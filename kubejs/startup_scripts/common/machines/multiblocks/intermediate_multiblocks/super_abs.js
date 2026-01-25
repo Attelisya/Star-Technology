@@ -32,7 +32,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('H', Predicates.abilities(PartAbility.MUFFLER))
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-        .workableCasingRenderer('gtceu:block/casings/gcym/high_temperature_smelting_casing',
-            'gtceu:block/multiblock/gcym/blast_alloy_smelter', false);
+        .workableCasingModel('gtceu:block/casings/gcym/high_temperature_smelting_casing',
+            'gtceu:block/multiblock/gcym/blast_alloy_smelter');
 
 });
