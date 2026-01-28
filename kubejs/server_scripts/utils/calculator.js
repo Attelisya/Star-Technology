@@ -165,6 +165,17 @@ let calculatorExec = (() => {
    */
   function calculate(node) {
     switch (node.type) {
+      case "unOp": {
+        let value = calculate(node.value);
+        switch (node.operator) {
+          case "+":
+            validateArguments("plus", ["number"], [value]);
+            return value;
+          case "-":
+            validateArguments("negate", ["number"], [value]);
+            return -value;
+        }
+      }
       case "binOp": {
         let left = calculate(node.left);
         let right = calculate(node.right);
