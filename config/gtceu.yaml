@@ -26,7 +26,7 @@ recipes:
   # Default: false
   hardWoodRecipes: false
   # Packmode Sensitivity
-
+  
   # Recipes for Buckets, Cauldrons, Hoppers, and Iron Bars require Iron Plates, Rods, and more.
   # Default: true
   hardIronRecipes: true
@@ -35,13 +35,13 @@ recipes:
   # Default: false
   hardRedstoneRecipes: false
   # Packmode Sensitivity
-
+  
   # Whether to make Vanilla Tools and Armor recipes harder.
   # Excludes Flint and Steel, and Buckets.
   # Default: false
   hardToolArmorRecipes: false
   # Packmode Sensitivity
-
+  
   # Whether to make miscellaneous recipes harder.
   # Default: false
   hardMiscRecipes: false
@@ -53,7 +53,7 @@ recipes:
   # Default: true
   nerfPaperCrafting: false
   # Packmode Sensitivity
-
+  
   # Recipes for items like Iron Doors, Trapdoors, Anvil require Iron Plates, Rods, and more.
   # Default: false
   hardAdvancedIronRecipes: false
@@ -94,7 +94,7 @@ recipes:
   # Default: true
   enchantedTools: true
   # Packmode Sensitivity
-
+  
 worldgen:
   # Rubber Tree spawn chance (decimal % per chunk)
   # Default: 0.5
@@ -222,8 +222,8 @@ machines:
   # Whether to enable World Accelerators, which accelerate ticks for surrounding Tile Entities, Crops, etc.
   # Default: true
   enableWorldAccelerators: false
-  # Packmode Sensitivity, Turned to Purely False for Zeta, too many exploits
-
+  # Packmode Sensitivity
+  
   # List of TileEntities that the World Accelerator should not accelerate.
   # GregTech TileEntities are always blocked.
   # Entries must be in a fully qualified format. For example: appeng.tile.networking.TileController
@@ -297,7 +297,7 @@ machines:
   # Default: false
   orderedAssemblyLineFluids: false
   # Packmode Sensitivity
-
+  
   # Default maximum parallel of steam multiblocks
   # Default: 8
   steamMultiParallelAmount: 8
@@ -518,14 +518,14 @@ compat:
     # Only affects converters.
     # Default: 4 FE == 1 EU
     feToEuRatio: 4
-    # Packmode Sensitivity
-
+  # Packmode Sensitivity
+  
     # GTEU to Forge Energy ratio for converting EU to FE.
     # Affects native conversion and Converters.
     # Default: 4 FE == 1 EU
     euToFeRatio: 4
-    # Packmode Sensitivity
-
+  # Packmode Sensitivity
+  
   # Config options regarding GTCEu compatibility with AE2
   ae2:
     # The interval between ME Hatch/Bus interact ME network.
