@@ -12,7 +12,8 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
         { name: 'Trinium', protons: 150, neutrons: 251 },
         { name: 'Naquadah', protons: 154, neutrons: 252 },
         { name: 'Naquadria', protons: 155, neutrons: 255 },
-        { name: 'NaquadahEnriched', protons: 156, neutrons: 256 }
+        { name: 'NaquadahEnriched', protons: 156, neutrons: 256 },
+        { name: 'Duranium', protons: 123, neutrons: 112 }
     ].forEach(e => setCounts(e.name, e.protons, e.neutrons));
 
 });
