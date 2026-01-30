@@ -3,9 +3,9 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
     
     const elem = global.elementFunction(event);
 
-    elem('xeproda', 136, 265, 'Xp');
-    elem('rhexis', 137, 298, 'Rx');
-    elem('chalyblux', 138, 312, 'Cx');
+    elem('xeproda', 146, 245, 'Xp');
+    elem('rhexis', 147, 247, 'Rx');
+    elem('chalyblux', 148, 249, 'Cx');
     elem('voidic', -1, -1, '∅');
     elem('dragon', -1, -1, '🜍');
 
