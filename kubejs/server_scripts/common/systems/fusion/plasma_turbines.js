@@ -145,15 +145,6 @@ ServerEvents.recipes(event => {
             .EUt(-2048);
     };
 
-    const PlasmaTurbineTemp = (type,duration,ifGas) => {
-        let Quantity = (ifGas == true) ? 5 : 1 ;
-        event.recipes.gtceu.plasma_generator(id(`${type}_from_${type}_plasma`))
-            .inputFluids(`gtceu:${type}_plas_plasma ${Quantity}`)
-            .outputFluids(`gtceu:${type} ${Quantity}`)
-            .duration(duration)
-            .EUt(-2048);
-    };
-
     const PlasmaTurbineUnique = (type,output,duration,ifGas) => {
         let Quantity = (ifGas == true) ? 5 : 1 ;
         event.recipes.gtceu.plasma_generator(id(`${output}_from_${type}_plasma`))
@@ -169,8 +160,8 @@ ServerEvents.recipes(event => {
     PlasmaTurbine('nitrogen',108,true);
     PlasmaTurbine('argon',126,true);
     PlasmaTurbine('helium',54,true);
-    PlasmaTurbineTemp('americium',676,false);
-    PlasmaTurbineTemp('tin',168,false);
+    PlasmaTurbine('americium',676,false);
+    PlasmaTurbine('tin',168,false);
     PlasmaTurbineUnique('magmatic','infernal_concentrate',1138,false);
 
     // Draco-Abyssal Rotor

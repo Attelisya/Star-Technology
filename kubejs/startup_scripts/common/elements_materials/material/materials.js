@@ -501,11 +501,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     }
 
     // Temp
-
-    compPlasma('americium_plas',1449,'americium',0x287869,no_decomp);
-
-    compPlasma('tin_plas',505,'tin',0xfafeff,no_decomp);
-
     event.create('borosilicate_glas').components('1x boron','7x silicon_dioxide').color(0xFAFAFA).secondaryColor(0xfaf5c0).iconSet(SHINY).flags(no_decomp,not_alloy,foil);
 
     // Materials

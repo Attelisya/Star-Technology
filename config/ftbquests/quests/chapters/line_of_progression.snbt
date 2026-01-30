@@ -327,7 +327,7 @@
 			id: "5B91E94506FB37D6"
 			tasks: [{
 				id: "5E8B1849D3F9B987"
-				item: "gtceu:uv_fusion_reactor"
+				item: "start_core:uv_fusion_reactor"
 				type: "item"
 			}]
 			x: 11.5d
@@ -615,7 +615,7 @@
 			id: "3883C93F8D66832B"
 			tasks: [{
 				id: "3667178AAE6464EE"
-				item: "gtceu:zpm_fusion_reactor"
+				item: "start_core:zpm_fusion_reactor"
 				type: "item"
 			}]
 			x: 11.5d
@@ -874,7 +874,7 @@
 			id: "482A52DE98E8E8F9"
 			tasks: [{
 				id: "683B58DDBB478348"
-				item: "start_core:uhv_auxiliary_boosted_fusion_reactor"
+				item: "start_core:uhv_fusion_reactor"
 				type: "item"
 			}]
 			x: 11.5d
@@ -885,7 +885,7 @@
 			id: "486FFD25F047E52C"
 			tasks: [{
 				id: "1A494CE1BE2CC207"
-				item: "start_core:uiv_auxiliary_boosted_fusion_reactor"
+				item: "start_core:uiv_fusion_reactor"
 				type: "item"
 			}]
 			x: 11.5d
@@ -896,7 +896,7 @@
 			id: "6BD707B1FCC47DC7"
 			tasks: [{
 				id: "210DA27D042C1096"
-				item: "gtceu:luv_fusion_reactor"
+				item: "start_core:luv_fusion_reactor"
 				type: "item"
 			}]
 			x: 11.5d

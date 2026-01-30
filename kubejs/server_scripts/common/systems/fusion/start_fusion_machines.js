@@ -2,48 +2,97 @@ ServerEvents.recipes(event => {
     const id = global.id;
     
     //Controller Blocks
-    
-    event.recipes.gtceu.assembly_line(id('uhv_auxiliary_boosted_fusion_reactor'))
+   [
+        'gtceu:assembly_line/fusion_reactor_mk1', 'gtceu:scanner/1_x_gtceu_indium_tin_barium_titanium_cuprate_single_wire',
+        'gtceu:assembly_line/fusion_reactor_mk2','gtceu:research_station/1x_gtceu_luv_fusion_reactor',
+        'gtceu:assembly_line/fusion_reactor_mk3', 'gtceu:research_station/1x_gtceu_zpm_fusion_reactor'
+    ].forEach( idRemoved => {
+        event.remove({ id: idRemoved });
+    });
+
+    event.recipes.gtceu.assembly_line(id('luv_fusion_reactor'))
+        .itemInputs('gtceu:superconducting_coil', '4x #gtceu:circuits/zpm', 'gtceu:double_plutonium_241_plate', 'gtceu:double_osmiridium_plate',
+                '2x gtceu:iv_field_generator', '64x gtceu:uhpic_chip', '32x gtceu:indium_tin_barium_titanium_cuprate_single_wire')
+        .inputFluids('gtceu:soldering_alloy 1152', 'gtceu:niobium_titanium 1152')
+        .itemOutputs('start_core:luv_fusion_reactor')
+        ["scannerResearch(java.util.function.UnaryOperator)"](
+                researchRecipeBuilder => researchRecipeBuilder
+                    .researchStack(Item.of('gtceu:superconducting_coil'))
+                    .duration(1200)
+                    .EUt(GTValues.VA[GTValues.IV])
+                )
+        .duration(1200)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    event.recipes.gtceu.assembly_line(id('zpm_fusion_reactor'))
+            .itemInputs('gtceu:fusion_coil', '4x #gtceu:circuits/uv', 'gtceu:double_naquadria_plate', 'gtceu:double_europium_plate',
+                    '2x gtceu:luv_field_generator', '64x gtceu:uhpic_chip', '32x gtceu:uhpic_chip', '32x gtceu:uranium_rhodium_dinaquadide_single_wire')
+            .inputFluids('gtceu:soldering_alloy 1152', 'gtceu:vanadium_gallium 1152')
+            .itemOutputs('start_core:zpm_fusion_reactor')
+            .duration(1350)
+            .stationResearch(
+                researchRecipeBuilder => researchRecipeBuilder
+                    .researchStack(Item.of('start_core:luv_fusion_reactor'))
+                    .EUt(GTValues.VHA[GTValues.ZPM])
+                    .CWUt(16)
+                )
+            .EUt(GTValues.VA[GTValues.ZPM]);
+
+    event.recipes.gtceu.assembly_line(id('uv_fusion_reactor'))
+        .itemInputs('gtceu:fusion_coil', '4x #gtceu:circuits/uhv', 'gtceu:quantum_star', 'gtceu:double_americium_plate',
+                '2x gtceu:zpm_field_generator', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '32x gtceu:enriched_naquadah_trinium_europium_duranide_single_wire')
+        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 1152', 'gtceu:yttrium_barium_cuprate 1152')
+        .itemOutputs('start_core:uv_fusion_reactor')
+        .duration(1500)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('start_core:zpm_fusion_reactor'))
+                .EUt(GTValues.VHA[GTValues.UV])
+                .CWUt(96)
+            )
+        .EUt(GTValues.VA[GTValues.UV]);
+
+    event.recipes.gtceu.assembly_line(id('uhv_fusion_reactor'))
         .itemInputs('start_core:auxiliary_fusion_coil_mk1', '4x #gtceu:circuits/uev', 'gtceu:gravi_star', 'gtceu:double_zircalloy_4_plate',
                 '2x gtceu:uv_field_generator', '64x kubejs:uepic_chip', '32x kubejs:uepic_chip', '32x gtceu:ruthenium_trinium_americium_neutronate_single_wire')
         .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 1152', 'gtceu:europium 1152')
-        .itemOutputs('start_core:uhv_auxiliary_boosted_fusion_reactor')
-        .duration(1200)
+        .itemOutputs('start_core:uhv_fusion_reactor')
+        .duration(1650)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of('gtceu:uv_fusion_reactor'))
+                .researchStack(Item.of('start_core:uv_fusion_reactor'))
                 .EUt(GTValues.VHA[GTValues.UHV])
                 .CWUt(144)
             )
-        .EUt(GTValues.VHA[GTValues.UHV]);
+        .EUt(GTValues.VA[GTValues.UHV]);
 
     event.recipes.gtceu.assembly_line(id('uev_fusion_reactor'))
         .itemInputs('start_core:advanced_fusion_coil', '4x #gtceu:circuits/uiv', 'kubejs:helish_star', 'gtceu:double_magmada_alloy_plate',
                 '2x gtceu:uhv_field_generator', '64x kubejs:uepic_chip', '64x kubejs:uepic_chip', '32x gtceu:seaborgium_palladium_enriched_estalt_flerovium_alloy_single_wire')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 1152', 'gtceu:cerium_tritelluride 1152')
+        .inputFluids('gtceu:naquadated_soldering_alloy 1152', 'gtceu:cerium_tritelluride 1152')
         .itemOutputs('start_core:uev_fusion_reactor')
-        .duration(1400)
+        .duration(1800)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of('start_core:uhv_auxiliary_boosted_fusion_reactor'))
+                .researchStack(Item.of('start_core:uhv_fusion_reactor'))
                 .EUt(GTValues.VHA[GTValues.UEV])
                 .CWUt(160)
             )
-        .EUt(GTValues.VHA[GTValues.UEV]);
+        .EUt(GTValues.VA[GTValues.UEV]);
 
-    event.recipes.gtceu.assembly_line(id('uiv_auxiliary_boosted_fusion_reactor'))
+    event.recipes.gtceu.assembly_line(id('uiv_fusion_reactor'))
         .itemInputs('start_core:auxiliary_fusion_coil_mk2', '4x #gtceu:circuits/uxv', 'kubejs:dragonic_eye', 'gtceu:double_abyssal_alloy_plate',
                 '2x gtceu:uev_field_generator', '64x kubejs:uipic_chip', '32x kubejs:uipic_chip', '32x gtceu:rhenium_super_composite_alloy_single_wire')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 1152', 'gtceu:polonium_bismide 1152')
-        .itemOutputs('start_core:uiv_auxiliary_boosted_fusion_reactor')
-        .duration(1600)
+        .inputFluids('gtceu:naquadated_soldering_alloy 1152', 'gtceu:polonium_bismide 1152')
+        .itemOutputs('start_core:uiv_fusion_reactor')
+        .duration(1950)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('start_core:uev_fusion_reactor'))
                 .EUt(GTValues.VHA[GTValues.UIV])
                 .CWUt(192)
             )
-        .EUt(GTValues.VHA[GTValues.UIV]);
+        .EUt(GTValues.VA[GTValues.UIV]);
 
     // === Reflector Panels ===
     event.remove({output: 'gtceu:neutron_reflector'});
@@ -76,7 +125,7 @@ ServerEvents.recipes(event => {
     ReflectorPanel(T1Panel,'ruridit','beryllium','gtceu:double_tungsten_carbide_plate','tin_alloy 2304',GTValues.VHA[GTValues.EV],CleanroomType.CLEANROOM);
     ReflectorPanel(T2Panel,'osmiridium','naquadah',T1Panel,'soldering_alloy 1152',GTValues.VHA[GTValues.IV],CleanroomType.CLEANROOM);
     ReflectorPanel(T3Panel,'trinaquadalloy','zirconium',T2Panel,'soldering_alloy 2304',GTValues.VHA[GTValues.LuV],CleanroomType.CLEANROOM);
-    ReflectorPanel(T4Panel,'pure_netherite','tritanium',T3Panel,'indium_tin_lead_cadmium_soldering_alloy 1152',GTValues.VHA[GTValues.ZPM],CleanroomType.STERILE_CLEANROOM);
+    ReflectorPanel(T4Panel,'zirconium_selenide_diiodide','tritanium',T3Panel,'indium_tin_lead_cadmium_soldering_alloy 1152',GTValues.VHA[GTValues.ZPM],CleanroomType.STERILE_CLEANROOM);
     ReflectorPanel(T5Panel,'ancient_netherite','void',T4Panel,'indium_tin_lead_cadmium_soldering_alloy 2304',GTValues.VHA[GTValues.UV],CleanroomType.STERILE_CLEANROOM);
     ReflectorPanel(T6Panel,'rhenate_w','mythrotight_carbide_steel',T5Panel,'naquadated_soldering_alloy 1152',GTValues.VHA[GTValues.UHV],CleanroomType.STERILE_CLEANROOM);
     ReflectorPanel(T7Panel,'draco_abyssal','hvga_steel',T6Panel,'naquadated_soldering_alloy 2304',GTValues.VHA[GTValues.UEV],$StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM);
@@ -165,10 +214,17 @@ ServerEvents.recipes(event => {
 
     event.remove({output: 'gtceu:fusion_glass'});
     event.recipes.gtceu.assembler(id('fusion_glass'))
-        .itemInputs('gtceu:laminated_glass','4x gtceu:enriched_naquadah_plate','6x kubejs:basic_neutron_reflector')
+        .itemInputs('gtceu:laminated_glass','4x gtceu:enriched_naquadah_plate','6x ' + T1Panel)
         .inputFluids('gtceu:polybenzimidazole 144')
         .itemOutputs('2x gtceu:fusion_glass')
         .duration(50)
         .EUt(GTValues.VA[GTValues.LuV]);
+
+    event.recipes.gtceu.assembler(id('reinforced_fusion_glass'))
+        .itemInputs('gtceu:fusion_glass','gtceu:zpm_emitter','6x ' + T3Panel)
+        .inputFluids('gtceu:polyether_ether_ketone 432')
+        .itemOutputs('2x kubejs:reinforced_fusion_glass')
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.UV]);
 
 });

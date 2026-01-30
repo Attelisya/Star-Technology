@@ -55,11 +55,12 @@ ServerEvents.recipes(event => {
             .duration(200)
             .EUt(GTValues.VHA[GTValues.UV]);
 
-        event.recipes.gtceu.fusion_reactor(id(`nether_tempered_${element}`))
+        event.recipes.gtceu.reflector_fusion_reactor(id(`nether_tempered_${element}`))
             .inputFluids(`gtceu:energized_${element} 144`, `gtceu:ancient_netherite 9`)
             .outputFluids(`gtceu:nether_tempered_${element} 144`)
             .duration(200)
             .EUt(GTValues.VHA[GTValues.ZPM])
+            .addData("reflector_tier", 4)
             .fusionStartEU(800000000);
     });
      

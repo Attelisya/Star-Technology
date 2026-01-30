@@ -66,4 +66,13 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:needs_iron_tool')
         .textureAll('kubejs:block/casings/abydos_multis/superalloy_casing');
 
+    event.create('reinforced_fusion_glass')
+        .hardness(2)
+        .resistance(2)
+        .soundType('glass')
+        .transparent(true)
+        .defaultTranslucent() 
+        .requiresTool(false)
+        .textureAll('kubejs:block/casings/abydos_multis/reinforced_fusion_glass');
+
 });
