@@ -328,6 +328,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('iron', foil);
     matmod('wrought_iron', frame);
     matmod('red_alloy', spring);
+    matmod('netherite', no_decomp);
 
     // Blast Properties of periodic table metals
     const blast = global.blastProperty;
@@ -344,6 +345,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     // Fluid Pipes
     GTMaterials.NaquadahEnriched.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(8000, 500, true, true, true, false));
+    GTMaterials.Netherite.setComponents('4x netherite', '4x gold');
 
     // Materials from elements
     const compIngot = (name, elements, color, icon, blasting, flags) => {
