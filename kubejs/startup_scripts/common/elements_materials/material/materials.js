@@ -345,7 +345,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     // Fluid Pipes
     GTMaterials.NaquadahEnriched.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(8000, 500, true, true, true, false));
-    GTMaterials.Netherite.setComponents('4x netherite', '4x gold');
+    GTMaterials.Netherite.setComponents('1x debris', '1x gold');
 
     // Materials from elements
     const compIngot = (name, elements, color, icon, blasting, flags) => {
