@@ -1111,6 +1111,10 @@
     "material.gtceu.iridium_hydroxide": "Iridium Hydroxide",
     "material.gtceu.iridium_oxide": "Iridium Oxide",
 
+    "material.gtceu.sodium_diphenoxide": "Sodium Diphenoxide",
+    "material.gtceu.phosgene": "Phosgene",
+    "material.gtceu.polycarbonate": "Polycarbonate",
+
     "gtceu.me_assembler": "ME Assembler",
     "block.gtceu.lv_me_assembler": "Basic ME Assembler",
     "block.gtceu.mv_me_assembler": "§bAdvanced ME Assembler",
@@ -1392,7 +1396,7 @@
     "block.gtceu.t_large_electromagnetic_separator": "Large Electromagnetic Separator",
     "block.gtceu.t_large_electromagnetic_separator.tooltip.0": "§7A larger variant of the electromagnetic separator that can process materials with more energy efficiency.",
     "block.gtceu.t_large_electromagnetic_separator.tooltip.1": "Has §6Perfect Overclock",
-    "block.gtceu.t_large_electromagnetic_separator.tooltip.2": "Can only have §bone§r Energy Hatch"
+    "block.gtceu.t_large_electromagnetic_separator.tooltip.2": "Can only have §bone§r Energy Hatch",
     "material.gtceu.acidic_bromine_solution": "Acidic Bromine Solution",
     "material.gtceu.concentrated_bromine_solution": "Concentrated Bromine Solution",
     "material.gtceu.hydrogen_iodid": "Hydrogen Iodide",
