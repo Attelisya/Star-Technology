@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
     
     const elem = global.elementFunction(event);
 
-    elem('purified_naquadah', 174, 350, 'Nq-');
-    elem('echo_r', -1, -1, 'Ec');
+    elem('purified_naquadah', 154, 250, 'Nq-');
+    elem('echo_r', 152, 252, 'Ec');
 
 });
