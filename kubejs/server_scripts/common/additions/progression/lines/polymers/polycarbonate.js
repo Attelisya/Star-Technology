@@ -7,10 +7,11 @@ ServerEvents.recipes(event => {
     */
     const lcr = event.recipes.gtceu.large_chemical_reactor;
 
-    lcr(id(`diphenoxide`))
+    lcr(id(`sodium_diphenoxide_dust`))
         .itemInputs(`2x gtceu:sodium_hydroxide_dust`)
         .inputFluids(`gtceu:bisphenol_a 1000`)
-        .outputFluids(`minecraft:water 2000`, `gtceu:diphenoxide 1000`)
+        .itemOutputs(`1x gtceu:sodium_diphenoxide_dust`)
+        .outputFluids(`minecraft:water 2000`)
         .duration(15*20)
         .EUt(GTValues.VA(GTValues.LuV));
 
@@ -22,10 +23,10 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA(GTValues.IV));
 
     lcr(id(`polycarbonate`))
-        .inputFluids(`gtceu:phosgene 1000`, `gtceu:diphenoxide 1000`)
-        .itemOutputs(`gtceu:salt_dust`)
-        .outputFluids(`gtceu:polycarbonate 1000`)
+        .itemInputs(`1x gtceu:sodium_diphenoxide_dust`)
+        .inputFluids(`gtceu:phosgene 1000`)
+        .itemOutputs(`2x gtceu:salt_dust`)
+        .outputFluids(`gtceu:liquid_polycarbonate 1000`)
         .duration(30*20)
         .EUt(GTValues.VA(GTValues.ZPM));
-
 })

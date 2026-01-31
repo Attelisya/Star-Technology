@@ -984,7 +984,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('44_difluorobenzophenone', ['13x carbon','8x hydrogen','1x oxygen','2x fluorine'], 0xeee1c9 ,[no_decomp]); //naming like this: 4_4_di... will make kubejs go error to annoy you :)
     
-    polymerFluidPipe('polyether_ether_ketone', ['19x carbon','12x hydrogen','3x oxygen'], 0xccbba7, [550, 600, true, true, true, false], [foil, plates, ring, plates, no_decomp]);
+    polymerFluidPipe('polyether_ether_ketone', ['19x carbon','12x hydrogen','3x oxygen'], 0xccbba7, [550, 600, true, true, true, false], [foil, plates, ring, no_decomp]);
     
     // SiC/Bi2Te3 Line
     compDust('sodium_borohydride', ['1x sodium','1x boron','4x hydrogen'], 0xE3DEC8, [no_decomp]);
@@ -1781,5 +1781,23 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .gas()
         .color(0x8f681e)
         .components('3x steam', '1x chlorine');
+
+    //Polycarbonate Line
+    /* Missing items/fluids
+    diphenoxide
+    phosgene
+    polycarbonate
+    */
+    compDust(`sodium_diphenoxide`, [`2x sodium`, `2x oxygen`, `15x carbon`, `16x hydrogen`], 0xFEFEFE, [no_decomp]);
+    compLiquid(`phosgene`, [`carbon`, `oxygen`, `2x chlorine`], 0xFDFEFC, [no_decomp]);
+
+    event.create(`polycarbonate`)
+        .ingot()
+        .liquid()
+        .color(0xFAFAFA)
+        .secondaryColor(0xFAF5C0)
+        .components(`3x oxygen`, `16x carbon`, `16x hydrogen`)
+        .flags(no_decomp, foil, plates)
+        .fluidPipeProperties(388, 300, true, true, false, false);
 
 });
