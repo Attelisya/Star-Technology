@@ -451,7 +451,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "77583C68BD5BD029"
-				item: "gtceu:luv_fusion_reactor"
+				item: "start_core:luv_fusion_reactor"
 				type: "item"
 			}]
 			x: 4.0d
@@ -1025,7 +1025,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "5DAE21D68E963FA2"
-				item: "gtceu:zpm_fusion_reactor"
+				item: "start_core:zpm_fusion_reactor"
 				type: "item"
 			}]
 			x: 12.0d

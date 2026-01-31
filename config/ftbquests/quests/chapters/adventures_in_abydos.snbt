@@ -763,7 +763,7 @@
 				id: "70C8CC3BD58DC9B4"
 				item: {
 					Count: 1
-					id: "start_core:uhv_auxiliary_boosted_fusion_reactor"
+					id: "start_core:uhv_fusion_reactor"
 					tag: { }
 				}
 				type: "item"

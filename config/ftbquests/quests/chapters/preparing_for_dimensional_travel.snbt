@@ -70,7 +70,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "63A31B4C5E81DA04"
-				item: "gtceu:uv_fusion_reactor"
+				item: "start_core:uv_fusion_reactor"
 				type: "item"
 			}]
 			x: -2.0d

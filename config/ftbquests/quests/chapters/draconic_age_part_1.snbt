@@ -1052,7 +1052,7 @@
 			size: 1.5d
 			tasks: [{
 				id: "5BCB1B1022CB00AB"
-				item: "start_core:uiv_auxiliary_boosted_fusion_reactor"
+				item: "start_core:uiv_fusion_reactor"
 				type: "item"
 			}]
 			x: 10.0d
