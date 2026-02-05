@@ -2,7 +2,7 @@ global.componentRecycles = {
     uhv: {
         primMaterial: `gtceu:zalloy`,
         cable: `gtceu:europium`,
-        secMaterial: `gtceu:zircalloy_4_ingot`,
+        secMaterial: `gtceu:zircalloy_4`,
         tertMaterial: `gtceu:zirconium`
     },
     uev: {
@@ -14,8 +14,8 @@ global.componentRecycles = {
     uiv: {
         primMaterial: `gtceu:ohmderblux_alloy`,
         cable: `gtceu:polonium_bismide`,
-        secMaterial: `gtceu:chaotixic_alloy`,
-        tertMaterial: `gtceu:abyssal_alloy`
+        secMaterial: `gtceu:abyssal_alloy`,
+        tertMaterial: `gtceu:chaotixic_alloy`
     }
 }
 
