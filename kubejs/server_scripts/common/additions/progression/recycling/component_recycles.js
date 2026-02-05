@@ -24,54 +24,54 @@ global.componentRecycleCount = {
         primCount: 18,
         cableCount: 10,
         secCount: 1,
-        tertiaryCount: 4
+        tertCount: 4
     },
     emitter:{
         primCount: 18,
         cableCount: 10,
         secCount: 1,
-        tertiaryCount: 4
+        tertCount: 4
     },
     field_generator: {
         primCount: 62,
         cableCount: 30,
         secCount: 3,
-        tertiaryCount: 4
+        tertCount: 4
     },
     robot_arm: {
         primCount: 48,
         cableCount: 24,
         secCount: 9,
-        tertiaryCount: 12
+        tertCount: 12
     },
     electric_piston: {
         primCount: 27,
         cableCount: 8,
         secCount: 5,
-        tertiaryCount: 6
+        tertCount: 6
     },
     conveyor_module: {
         primCount: 27,
         cableCount: 12,
         secCount: 4,
-        tertiaryCount: 8
+        tertCount: 8
     },
     fluid_regulator: {
         primCount: 11,
         cableCount: 4,
         secCount: 8,
-        tertiaryCount: 4
+        tertCount: 4
     },
     electric_pump: {
         primCount: 11,
         cableCount: 4,
         secCount: 8,
-        tertiaryCount: 4
+        tertCount: 4
     },
     electric_motor: {
         primCount: 6,
         cableCount: 4,
         secCount: 0,
-        tertiaryCount: 4
+        tertCount: 4
     }
 }
