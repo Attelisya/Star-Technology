@@ -74,7 +74,7 @@ global.getComponentTotal = (components) => {
 }
 
 // checks if input value is too big for one output slot (built for component recycling) 
-global.componentCheckCount = (values) => {
+global.checkComponentCount = (values) => {
   const blocksBools = {
     primBlock: false,
     cableBlock: false,
