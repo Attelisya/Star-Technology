@@ -1,6 +1,3 @@
-const $StarTDraconicInfusionMachine = Java.loadClass('com.startechnology.start_core.machine.draconic_infusion.StarTDraconicInfusionMachine')
-
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('draco_infusion')

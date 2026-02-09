@@ -37,6 +37,8 @@
         // .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, $StarTRecipeModifiers.THREADING_MACHINE])
             // gives threading abilities, goes after OC determinate
 
+    const $StarTDraconicInfusionMachine = Java.loadClass('com.startechnology.start_core.machine.draconic_infusion.StarTDraconicInfusionMachine')
+
 //GTCEU Loader
 
     //Multiblock Relative Direction Loader
