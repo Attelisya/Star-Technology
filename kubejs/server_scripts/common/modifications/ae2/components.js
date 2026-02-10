@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
                 .itemInputs(`kubejs:acu_chip`, `ae2:printed_${type}_processor`, 'ae2:printed_silicon')
                 .inputFluids('gtceu:soldering_alloy 144')
                 .itemOutputs(`2x ae2:${type}_processor`)
-                .duration(500)
+                .duration(360)
                 .EUt(global.va['mv']);
         });
 
