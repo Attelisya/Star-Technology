@@ -1,3 +1,4 @@
+// note: this code is assuming all casing materials from uev+ are the same as the component tertiary material
 global.not_hardmode(() => {
     ServerEvents.recipes(event => {
         const TIERS = [
