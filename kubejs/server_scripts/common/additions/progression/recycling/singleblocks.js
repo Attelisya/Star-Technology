@@ -1,14 +1,14 @@
 global.not_hardmode(() => {
     ServerEvents.recipes(event => {
         const TIERS = [
-            `uhv`, `uev`, `uiv`
+            "uhv", "uev", "uiv"
         ]
         const SINGLEBLOCKS = [
-            `electric_furnace`, `electric_blast_furnace`, `electric_smoker`, `alloy_smelter`, `arc_furnace`, `electrolyzer`, `polarizer`, 
-            `charger_4x`, `assembler`, `autoclave`, `bender`, `brewery`, `canner`, `centrifuge`, `chemical_bath`, `chemical_reactor`,
-            `compressor`, `cutter`, `distillery`, `electromagnetic_separator`, `extractor`, `extruder`, `fermenter`, `fluid_heater`,
-            `fluid_solidifier`, `forge_hammer`, `lathe`, `scanner`, `mixer`, `ore_washer`, `packer`, `laser_engraver`, `sifter`, 
-            `thermal_centrifuge`, `wiremill`, `circuit_assembler`, `macerator`, `gas_collector`, `rock_crusher`
+            "electric_furnace", "electric_blast_furnace", "electric_smoker", "alloy_smelter", "arc_furnace", "electrolyzer", "polarizer", 
+            "charger_4x", "assembler", "autoclave", "bender", "brewery", "canner", "centrifuge", "chemical_bath", "chemical_reactor",
+            "compressor", "cutter", "distillery", "electromagnetic_separator", "extractor", "extruder", "fermenter", "fluid_heater",
+            "fluid_solidifier", "forge_hammer", "lathe", "scanner", "mixer", "ore_washer", "packer", "laser_engraver", "sifter", 
+            "thermal_centrifuge", "wiremill", "circuit_assembler", "macerator", "gas_collector", "rock_crusher"
         ]
         const SINGLEBLOCKDETAILS = { //if specialSingle = true, the next 3 are blank/unread
             electric_furnace: {
@@ -343,7 +343,7 @@ global.not_hardmode(() => {
                 charger_4x: [`8x ${materials.casing}`, `2x ${materials.cable}`, `8x ${materials.wire}`, " ", " ", " "]
             }
             let casingCount = 8 + extraCasings;
-            let recycleOutputs;
+            let recycleOutputs = [" ", " ", " ", " ", " ", " "];
 
             if (specialSingleBool) {
                 if (singleblock == "electric_furnace") {recycleOutputs = specialSingleOutputs.electric_furnace;}
@@ -358,21 +358,42 @@ global.not_hardmode(() => {
             else {
                 const tempTotals = global.getComponentTotal(components);
                 tempTotals.cableCount += extraCables;
-                const tempStr = `${casingCount}x ${materials.casing}`;
-                recycleOutputs = tempStr.concat(global.checkComponentCount(tempTotals));
+                const tempArr = global.checkComponentCount(tempTotals);
+                const {
+                    primBlock,
+                    cableBlock,
+                    secBlock,
+                    tertBlock
+                } = tempArr[0];
+                const blockBools = [primBlock, cableBlock, secBlock, tertBlock]; //converts obj to array
+                const {
+                    primCount,
+                    cableCount,
+                    secCount,
+                    tertCount
+                } = tempArr[1];
+                
+                recycleOutputs[0] = `${casingCount}x ${materials.casing}`;
+                recycleOutputs[1] = `${primCount}x ${materials.compPrim}`;
+                recycleOutputs[2] = `${cableCount}x ${materials.cable}`;
+                recycleOutputs[3] = `${secCount}x ${materials.compSec}`;
+                recycleOutputs[4] = `${tertCount}x ${materials.compTert}`;
+                recycleOutputs[5] = blockBools;
+                
             }
             if (recycleOutputs != undefined) {
+                console.log(`recycleOutputs: ${recycleOutputs}`);
                 return recycleOutputs;
             }
         }
 
-        function getFinalOutputs(outputs, macBool) {
+        function getFinalOutputs(outputs, macBool, specialSingleBool) {
             let finalOutputs = [];
-            const blockBools = outputs[5];
             let i=1;
+            const blockBools = outputs[5];
 
             if (macBool) {
-                if (blockBools == " ") {
+                if (specialSingleBool) {
                     for (let x = 0; x < 5; x++) {
                         if (outputs[x] == "gtceu:graphite_dust") {
                             finalOutputs[x] = outputs[x];
@@ -394,12 +415,16 @@ global.not_hardmode(() => {
                             if (outputs[i] != " ") {
                                 finalOutputs[i] = `${outputs[i]}_dust`;
                             }
+                            else if (outputs[x] == /0x .*/) {
+                                finalOutputs[i] = "";
+                            }
                         }
+                        i++;
                     });
                 }
             }
             else {
-                if (blockBools == " ") {
+                if (specialSingleBool) {
                     for (let x = 0; x < 5; x++) {
                         if (outputs[x] == "gtceu:graphite_dust") {
                             finalOutputs[x] = outputs[x];
@@ -421,6 +446,9 @@ global.not_hardmode(() => {
                             if (outputs[i] != " ") {
                                 finalOutputs[i] = `${outputs[i]}_ingot`;
                             }
+                            else if (outputs[x] == /0x .*/) {
+                                finalOutputs[i] = "";
+                            }
                         }
                         i++;
                     });
@@ -436,8 +464,8 @@ global.not_hardmode(() => {
             let outputs;
 
             tiers.forEach(tier => {
-                outputs = getFinalOutputs(getSingleblockRecycleOutputs(singleblock, specialSingleBool, tier, components, extraCasings, extraCables), false);
-                console.log (`start:arc_${tier}_${singleblock} outputs: ${outputs}`)
+                outputs = getFinalOutputs(getSingleblockRecycleOutputs(singleblock, specialSingleBool, tier, components, extraCasings, extraCables), false, specialSingleBool);
+                console.log (`start:arc_${tier}_${singleblock} outputs: ${outputs}`);
                 event.recipes.gtceu.arc_furnace(id(`arc_${tier}_${singleblock}`))
                     .itemInputs(`gtceu:${tier}_${singleblock}`)
                     .itemOutputs(outputs)
@@ -454,8 +482,8 @@ global.not_hardmode(() => {
             let outputs;
 
             tiers.forEach(tier => {
-                outputs = getFinalOutputs(getSingleblockRecycleOutputs(singleblock, specialSingleBool, tier, components, extraCasings, extraCables), true);
-                console.log (`start:macerate_${tier}_${singleblock} outputs: ${outputs}`)
+                outputs = getFinalOutputs(getSingleblockRecycleOutputs(singleblock, specialSingleBool, tier, components, extraCasings, extraCables), true, specialSingleBool);
+                console.log (`start:macerate_${tier}_${singleblock} outputs: ${outputs}`);
                 event.recipes.gtceu.macerator(id(`macerate_${tier}_${singleblock}`))
                     .itemInputs(`gtceu:${tier}_${singleblock}`)
                     .itemOutputs(outputs)
@@ -464,10 +492,26 @@ global.not_hardmode(() => {
                     .category(GTRecipeCategories.MACERATOR_RECYCLING);
             });
         }
+        const singleblockDetails = (singleblockKey) => {
+            const data = SINGLEBLOCKDETAILS[singleblockKey]
+            if (!data) return;
 
-        SINGLEBLOCKDETAILS.forEach(singleblock => {
-            arcRecipe(singleblock.name, singleblock.specialSingle,TIERS , singleblock.components, singleblock.extraCasings, singleblock.extraCables);
-            macRecipe(singleblock.name, singleblock.specialSingle,TIERS , singleblock.components, singleblock.extraCasings, singleblock.extraCables);
+            const {
+                name,
+                specialSingle,
+                components,
+                extraCasings,
+                extraCables
+            } = data
+            
+            console.log(`arcRecipe: name:${name}, specBool:${specialSingle}, tiers:${TIERS}, comps:${components}, casings: ${extraCasings}, cables: ${extraCables}`);
+            arcRecipe(name, specialSingle, TIERS, components, extraCasings, extraCables);
+            console.log(`macRecipe: name:${name}, specBool:${specialSingle}, tiers:${TIERS}, comps:${components}, casings: ${extraCasings}, cables: ${extraCables}`);
+            macRecipe(name, specialSingle, TIERS, components, extraCasings, extraCables);
+        } 
+        
+        SINGLEBLOCKS.forEach(singleblock => {
+            singleblockDetails(singleblock);
         });
     })
 })
