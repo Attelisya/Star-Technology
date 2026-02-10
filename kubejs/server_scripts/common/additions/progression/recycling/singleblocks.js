@@ -5,25 +5,300 @@ global.not_hardmode(() => {
         ]
         const SINGLEBLOCKS = [
             `electric_furnace`, `electric_blast_furnace`, `electric_smoker`, `alloy_smelter`, `arc_furnace`, `electrolyzer`, `polarizer`, 
-            `turbo_charger`, `assembler`, `autoclave`, `bender`, `brewery`, `canner`, `centrifuge`, `chemical_bath`, `chemical_reactor`,
+            `charger_4x`, `assembler`, `autoclave`, `bender`, `brewery`, `canner`, `centrifuge`, `chemical_bath`, `chemical_reactor`,
             `compressor`, `cutter`, `distillery`, `electromagnetic_separator`, `extractor`, `extruder`, `fermenter`, `fluid_heater`,
             `fluid_solidifier`, `forge_hammer`, `lathe`, `scanner`, `mixer`, `ore_washer`, `packer`, `laser_engraver`, `sifter`, 
             `thermal_centrifuge`, `wiremill`, `circuit_assembler`, `macerator`, `gas_collector`, `rock_crusher`
         ]
+        const SINGLEBLOCKDETAILS = { //if specialSingle = true, the next 3 are blank/unread
+            electric_furnace: {
+                name: "electric_furnace",
+                specialSingle: true,
+                components: " ",
+                extraCasings: 0, 
+                extraCables: 0
+            },
+            electric_blast_furnace: {
+                name: "electric_blast_furnace",
+                specialSingle: true,
+                components: " ",
+                extraCasings: 0, 
+                extraCables: 0
+            },
+            electric_smoker: {
+                name: "electric_smoker",
+                specialSingle: true,
+                components: " ",
+                extraCasings: 0, 
+                extraCables: 0
+            },
+            alloy_smelter: {
+                name: "alloy_smelter",
+                specialSingle: true,
+                components: " ",
+                extraCasings: 0, 
+                extraCables: 0
+            },
+            arc_furnace: {
+                name: "arc_furnace",
+                specialSingle: true,
+                components: " ",
+                extraCasings: 0, 
+                extraCables: 0
+            },
+            electrolyzer: {
+                name: "electrolyzer",
+                specialSingle: true,
+                components: " ",
+                extraCasings: 0, 
+                extraCables: 0
+            },
+            polarizer: {
+                name: "polarizer",
+                specialSingle: true,
+                components: " ",
+                extraCasings: 0, 
+                extraCables: 0
+            },
+            charger_4x: {
+                name: "charger_4x",
+                specialSingle: true,
+                components: " ",
+                extraCasings: 0, 
+                extraCables: 0
+            },
+            assembler: {
+                name: "assembler",
+                specialSingle: false,
+                components: ["robot_arm", "robot_arm", "conveyor_module", "conveyor_module"],
+                extraCasings: 0,
+                extraCables: 2
+            },
+            autoclave: {
+                name: "autoclave",
+                specialSingle: false,
+                components: ["electric_pump"],
+                extraCasings: 4,
+                extraCables: 1
+            },
+            bender: {
+                name: "bender",
+                specialSingle: false,
+                components: ["electric_piston", "electric_piston", "electric_motor", "electric_motor"],
+                extraCasings: 1,
+                extraCables: 1
+            },
+            brewery: {
+                name: "brewery",
+                specialSingle: false,
+                components: ["electric_pump"],
+                extraCasings: 0,
+                extraCables: 2
+            },
+            canner: {
+                name: "canner",
+                specialSingle: false,
+                components: ["electric_pump"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            centrifuge: {
+                name: "centrifuge",
+                specialSingle: false,
+                components: ["electric_motor", "electric_motor"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            chemical_bath: {
+                name: "chemical_bath",
+                specialSingle: false,
+                components: ["conveyor_module", "conveyor_module", "electric_pump"],
+                extraCasings: 0, 
+                extraCables: 1
+            },
+            chemical_reactor: {
+                name: "chemical_reactor",
+                specialSingle: false,
+                components: ["electric_motor"],
+                extraCasings: 4, 
+                extraCables: 1
+            },
+            compressor: {
+                name: "compressor",
+                specialSingle: false,
+                components: ["electric_piston", "electric_piston"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            cutter: {
+                name: "cutter",
+                specialSingle: false,
+                components: ["electric_motor", "conveyor_module"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            distillery: {
+                name: "distillery",
+                specialSingle: false,
+                components: ["electric_pump"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            electromagnetic_separator: {
+                name: "electromagnetic_separator",
+                specialSingle: false,
+                components: ["conveyor_module"],
+                extraCasings: 0, 
+                extraCables: 10
+            },
+            extractor: {
+                name: "extractor",
+                specialSingle: false,
+                components: ["electric_piston", "electric_pump"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            extruder: {
+                name: "extruder",
+                specialSingle: false,
+                components: ["electric_piston"],
+                extraCasings: 0, 
+                extraCables: 1
+            },
+            fermenter: {
+                name: "fermenter",
+                specialSingle: false,
+                components: ["electric_pump"],
+                extraCasings: 0, 
+                extraCables: 3
+            },
+            fluid_heater: {
+                name: "fluid_heater",
+                specialSingle: false,
+                components: ["electric_pump", "electric_pump"],
+                extraCasings: 0, 
+                extraCables: 1
+            },
+            fluid_solidifier: {
+                name: "fluid_solidifier",
+                specialSingle: false,
+                components: ["electric_pump", "electric_pump"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            forge_hammer: {
+                name: "forge_hammer",
+                specialSingle: false,
+                components: ["electric_piston"],
+                extraCasings: 0, 
+                extraCables: 3
+            },
+            lathe: {
+                name: "lathe",
+                specialSingle: false,
+                components: ["electric_motor", "electric_piston"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            scanner: {
+                name: "scanner",
+                specialSingle: false,
+                components: ["emitter", "sensor"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            mixer: {
+                name: "mixer",
+                specialSingle: false,
+                components: ["electric_motor"],
+                extraCasings: 4, // note: this would be the previous casing tier for ev and below
+                extraCables: 1
+            },
+            ore_washer: {
+                name: "ore_washer",
+                specialSingle: false,
+                components: ["electric_motor"],
+                extraCasings: 8, // note: this would be the previous casing tier for ev and below
+                extraCables: 2
+            },
+            packer: {
+                name: "packer",
+                specialSingle: false,
+                components: ["robot_arm", "conveyor_module"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            laser_engraver: {
+                name: "laser_engraver",
+                specialSingle: false,
+                components: ["electric_piston", "electric_piston", "emitter"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            sifter: {
+                name: "sifter",
+                specialSingle: false,
+                components: ["electric_piston", "electric_piston"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            thermal_centrifuge: {
+                name: "thermal_centrifuge",
+                specialSingle: false,
+                components: ["electric_motor", "electric_motor"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            wiremill: {
+                name: "wiremill",
+                specialSingle: false,
+                components: ["electric_motor", "electric_motor", "electric_motor", "electric_motor"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            circuit_assembler: {
+                name: "circuit_assembler",
+                specialSingle: false,
+                components: ["conveyor_module", "conveyor_module", "robot_arm"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            macerator: {
+                name: "macerator",
+                specialSingle: false,
+                components: ["electric_motor", "electric_piston"],
+                extraCasings: 0, 
+                extraCables: 2
+            },
+            gas_collector: {
+                name: "gas_collector",
+                specialSingle: false,
+                components: ["electric_pump", "electric_pump"],
+                extraCasings: 0, 
+                extraCables: 1
+            },
+            rock_crusher: {
+                name: "rock_crusher",
+                specialSingle: false,
+                components: ["electric_motor", "electric_piston"],
+                extraCasings: 0, 
+                extraCables: 2
+            }
+        }
 
-        function getSingleblockRecycleOutputs(singleblock, tier) {
+        function getSingleblockRecycleOutputs(singleblock, specialSingleBool, tier, components /*not read if special*/, extraCasings /*0 if special*/, extraCables /*0 if special*/) {
             const singleComponents = global.componentMaterials;
             const componentRecycles = global.componentRecycles;
             const materials = {
-                casing: ``,
-                compPrim: ``,
-                cable: ``,
-                compSec: ``,
-                compTert: ``,
-                wire: ``,
-                electrolyzWire: ``
+                casing: "",
+                compPrim: "",
+                cable: "",
+                compSec: "",
+                compTert: "",
+                wire: "",
+                elctrlyzWire: ""
             }
-
+            
             switch(tier) {
                 case `uhv`:
                     const CRuhv = componentRecycles.uhv;
@@ -33,7 +308,7 @@ global.not_hardmode(() => {
                     materials.compSec = CRuhv.secMaterial,
                     materials.compTert = CRuhv.tertMaterial,
                     materials.wire = `gtceu:${singleComponents.uhv.materials.wire}`,
-                    materials.electrolyzWire = `gtceu:${singleComponents.uhv.materials.electrolyzWire}`
+                    materials.elctrlyzWire = `gtceu:${singleComponents.uhv.materials.elctrlyzWire}`
                     break;
                 case `uev`:
                     const CRuev = componentRecycles.uev;
@@ -43,7 +318,7 @@ global.not_hardmode(() => {
                     materials.compSec = CRuev.secMaterial,
                     materials.compTert = CRuev.tertMaterial
                     materials.wire = `gtceu:${singleComponents.uev.materials.wire}`,
-                    materials.electrolyzWire = `gtceu:${singleComponents.uev.materials.electrolyzWire}`
+                    materials.elctrlyzWire = `gtceu:${singleComponents.uev.materials.elctrlyzWire}`
                     break;
                 case `uiv`:
                     const CRuiv = componentRecycles.uev;
@@ -53,366 +328,117 @@ global.not_hardmode(() => {
                     materials.compSec = CRuiv.secMaterial,
                     materials.compTert = CRuiv.tertMaterial
                     materials.wire = `gtceu:${singleComponents.uiv.materials.wire}`,
-                    materials.electrolyzWire = `gtceu:${singleComponents.uiv.materials.electrolyzWire}`
+                    materials.elctrlyzWire = `gtceu:${singleComponents.uiv.materials.elctrlyzWire}`
                     break;
             }
 
-            let blockBools = {
-                primBlock: false,
-                cableBlock: false,
-                secBlock: false,
-                tertBlock: false
+            const specialSingleOutputs = {
+                electric_furnace: [`8x ${materials.casing}`, `2x ${materials.cable}`, `4x ${materials.wire}`, " ", " ", " "],
+                electric_blast_furnace: [`10x ${materials.casing}`, `2x ${materials.cable}`, `4x ${materials.wire}`, " ", " ", " "],
+                electric_smoker: [`8x ${materials.casing}`, `2x ${materials.cable}`, `6x ${materials.wire}`, " ", " ", " "],
+                alloy_smelter: [`8x ${materials.casing}`, `2x ${materials.cable}`, `6x ${materials.wire}`, " ", " ", " "],
+                arc_furnace: [`11x ${materials.casing}`, `5x ${materials.cable}`, "gtceu:graphite_dust", " ", " ", " "],
+                electrolyzer: [`8x ${materials.casing}`, `1x ${materials.cable}`, `2x ${materials.elctrlyzWire}`, " ", " ", " "],
+                polarizer: [`8x ${materials.casing}`, `18x ${materials.cable}`, " ", " ", " ", " "],
+                charger_4x: [`8x ${materials.casing}`, `2x ${materials.cable}`, `8x ${materials.wire}`, " ", " ", " "]
             }
-            let casingCount = 8;
-            switch(singleblock) {
-                case "electric_furnace": {
-                    return [`${casingCount}x ${materials.casing}`, `2x ${materials.cable}`, `4x ${materials.wire}`, " ", " ", " "];
-                }
-                case "electric_blast_furnace": {
-                    casingCount += 2;
-                    return [`${casingCount}x ${materials.casing}`, `2x ${materials.cable}`, `4x ${materials.wire}`, " ", " ", " "];
-                }
-                case "electric_smoker": {
-                    return [`${casingCount}x ${materials.casing}`, `2x ${materials.cable}`, `6x ${materials.wire}`, " ", " ", " "];
-                }
-                case "alloy_smelter": {
-                    return [`${casingCount}x ${materials.casing}`, `2x ${materials.cable}`, `8x ${materials.wire}`, " ", " ", " "];
-                }
-                case "arc_furnace": {
-                    casingCount += 3;
-                    return [`${casingCount}x ${materials.casing}`, `5x ${materials.cable}`, `gtceu:graphite_dust`, " ", " ", " "];
-                }
-                case "electrolyzer": {
-                    return [`${casingCount}x ${materials.casing}`, `1x ${materials.cable}`, `2x ${materials.electrolyzWire}`, " ", " ", " "];
-                }
-                case "polarizer": {
-                    return [`${casingCount}x ${materials.casing}`, `18x ${materials.cable}`, " ", " ", " ", " "];
-                }
-                case "turbo_charger": {
-                    return [`${casingCount}x ${materials.casing}`, `2x ${materials.cable}`, `8x ${materials.wire}`, " ", " ", " "];
-                }
-                case "assembler": {
-                    let totals = global.getComponentTotal(["robot_arm", "robot_arm", "conveyor_module", "conveyor_module"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "autoclave": {
-                    casingCount += 4;
-                    let totals = global.getComponentTotal(["electric_pump"]);
-                    totals.cableCount += 1;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "bender": {
-                    casingCount += 1;
-                    let totals = global.getComponentTotal(["electric_piston", "electric_piston", "electric_motor", "electric_motor"]);
-                    totals.cableCount += 1;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "brewery": {
-                    let totals = global.getComponentTotal(["electric_pump"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "canner": {
-                    let totals = global.getComponentTotal(["electric_pump"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "centrifuge": {
-                    let totals = global.getComponentTotal(["electric_motor", "electric_motor"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "chemical_bath": {
-                    let totals = global.getComponentTotal(["conveyor_module", "conveyor_module", "electric_pump"]);
-                    totals.cableCount += 1;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "chemical_reactor": {
-                    casingCount += 4;
-                    let totals = global.getComponentTotal(["electric_motor"]);
-                    totals.cableCount += 1;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "compressor": {
-                    let totals = global.getComponentTotal(["electric_piston", "electric_piston"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "cutter": {
-                    let totals = global.getComponentTotal(["electric_motor", "conveyor_module"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "distillery": {
-                    let totals = global.getComponentTotal(["electric_pump"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "electromagnetic_separator": {
-                    let totals = global.getComponentTotal(["conveyor_module"]);
-                    totals.cableCount += 10;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "extractor": {
-                    let totals = global.getComponentTotal(["electric_piston", "electric_pump"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "extruder": {
-                    let totals = global.getComponentTotal(["electric_piston"]);
-                    totals.cableCount += 1;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "fermenter": {
-                    let totals = global.getComponentTotal(["electric_pump"]);
-                    totals.cableCount += 3;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "fluid_heater": {
-                    let totals = global.getComponentTotal(["electric_pump", "electric_pump"]);
-                    totals.cableCount += 1;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "fluid_solidifier": {
-                    let totals = global.getComponentTotal(["electric_pump", "electric_pump"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "forge_hammer": {
-                    let totals = global.getComponentTotal(["electric_piston"]);
-                    totals.cableCount += 3;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "lathe": {
-                    let totals = global.getComponentTotal(["electric_motor", "electric_piston"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "scanner": {
-                    let totals = global.getComponentTotal(["emitter", "sensor"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "mixer": {
-                    casingCount += 4; // note that this would be the previous casing tier for ev and below
-                    let totals = global.getComponentTotal(["electric_motor"]);
-                    totals.cableCount += 1;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "ore_washer": {
-                    casingCount += 8; // same as mixer here (seems to be anything using rotors)
-                    let totals = global.getComponentTotal(["electric_motor"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "packer": {
-                    let totals = global.getComponentTotal(["robot_arm", "conveyor_module"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "laser_engraver": {
-                    let totals = global.getComponentTotal(["electric_piston", "electric_piston", "emitter"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "sifter": { 
-                    let totals = global.getComponentTotal(["electric_piston", "electric_piston"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "thermal_centrifuge": {
-                    let totals = global.getComponentTotal(["electric_motor", "electric_motor"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "wiremill": {
-                    let totals = global.getComponentTotal(["electric_motor", "electric_motor", "electric_motor", "electric_motor"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "circuit_assembler": {
-                    let totals = global.getComponentTotal(["conveyor_module", "conveyor_module", "robot_arm"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "macerator": {
-                    let totals = global.getComponentTotal(["electric_motor", "electric_piston"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "gas_collector": {
-                    let totals = global.getComponentTotal(["electric_pump", "electric_pump"]);
-                    totals.cableCount += 1;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
-                case "rock_crusher": {
-                    let totals = global.getComponentTotal(["electric_motor", "electric_piston"]);
-                    totals.cableCount += 2;
-                    let tempObj = global.checkComponentCount(totals);
-                    totals = tempObj.values;
-                    blockBools = tempObj.blocksBools;
-                    break;
-                }
+            let casingCount = 8 + extraCasings;
+            let recycleOutputs;
+
+            if (specialSingleBool) {
+                if (singleblock == "electric_furnace") {recycleOutputs = specialSingleOutputs.electric_furnace;}
+                else if (singleblock == "electric_blast_furnace") {recycleOutputs = specialSingleOutputs.electric_blast_furnace;}
+                else if (singleblock == "electric_smoker") {recycleOutputs = specialSingleOutputs.electric_smoker;}
+                else if (singleblock == "alloy_smelter") {recycleOutputs = specialSingleOutputs.alloy_smelter;}
+                else if (singleblock == "arc_furnace") {recycleOutputs = specialSingleOutputs.arc_furnace;}
+                else if (singleblock == "electrolyzer") {recycleOutputs = specialSingleOutputs.electrolyzer;}
+                else if (singleblock == "polarizer") {recycleOutputs = specialSingleOutputs.polarizer;}
+                else if (singleblock == "charger_4x") {recycleOutputs = specialSingleOutputs.charger_4x;}
             }
-            return [`${casingCount}x ${materials.casing}`, `${totals.cableCount}x ${materials.cable}`, `${totals.primCount}x ${materials.compPrim}`, 
-                    `${totals.secCount}x ${materials.compSec}`, `${totals.tertCount}x ${materials.compTert}`, blockBools];
+            else {
+                const tempTotals = global.getComponentTotal(components);
+                tempTotals.cableCount += extraCables;
+                const tempStr = `${casingCount}x ${materials.casing}`;
+                recycleOutputs = tempStr.concat(global.checkComponentCount(tempTotals));
+            }
+            if (recycleOutputs != undefined) {
+                return recycleOutputs;
+            }
         }
 
         function getFinalOutputs(outputs, macBool) {
             let finalOutputs = [];
             const blockBools = outputs[5];
+            let i=1;
 
             if (macBool) {
                 if (blockBools == " ") {
                     for (let x = 0; x < 5; x++) {
-                        if (outputs[x] != " ") {
+                        if (outputs[x] == "gtceu:graphite_dust") {
+                            finalOutputs[x] = outputs[x];
+                        }
+                        else if (outputs[x] != " ") {
                             finalOutputs[x] = `${outputs[x]}_dust`;
                         }
                     }
                 }
                 else {
                     finalOutputs[0] = `${outputs[0]}_dust`;
-                    for (let x = 0; x < 4; x++) {
-                        if (blockBools[x]) {
-                            if (outputs[x+1] != " ") {
-                                finalOutputs[x+1] = `${outputs[x+1]}_dust_block`;
+                    blockBools.forEach(blockBool => {
+                        if (blockBool) {
+                            if (outputs[i] != " ") {
+                                finalOutputs[i] = `${outputs[i]}_dust_block`;
                             }
                         }
                         else {
-                            if (outputs[x+1] != " ") {
-                                finalOutputs[x+1] = `${outputs[x+1]}_dust`;
+                            if (outputs[i] != " ") {
+                                finalOutputs[i] = `${outputs[i]}_dust`;
                             }
                         }
-                    }
+                    });
                 }
             }
             else {
                 if (blockBools == " ") {
                     for (let x = 0; x < 5; x++) {
-                        if (outputs[x] != " ") {
+                        if (outputs[x] == "gtceu:graphite_dust") {
+                            finalOutputs[x] = outputs[x];
+                        }
+                        else if (outputs[x] != " ") {
                             finalOutputs[x] = `${outputs[x]}_ingot`;
                         }
                     }
                 }
                 else {
                     finalOutputs[0] = `${outputs[0]}_ingot`;
-                    for (let x = 0; x < 4; x++) {
-                        if (blockBools[x]) {
-                            if (outputs[x+1] != " ") {
-                                finalOutputs[x+1] = `${outputs[x+1]}_block`;
+                    blockBools.forEach(blockBool => {
+                        if (blockBool) {
+                            if (outputs[i] != " ") {
+                                finalOutputs[i] = `${outputs[i]}_block`;
                             }
                         }
                         else {
-                            if (outputs[x+1] != " ") {
-                                finalOutputs[x+1] = `${outputs[x+1]}_ingot`;
+                            if (outputs[i] != " ") {
+                                finalOutputs[i] = `${outputs[i]}_ingot`;
                             }
                         }
-                    }
+                        i++;
+                    });
                 }
             }
 
             return finalOutputs;
         }  
 
-        const arcRecipe = (singleblock, tiers) => {
+        const arcRecipe = (singleblock, specialSingleBool, tiers, components, extraCasings, extraCables) => {
             const calculateDuration = global.calculateRecyclingDuration;
             const id = global.id;
             let outputs;
 
             tiers.forEach(tier => {
-                outputs = getFinalOutputs(getSingleblockRecycleOutputs(singleblock, tier), false);
-                event.recipes.gtceu.arc_furnace(`start:arc_${tier}_${singleblock}`)
+                outputs = getFinalOutputs(getSingleblockRecycleOutputs(singleblock, specialSingleBool, tier, components, extraCasings, extraCables), false);
+                console.log (`start:arc_${tier}_${singleblock} outputs: ${outputs}`)
+                event.recipes.gtceu.arc_furnace(id(`arc_${tier}_${singleblock}`))
                     .itemInputs(`gtceu:${tier}_${singleblock}`)
                     .itemOutputs(outputs)
                     .duration(calculateDuration(outputs))
@@ -421,15 +447,16 @@ global.not_hardmode(() => {
             });
         }
 
-        const macRecipe = (singleblock, tiers) => {
+        const macRecipe = (singleblock, specialSingleBool, tiers, components, extraCasings, extraCables) => {
             const calculateDuration = global.calculateRecyclingDuration;
             const calculateVoltageMultiplier = global.calculateRecyclingVoltageMultiplier;
             const id = global.id;
             let outputs;
 
             tiers.forEach(tier => {
-                outputs = getFinalOutputs(getSingleblockRecycleOutputs(singleblock, tier), true);
-                event.recipes.gtceu.macerator(`start:macerate_${tier}_${singleblock}`)
+                outputs = getFinalOutputs(getSingleblockRecycleOutputs(singleblock, specialSingleBool, tier, components, extraCasings, extraCables), true);
+                console.log (`start:macerate_${tier}_${singleblock} outputs: ${outputs}`)
+                event.recipes.gtceu.macerator(id(`macerate_${tier}_${singleblock}`))
                     .itemInputs(`gtceu:${tier}_${singleblock}`)
                     .itemOutputs(outputs)
                     .duration(calculateDuration(outputs))
@@ -438,10 +465,9 @@ global.not_hardmode(() => {
             });
         }
 
-        SINGLEBLOCKS.forEach(singleblock => {
-            arcRecipe(singleblock, TIERS);
-            macRecipe(singleblock, TIERS);
+        SINGLEBLOCKDETAILS.forEach(singleblock => {
+            arcRecipe(singleblock.name, singleblock.specialSingle,TIERS , singleblock.components, singleblock.extraCasings, singleblock.extraCables);
+            macRecipe(singleblock.name, singleblock.specialSingle,TIERS , singleblock.components, singleblock.extraCasings, singleblock.extraCables);
         });
-        
     })
 })
