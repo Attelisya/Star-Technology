@@ -367,7 +367,7 @@ global.not_hardmode(() => {
                 else if (singleblock == "charger_4x") {recycleOutputs = specialSingleOutputs.charger_4x;}
             }
             else {
-                const tempTotals = global.getComponentTotal(components);
+                const tempTotals = global.getUHVPlusComponentTotal(components);
                 tempTotals.cableCount += extraCables;
                 if (tier == "uhv") {
                     console.log(`counts pre block check: prim: ${tempTotals.primCount}, cable: ${tempTotals.cableCount}, sec: ${tempTotals.secCount}, tert: ${tempTotals.tertCount}`);

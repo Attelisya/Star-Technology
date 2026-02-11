@@ -19,7 +19,7 @@ global.componentRecycles = {
     }
 }
 
-global.componentRecycleCount = {
+global.UHVPlusComponentRecycleCounts = {
     sensor: {
         primCount: 18,
         cableCount: 10,

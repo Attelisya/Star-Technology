@@ -50,8 +50,8 @@ global.calculateRecyclingVoltageMultiplier = (itemOutputs) => {
 };
 
 // breaks components down into their base materials
-global.getComponentTotal = (components) => {
-  const componentRecycleCount = global.componentRecycleCount;
+global.getUHVPlusComponentTotal = (components) => {
+  const componentRecycleCounts = global.UHVPlusComponentRecycleCounts;
   let totalCounts = {
     primCount: 0,
     cableCount: 0,
@@ -64,66 +64,66 @@ global.getComponentTotal = (components) => {
   components.forEach(component => {
     switch (component) {
       case "sensor": {
-        totalCounts.primCount += componentRecycleCount.sensor.primCount;
-        totalCounts.cableCount += componentRecycleCount.sensor.cableCount;
-        totalCounts.secCount += componentRecycleCount.sensor.secCount;
-        totalCounts.tertCount += componentRecycleCount.sensor.tertCount;
+        totalCounts.primCount += componentRecycleCounts.sensor.primCount;
+        totalCounts.cableCount += componentRecycleCounts.sensor.cableCount;
+        totalCounts.secCount += componentRecycleCounts.sensor.secCount;
+        totalCounts.tertCount += componentRecycleCounts.sensor.tertCount;
         break;
       }
       case "emitter": {
-        totalCounts.primCount += componentRecycleCount.emitter.primCount;
-        totalCounts.cableCount += componentRecycleCount.emitter.cableCount;
-        totalCounts.secCount += componentRecycleCount.emitter.secCount;
-        totalCounts.tertCount += componentRecycleCount.emitter.tertCount;
+        totalCounts.primCount += componentRecycleCounts.emitter.primCount;
+        totalCounts.cableCount += componentRecycleCounts.emitter.cableCount;
+        totalCounts.secCount += componentRecycleCounts.emitter.secCount;
+        totalCounts.tertCount += componentRecycleCounts.emitter.tertCount;
         break;
       }
       case "field_generator": {
-        totalCounts.primCount += componentRecycleCount.field_generator.primCount;
-        totalCounts.cableCount += componentRecycleCount.field_generator.cableCount;
-        totalCounts.secCount += componentRecycleCount.field_generator.secCount;
-        totalCounts.tertCount += componentRecycleCount.field_generator.tertCount;
+        totalCounts.primCount += componentRecycleCounts.field_generator.primCount;
+        totalCounts.cableCount += componentRecycleCounts.field_generator.cableCount;
+        totalCounts.secCount += componentRecycleCounts.field_generator.secCount;
+        totalCounts.tertCount += componentRecycleCounts.field_generator.tertCount;
         break;
       }
       case "robot_arm": {
-        totalCounts.primCount += componentRecycleCount.robot_arm.primCount;
-        totalCounts.cableCount += componentRecycleCount.robot_arm.cableCount;
-        totalCounts.secCount += componentRecycleCount.robot_arm.secCount;
-        totalCounts.tertCount += componentRecycleCount.robot_arm.tertCount;
+        totalCounts.primCount += componentRecycleCounts.robot_arm.primCount;
+        totalCounts.cableCount += componentRecycleCounts.robot_arm.cableCount;
+        totalCounts.secCount += componentRecycleCounts.robot_arm.secCount;
+        totalCounts.tertCount += componentRecycleCounts.robot_arm.tertCount;
         break;
       }
       case "electric_piston": {
-        totalCounts.primCount += componentRecycleCount.electric_piston.primCount;
-        totalCounts.cableCount += componentRecycleCount.electric_piston.cableCount;
-        totalCounts.secCount += componentRecycleCount.electric_piston.secCount;
-        totalCounts.tertCount += componentRecycleCount.electric_piston.tertCount;
+        totalCounts.primCount += componentRecycleCounts.electric_piston.primCount;
+        totalCounts.cableCount += componentRecycleCounts.electric_piston.cableCount;
+        totalCounts.secCount += componentRecycleCounts.electric_piston.secCount;
+        totalCounts.tertCount += componentRecycleCounts.electric_piston.tertCount;
         break;
       }
       case "conveyor_module": {
-        totalCounts.primCount += componentRecycleCount.conveyor_module.primCount;
-        totalCounts.cableCount += componentRecycleCount.conveyor_module.cableCount;
-        totalCounts.secCount += componentRecycleCount.conveyor_module.secCount;
-        totalCounts.tertCount += componentRecycleCount.conveyor_module.tertCount;
+        totalCounts.primCount += componentRecycleCounts.conveyor_module.primCount;
+        totalCounts.cableCount += componentRecycleCounts.conveyor_module.cableCount;
+        totalCounts.secCount += componentRecycleCounts.conveyor_module.secCount;
+        totalCounts.tertCount += componentRecycleCounts.conveyor_module.tertCount;
         break;
       }
       case "fluid_regulator": {
-        totalCounts.primCount += componentRecycleCount.fluid_regulator.primCount;
-        totalCounts.cableCount += componentRecycleCount.fluid_regulator.cableCount;
-        totalCounts.secCount += componentRecycleCount.fluid_regulator.secCount;
-        totalCounts.tertCount += componentRecycleCount.fluid_regulator.tertCount;
+        totalCounts.primCount += componentRecycleCounts.fluid_regulator.primCount;
+        totalCounts.cableCount += componentRecycleCounts.fluid_regulator.cableCount;
+        totalCounts.secCount += componentRecycleCounts.fluid_regulator.secCount;
+        totalCounts.tertCount += componentRecycleCounts.fluid_regulator.tertCount;
         break;
       }
       case "electric_pump": {
-        totalCounts.primCount += componentRecycleCount.electric_pump.primCount;
-        totalCounts.cableCount += componentRecycleCount.electric_pump.cableCount;
-        totalCounts.secCount += componentRecycleCount.electric_pump.secCount;
-        totalCounts.tertCount += componentRecycleCount.electric_pump.tertCount;
+        totalCounts.primCount += componentRecycleCounts.electric_pump.primCount;
+        totalCounts.cableCount += componentRecycleCounts.electric_pump.cableCount;
+        totalCounts.secCount += componentRecycleCounts.electric_pump.secCount;
+        totalCounts.tertCount += componentRecycleCounts.electric_pump.tertCount;
         break;
       }
       case "electric_motor": {
-        totalCounts.primCount += componentRecycleCount.electric_motor.primCount;
-        totalCounts.cableCount += componentRecycleCount.electric_motor.cableCount;
-        totalCounts.secCount += componentRecycleCount.electric_motor.secCount;
-        totalCounts.tertCount += componentRecycleCount.electric_motor.tertCount;
+        totalCounts.primCount += componentRecycleCounts.electric_motor.primCount;
+        totalCounts.cableCount += componentRecycleCounts.electric_motor.cableCount;
+        totalCounts.secCount += componentRecycleCounts.electric_motor.secCount;
+        totalCounts.tertCount += componentRecycleCounts.electric_motor.tertCount;
         break;
       }
     }
