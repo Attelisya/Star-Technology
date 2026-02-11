@@ -8,6 +8,7 @@ global.not_hardmode(() => {
 
         function getParallelRecycleOutputs(tier, absoluteBool, LUVToUV, UHVPlus) {
             let finalOutputs = [];
+            const componentRecycles = global.componentRecycles;
             
             const materials = {
                 casing: "",
@@ -18,13 +19,9 @@ global.not_hardmode(() => {
                 wire: "",
                 foil: ""
             }
-            
-            //if IV
-            if (!(LUVToUV && UHVPlus)) {
-                finalOutputs = ["12x gtceu:tungsten_steel", "3x gtceu:platinum", "gtceu:tungsten", "2x gtceu:iridium"];
-            }
+
             //if LUVToUV
-            else if (LUVToUV) {
+            if (LUVToUV) {
                 const getLUVToUVComponentTotal = global.getLUVToUVComponentTotal;
                 const tempTotals = getLUVToUVComponentTotal(["emitter", "sensor"]);
                 const {
@@ -36,7 +33,7 @@ global.not_hardmode(() => {
 
                 switch (tier) {
                     case "luv": {
-                        const CRluv = global.componentRecycles.luv;
+                        const CRluv = componentRecycles.luv;
                         materials.casing = "gtceu:rhodium_plated_palladium";
                         materials.compPrim = CRluv.primMaterial;
                         materials.cable = CRluv.cableMaterial;
@@ -45,7 +42,7 @@ global.not_hardmode(() => {
                         break;
                     }
                     case "zpm": {
-                        const CRzpm = global.componentRecycles.zpm;
+                        const CRzpm = componentRecycles.zpm;
                         materials.casing = "gtceu:naquadah_alloy";
                         materials.compPrim = CRzpm.primMaterial;
                         materials.cable = CRzpm.cableMaterial;
@@ -54,7 +51,7 @@ global.not_hardmode(() => {
                         break;
                     }
                     case "uv": {
-                        const CRuv = global.componentRecycles.uv;
+                        const CRuv = componentRecycles.uv;
                         materials.casing = "gtceu:darmstadtium";
                         materials.compPrim = CRuv.primMaterial;
                         materials.cable = CRuv.cableMaterial;
@@ -76,7 +73,7 @@ global.not_hardmode(() => {
                 
             }
             //if UHVPlus
-            else {
+            else if (UHVPlus){
                 let tempTotals;
 
                 switch(tier) {
@@ -136,7 +133,7 @@ global.not_hardmode(() => {
                     
                     let position = 0;
                 
-                    finalOutputs[position] = `${casingCount}x ${materials.casing}`; position++;
+                    finalOutputs[position] = `8x ${materials.casing}`; position++;
                     if (primCount != 0) {finalOutputs[position] = `${primCount}x ${materials.compPrim}`; position++;}
                     if (cableCount != 0) {finalOutputs[position] = `${cableCount}x ${materials.cable}`; position++;}
                     if (secCount != 0) {finalOutputs[position] = `${secCount}x ${materials.compSec}`; position++;}
@@ -147,7 +144,7 @@ global.not_hardmode(() => {
                     finalOutputs[position] = tertBlock; position++;
                 }
                 else { //assuming all future tiers also have the tert material as the casing material
-                    tempTotals.tertCount += casingCount;
+                    tempTotals.tertCount += 8;
 
                     const tempObj = global.checkComponentCount(tempTotals);
                     if (!tempObj) return;
@@ -178,6 +175,9 @@ global.not_hardmode(() => {
                     finalOutputs[position] = tertBlock; position++;
                 }
             }
+            else {                
+                finalOutputs = ["12x gtceu:tungsten_steel", "3x gtceu:platinum", "gtceu:tungsten", "2x gtceu:iridium", false, false, false, false];
+            }
 
             console.log(`final outputs: ${finalOutputs}`);
             return finalOutputs;
@@ -196,6 +196,14 @@ global.not_hardmode(() => {
                     .itemInputs(`start_core:${tier}_absolute_parallel_hatch`)
                     .itemOutputs(absoluteOutputs)
                     .duration(calculateDuration(absoluteOutputs))
+                    .EUt(GTValues.VA[GTValues.LV])
+                    .category(GTRecipeCategories.ARC_FURNACE_RECYCLING);
+
+                outputs = getFinalOutputs(getParallelRecycleOutputs(tier, false, LUVToUV, UHVPlus), tier, false, false);
+                event.recipes.gtceu.arc_furnace(id(`arc_${tier}_parallel_hatch`))
+                    .itemInputs(`start_core:${tier}_parallel_hatch`)
+                    .itemOutputs(outputs)
+                    .duration(calculateDuration(outputs))
                     .EUt(GTValues.VA[GTValues.LV])
                     .category(GTRecipeCategories.ARC_FURNACE_RECYCLING);
             }
@@ -225,18 +233,28 @@ global.not_hardmode(() => {
                     .duration(calculateDuration(absoluteOutputs))
                     .EUt(2 * calculateVoltageMultiplier(absoluteOutputs))
                     .category(GTRecipeCategories.MACERATOR_RECYCLING);
-            }
 
-            outputs = getFinalOutputs(getParallelRecycleOutputs(tier, false, LUVToUV, UHVPlus), tier, true, false);
-            event.recipes.gtceu.macerator(id(`macerate_${tier}_parallel_hatch`))
-                .itemInputs(`gtceu:${tier}_parallel_hatch`)
-                .itemOutputs(outputs)
-                .duration(calculateDuration(outputs))
-                .EUt(2 * calculateVoltageMultiplier(outputs))
-                .category(GTRecipeCategories.MACERATOR_RECYCLING);
+                outputs = getFinalOutputs(getParallelRecycleOutputs(tier, false, LUVToUV, UHVPlus), tier, true, false);
+                event.recipes.gtceu.macerator(id(`macerate_${tier}_parallel_hatch`))
+                    .itemInputs(`start_core:${tier}_parallel_hatch`)
+                    .itemOutputs(outputs)
+                    .duration(calculateDuration(outputs))
+                    .EUt(2 * calculateVoltageMultiplier(outputs))
+                    .category(GTRecipeCategories.MACERATOR_RECYCLING);
+            }
+            else {
+                outputs = getFinalOutputs(getParallelRecycleOutputs(tier, false, LUVToUV, UHVPlus), tier, true, false);
+                event.recipes.gtceu.macerator(id(`macerate_${tier}_parallel_hatch`))
+                    .itemInputs(`gtceu:${tier}_parallel_hatch`)
+                    .itemOutputs(outputs)
+                    .duration(calculateDuration(outputs))
+                    .EUt(2 * calculateVoltageMultiplier(outputs))
+                    .category(GTRecipeCategories.MACERATOR_RECYCLING);
+            }
         }
 
         TIERS.forEach(tier => {
+            console.log(`tier: ${tier}`);
             if (tier == "luv" || tier == "zpm" || tier == "uv") {
                 LUVTOUV = true;
                 UHVPLUS = false;
