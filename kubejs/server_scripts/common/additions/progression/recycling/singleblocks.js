@@ -320,7 +320,7 @@ global.not_hardmode(() => {
                     const CRuhv = componentRecycles.uhv;
                     materials.casing = "gtceu:neutronium",
                     materials.compPrim = CRuhv.primMaterial,
-                    materials.cable = CRuhv.cable,
+                    materials.cable = CRuhv.cableMaterial,
                     materials.compSec = CRuhv.secMaterial,
                     materials.compTert = CRuhv.tertMaterial,
                     materials.wire = `gtceu:${singleComponents.uhv.materials.wire}`,
@@ -331,7 +331,7 @@ global.not_hardmode(() => {
                     const CRuev = componentRecycles.uev;
                     materials.casing = "gtceu:mythrolic_alloy",
                     materials.compPrim = CRuev.primMaterial,
-                    materials.cable = CRuev.cable,
+                    materials.cable = CRuev.cableMaterial,
                     materials.compSec = CRuev.secMaterial,
                     materials.compTert = CRuev.tertMaterial
                     materials.wire = `gtceu:${singleComponents.uev.materials.wire}`,
@@ -342,7 +342,7 @@ global.not_hardmode(() => {
                     const CRuiv = componentRecycles.uiv;
                     materials.casing = "gtceu:chaotixic_alloy",
                     materials.compPrim = CRuiv.primMaterial,
-                    materials.cable = CRuiv.cable,
+                    materials.cable = CRuiv.cableMaterial,
                     materials.compSec = CRuiv.secMaterial,
                     materials.compTert = CRuiv.tertMaterial
                     materials.wire = `gtceu:${singleComponents.uiv.materials.wire}`,
@@ -378,8 +378,7 @@ global.not_hardmode(() => {
                 const tempTotals = global.getUHVPlusComponentTotal(components);
                 tempTotals.cableCount += extraCables;
                 if (tier == "uhv") {
-                    console.log(`counts pre block check: prim: ${tempTotals.primCount}, cable: ${tempTotals.cableCount}, sec: ${tempTotals.secCount}, tert: ${tempTotals.tertCount}`);
-                    const tempArr = global.checkComponentCount(tempTotals);
+                    const tempObj = global.checkComponentCount(tempTotals);
                     const {
                         blockBools: {
                             primBlock,
@@ -393,9 +392,8 @@ global.not_hardmode(() => {
                             secCount,
                             tertCount
                         }
-                    } = tempArr;
+                    } = tempObj;
                     
-                    console.log(`counts post block check: prim: ${primCount}, cable: ${cableCount}, sec: ${secCount}, tert: ${tertCount}`);
                     let position = 0;
                 
                     recycleOutputs[position] = `${casingCount}x ${materials.casing}`; position++;
@@ -410,8 +408,9 @@ global.not_hardmode(() => {
                 }
                 else { //assuming all future tiers also have the tert material as the casing material
                     tempTotals.tertCount += casingCount;
-                    console.log(`counts pre block check: prim: ${tempTotals.primCount}, cable: ${tempTotals.cableCount}, sec: ${tempTotals.secCount}, tert: ${tempTotals.tertCount}`);
-                    const tempArr = global.checkComponentCount(tempTotals);
+
+                    const tempObj = global.checkComponentCount(tempTotals);
+                    if (!tempObj) return;
                     const {
                         blockBools: {
                             primBlock,
@@ -425,9 +424,8 @@ global.not_hardmode(() => {
                             secCount,
                             tertCount
                         }
-                    } = tempArr;
+                    } = tempObj;
                     
-                    console.log(`counts post block check: prim: ${primCount}, cable: ${cableCount}, sec: ${secCount}, tert: ${tertCount}`);
                     let position = 0;
                 
                     if (primCount != 0) {recycleOutputs[position] = `${primCount}x ${materials.compPrim}`; position++;}
@@ -441,7 +439,6 @@ global.not_hardmode(() => {
                 }
             }
             if (recycleOutputs != undefined) {
-                console.log(`recycleOutputs: ${recycleOutputs}`);
                 return recycleOutputs;
             }
         }
@@ -456,7 +453,6 @@ global.not_hardmode(() => {
 
             tiers.forEach(tier => {
                 outputs = getFinalOutputs(getSingleblockRecycleOutputs(true, singleblock, specialSingleBool, tier, components, extraCasings, extraCables), tier, false, specialSingleBool);
-                console.log (`start:arc_${tier}_${singleblock} outputs: ${outputs}`);
                 event.recipes.gtceu.arc_furnace(id(`arc_${tier}_${singleblock}`))
                     .itemInputs(`gtceu:${tier}_${singleblock}`)
                     .itemOutputs(outputs)
@@ -475,7 +471,6 @@ global.not_hardmode(() => {
 
             tiers.forEach(tier => {
                 outputs = getFinalOutputs(getSingleblockRecycleOutputs(true, singleblock, specialSingleBool, tier, components, extraCasings, extraCables), true, specialSingleBool);
-                console.log (`start:macerate_${tier}_${singleblock} outputs: ${outputs}`);
                 event.recipes.gtceu.macerator(id(`macerate_${tier}_${singleblock}`))
                     .itemInputs(`gtceu:${tier}_${singleblock}`)
                     .itemOutputs(outputs)
@@ -496,9 +491,7 @@ global.not_hardmode(() => {
                 extraCables
             } = data
             
-            console.log(`arcRecipe: name:${name}, specBool:${specialSingle}, tiers:${TIERS}, comps:${components}, casings: ${extraCasings}, cables: ${extraCables}`);
             arcRecipe(name, specialSingle, TIERS, components, extraCasings, extraCables);
-            // console.log(`macRecipe: name:${name}, specBool:${specialSingle}, tiers:${TIERS}, comps:${components}, casings: ${extraCasings}, cables: ${extraCables}`);
             // macRecipe(name, specialSingle, TIERS, components, extraCasings, extraCables);
         } 
         

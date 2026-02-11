@@ -1,21 +1,60 @@
 global.componentRecycles = {
+    luv: {
+        primMaterial: "gtceu:hsss",
+        cableMaterial: "gtceu:niobium_titanium",
+        wireMaterial: "gtceu:palladium",
+        foilMaterial: "gtceu:rhodium"
+    },
+    zpm: {
+        primMaterial: "gtceu:naquadah_alloy",
+        cableMaterial: "gtceu:vanadium_gallium",
+        wireMaterial: "gtceu:europium",
+        foilMaterial: "gtceu:trinium"
+    },
+    uv: {
+        primMaterial: "gtceu:titan_steel",
+        cableMaterial: "gtceu:yttrium_barium_cuprate",
+        wireMaterial: "gtceu:americium",
+        foilMaterial: "gtceu:naquadria"
+    },
     uhv: {
         primMaterial: "gtceu:zalloy",
-        cable: "gtceu:europium",
+        cableMaterial: "gtceu:europium",
         secMaterial: "gtceu:zircalloy_4",
         tertMaterial: "gtceu:zirconium"
     },
     uev: {
         primMaterial: "gtceu:starium_alloy",
-        cable: "gtceu:cerium_tritelluride",
+        cableMaterial: "gtceu:cerium_tritelluride",
         secMaterial: "gtceu:magmada_alloy",
         tertMaterial: "gtceu:mythrolic_alloy"
     },
     uiv: {
         primMaterial: "gtceu:ohmderblux_alloy",
-        cable: "gtceu:polonium_bismide",
+        cableMaterial: "gtceu:polonium_bismide",
         secMaterial: "gtceu:abyssal_alloy",
         tertMaterial: "gtceu:chaotixic_alloy"
+    }
+}
+
+global.LUVToUVComponentRecycleCounts = { 
+    emitter: {
+        primCount: 13,
+        cableCount: 3,
+        wireCount: 8,
+        foilCount: 24
+    },
+    sensor: {
+        primCount: 13,
+        cableCount: 3,
+        wireCount: 8,
+        foilCount: 24
+    },
+    electric_motor: {
+        primCount: 5,
+        cableCount: 1,
+        wireCount: 8,
+        foilCount: 0
     }
 }
 

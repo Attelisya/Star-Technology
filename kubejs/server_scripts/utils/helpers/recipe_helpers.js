@@ -1,7 +1,10 @@
 // priority: 1000
 
 /**
- * https://github.com/GregTechCEu/GregTech-Modern/blob/v1.6.4-1.20.1/src/main/java/com/gregtechceu/gtceu/data/recipe/misc/RecyclingRecipes.java#L424
+ * https://github.com/primchCEu/GregTech-Modern/blob/v1.6.4-1.20.1/src/main/java/com/gregtechceu/gtceu/data/recipe/misc/RecyclingRecipes.javatotalCounts.valueCount += componentRecycleCounts.value.primCount;
+ * totalCounts.valueCount cableCount componentRecycleCounts.value.cableCount;
+ * totalCounts.valueCount += wireounts.value.wireCount;
+ * totalCounts.valueCount += foilnentRecycleCounts.value.foilCountL424
  * @param {string[]} itemOutputs
  * @returns {number}
  */
@@ -18,7 +21,10 @@ global.calculateRecyclingDuration = (itemOutputs) => {
 };
 
 /**
- * https://github.com/GregTechCEu/GregTech-Modern/blob/v1.6.4-1.20.1/src/main/java/com/gregtechceu/gtceu/data/recipe/misc/RecyclingRecipes.java#L389
+ * https://github.com/primchCEu/GregTech-Modern/blob/v1.6.4-1.20.1/src/main/java/com/gregtechceu/gtceu/data/recipe/misc/RecyclingRecipes.javatotalCounts.valueCount += componentRecycleCounts.value.primCount;
+ * totalCounts.valueCount cableCount componentRecycleCounts.value.cableCount;
+ * totalCounts.valueCount += wireounts.value.wireCount;
+ * totalCounts.valueCount += foilnentRecycleCounts.value.foilCountL389
  * @param {string[]} itemOutputs
  * @returns {number}
  */
@@ -49,7 +55,37 @@ global.calculateRecyclingVoltageMultiplier = (itemOutputs) => {
   return 16;
 };
 
-// breaks components down into their base materials
+global.getLUVToUVComponentTotal = (components) => {
+  const componentRecycleCounts = global.LUVToUVComponentRecycleCounts;
+  let totalCounts = {
+    primCount: 0,
+    cableCount: 0,
+    wireCount: 0,
+    foilCount: 0
+  }
+
+  components.forEach(component => {
+    switch (component) {
+      case "emitter": {
+        totalCounts.primCount += componentRecycleCounts.emitter.primCount;
+        totalCounts.cableCount += componentRecycleCounts.emitter.cableCount;
+        totalCounts.wireCount += componentRecycleCounts.emitter.wireCount;
+        totalCounts.foilCount += componentRecycleCounts.emitter.foilCount;
+        break;
+      }
+      case "sensor": {
+        totalCounts.primCount += componentRecycleCounts.sensor.primCount;
+        totalCounts.cableCount += componentRecycleCounts.sensor.cableCount;
+        totalCounts.wireCount += componentRecycleCounts.sensor.wireCount;
+        totalCounts.foilCount += componentRecycleCounts.sensor.foilCount;
+        break;
+      }
+    }
+  })
+  return totalCounts;
+}
+
+// breaks uhv plus components down into their base materials
 global.getUHVPlusComponentTotal = (components) => {
   const componentRecycleCounts = global.UHVPlusComponentRecycleCounts;
   let totalCounts = {
@@ -63,18 +99,18 @@ global.getUHVPlusComponentTotal = (components) => {
   // adds all sent component ingredients together
   components.forEach(component => {
     switch (component) {
-      case "sensor": {
-        totalCounts.primCount += componentRecycleCounts.sensor.primCount;
-        totalCounts.cableCount += componentRecycleCounts.sensor.cableCount;
-        totalCounts.secCount += componentRecycleCounts.sensor.secCount;
-        totalCounts.tertCount += componentRecycleCounts.sensor.tertCount;
-        break;
-      }
       case "emitter": {
         totalCounts.primCount += componentRecycleCounts.emitter.primCount;
         totalCounts.cableCount += componentRecycleCounts.emitter.cableCount;
         totalCounts.secCount += componentRecycleCounts.emitter.secCount;
         totalCounts.tertCount += componentRecycleCounts.emitter.tertCount;
+        break;
+      }
+      case "sensor": {
+        totalCounts.primCount += componentRecycleCounts.sensor.primCount;
+        totalCounts.cableCount += componentRecycleCounts.sensor.cableCount;
+        totalCounts.secCount += componentRecycleCounts.sensor.secCount;
+        totalCounts.tertCount += componentRecycleCounts.sensor.tertCount;
         break;
       }
       case "field_generator": {
