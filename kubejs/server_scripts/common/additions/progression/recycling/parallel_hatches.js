@@ -29,7 +29,7 @@ global.not_hardmode(() => {
                     cableCount,
                     wireCount,
                     foilCount
-                } = tempTotals
+                } = tempTotals;
 
                 switch (tier) {
                     case "luv": {
@@ -176,10 +176,10 @@ global.not_hardmode(() => {
                 }
             }
             else {                
-                finalOutputs = ["12x gtceu:tungsten_steel", "3x gtceu:platinum", "gtceu:tungsten", "2x gtceu:iridium", false, false, false, false];
+                finalOutputs = ["12x gtceu:tungsten_steel", "3x gtceu:platinum", "gtceu:tungsten", "2x gtceu:iridium",
+                    /*fake blockBools*/ false, false, false, false];
             }
 
-            console.log(`final outputs: ${finalOutputs}`);
             return finalOutputs;
         } 
 
@@ -191,7 +191,6 @@ global.not_hardmode(() => {
 
             if (UHVPlus) {
                 let absoluteOutputs = getFinalOutputs(getParallelRecycleOutputs(tier, true, LUVToUV, UHVPlus), tier, false, false);
-                console.log(`absolute outputs: ${absoluteOutputs}`);
                 event.recipes.gtceu.arc_furnace(id(`arc_${tier}_absolute_parallel_hatch`))
                     .itemInputs(`start_core:${tier}_absolute_parallel_hatch`)
                     .itemOutputs(absoluteOutputs)
@@ -254,7 +253,6 @@ global.not_hardmode(() => {
         }
 
         TIERS.forEach(tier => {
-            console.log(`tier: ${tier}`);
             if (tier == "luv" || tier == "zpm" || tier == "uv") {
                 LUVTOUV = true;
                 UHVPLUS = false;

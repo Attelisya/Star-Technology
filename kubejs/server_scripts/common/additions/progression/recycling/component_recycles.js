@@ -50,6 +50,12 @@ global.LUVToUVComponentRecycleCounts = {
         wireCount: 8,
         foilCount: 24
     },
+    field_generator: {
+        primCount: 36,
+        cableCount: 8,
+        wireCount: 16,
+        foilCount: 48
+    },
     electric_motor: {
         primCount: 5,
         cableCount: 1,
