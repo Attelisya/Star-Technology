@@ -40,7 +40,7 @@ global.componentRecycles = {
 global.LUVToUVComponentRecycleCounts = { 
     dreamlink_cover: {
         primCount: 13,
-        cableCount: 11,
+        cableCount: 4,
         secCount: 1,
         tertCount: 4
     },
