@@ -485,7 +485,7 @@ global.not_hardmode(() => {
             } = data
             
             arcRecipe(name, specialSingle, TIERS, components, extraCasings, extraCables);
-            // macRecipe(name, specialSingle, TIERS, components, extraCasings, extraCables);
+            macRecipe(name, specialSingle, TIERS, components, extraCasings, extraCables);
         } 
         
         SINGLEBLOCKS.forEach(singleblock => {

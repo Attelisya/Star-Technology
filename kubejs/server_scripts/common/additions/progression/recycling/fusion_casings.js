@@ -198,7 +198,7 @@ global.not_hardmode(() => {
             } = data
 
             arcRecipe(name, prefix, field_generator_tier, casing_tier);
-            // macRecipe(name, prefix, field_generator_tier, casing_tier);
+            macRecipe(name, prefix, field_generator_tier, casing_tier);
         }
 
         CASINGS.forEach(casing => {

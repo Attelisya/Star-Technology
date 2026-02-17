@@ -166,7 +166,7 @@ global.not_hardmode(() => {
         
         TIERS.forEach(tier => {
             arcRecipe(tier);
-            // macRecipe(tier);
+            macRecipe(tier);
         })
     })
 })

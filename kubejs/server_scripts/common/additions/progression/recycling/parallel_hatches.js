@@ -266,7 +266,7 @@ global.not_hardmode(() => {
                 UHVPLUS = false;
             }
 
-            // macRecipe(tier, LUVTOUV, UHVPLUS);
+            macRecipe(tier, LUVTOUV, UHVPLUS);
             arcRecipe(tier, LUVTOUV, UHVPLUS);
         })
     })
