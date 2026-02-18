@@ -390,10 +390,10 @@ global.not_hardmode(() => {
                     let position = 0;
                 
                     recycleOutputs[position] = `${casingCount}x ${materials.casing}`; position++;
-                    if (primCount != 0) {recycleOutputs[position] = `${primCount}x ${materials.compPrim}`; position++;}
-                    if (cableCount != 0) {recycleOutputs[position] = `${cableCount}x ${materials.cable}`; position++;}
-                    if (secCount != 0) {recycleOutputs[position] = `${secCount}x ${materials.compSec}`; position++;}
-                    if (tertCount != 0) {recycleOutputs[position] = `${tertCount}x ${materials.compTert}`; position++;}
+                    if (primCount != 0) { recycleOutputs[position] = `${primCount}x ${materials.compPrim}`; position++; }
+                    if (cableCount != 0) { recycleOutputs[position] = `${cableCount}x ${materials.cable}`; position++; }
+                    if (secCount != 0) { recycleOutputs[position] = `${secCount}x ${materials.compSec}`; position++; }
+                    if (tertCount != 0) { recycleOutputs[position] = `${tertCount}x ${materials.compTert}`; position++; }
                     recycleOutputs[position] = primBlock; position++;
                     recycleOutputs[position] = cableBlock; position++;
                     recycleOutputs[position] = secBlock; position++;
@@ -421,10 +421,10 @@ global.not_hardmode(() => {
                     
                     let position = 0;
                 
-                    if (primCount != 0) {recycleOutputs[position] = `${primCount}x ${materials.compPrim}`; position++;}
-                    if (cableCount != 0) {recycleOutputs[position] = `${cableCount}x ${materials.cable}`; position++;}
-                    if (secCount != 0) {recycleOutputs[position] = `${secCount}x ${materials.compSec}`; position++;}
-                    if (tertCount != 0) {recycleOutputs[position] = `${tertCount}x ${materials.compTert}`; position++;}
+                    if (primCount != 0) { recycleOutputs[position] = `${primCount}x ${materials.compPrim}`; position++; }
+                    if (cableCount != 0) { recycleOutputs[position] = `${cableCount}x ${materials.cable}`; position++; }
+                    if (secCount != 0) { recycleOutputs[position] = `${secCount}x ${materials.compSec}`; position++; }
+                    if (tertCount != 0) { recycleOutputs[position] = `${tertCount}x ${materials.compTert}`; position++; }
                     recycleOutputs[position] = primBlock; position++;
                     recycleOutputs[position] = cableBlock; position++;
                     recycleOutputs[position] = secBlock; position++;

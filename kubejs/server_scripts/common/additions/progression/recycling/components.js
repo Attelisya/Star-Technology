@@ -26,10 +26,10 @@ global.not_hardmode(() => {
                 } = global.componentRecycleMaterials[tier];
 
                 let position = 0;
-                if (primCount != 0) {finalOutputs[position] = `${primCount}x ${primMaterial}`; position++;}
-                if (cableCount != 0) {finalOutputs[position] = `${cableCount}x ${cableMaterial}`; position++;}
-                if (wireCount != 0) {finalOutputs[position] = `${wireCount}x ${wireMaterial}`; position++;}
-                if (foilCount != 0) {finalOutputs[position] = `${foilCount}x ${foilMaterial}`; position++;}
+                if (primCount != 0) { finalOutputs[position] = `${primCount}x ${primMaterial}`; position++; }
+                if (cableCount != 0) { finalOutputs[position] = `${cableCount}x ${cableMaterial}`; position++; }
+                if (wireCount != 0) { finalOutputs[position] = `${wireCount}x ${wireMaterial}`; position++; }
+                if (foilCount != 0) { finalOutputs[position] = `${foilCount}x ${foilMaterial}`; position++; }
                 for (let x = position; x < position + 4; x++) { //fake block bools
                     finalOutputs[x] = false;
                 }
@@ -50,10 +50,10 @@ global.not_hardmode(() => {
                 } = global.componentRecycleMaterials[tier];
 
                 let position = 0;
-                if (primCount != 0) {finalOutputs[position] = `${primCount}x ${primMaterial}`; position++;}
-                if (cableCount != 0) {finalOutputs[position] = `${cableCount}x ${cableMaterial}`; position++;}
-                if (secCount != 0) {finalOutputs[position] = `${secCount}x ${secMaterial}`; position++;}
-                if (tertCount != 0) {finalOutputs[position] = `${tertCount}x ${tertMaterial}`; position++;}
+                if (primCount != 0) { finalOutputs[position] = `${primCount}x ${primMaterial}`; position++; }
+                if (cableCount != 0) { finalOutputs[position] = `${cableCount}x ${cableMaterial}`; position++; }
+                if (secCount != 0) { finalOutputs[position] = `${secCount}x ${secMaterial}`; position++; }
+                if (tertCount != 0) { finalOutputs[position] = `${tertCount}x ${tertMaterial}`; position++; }
                 for (let x = position; x < position + 4; x++) { //fake block bools
                     finalOutputs[x] = false;
                 }
