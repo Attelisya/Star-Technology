@@ -371,7 +371,7 @@ global.not_hardmode(() => {
                 const tempTotals = global.getUHVPlusComponentTotal(components);
                 tempTotals.cableCount += extraCables;
                 if (tier == "uhv") {
-                    const tempObj = global.checkComponentCount(tempTotals);
+                    const tempObj = global.checkComponentCount(tempTotals, true);
                     const {
                         blockBools: {
                             primBlock,
@@ -402,7 +402,7 @@ global.not_hardmode(() => {
                 else { //assuming all future tiers also have the tert material as the casing material
                     tempTotals.tertCount += casingCount;
 
-                    const tempObj = global.checkComponentCount(tempTotals);
+                    const tempObj = global.checkComponentCount(tempTotals, true);
                     if (!tempObj) return;
                     const {
                         blockBools: {

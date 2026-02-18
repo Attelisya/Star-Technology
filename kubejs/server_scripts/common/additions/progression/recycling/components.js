@@ -58,7 +58,6 @@ global.not_hardmode(() => {
                     finalOutputs[x] = false;
                 }
             }
-            console.log(`final outputs: ${finalOutputs}`);
             return finalOutputs;
         }
 

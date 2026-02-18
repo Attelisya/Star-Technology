@@ -168,58 +168,110 @@ global.getUHVPlusComponentTotal = (components) => {
   return totalCounts;
 }
 
-// checks if input value is too big for one output slot, then breaks down into block form (built for component recycling) 
-global.checkComponentCount = (tempTotals) => {
-  const finalOutput = {
-    blockBools: {
-      primBlock: false,
-      cableBlock: false,
-      secBlock: false,
-      tertBlock: false
-    },
-    totals: {
-      primCount: 0,
-      cableCount: 0,
-      secCount: 0,
-      tertCount: 0
-    }
-  }
-
+// checks if input value is too big for one output slot, then breaks down into block form 
+global.checkComponentCount = (tempTotals, UHVPLUS) => {
   
 
-  if (tempTotals.primCount > 64) {
-    finalOutput.blockBools.primBlock = true; 
-    finalOutput.totals.primCount = Math.floor(tempTotals.primCount / 9);
+  if (UHVPLUS) {
+    const finalOutput = {
+      blockBools: {
+        primBlock: false,
+        cableBlock: false,
+        secBlock: false,
+        tertBlock: false
+      },
+      totals: {
+        primCount: 0,
+        cableCount: 0,
+        secCount: 0,
+        tertCount: 0
+      }
+    }
+
+    if (tempTotals.primCount > 64) {
+      finalOutput.blockBools.primBlock = true; 
+      finalOutput.totals.primCount = Math.floor(tempTotals.primCount / 9);
+    }
+    else {
+      finalOutput.totals.primCount = tempTotals.primCount;
+    }
+
+    if (tempTotals.cableCount > 64) {
+      finalOutput.blockBools.cableBlock = true; 
+      finalOutput.totals.cableCount = Math.floor(tempTotals.cableCount / 9);
+    }
+    else {
+      finalOutput.totals.cableCount = tempTotals.cableCount;
+    }
+
+    if (tempTotals.secCount > 64) {
+      finalOutput.blockBools.secBlock = true; 
+      finalOutput.totals.secCount = Math.floor(tempTotals.secCount / 9);
+    }
+    else {
+      finalOutput.totals.secCount = tempTotals.secCount;
+    }
+
+    if (tempTotals.tertCount > 64) {
+      finalOutput.blockBools.tertBlock = true; 
+      finalOutput.totals.tertCount = Math.floor(tempTotals.tertCount / 9);
+    }
+    else {
+      finalOutput.totals.tertCount = tempTotals.tertCount;
+    }
+
+    return finalOutput;
   }
   else {
-    finalOutput.totals.primCount = tempTotals.primCount;
-  }
+    const finalOutput = {
+      blockBools: {
+        primBlock: false,
+        cableBlock: false,
+        wireBlock: false,
+        foilBlock: false
+      },
+      totals: {
+        primCount: 0,
+        cableCount: 0,
+        wireCount: 0,
+        foilCount: 0
+      }
+    }
 
-  if (tempTotals.cableCount > 64) {
-    finalOutput.blockBools.cableBlock = true; 
-    finalOutput.totals.cableCount = Math.floor(tempTotals.cableCount / 9);
-  }
-  else {
-    finalOutput.totals.cableCount = tempTotals.cableCount;
-  }
+    if (tempTotals.primCount > 64) {
+      finalOutput.blockBools.primBlock = true; 
+      finalOutput.totals.primCount = Math.floor(tempTotals.primCount / 9);
+    }
+    else {
+      finalOutput.totals.primCount = tempTotals.primCount;
+    }
 
-  if (tempTotals.secCount > 64) {
-    finalOutput.blockBools.secBlock = true; 
-    finalOutput.totals.secCount = Math.floor(tempTotals.secCount / 9);
-  }
-  else {
-    finalOutput.totals.secCount = tempTotals.secCount;
-  }
+    if (tempTotals.cableCount > 64) {
+      finalOutput.blockBools.cableBlock = true; 
+      finalOutput.totals.cableCount = Math.floor(tempTotals.cableCount / 9);
+    }
+    else {
+      finalOutput.totals.cableCount = tempTotals.cableCount;
+    }
 
-  if (tempTotals.tertCount > 64) {
-    finalOutput.blockBools.tertBlock = true; 
-    finalOutput.totals.tertCount = Math.floor(tempTotals.tertCount / 9);
-  }
-  else {
-    finalOutput.totals.tertCount = tempTotals.tertCount;
-  }
+    if (tempTotals.secCount > 64) {
+      finalOutput.blockBools.secBlock = true; 
+      finalOutput.totals.wireCount = Math.floor(tempTotals.wireCount / 9);
+    }
+    else {
+      finalOutput.totals.wireCount = tempTotals.wireCount;
+    }
 
-  return finalOutput;
+    if (tempTotals.foilCount > 64) {
+      finalOutput.blockBools.foilBlock = true; 
+      finalOutput.totals.foilCount = Math.floor(tempTotals.foilCount / 9);
+    }
+    else {
+      finalOutput.totals.foilCount = tempTotals.foilCount;
+    }
+
+    return finalOutput;
+  }
 }
 
 //gives ending parameters to the outputs dependent on whether the output is a block or not

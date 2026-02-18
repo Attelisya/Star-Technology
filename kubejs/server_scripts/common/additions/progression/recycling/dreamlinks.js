@@ -87,7 +87,6 @@ global.not_hardmode(() => {
                 `${secCount}x ${materials.compSec}`, `${tertCount}x ${materials.compTert}`, false, false, false, false],
                 "dream_cover", false, false);
             
-            console.log(`outputs: ${coverOutputs}`);
             event.recipes.gtceu.arc_furnace(id(`arc_${tier}_2a_dream_link_cover_item`))
                 .itemInputs(`start_core:${tier}_2a_dream_link_cover_item`)
                 .itemOutputs(coverOutputs)
@@ -155,7 +154,6 @@ global.not_hardmode(() => {
                 `${secCount}x ${materials.compSec}`, `${tertCount}x ${materials.compTert}`, false, false, false, false],
                 "dream_cover", true, false);
             
-            console.log(`outputs: ${coverOutputs}`);
             event.recipes.gtceu.macerator(id(`macerate_${tier}_2a_dream_link_cover_item`))
                 .itemInputs(`start_core:${tier}_2a_dream_link_cover_item`)
                 .itemOutputs(coverOutputs)

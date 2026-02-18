@@ -125,8 +125,6 @@ global.not_hardmode(() => {
                 false, false, false, false];
 
             const outputs = getFinalOutputs(tempOutputs, "coils", false, false);
-
-            console.log(`prefix: ${prefix}`);
             
             event.recipes.gtceu.arc_furnace(id(`arc_${coil}`))
                 .itemInputs(`${prefix+coil}`)
