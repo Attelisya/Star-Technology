@@ -17,7 +17,7 @@ ServerEvents.recipes (event => {
 
     const lcr = event.recipes.gtceu.large_chemical_reactor;
     const fs = event.recipes.gtceu.fluid_solidifier;
-    // const vcr = event.recipes.start_core.vacuum_chemical_reaction_chamber;
+    // const vcr = event.recipes.gtceu.vacuum_chemical_reactor;
     
     lcr(id(`linoleic_acid`))
         .inputFluids(`gtceu:seed_oil 1000`, `gtceu:steam 3000`)
@@ -66,12 +66,12 @@ ServerEvents.recipes (event => {
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
     // vcr(id(`aerogel_ingot`))
-    //     .nonConsumable(`gtceu:ingot_casting_mold`)
-    //     .inputFluids(`gtceu:aerogel_solvent_mixture 3000`, `gtceu:tetraethyl_orthosilicate 1000`, `gtceu:hydrochloric_acid 1000`)
-    //     .outputFluid(`gtceu:aerogel_precursor_solution 1000`)
+    //     .itemInputs(`kubejs:wet_aerogel_ingot`)
+    //     .outputFluids(`gtceu:ethanol 500`, `minecraft:water 500`)
+    //     .itemOutputs(`gtceu:aerogel_ingot`)
     //     .duration(200)
-    //     .EUt(GTValues.VHA[GTValues.ZPM]);
-
+    //     .EUt(GTValues.VHA[GTValues.ZPM])
+    //     .vacuumLevel(80);
 
     //dust removal
     event.remove({output: `gtceu:aerogel_dust`});
