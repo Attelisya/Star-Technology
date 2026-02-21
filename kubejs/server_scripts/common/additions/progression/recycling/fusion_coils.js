@@ -62,7 +62,7 @@ global.not_hardmode(() => {
                     tertMaterial
                 } = componentRecycleMaterials[tierComponent];
 
-                const tempOutputs = checkComponentCount(getUHVPlusComponentTotal(components), true);
+                const tempOutputs = checkComponentCount(getUHVPlusComponentTotal(components), true, true);
 
                 if (!tempOutputs) return;
                 const {
@@ -101,7 +101,7 @@ global.not_hardmode(() => {
                     foilMaterial
                 } = componentRecycleMaterials[tierComponent]
 
-                const tempOutputs = checkComponentCount(getLUVToUVComponentTotal(components), false);
+                const tempOutputs = checkComponentCount(getLUVToUVComponentTotal(components), false, true);
                 if (!tempOutputs) return;
                 const {
                     blockBools: {

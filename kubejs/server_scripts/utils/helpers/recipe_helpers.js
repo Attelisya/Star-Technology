@@ -109,9 +109,7 @@ global.getUHVPlusComponentTotal = (components) => {
 }
 
 // checks if input value is too big for one output slot, then breaks down into block form 
-global.checkComponentCount = (tempTotals, UHVPLUS) => {
-  
-
+global.checkComponentCount = (tempTotals, UHVPLUS, fusionCoilBool) => {
   if (UHVPLUS) {
     const finalOutput = {
       blockBools: {
@@ -126,6 +124,13 @@ global.checkComponentCount = (tempTotals, UHVPLUS) => {
         secCount: 0,
         tertCount: 0
       }
+    }
+
+    if (fusionCoilBool) {
+      tempTotals.primCount = Math.floor(tempTotals.primCount / 3);
+      tempTotals.cableCount = Math.floor(tempTotals.cableCount / 3);
+      tempTotals.secCount = Math.floor(tempTotals.secCount / 3);
+      tempTotals.tertCount = Math.floor(tempTotals.tertCount / 3);
     }
 
     if (tempTotals.primCount > 64) {
@@ -176,6 +181,13 @@ global.checkComponentCount = (tempTotals, UHVPLUS) => {
         wireCount: 0,
         foilCount: 0
       }
+    }
+
+    if (fusionCoilBool) {
+      tempTotals.primCount = Math.floor(tempTotals.primCount / 3);
+      tempTotals.cableCount = Math.floor(tempTotals.cableCount / 3);
+      tempTotals.wireCount = Math.floor(tempTotals.wireCount / 3);
+      tempTotals.foilCount = Math.floor(tempTotals.foilCount / 3);
     }
 
     if (tempTotals.primCount > 64) {

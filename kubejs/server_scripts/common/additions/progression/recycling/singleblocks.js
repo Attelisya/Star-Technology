@@ -402,7 +402,7 @@ global.not_hardmode(() => {
                 else { //assuming all future tiers also have the tert material as the casing material
                     tempTotals.tertCount += casingCount;
 
-                    const tempObj = global.checkComponentCount(tempTotals, true);
+                    const tempObj = global.checkComponentCount(tempTotals, true, false);
                     if (!tempObj) return;
                     const {
                         blockBools: {
