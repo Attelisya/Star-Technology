@@ -310,34 +310,31 @@ global.not_hardmode(() => {
             
             switch(tier) {
                 case "uhv": {
-                    const CRuhv = componentRecycles.uhv;
                     materials.casing = "gtceu:neutronium",
-                    materials.compPrim = CRuhv.primMaterial,
-                    materials.cable = CRuhv.cableMaterial,
-                    materials.compSec = CRuhv.secMaterial,
-                    materials.compTert = CRuhv.tertMaterial,
+                    materials.compPrim = componentRecycles.uhv.primMaterial,
+                    materials.cable = componentRecycles.uhv.cableMaterial,
+                    materials.compSec = componentRecycles.uhv.secMaterial,
+                    materials.compTert = componentRecycles.uhv.tertMaterial,
                     materials.wire = `gtceu:${singleComponents.uhv.materials.wire}`,
                     materials.elctrlyzWire = `gtceu:${singleComponents.uhv.materials.elctrlyzWire}`
                     break;
                 }
                 case "uev": {
-                    const CRuev = componentRecycles.uev;
                     materials.casing = "gtceu:mythrolic_alloy",
-                    materials.compPrim = CRuev.primMaterial,
-                    materials.cable = CRuev.cableMaterial,
-                    materials.compSec = CRuev.secMaterial,
-                    materials.compTert = CRuev.tertMaterial
+                    materials.compPrim = componentRecycles.uev.primMaterial,
+                    materials.cable = componentRecycles.uev.cableMaterial,
+                    materials.compSec = componentRecycles.uev.secMaterial,
+                    materials.compTert = componentRecycles.uev.tertMaterial
                     materials.wire = `gtceu:${singleComponents.uev.materials.wire}`,
                     materials.elctrlyzWire = `gtceu:${singleComponents.uev.materials.elctrlyzWire}`
                     break;
                 }
                 case "uiv": {
-                    const CRuiv = componentRecycles.uiv;
                     materials.casing = "gtceu:chaotixic_alloy",
-                    materials.compPrim = CRuiv.primMaterial,
-                    materials.cable = CRuiv.cableMaterial,
-                    materials.compSec = CRuiv.secMaterial,
-                    materials.compTert = CRuiv.tertMaterial
+                    materials.compPrim = componentRecycles.uiv.primMaterial,
+                    materials.cable = componentRecycles.uiv.cableMaterial,
+                    materials.compSec = componentRecycles.uiv.secMaterial,
+                    materials.compTert = componentRecycles.uiv.tertMaterial
                     materials.wire = `gtceu:${singleComponents.uiv.materials.wire}`,
                     materials.elctrlyzWire = `gtceu:${singleComponents.uiv.materials.elctrlyzWire}`
                     break;
@@ -356,81 +353,49 @@ global.not_hardmode(() => {
             }
             let casingCount = 8 + extraCasings;
             let recycleOutputs = [" ", " ", " ", " ", " ", " "];
+            let tempTotals;
+            let tempObj;
 
             if (specialSingleBool) {
-                if (singleblock == "electric_furnace") {recycleOutputs = specialSingleOutputs.electric_furnace;}
-                else if (singleblock == "electric_blast_furnace") {recycleOutputs = specialSingleOutputs.electric_blast_furnace;}
-                else if (singleblock == "electric_smoker") {recycleOutputs = specialSingleOutputs.electric_smoker;}
-                else if (singleblock == "alloy_smelter") {recycleOutputs = specialSingleOutputs.alloy_smelter;}
-                else if (singleblock == "arc_furnace") {recycleOutputs = specialSingleOutputs.arc_furnace;}
-                else if (singleblock == "electrolyzer") {recycleOutputs = specialSingleOutputs.electrolyzer;}
-                else if (singleblock == "polarizer") {recycleOutputs = specialSingleOutputs.polarizer;}
-                else if (singleblock == "charger_4x") {recycleOutputs = specialSingleOutputs.charger_4x;}
+                if (singleblock == "electric_furnace") { recycleOutputs = specialSingleOutputs.electric_furnace; }
+                else if (singleblock == "electric_blast_furnace") { recycleOutputs = specialSingleOutputs.electric_blast_furnace; }
+                else if (singleblock == "electric_smoker") { recycleOutputs = specialSingleOutputs.electric_smoker; }
+                else if (singleblock == "alloy_smelter") { recycleOutputs = specialSingleOutputs.alloy_smelter; }
+                else if (singleblock == "arc_furnace") { recycleOutputs = specialSingleOutputs.arc_furnace; }
+                else if (singleblock == "electrolyzer") { recycleOutputs = specialSingleOutputs.electrolyzer; }
+                else if (singleblock == "polarizer") { recycleOutputs = specialSingleOutputs.polarizer; }
+                else if (singleblock == "charger_4x") { recycleOutputs = specialSingleOutputs.charger_4x; }
             }
             else {
-                const tempTotals = global.getUHVPlusComponentTotal(components);
+                tempTotals = global.getUHVPlusComponentTotal(components);
                 tempTotals.cableCount += extraCables;
-                if (tier == "uhv") {
-                    const tempObj = global.checkComponentCount(tempTotals, true);
-                    const {
-                        blockBools: {
-                            primBlock,
-                            cableBlock,
-                            secBlock,
-                            tertBlock
-                        },
-                        totals: {
-                            primCount,
-                            cableCount,
-                            secCount,
-                            tertCount
-                        }
-                    } = tempObj;
-                    
-                    let position = 0;
-                
-                    recycleOutputs[position] = `${casingCount}x ${materials.casing}`; position++;
-                    if (primCount != 0) { recycleOutputs[position] = `${primCount}x ${materials.compPrim}`; position++; }
-                    if (cableCount != 0) { recycleOutputs[position] = `${cableCount}x ${materials.cable}`; position++; }
-                    if (secCount != 0) { recycleOutputs[position] = `${secCount}x ${materials.compSec}`; position++; }
-                    if (tertCount != 0) { recycleOutputs[position] = `${tertCount}x ${materials.compTert}`; position++; }
-                    recycleOutputs[position] = primBlock; position++;
-                    recycleOutputs[position] = cableBlock; position++;
-                    recycleOutputs[position] = secBlock; position++;
-                    recycleOutputs[position] = tertBlock; position++;
-                }
-                else { //assuming all future tiers also have the tert material as the casing material
-                    tempTotals.tertCount += casingCount;
 
-                    const tempObj = global.checkComponentCount(tempTotals, true, false);
-                    if (!tempObj) return;
-                    const {
-                        blockBools: {
-                            primBlock,
-                            cableBlock,
-                            secBlock,
-                            tertBlock
-                        },
-                        totals: {
-                            primCount,
-                            cableCount,
-                            secCount,
-                            tertCount
-                        }
-                    } = tempObj;
-                    
-                    let position = 0;
-                
-                    if (primCount != 0) { recycleOutputs[position] = `${primCount}x ${materials.compPrim}`; position++; }
-                    if (cableCount != 0) { recycleOutputs[position] = `${cableCount}x ${materials.cable}`; position++; }
-                    if (secCount != 0) { recycleOutputs[position] = `${secCount}x ${materials.compSec}`; position++; }
-                    if (tertCount != 0) { recycleOutputs[position] = `${tertCount}x ${materials.compTert}`; position++; }
-                    recycleOutputs[position] = primBlock; position++;
-                    recycleOutputs[position] = cableBlock; position++;
-                    recycleOutputs[position] = secBlock; position++;
-                    recycleOutputs[position] = tertBlock; position++;
+                if (tier == "uev" || tier == "uiv") { // if tertiary material is the same as casing material
+                    tempTotals.tertCount += casingCount;
+                    tempObj = global.checkRecyclingCount(tempTotals, true, false, false);
                 }
+                else { 
+                    tempObj = global.checkRecyclingCount(tempTotals, true, false, true);
+                    tempObj.totals.casingCount = casingCount;
+                }
+                
+                let checkCount = 0;
+                let position = 0;
+                while (checkCount != (tier == "uev" || tier == "uiv") ? 4 : 5) {
+                    if (tempObj.totals[tempObj.outputOrder[position] + "Count"] != 0) {
+                        recycleOutputs[position] = `${tempObj.totals[tempObj.outputOrder[position] + "Count"]}x 
+                            ${materials[tempObj.outputOrder[position] + "Material"]}`;
+                        position++;
+                    }
+                    checkCount++;
+                }
+                
+                tempObj.blockBools.forEach(blockBool => {
+                    recycleOutputs[position] = blockBool;
+                    position++;
+                });
             }
+
             if (recycleOutputs != undefined) {
                 return recycleOutputs;
             }

@@ -109,7 +109,7 @@ global.getUHVPlusComponentTotal = (components) => {
 }
 
 // checks if input value is too big for one output slot, then breaks down into block form 
-global.checkComponentCount = (tempTotals, UHVPLUS, fusionCoilBool) => {
+global.checkRecyclingCount = (tempTotals, UHVPLUS, auxCoilBool, casingBool) => {
   if (UHVPLUS) {
     const finalOutput = {
       blockBools: {
@@ -119,14 +119,123 @@ global.checkComponentCount = (tempTotals, UHVPLUS, fusionCoilBool) => {
         tertBlock: false
       },
       totals: {
+        casingCount: 0,
         primCount: 0,
         cableCount: 0,
         secCount: 0,
         tertCount: 0
+      },
+      outputOrder: ["", "", "", "", ""]
+    }
+
+    // orders outputs by size
+    if (casingBool) {
+      let knownPositions = [];
+      let toBeSorted = [tempTotals.casingCount, tempTotals.primCount, tempTotals.cableCount, tempTotals.secCount, tempTotals.tertCount];
+      const sorted = toBeSorted.sort();
+      let material;
+      let found;
+      let n;
+
+      for(let i = 0; i < 5; i++) {
+        // gets what material is in said position
+        switch (i) {
+          case "0": {
+            material = "casing";
+            break;
+          }
+          case "1": {
+            material = "prim";
+            break;
+          }
+          case "2": {
+            material = "cable";
+            break;
+          }
+          case "3": {
+            material = "sec";
+            break;
+          }
+          case "4": {
+            material = "tert";
+            break;
+          }
+        }
+
+        // finds which location the material is in
+        found = false;
+        n = 0;
+        while (!found) {
+          if (toBeSorted[i] == sorted[n]) {
+            if (knownPositions.includes(i)) { // counters duplicate output nums
+              n++;
+            }
+            else {
+              knownPositions.push(n);
+              found = true;
+            }
+          }
+          else {
+            n++;
+          }
+        }
+        // tells the final output which material is where
+        finalOutput.outputOrder[n] = material;
+      }
+    }
+    else {
+      let knownPositions = [];
+      let toBeSorted = [tempTotals.primCount, tempTotals.cableCount, tempTotals.secCount, tempTotals.tertCount];
+      const sorted = toBeSorted.sort();
+      let material;
+      let found;
+      let n;
+
+      for(let i = 0; i < 4; i++) {
+        // gets what material is in said position
+        switch (i) {
+          case "0": {
+            material = "prim";
+            break;
+          }
+          case "1": {
+            material = "cable";
+            break;
+          }
+          case "2": {
+            material = "sec";
+            break;
+          }
+          case "3": {
+            material = "tert";
+            break;
+          }
+        }
+
+        // finds which location the material is in
+        found = false;
+        n = 0;
+        while (!found) {
+          if (toBeSorted[i] == sorted[n]) {
+            if (knownPositions.includes(i)) { // counters duplicate output nums
+              n++;
+            }
+            else {
+              knownPositions.push(n);
+              found = true;
+            }
+          }
+          else {
+            n++;
+          }
+        }
+        // tells the final output which material is where
+        finalOutput.outputOrder[n] = material;
       }
     }
 
-    if (fusionCoilBool) {
+    // reduces fusion coil outputs to the actual value
+    if (auxCoilBool) {
       tempTotals.primCount = Math.floor(tempTotals.primCount / 3);
       tempTotals.cableCount = Math.floor(tempTotals.cableCount / 3);
       tempTotals.secCount = Math.floor(tempTotals.secCount / 3);
@@ -141,6 +250,7 @@ global.checkComponentCount = (tempTotals, UHVPLUS, fusionCoilBool) => {
       finalOutput.totals.primCount = tempTotals.primCount;
     }
 
+    // checks if item should be changed to block form
     if (tempTotals.cableCount > 64) {
       finalOutput.blockBools.cableBlock = true; 
       finalOutput.totals.cableCount = Math.floor(tempTotals.cableCount / 9);
@@ -180,10 +290,117 @@ global.checkComponentCount = (tempTotals, UHVPLUS, fusionCoilBool) => {
         cableCount: 0,
         wireCount: 0,
         foilCount: 0
+      },
+      outputOrder: ["", "", "", "", ""] 
+    }
+
+    // orders outputs by size
+    if (casingBool) {
+      let knownPositions = [];
+      let toBeSorted = [tempTotals.casingCount, tempTotals.primCount, tempTotals.cableCount, tempTotals.secCount, tempTotals.tertCount];
+      const sorted = toBeSorted.sort();
+      let material;
+      let found;
+      let n;
+
+      for(let i = 0; i < 5; i++) {
+        // gets what material is in said position
+        switch (i) {
+          case "0": {
+            material = "casing";
+            break;
+          }
+          case "1": {
+            material = "prim";
+            break;
+          }
+          case "2": {
+            material = "cable";
+            break;
+          }
+          case "3": {
+            material = "wire";
+            break;
+          }
+          case "4": {
+            material = "foil";
+            break;
+          }
+        }
+
+        // finds which location the material is in
+        found = false;
+        n = 0;
+        while (!found) {
+          if (toBeSorted[i] == sorted[n]) {
+            if (knownPositions.includes(i)) { // counters duplicate output nums
+              n++;
+            }
+            else {
+              knownPositions.push(n);
+              found = true;
+            }
+          }
+          else {
+            n++;
+          }
+        }
+        // tells the final output which material is where
+        finalOutput.outputOrder[n] = material;
+      }
+    }
+    else {
+      let knownPositions = [];
+      let toBeSorted = [tempTotals.primCount, tempTotals.cableCount, tempTotals.secCount, tempTotals.tertCount];
+      const sorted = toBeSorted.sort();
+      let material;
+      let found;
+      let n;
+
+      for(let i = 0; i < 4; i++) {
+        // gets what material is in said position
+        switch (i) {
+          case "0": {
+            material = "prim";
+            break;
+          }
+          case "1": {
+            material = "cable";
+            break;
+          }
+          case "2": {
+            material = "wire";
+            break;
+          }
+          case "3": {
+            material = "foil";
+            break;
+          }
+        }
+
+        // finds which location the material is in
+        found = false;
+        n = 0;
+        while (!found) {
+          if (toBeSorted[i] == sorted[n]) {
+            if (knownPositions.includes(i)) { // counters duplicate output nums
+              n++;
+            }
+            else {
+              knownPositions.push(n);
+              found = true;
+            }
+          }
+          else {
+            n++;
+          }
+        }
+        // tells the final output which material is where
+        finalOutput.outputOrder[n] = material;
       }
     }
 
-    if (fusionCoilBool) {
+    if (auxCoilBool) {
       tempTotals.primCount = Math.floor(tempTotals.primCount / 3);
       tempTotals.cableCount = Math.floor(tempTotals.cableCount / 3);
       tempTotals.wireCount = Math.floor(tempTotals.wireCount / 3);
