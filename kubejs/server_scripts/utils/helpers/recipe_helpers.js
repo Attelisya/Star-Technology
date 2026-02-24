@@ -106,148 +106,46 @@ function compareNumbers(a,b) {
 }
 // checks if input value is too big for one output slot, then breaks down into block form 
 global.checkRecyclingCount = (tempTotals, blockType, auxCoilBool, casingBool, fusionCasingBool) => {
-  let finalOutput;
-  let finalOutputTypes;
-  let toBeSorted;
+  let finalOutput = {
+    blockBools: {},
+    totals: {},
+    outputOrder: []
+  };
+  let finalOutputTypes = [];
+  let toBeSorted = [];
 
-  // TODO: simplify (check line 46 in fusion coils for reference)
   if (blockType == "singleblock_UHVPLUS" || blockType == "parallel_hatch_UHVPLUS") { 
-    finalOutput = {
-      blockBools: {
-        primBlock: false,
-        cableBlock: false,
-        secBlock: false,
-        tertBlock: false
-      },
-      totals: {
-        casingCount: 0,
-        primCount: 0,
-        cableCount: 0,
-        secCount: 0,
-        tertCount: 0
-      },
-      outputOrder: (casingBool) ? ["", "", "", "", ""] : ["", "", "", ""]
-    }
     finalOutputTypes = (casingBool) ? ["casing", "prim", "cable", "sec", "tert"] : ["prim", "cable", "sec", "tert"];
-    toBeSorted = (casingBool) ? [tempTotals.casingCount, tempTotals.primCount, tempTotals.cableCount, tempTotals.secCount, `${tempTotals.tertCount}`] :
-      [tempTotals.primCount, tempTotals.cableCount, tempTotals.secCount, tempTotals.tertCount];
   }
   else if (blockType == "singleblock_LUVToUV" || blockType == "parallel_hatch_LUVToUV") {
-    finalOutput = {
-      blockBools: {
-        primBlock: false,
-        cableBlock: false,
-        wireBlock: false,
-        foilBlock: false
-      },
-      totals: {
-        primCount: 0,
-        cableCount: 0,
-        wireCount: 0,
-        foilCount: 0
-      },
-      outputOrder: (casingBool) ? ["", "", "", "", ""] : ["", "", "", ""]
-    }
     finalOutputTypes = (casingBool) ? ["casing", "prim", "cable", "wire", "foil"] : ["prim", "cable", "wire", "foil"];
-    toBeSorted = (casingBool) ? [tempTotals.casingCount, tempTotals.primCount, tempTotals.cableCount, tempTotals.wireCount, tempTotals.foilCount] : 
-      [tempTotals.primCount, tempTotals.cableCount, tempTotals.wireCount, tempTotals.foilCount];
   }
   else if (blockType == "coil") {
-    finalOutput = {
-      blockBools: {
-        frameBlock: false,
-        wireBlock: false,
-        foilBlock: false 
-      },
-      totals: {
-        frameCount: 0,
-        wireCount: 0,
-        foilCount: 0
-      },
-      outputOrder: ["", "", ""] 
-    }
     finalOutputTypes = ["frame", "wire", "foil"];
-    toBeSorted = [tempTotals.frameCount, tempTotals.wireCount, tempTotals.foilCount];
   }
   else if (blockType == "fusion_casing_UHVPLUS") {
-    finalOutput = {
-      blockBools: {
-        primBlock: false,
-        cableBlock: false,
-        hullCableBlock: false,
-        secBlock: false
-      },
-      totals: {
-        casingCount: 0,
-        primCount: 0,
-        cableCount: 0,
-        hullCableCount: 0,
-        secCount: 0
-      },
-      outputOrder: ["", "", "", "", ""]
-    }
     finalOutputTypes = ["casing", "prim", "cable", "hullCable", "sec"];
-    toBeSorted = [tempTotals.casingCount, tempTotals.primCount, tempTotals.cableCount, tempTotals.hullCableCount, tempTotals.secCount];
   }
   else if (blockType == "fusion_casing_LUVToUV") {
-    finalOutput = {
-      blockBools: {
-        primBlock: false,
-        cableBlock: false,
-        hullCableBlock: false,
-        wireBlock: false
-      },
-      totals: {
-        casingCount: 0,
-        primCount: 0,
-        cableCount: 0,
-        hullCableCount: 0,
-        wireCount: 0
-      },
-      outputOrder: ["", "", "", "", ""]
-    }
     finalOutputTypes = ["casing", "prim", "cable", "hullCable", "wire"];
-    toBeSorted = [tempTotals.casingCount, tempTotals.primCount, tempTotals.cableCount, tempTotals.hullCableCount, tempTotals.wireCount];
   }
   else if (blockType == "fusion_coil_UHVPLUS") {
-    finalOutput = {
-      blockBools: {
-        primBlock: false,
-        cableBlock: false,
-        secBlock: false,
-        tertBlock: false
-      },
-      totals: {
-        plateCount: 0,
-        primCount: 0,
-        cableCount: 0,
-        secCount: 0,
-        tertCount: 0
-      },
-      outputOrder: ["", "", "", "", ""]
-    }
     finalOutputTypes = ["plate", "prim", "cable", "sec", "tert"];
-    toBeSorted = [tempTotals.plateCount, tempTotals.primCount, tempTotals.cableCount, tempTotals.secCount, tempTotals.tertCount];
   }
   else if (blockType == "fusion_coil_LUVToUV") {
-    finalOutput = {
-      blockBools: {
-        primBlock: false,
-        cableBlock: false,
-        wireBlock: false,
-        foilBlock: false
-      },
-      totals: {
-        plateCount: 0,
-        primCount: 0,
-        cableCount: 0,
-        wireCount: 0,
-        foilCount: 0
-      },
-      outputOrder: ["", "", "", "", ""]
-    }
     finalOutputTypes = ["plate", "prim", "cable", "wire", "foil"];
-    toBeSorted = [tempTotals.plateCount, tempTotals.primCount, tempTotals.cableCount, tempTotals.wireCount, tempTotals.foilCount];
+  }
+
+  let position = 0;
+  finalOutputTypes.forEach(type => {
+    toBeSorted[position] = tempTotals[type + "Count"];
+    finalOutput.blockBools[type + "Block"] = false;
+    finalOutput.totals[type + "Count"] = 0;
+    position++;
+  })
+
+  for (let x = 0; x < finalOutputTypes.length - 1; x++) {
+    finalOutput.outputOrder[x] = "";
   }
  
   // orders outputs by size
