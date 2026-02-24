@@ -1,6 +1,31 @@
 // priority: 1000
 
 global.componentMaterials = {
+    lv: {
+        materials: {
+            tierMaterial: `steel`
+        }
+    },
+    mv: {
+        materials: {
+            tierMaterial: `aluminium`
+        }
+    },
+    hv: {
+        materials: {
+            tierMaterial: `stainless_steel`
+        }
+    },
+    ev: {
+        materials: {
+            tierMaterial: `titanium`
+        }
+    },
+    iv: {
+        materials: {
+            tierMaterial: `tungsten_steel`
+        }
+    },
     luv: {
         tiers: { tier: 'luv', tier0: 'zpm', tier1: 'iv', tier2: 'ev' },
         materials: {

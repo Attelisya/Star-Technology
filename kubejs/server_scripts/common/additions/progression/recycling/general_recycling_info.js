@@ -1,88 +1,46 @@
+// priority: 999
+
+const componentMaterials = global.componentMaterials;
 global.componentRecycleMaterials = {
     luv: {
-        primMaterial: "gtceu:hsss",
-        cableMaterial: "gtceu:niobium_titanium",
-        wireMaterial: "gtceu:palladium",
-        foilMaterial: "gtceu:rhodium"
+        primMaterial: `gtceu:${componentMaterials.luv.materials.primMaterial}`,
+        cableMaterial: `gtceu:${componentMaterials.luv.materials.cable}`,
+        wireMaterial: `gtceu:${componentMaterials.luv.materials.wireMechanical}`,
+        foilMaterial: `gtceu:${componentMaterials.luv.materials.miscMaterial}`
     },
     zpm: {
-        primMaterial: "gtceu:naquadah_alloy",
-        cableMaterial: "gtceu:vanadium_gallium",
-        wireMaterial: "gtceu:europium",
-        foilMaterial: "gtceu:trinium"
+        primMaterial: `gtceu:${componentMaterials.zpm.materials.primMaterial}`,
+        cableMaterial: `gtceu:${componentMaterials.zpm.materials.cable}`,
+        wireMaterial: `gtceu:${componentMaterials.zpm.materials.wireMechanical}`,
+        foilMaterial: `gtceu:${componentMaterials.zpm.materials.miscMaterial}`
     },
     uv: {
-        primMaterial: "gtceu:titan_steel",
-        cableMaterial: "gtceu:yttrium_barium_cuprate",
-        wireMaterial: "gtceu:americium",
-        foilMaterial: "gtceu:naquadria"
+        primMaterial: `gtceu:${componentMaterials.uv.materials.primMaterial}`,
+        cableMaterial: `gtceu:${componentMaterials.uv.materials.cable}`,
+        wireMaterial: `gtceu:${componentMaterials.uv.materials.wireMechanical}`,
+        foilMaterial: `gtceu:${componentMaterials.uv.materials.miscMaterial}`
     },
     uhv: {
-        primMaterial: "gtceu:zalloy",
-        cableMaterial: "gtceu:europium",
-        secMaterial: "gtceu:zircalloy_4",
-        tertMaterial: "gtceu:zirconium"
+        primMaterial: `gtceu:${componentMaterials.uhv.materials.primMaterial}`,
+        cableMaterial: `gtceu:${componentMaterials.uhv.materials.cable}`,
+        secMaterial: `gtceu:${componentMaterials.uhv.materials.supMaterial}`,
+        tertMaterial: `gtceu:${componentMaterials.uhv.materials.wireMechanical}`
     },
     uev: {
-        primMaterial: "gtceu:starium_alloy",
-        cableMaterial: "gtceu:cerium_tritelluride",
-        secMaterial: "gtceu:magmada_alloy",
-        tertMaterial: "gtceu:mythrolic_alloy"
+        primMaterial: `gtceu:${componentMaterials.uev.materials.primMaterial}`,
+        cableMaterial: `gtceu:${componentMaterials.uev.materials.cable}`,
+        secMaterial: `gtceu:${componentMaterials.uev.materials.supMaterial}`,
+        tertMaterial: `gtceu:${componentMaterials.uev.materials}`
     },
     uiv: {
-        primMaterial: "gtceu:ohmderblux_alloy",
-        cableMaterial: "gtceu:polonium_bismide",
-        secMaterial: "gtceu:abyssal_alloy",
-        tertMaterial: "gtceu:chaotixic_alloy"
+        primMaterial: `gtceu:${componentMaterials.uiv.materials.primMaterial}`,
+        cableMaterial: `gtceu:${componentMaterials.uiv.materials.cable}`,
+        secMaterial: `gtceu:${componentMaterials.uiv.materials.supMaterial}`,
+        tertMaterial: `gtceu:${componentMaterials.uiv.materials}`
     }
 }
 
-global.energyRecycleMaterials = {
-    lv: {
-        casingMaterial: "steel",
-        cableMaterial: "tin"
-    },
-    mv: {
-        casingMaterial: "aluminium",
-        cableMaterial: "copper"
-    },
-    hv: {
-        casingMaterial: "stainless_steel",
-        cableMaterial: "gold"
-    },
-    ev: {
-        casingMaterial: "titanium",
-        cableMaterial: "aluminium"
-    },
-    iv: {
-        casingMaterial: "tungsten_steel",
-        cableMaterial: "tungsten"
-    },
-    luv: {
-        casingMaterial: "rhodium_plated_palladium",
-        cableMaterial: "niobium_titanium"
-    },
-    zpm: {
-        casingMaterial: "naquadah_alloy",
-        cableMaterial: "vanadium_gallium"
-    },
-    uv: {
-        casingMaterial: "darmstadtium",
-        cableMaterial: "yttrium_barium_cuprate"
-    },
-    uhv: {
-        casingMaterial: "neutronium",
-        cableMaterial: "europium"
-    },
-    uev: {
-        casingMaterial: "mythrolic_alloy",
-        cableMaterial: "cerium_tritelluride"
-    },
-    uiv: {
-        casingMaterial: "chaotixic_alloy",
-        cableMaterial: "polonium_bismide"
-    }
-}
+
 
 global.LUVToUVComponentRecycleCounts = { 
     dreamlink_cover: {
@@ -656,6 +614,67 @@ global.fusionCoilRecycleDetails = {
         plateCount: 8
     }
 };
+
+global.casingMaterials = {
+    lv: `gtceu:${componentMaterials.lv.materials.tierMaterial}`,
+    mv: `gtceu:${componentMaterials.mv.materials.tierMaterial}`,
+    hv: `gtceu:${componentMaterials.hv.materials.tierMaterial}`,
+    ev: `gtceu:${componentMaterials.ev.materials.tierMaterial}`,
+    iv: `gtceu:${componentMaterials.iv.materials.tierMaterial}`,
+    luv: `gtceu:${componentMaterials.luv.materials.tierMaterial}`,
+    zpm: `gtceu:${componentMaterials.zpm.materials.tierMaterial}`,
+    uv: `gtceu:${componentMaterials.uv.materials.tierMaterial}`,
+    uhv: `gtceu:${componentMaterials.uhv.materials.tierMaterial}`,
+    uev: `gtceu:${componentMaterials.uev.materials.tierMaterial}`,
+    uiv: `gtceu:${componentMaterials.uiv.materials.tierMaterial}`
+}
+
+// global.energyRecycleMaterials = {
+//     lv: {
+//         casingMaterial: "steel",
+//         cableMaterial: "tin"
+//     },
+//     mv: {
+//         casingMaterial: "aluminium",
+//         cableMaterial: "copper"
+//     },
+//     hv: {
+//         casingMaterial: "stainless_steel",
+//         cableMaterial: "gold"
+//     },
+//     ev: {
+//         casingMaterial: "titanium",
+//         cableMaterial: "aluminium"
+//     },
+//     iv: {
+//         casingMaterial: "tungsten_steel",
+//         cableMaterial: "tungsten"
+//     },
+//     luv: {
+//         casingMaterial: "rhodium_plated_palladium",
+//         cableMaterial: "niobium_titanium"
+//     },
+//     zpm: {
+//         casingMaterial: "naquadah_alloy",
+//         cableMaterial: "vanadium_gallium"
+//     },
+//     uv: {
+//         casingMaterial: "darmstadtium",
+//         cableMaterial: "yttrium_barium_cuprate"
+//     },
+//     uhv: {
+//         casingMaterial: "neutronium",
+//         cableMaterial: "europium"
+//     },
+//     uev: {
+//         casingMaterial: "mythrolic_alloy",
+//         cableMaterial: "cerium_tritelluride"
+//     },
+//     uiv: {
+//         casingMaterial: "chaotixic_alloy",
+//         cableMaterial: "polonium_bismide"
+//     }
+// }
 
 // global.energyHatchRecycleCounts = {
 //     lvtohv: {
