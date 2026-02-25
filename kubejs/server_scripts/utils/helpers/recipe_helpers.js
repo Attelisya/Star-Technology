@@ -55,45 +55,18 @@ global.calculateRecyclingVoltageMultiplier = (itemOutputs) => {
   return 16;
 };
 
-global.getLUVToUVComponentTotal = (components) => {
-  const componentRecycleCounts = global.LUVToUVComponentRecycleCounts;
-  let totalCounts = {
-    primCount: 0,
-    cableCount: 0,
-    wireCount: 0,
-    foilCount: 0
-  }
+// breaks components down into their base materials
+global.getComponentTotal = (components, tierBracket) => {
+  const componentRecycleCounts = (tierBracket == "UHVPLUS") ? global.UHVPlusComponentRecycleCounts : global.LUVToUVComponentRecycleCounts;
+  const totalCountsTypes = (tierBracket == "UHVPLUS") ? ["primCount", "cableCount", "secCount", "tertCount"] : ["primCount", "cableCount", "wireCount", "foilCount"];
+  let totalCounts = {};
+
+  totalCountsTypes.forEach(type => {
+    totalCounts[type] = 0;
+  });
 
   components.forEach(component => {
-    if (!component) return;
-    const {
-      primCount,
-      cableCount,
-      wireCount,
-      foilCount
-    } = componentRecycleCounts[component];
-
-    totalCounts.primCount += primCount;
-    totalCounts.cableCount += cableCount;
-    totalCounts.wireCount += wireCount;
-    totalCounts.foilCount += foilCount;
-  })
-  return totalCounts;
-}
-
-// breaks uhv plus components down into their base materials
-global.getUHVPlusComponentTotal = (components) => {
-  const componentRecycleCounts = global.UHVPlusComponentRecycleCounts;
-  let totalCounts = {
-    primCount: 0,
-    cableCount: 0,
-    secCount: 0,
-    tertCount: 0
-  }
-  const totalCountsTypes = ["primCount", "cableCount", "secCount", "tertCount"];
-
-  components.forEach(component => {
-    totalCountsTypes.forEach (type => {
+    totalCountsTypes.forEach(type => {
       totalCounts[type] += componentRecycleCounts[component][type];
     });
   });

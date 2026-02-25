@@ -16,21 +16,19 @@ global.not_hardmode(() => {
         function getSingleblockRecycleOutputs(arcBool, singleblock, specialSingleBool, tier, components /*not read if special*/, extraCasings /*0 if special*/, extraCables /*0 if special*/) {
             const componentRecycles = global.componentRecycleMaterials;
             const casingMaterials = global.casingMaterials;
+            const getComponentTotal = global.getComponentTotal;
+            let tierBracket;
             let materialTypes = [];
             let materials = {};
-            let blockType;
-            let getComponentTotal;
             const graphite = arcBool ? "7x gtceu:tiny_ash_dust" : "gtceu:graphite_dust";
             
             if (tier == "luv" || tier == "zpm" || tier == "uv") {
                 materialTypes = ["casing", "prim", "cable", "wire", "elctrlyzWire", "foil"];
-                getComponentTotal = global.getLUVToUVComponentTotal;
-                blockType = "singleblock_LUVToUV";
+                tierBracket = "LUVToUV";
             }
             else if (tier == "uhv" || tier == "uev" || tier == "uiv") {
                 materialTypes = ["casing", "prim", "cable", "wire", "elctrlyzWire", "sec", "tert"];
-                getComponentTotal = global.getUHVPlusComponentTotal;
-                blockType = "singleblock_UHVPLUS"
+                tierBracket = "UHVPLUS";
             }
 
             materialTypes.forEach(type => {
@@ -62,16 +60,16 @@ global.not_hardmode(() => {
             }
             else {
                 // gets and checks the final outputs
-                tempTotals = getComponentTotal(components);
+                tempTotals = getComponentTotal(components, tierBracket);
                 tempTotals.cableCount += extraCables;
 
                 if (tier == "uev" || tier == "uiv") { // if tertiary material is the same as casing material
                     tempTotals.tertCount += casingCount;
-                    tempObj = global.checkRecyclingCount(tempTotals, blockType, false, false, false);
+                    tempObj = global.checkRecyclingCount(tempTotals, `singleblock_${tierBracket}`, false, false, false);
                 }
                 else {
                     tempTotals.casingCount = casingCount; 
-                    tempObj = global.checkRecyclingCount(tempTotals, blockType, false, true, false);
+                    tempObj = global.checkRecyclingCount(tempTotals, `singleblock_${tierBracket}`, false, true, false);
                 }
                 
                 // sorts the final outputs

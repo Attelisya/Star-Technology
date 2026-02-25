@@ -7,41 +7,41 @@ global.not_hardmode(() => {
         let UHVPLUS;
 
         function getParallelRecycleOutputs(tier, absoluteBool, LUVToUV, UHVPlus) {
+            const checkRecyclingCount = global.checkRecyclingCount;
+            const getComponentTotal = global.getComponentTotal;
             const componentRecycles = global.componentRecycleMaterials;
             const casingMaterials = global.casingMaterials;
-            const checkRecyclingCount = global.checkRecyclingCount;
             let recycleOutputs = [];
             let materials = {};
             let counts = {};
-            let casingBool = (tier == "uev" || tier == "uiv") ? false : true; 
+            let casingBool = (tier == "uev" || tier == "uiv") ? false : true;
+            let tierBracket;
             let tempTotals;
             let materialTypes;
             let blockType;
 
-            //if LUVToUV
             if (LUVToUV) {
-                let getLUVToUVComponentTotal = global.getLUVToUVComponentTotal;
-                tempTotals = getLUVToUVComponentTotal(["emitter", "sensor"]);
+                tierBracket = "LUVToUV";
                 materialTypes = ["casing", "prim", "cable", "wire", "foil"];
                 blockType = "parallel_hatch_LUVToUV";
             }
-            //if UHVPlus
-            else if (UHVPlus){
-                let getUHVPlusComponentTotal = global.getUHVPlusComponentTotal;
+            else if (UHVPlus) {
+                tierBracket = "UHVPLUS";
                 materialTypes = (tier == "uhv") ? ["casing", "prim", "cable", "sec", "tert"] : ["prim", "cable", "sec", "tert"];
                 blockType = "parallel_hatch_UHVPLUS";
-
-                if (absoluteBool) {
-                    tempTotals = getUHVPlusComponentTotal(["emitter", "emitter", "emitter", "emitter", "emitter", "sensor", "sensor", "sensor", "sensor", "sensor"]);
-                }
-                else {
-                    tempTotals = getUHVPlusComponentTotal(["emitter", "sensor"]);
-                }
             }
             else {                
                 recycleOutputs = ["12x gtceu:tungsten_steel", "3x gtceu:platinum", "2x gtceu:iridium", "gtceu:tungsten",
                     /*fake blockBools*/ false, false, false, false];
                 return recycleOutputs;
+            }
+
+            //
+            if (absoluteBool) {
+                tempTotals = getComponentTotal(["emitter", "emitter", "emitter", "emitter", "emitter", "sensor", "sensor", "sensor", "sensor", "sensor"], tierBracket);
+            }
+            else {
+                tempTotals = getComponentTotal(["emitter", "sensor"], tierBracket);
             }
 
             tempTotals.cableCount += 3;
@@ -107,7 +107,7 @@ global.not_hardmode(() => {
                     .EUt(GTValues.VA[GTValues.LV])
                     .category(GTRecipeCategories.ARC_FURNACE_RECYCLING);
             }
-            else{
+            else {
                 outputs = getFinalOutputs(getParallelRecycleOutputs(tier, false, LUVToUV, UHVPlus), "parallel_hatch", false, false);
                 event.recipes.gtceu.arc_furnace(id(`arc_${tier}_parallel_hatch`))
                     .itemInputs(`gtceu:${tier}_parallel_hatch`)
@@ -169,6 +169,6 @@ global.not_hardmode(() => {
 
             macRecipe(tier, LUVTOUV, UHVPLUS);
             arcRecipe(tier, LUVTOUV, UHVPLUS);
-        })
+        });
     })
 })

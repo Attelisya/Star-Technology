@@ -11,7 +11,8 @@ global.not_hardmode(() => {
         function getFusionCoilRecycleOutputs(coil) {
             const checkRecyclingCount = global.checkRecyclingCount;
             const componentRecycleMaterials = global.componentRecycleMaterials;
-            let getComponentTotal;
+            const getComponentTotal = global.getComponentTotal;
+            let tierBracket;
             let materials = {};
             let recycleOutputs = [];
             let blockType;
@@ -26,15 +27,13 @@ global.not_hardmode(() => {
             } = FUSIONCOILDETAILS[coil];
             let auxCoilBool = (tierComponent == "zpm" || tierComponent == "uhv") ? true : false;
 
-            if (tierComponent == "uhv" || tierComponent == "uev" || tierComponent == "uiv") {    
-                getComponentTotal = global.getUHVPlusComponentTotal;
+            if (tierComponent == "uhv" || tierComponent == "uev" || tierComponent == "uiv") {
+                tierBracket = "UHVPLUS";
                 materialTypes = ["plate", "prim", "cable", "sec", "tert"];
-                blockType = "fusion_coil_UHVPLUS";
             }
             else if (tierComponent == "luv" || tierComponent == "zpm" || tierComponent == "uv") {
-                getComponentTotal = global.getLUVToUVComponentTotal;
+                tierBracket = "LUVToUV";
                 materialTypes = ["plate", "prim", "cable", "wire", "foil"];
-                blockType = "fusion_coil_LUVToUV"; 
             }
             else {
                 recycleOutputs = [ "15x gtceu:tungsten_steel", "8x gtceu:samarium_iron_arsenic_oxide", `${plateCount}x ${plateMaterial}`,
@@ -42,7 +41,7 @@ global.not_hardmode(() => {
                 return recycleOutputs;
             }
             // gets final outputs
-            let tempTotals = getComponentTotal(components);
+            let tempTotals = getComponentTotal(components, tierBracket);
             if (!componentRecycleMaterials[tierComponent]) return;
             materialTypes.forEach(type => {
                 if (type == "plate") {
@@ -56,7 +55,7 @@ global.not_hardmode(() => {
             });
 
             // checks final outputs
-            let tempObj = checkRecyclingCount(counts, blockType, auxCoilBool, true, false);
+            let tempObj = checkRecyclingCount(counts, `fusion_coil_${tierBracket}`, auxCoilBool, true, false);
 
             // sorts the final outputs
             let checkCount = 0;
@@ -72,7 +71,7 @@ global.not_hardmode(() => {
                 
                 checkCount++;
             }
-            
+
             // sets the blockBools
             for (let n = 0; n < 4; n++) {
                 recycleOutputs.push(tempObj.blockBools[tempObj.outputOrder[n] + "Block"]);

@@ -1,5 +1,4 @@
 global.not_hardmode(() => {
-
     ServerEvents.recipes(event => {
         const id = global.id;
         const calculateDuration = global.calculateRecyclingDuration;
