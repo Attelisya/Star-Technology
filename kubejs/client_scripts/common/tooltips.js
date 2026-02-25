@@ -18,7 +18,8 @@ ItemEvents.tooltip(event => {
         "gtceu:ascendant_engraving_matrix", "gtceu:byteforce_unified_incomparable_logistics_depot", "gtceu:electro_magnetic_material_ripper", "gtceu:fermenting_arboreal_rejuvination_monstronsity", 
         "gtceu:gravitational_compression_chamber", "gtceu:material_annihilation_array", "gtceu:molecular_inducing_xanadu", "gtceu:multithreaded_component_synthesis_forge",
         "gtceu:subatomic_particle_lattice_isolation_terminal", "gtceu:superior_particulate_isolation_nexus", "gtceu:yielding_excression_advanced_seperation_transformator", 
-        "start_core:luv_fusion", "start_core:zpm_fusion", "start_core:uv_fusion", "start_core:uhv_fusion", "start_core:uev_fusion", "start_core:uiv_fusion"
+        "start_core:luv_fusion", "start_core:zpm_fusion", "start_core:uv_fusion", "start_core:uhv_fusion", "start_core:uev_fusion", "start_core:uiv_fusion", 
+        "gtceu:supreme_plasma_turbine", "gtceu:nyinsane_plasma_turbine"
     ];
     
     addedByStarT.forEach(name => {
