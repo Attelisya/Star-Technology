@@ -6,35 +6,44 @@ global.componentRecycleMaterials = {
         primMaterial: `gtceu:${componentMaterials.luv.materials.primMaterial}`,
         cableMaterial: `gtceu:${componentMaterials.luv.materials.cable}`,
         wireMaterial: `gtceu:${componentMaterials.luv.materials.wireMechanical}`,
+        elctrlyzWireMaterial: `gtceu:${componentMaterials.luv.materials.elctrlyzWire}`,
         foilMaterial: `gtceu:${componentMaterials.luv.materials.miscMaterial}`
     },
     zpm: {
         primMaterial: `gtceu:${componentMaterials.zpm.materials.primMaterial}`,
         cableMaterial: `gtceu:${componentMaterials.zpm.materials.cable}`,
         wireMaterial: `gtceu:${componentMaterials.zpm.materials.wireMechanical}`,
+        elctrlyzWireMaterial: `gtceu:${componentMaterials.zpm.materials.elctrlyzWire}`,
         foilMaterial: `gtceu:${componentMaterials.zpm.materials.miscMaterial}`
     },
     uv: {
         primMaterial: `gtceu:${componentMaterials.uv.materials.primMaterial}`,
         cableMaterial: `gtceu:${componentMaterials.uv.materials.cable}`,
         wireMaterial: `gtceu:${componentMaterials.uv.materials.wireMechanical}`,
+        elctrlyzWireMaterial: `gtceu:${componentMaterials.zpm.materials.elctrlyzWire}`,
         foilMaterial: `gtceu:${componentMaterials.uv.materials.miscMaterial}`
     },
     uhv: {
         primMaterial: `gtceu:${componentMaterials.uhv.materials.primMaterial}`,
         cableMaterial: `gtceu:${componentMaterials.uhv.materials.cable}`,
+        wireMaterial: `gtceu:${componentMaterials.uhv.materials.wire}`,
+        elctrlyzWireMaterial: `gtceu:${componentMaterials.zpm.materials.elctrlyzWire}`,
         secMaterial: `gtceu:${componentMaterials.uhv.materials.supMaterial}`,
         tertMaterial: `gtceu:${componentMaterials.uhv.materials.wireMechanical}`
     },
     uev: {
         primMaterial: `gtceu:${componentMaterials.uev.materials.primMaterial}`,
         cableMaterial: `gtceu:${componentMaterials.uev.materials.cable}`,
+        wireMaterial: `gtceu:${componentMaterials.uev.materials.wire}`,
+        elctrlyzWireMaterial: `gtceu:${componentMaterials.zpm.materials.elctrlyzWire}`,
         secMaterial: `gtceu:${componentMaterials.uev.materials.supMaterial}`,
         tertMaterial: `gtceu:${componentMaterials.uev.materials.tierMaterial}`
     },
     uiv: {
         primMaterial: `gtceu:${componentMaterials.uiv.materials.primMaterial}`,
         cableMaterial: `gtceu:${componentMaterials.uiv.materials.cable}`,
+        wireMaterial: `gtceu:${componentMaterials.uiv.materials.wire}`,
+        elctrlyzWireMaterial: `gtceu:${componentMaterials.zpm.materials.elctrlyzWire}`,
         secMaterial: `gtceu:${componentMaterials.uiv.materials.supMaterial}`,
         tertMaterial: `gtceu:${componentMaterials.uiv.materials.tierMaterial}`
     }

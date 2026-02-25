@@ -62,7 +62,6 @@ global.not_hardmode(() => {
 
             // sorts the final outputs
             let checkCount = 0;
-            let position = 0;
             let flag = false;
             let flag2 = (tier == "uev" || tier == "uiv") ? 3 : 4;
 
@@ -70,21 +69,18 @@ global.not_hardmode(() => {
                 if (checkCount == flag2) {
                     flag = true;
                 }
-                console.log(`tempObj.totals[${tempObj.outputOrder[position] + "Count"}]: ${tempObj.totals[tempObj.outputOrder[position] + "Count"]}`);
-                if (tempObj.totals[tempObj.outputOrder[position] + "Count"] != 0) {
-                    recycleOutputs[position] = `${tempObj.totals[tempObj.outputOrder[position] + "Count"]}x ${materials[tempObj.outputOrder[position] + "Material"]}`;
-                    console.log(`recycleOutputs[${position}]: ${recycleOutputs[position]}`);
-                    position++;
+                if (tempObj.totals[tempObj.outputOrder[checkCount] + "Count"] != 0) {
+                    recycleOutputs.push(`${tempObj.totals[tempObj.outputOrder[checkCount] + "Count"]}x ${materials[tempObj.outputOrder[checkCount] + "Material"]}`);
                 }
                 
                 checkCount++;
             }
-            let listStart = (tier == "uev" || tier == "uiv") ? 4 : 5;
+
+            // sets the blockBools
             for (let n = 0; n < 4; n++) {
-                recycleOutputs[n + listStart] = tempObj.blockBools[tempObj.outputOrder[n] + "Block"];
+                recycleOutputs.push(tempObj.blockBools[tempObj.outputOrder[n] + "Block"]);
             }
 
-            console.log(`recycleOutputs: ${recycleOutputs}`);
             return recycleOutputs;
         } 
 

@@ -13,16 +13,12 @@ global.not_hardmode(() => {
         function getFusionCasingRecycleOutputs(field_generator_tier, casing_tier) {
             const componentRecycles = global.componentRecycleMaterials;
             const checkRecyclingCount = global.checkRecyclingCount;
+            const casingMaterials = global.casingMaterials;
+            let materials = {};
+            let tempTotals = {};
             let recycleOutputs = [];
-            const materials = {
-                casingMaterial: "",
-                primMaterial: "",
-                cableMaterial: "",
-                hullCableMaterial: "",
-                secMaterial: "",
-                wireMaterial: ""
-            }
-            let tempTotals;
+            let materialTypes;
+            let componentCounts;
             let blockType;
 
             if (field_generator_tier == "iv") { //iv
@@ -31,88 +27,30 @@ global.not_hardmode(() => {
                 return recycleOutputs;
             }
             else if (field_generator_tier == "luv" || field_generator_tier == "zpm" || field_generator_tier == "uv") { //LUVToUV
-                const counts = global.LUVToUVComponentRecycleCounts.field_generator;
-                const {
-                    primCount,
-                    cableCount,
-                    wireCount
-                } = counts;
-
-                tempTotals = {
-                    casingCount: 8,
-                    primCount: primCount,
-                    cableCount: cableCount,
-                    hullCableCount: 1,
-                    wireCount: wireCount
-                }
-
+                componentCounts = global.LUVToUVComponentRecycleCounts.field_generator;
                 blockType = "fusion_casing_LUVToUV";
-
-                switch (casing_tier) {
-                    case "zpm": {
-                        materials.casingMaterial = "gtceu:naquadah_alloy";
-                        materials.primMaterial = componentRecycles.luv.primMaterial;
-                        materials.cableMaterial = componentRecycles.luv.cableMaterial;
-                        materials.hullCableMaterial = componentRecycles.zpm.cableMaterial;
-                        materials.wireMaterial = componentRecycles.luv.wireMaterial;
-                        break;
-                    }
-                    case "uv": {
-                        materials.casingMaterial = "gtceu:darmstadtium";
-                        materials.primMaterial = componentRecycles.zpm.primMaterial;
-                        materials.cableMaterial = componentRecycles.zpm.cableMaterial;
-                        materials.hullCableMaterial = componentRecycles.uv.cableMaterial;
-                        materials.wireMaterial = componentRecycles.zpm.wireMaterial;
-                        break;
-                    }
-                    case "uhv": {
-                        materials.casingMaterial = "gtceu:neutronium";
-                        materials.primMaterial = componentRecycles.uv.primMaterial;
-                        materials.cableMaterial = componentRecycles.uv.cableMaterial;
-                        materials.hullCableMaterial = componentRecycles.uhv.cableMaterial;
-                        materials.wireMaterial = componentRecycles.uv.wireMaterial;
-                        break;
-                    }
-                }
-
+                materialTypes = ["casing", "prim", "cable", "hullCable", "wire"];
             }
             else { //UHVPlus
-                const counts = global.UHVPlusComponentRecycleCounts.field_generator;
-                const {
-                    primCount,
-                    cableCount,
-                    secCount,
-                } = counts;
-
-                tempTotals = {
-                    casingCount: 8,
-                    primCount: primCount,
-                    cableCount: cableCount,
-                    hullCableCount: 1,
-                    secCount: secCount
-                }
-
+                componentCounts = global.UHVPlusComponentRecycleCounts.field_generator;
                 blockType = "fusion_casing_UHVPLUS";
-
-                switch (casing_tier) {
-                    case "uev": {
-                        materials.casingMaterial = "gtceu:mythrolic_alloy";
-                        materials.primMaterial = componentRecycles.uhv.primMaterial;
-                        materials.cableMaterial = componentRecycles.uhv.cableMaterial;
-                        materials.hullCableMaterial = componentRecycles.uev.cableMaterial;
-                        materials.secMaterial = componentRecycles.uhv.secMaterial;
-                        break;
-                    }
-                    case "uiv": {
-                        materials.casingMaterial = "gtceu:chaotixic_alloy";
-                        materials.primMaterial = componentRecycles.uev.primMaterial;
-                        materials.cableMaterial = componentRecycles.uev.cableMaterial;
-                        materials.hullCableMaterial = componentRecycles.uiv.cableMaterial;
-                        materials.secMaterial = componentRecycles.uev.secMaterial;
-                        break;
-                    }
-                }
+                materialTypes = ["casing", "prim", "cable", "hullCable", "sec"];
             }
+
+            materialTypes.forEach(type => {
+                if (type == "casing") {
+                    tempTotals[type + "Count"] = 8;
+                    materials[type + "Material"] = casingMaterials[casing_tier];
+                }
+                else if (type == "hullCable") {
+                    tempTotals[type + "Count"] = 1;
+                    materials[type + "Material"] = componentRecycles[casing_tier][type + "Material"];
+                }
+                else {
+                    tempTotals[type + "Count"] = componentCounts[type + "Count"];
+                    materials[type + "Material"] = componentRecycles[field_generator_tier][type + "Material"];
+                }
+            });
 
             // gets the final outputs
             let tempObj = checkRecyclingCount(tempTotals, blockType, false, true, true);
@@ -134,11 +72,10 @@ global.not_hardmode(() => {
                 checkCount++;
             }
 
-            recycleOutputs[position] = tempObj.blockBools.primBlock; position++;
-            recycleOutputs[position] = tempObj.blockBools.cableBlock; position++;
-            recycleOutputs[position] = tempObj.blockBools.hullCableBlock; position++;            
-            recycleOutputs[position] = (field_generator_tier == "uhv" || field_generator_tier == "uev" || field_generator_tier == "uiv") ? tempObj.blockBools.secBlock : tempObj.blockBools.wireBlock; 
-            position++;
+            // sets the blockBools
+            for (let n = 0; n < 4; n++) {
+                recycleOutputs.push(tempObj.blockBools[tempObj.outputOrder[n] + "Block"]);
+            }
 
             return recycleOutputs;
         }

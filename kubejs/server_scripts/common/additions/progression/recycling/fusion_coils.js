@@ -60,22 +60,22 @@ global.not_hardmode(() => {
 
             // sorts the final outputs
             let checkCount = 0;
-            let position = 0;
             let flag = false;
 
             while (!flag) {
                 if (checkCount == 4) {
                     flag = true;
                 }
-                if (tempObj.totals[tempObj.outputOrder[position] + "Count"] != 0) {
-                    recycleOutputs[position] = `${tempObj.totals[tempObj.outputOrder[position] + "Count"]}x ${materials[tempObj.outputOrder[position] + "Material"]}`;
-                    position++;
+                if (tempObj.totals[tempObj.outputOrder[checkCount] + "Count"] != 0) {
+                    recycleOutputs.push(`${tempObj.totals[tempObj.outputOrder[checkCount] + "Count"]}x ${materials[tempObj.outputOrder[checkCount] + "Material"]}`);
                 }
                 
                 checkCount++;
             }
+            
+            // sets the blockBools
             for (let n = 0; n < 4; n++) {
-                recycleOutputs[n+5] = tempObj.blockBools[tempObj.outputOrder[n] + "Block"];
+                recycleOutputs.push(tempObj.blockBools[tempObj.outputOrder[n] + "Block"]);
             }
 
             return recycleOutputs;

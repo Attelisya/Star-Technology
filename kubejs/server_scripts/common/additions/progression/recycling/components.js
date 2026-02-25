@@ -34,28 +34,23 @@ global.not_hardmode(() => {
 
             // sorts the final outputs
             let checkCount = 0;
-            let position = 0;
             let flag = false;
             
             while (!flag) {
                 if (checkCount == 3) {
                     flag = true;
                 }
-                if (tempObj.totals[tempObj.outputOrder[position] + "Count"] != 0) {
-                    recycleOutputs[position] = `${tempObj.totals[tempObj.outputOrder[position] + "Count"]}x ${details.materials[tempObj.outputOrder[position] + "Material"]}`;
-                    position++;
+                if (tempObj.totals[tempObj.outputOrder[checkCount] + "Count"] != 0) {
+                    recycleOutputs.push(`${tempObj.totals[tempObj.outputOrder[checkCount] + "Count"]}x ${details.materials[tempObj.outputOrder[checkCount] + "Material"]}`);
                 }
 
                 checkCount++;
             }
 
-            //sets the blockBools
-            recycleOutputs[position] = tempObj.blockBools.primBlock; position++;
-            recycleOutputs[position] = tempObj.blockBools.cableBlock; position++;
-            recycleOutputs[position] = (tier == "uhv" || tier == "uev" || tier == "uiv") ? tempObj.blockBools.secBlock : tempObj.blockBools.wireBlock; 
-            position++;
-            recycleOutputs[position] = (tier == "uhv" || tier == "uev" || tier == "uiv") ? tempObj.blockBools.tertBlock : tempObj.blockBools.foilBlock; 
-            position++;
+            // sets the blockBools
+            for (let n = 0; n < 4; n++) {
+                recycleOutputs.push(tempObj.blockBools[tempObj.outputOrder[n] + "Block"]);
+            }
 
             return recycleOutputs;
         }
