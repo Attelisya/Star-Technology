@@ -39,6 +39,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 			.build())
 		.workableCasingModel('kubejs:block/casings/nether_multis/extreme_temperature_smelting_casing',
             'gtceu:block/multiblock/gcym/blast_alloy_smelter')
-		.additionalDisplay(global.coilMachineTempDisplay);;
+		.additionalDisplay(global.coilMachineTempDisplay);
 
 });

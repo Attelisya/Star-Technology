@@ -31,6 +31,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .build())
         .workableCasingModel('gtceu:block/casings/gcym/high_temperature_smelting_casing',
             'gtceu:block/multiblock/gcym/mega_blast_furnace')
-        .additionalDisplay(global.coilMachineTempDisplay);;
+        .additionalDisplay(global.coilMachineTempDisplay);
 
 });
