@@ -1808,8 +1808,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     polymerFluidPipe(`polycarbonate`, [`3x oxygen`, `16x carbon`, `16x hydrogen`], 0x202020, [388, 300, true, true, false, false], [no_decomp, foil, plates]);
 
     //De-Ionized Water Line
-    noCompFluid(`purified_water`, 0x06467c);
-    noCompFluid(`acidic_water`, 0x084a83);
+    noCompFluid(`purified_water`, 0x4A94FF);
+    noCompFluid(`acidic_water`, 0x2E85FF);
     compLiquid(`divinylbenzene`, [`10x carbon`, `10x hydrogen`], 0x9fb1b8, [no_decomp]);
-    noCompFluid(`deionized_water`, 0x165c99);
+    noCompFluid(`deionized_water`, 0x006AFF);
 });

@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
 
     Cyclonic sifter 40b distilled water + carbon mesh with 50% consume rate -> 20b purified water 
     VCR 10b purified water + 8 ion exchange resin beads -> 10b acidic water + 5 dirty ion exchange resin beads
-    Distillation tower (sterile) 10b acidic water ->  0.25b water + 0.5b distilled water + 1b purified water + 8b de-ionised water 
+    Distillation tower (sterile) 10b acidic water ->  0.25b water + 1b purified water + 0.5b distilled water + 8b de-ionised water 
     Chem bath 4 dirty ion exchange resin beads + 1b sulfuric acid = 4 dry ion exchange resin beads
     */
 
@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
 
     dt(id(`deionized_water`))
         .inputFluids(`gtceu:acidic_water 10000`)
-        .outputFluids(`minecraft:water 250`, `gtceu:distilled_water 500`, `gtceu:purified_water 1000`, `gtceu:deionized_water 8000`)
+        .outputFluids(`minecraft:water 250`, `gtceu:purified_water 1000`, `gtceu:distilled_water 500`, `gtceu:deionized_water 8000`)
         .duration(200)
         .disableDistilleryRecipes(true)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
