@@ -81,3 +81,6 @@
     //VCR Machine Loader
     const $VacuumChemicalReactorMachine = Java.loadClass("com.startechnology.start_core.machine.vcrc.VacuumChemicalReactionChamberMachine");
     const $StarTVacuumPumpPredicates = Java.loadClass("com.startechnology.start_core.machine.vacuum_pump.StarTVacuumPumpPredicates");
+
+    // Formatting Util
+    const $FormattingUtil = Java.loadClass('com.gregtechceu.gtceu.utils.FormattingUtil');
