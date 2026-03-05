@@ -1,60 +1,68 @@
 StartupEvents.registry('item', event => {
 
-    const nuclearRod = (type,tier,composition,depeleted_composition,boolsumption,effect) => {
+    const nuclearRod = (type,tier,composition,depeleted_composition,boolsumption) => {
         
         let activeRod = event.create(`${type}_fuel_rod`)
             .tooltip(Text.translate('item.kubejs.nuclear_rod_composition.tooltip'))
             .tooltip(composition)
             .textureJson({ 
                 layer0: `kubejs:item/resource_gen/nuclear_rods/${type}`,
-                layer1: `kubejs:item/resource_gen/nuclear_rods/overlay`,
                 layer1: `kubejs:item/resource_gen/nuclear_rods/enriched`
             });
 
         if(boolsumption){
-            activeRod.food(f => f.effect)
+            activeRod.food(f => {f
+                .effect('minecraft:speed', 600, 0, 20)
+                .alwaysEdible()
+                // .eaten(ctx =>{
+                //     event.server.scheduleInTicks(10+Math.floor(Math.random()*300), ctx => {
+            //             event.server.runCommandSilent(`execute at ${event.player.username} run summon thermal:fire_tnt ${Math.floor(event.player.x)} ${Math.floor(event.player.y)} ${Math.floor(event.player.z)}`);
+            //             event.server.runCommandSilent(`execute at ${event.player.username} run summon minecraft:tnt ${Math.floor(event.player.x)} ${Math.floor(event.player.y)} ${Math.floor(event.player.z)}`);
+            //             event.player.potionEffects.add('minecraft:instant_damage', 1, 99);
+                //     });
+                // });
+            });
         }
 
         event.create(`depleted_${type}_fuel_rod`)
             .tooltip(Text.translate('item.kubejs.nuclear_rod_composition.tooltip'))
-            .tooltip(/*'§k' + */depeleted_composition) //uncomment after done
+            .tooltip('§k' + depeleted_composition)
             .textureJson({ 
                 layer0: `kubejs:item/resource_gen/nuclear_rods/dep_${type}`,
-                layer1: `kubejs:item/resource_gen/nuclear_rods/overlay`,
                 layer1: `kubejs:item/resource_gen/nuclear_rods/depleted`
             });
 
     }
 
-    nuclearRod('thr','ev','96% Th²³⁰','96% U²³⁵',false,'');
+    nuclearRod('thr','ev','96% Th²³⁰','96% U²³⁵',false);
 
-    nuclearRod('leu238','ev','96% U²³⁸','72% Pu²⁴⁴ | 24% Np²³⁷',false,'');
+    nuclearRod('leu238','ev','96% §eU²³⁸','72% Pu²⁴⁴ | 24% Np²³⁷',false);
 
-    nuclearRod('heu','iv','96% U²³⁵','72% Pu²⁴¹ | 24% ?',false,'');
+    nuclearRod('heu','iv','96% §eU²³⁵','72% Pu²⁴¹ | 24% ?',true);
 
-    nuclearRod('plu','iv','96% Pu²⁴⁴','48% Pu²³⁹ | 24% Pu²⁴¹ | 24% Am²⁴¹',false,'');
+    nuclearRod('plu','iv','96% §ePu²⁴⁴','48% Pu²³⁹ | 24% Pu²⁴¹ | 24% Am²⁴¹',false);
 
-    nuclearRod('mox239','iv','48% U²³⁸ | 48% Pu²³⁹','48% Am²⁴¹ | 24% Pu²⁴¹ | 24% ?',false,'');
+    nuclearRod('mox239','iv','48% §eU²³⁸ §7|§r §e48% Pu²³⁹','48% Am²⁴¹ | 24% Pu²⁴¹ | 24% ?',false);
 
-    nuclearRod('amr','luv','96% Am²⁴¹','48% Cm²⁴⁴ | 24% Pu²³⁸ | 24% Np²³⁷',false,'');
+    nuclearRod('amr','luv','96% §eAm²⁴¹','48% Cm²⁴⁴ | 24% Pu²³⁸ | 24% Np²³⁷',false);
 
-    nuclearRod('nep','luv','96% Np²³⁷','48% Pu²³⁸ | 24% Pu²³⁹ | 24% ?',false,'');
+    nuclearRod('nep','luv','96% §eNp²³⁷','48% Pu²³⁸ | 24% Pu²³⁹ | 24% ?',false);
 
-    nuclearRod('crm','zpm','96% Cm²⁴⁴','48% Cf²⁵² | 48% Pu²³⁹',false,'');
+    nuclearRod('crm','zpm','96% §eCm²⁴⁴','48% Cf²⁵² | 48% Pu²³⁹',false);
 
-    nuclearRod('mox241','zpm','48% U²³⁸ | 48% Pu²⁴¹','72% Pu²³⁹ | 24% Am²⁴¹',false,'');
+    nuclearRod('mox241','zpm','48% §eU²³⁸ §7|§r48%  §ePu²⁴¹','72% Pu²³⁹ | 24% Am²⁴¹',false);
 
-    nuclearRod('tpu','zpm','48% Th²³⁰ | 48% Pu²³⁹','72% U²³³ | 24% Am²⁴¹',false,'');
+    nuclearRod('tpu','zpm','48% §eTh²³⁰ §7|§r 48% §ePu²³⁹','72% U²³³ | 24% Am²⁴¹',false);
 
-    nuclearRod('mox238','zpm','72% Pu²³⁸ | 24% Cf²⁵²','72% Cm²⁴⁴ | 24% Pu²³⁹',false,'');
+    nuclearRod('mox238','zpm','72% §ePu²³⁸ §7|§r 24% §eCf²⁵²','72% Cm²⁴⁴ | 24% Pu²³⁹',false);
 
-    nuclearRod('caf','uv','96% Cf²⁵²','48% Fm²⁵⁷ | 48% Pu²⁴¹',false,'');
+    nuclearRod('caf','uv','96% §eCf²⁵²','48% Fm²⁵⁷ | 48% Pu²⁴¹',false);
 
-    nuclearRod('etu','uv','48% Cm²⁴⁴ | 24% Cf²⁵² | 24% Am²⁴¹','48% Pu²³⁸ | 48% Es²⁵³',false,'');
+    nuclearRod('etu','uv','48% §eCm²⁴⁴ §7|§r 24% §eCf²⁵² §7|§r 24% §eAm²⁴¹','48% Pu²³⁸ | 48% Es²⁵³',false);
 
-    nuclearRod('leu233','uv','96% U²³³','48% Pu²³⁹ | 24% Cf²⁵² | 24% ?',false,'');
+    nuclearRod('leu233','uv','96% §eU²³³','48% Pu²³⁹ | 24% Cf²⁵² | 24% ?',false);
 
-    nuclearRod('nqe','uhv','72% Nq⁴⁰⁴ | 24% Es²⁵³','72% Ec⁴⁰⁴ | 24% ?',false,'');
+    nuclearRod('nqe','uhv','72% §eNq⁴⁰⁴ §7|§r 24% §eEs²⁵³','72% Ec⁴⁰⁴ | 24% ?',false);
     
     //Th²³⁰ - thorium
     //U²³³ - uranium_233
@@ -72,25 +80,5 @@ StartupEvents.registry('item', event => {
     //Fm²⁵⁷ - fermium
     //Nq⁴⁰⁴ - purified_naquadah
     //Ec⁴⁰⁴ - echo   
-    
-    // event.create('thorium_fuel_rod')
-    //     .texture('kubejs:item/resource_gen/nuclear_rods/thorium_fuel_rod');
-
-    // event.create('highly_enriched_uranium_fuel_rod')
-    //     .tooltip(Text.translate('item.kubejs.highly_enriched_uranium_fuel_rod.tooltip'))
-    //     .texture('kubejs:item/resource_gen/nuclear_rods/high_enriched_uranium_fuel_rod');
-
-    // event.create('low_enriched_uranium_fuel_rod')
-    //     .texture('kubejs:item/resource_gen/nuclear_rods/low_enriched_uranium_fuel_rod');
-
-    // event.create('depleted_thorium_fuel_rod')
-    //     .texture('kubejs:item/resource_gen/nuclear_rods/depleted_thorium_fuel_rod');
-
-    // event.create('depleted_highly_enriched_uranium_fuel_rod')
-    //     .tooltip(Text.translate('item.kubejs.depleted_highly_enriched_uranium_fuel_rod.tooltip'))
-    //     .texture('kubejs:item/resource_gen/nuclear_rods/depleted_high_enriched_uranium_rod');
-
-    // event.create('depleted_low_enriched_uranium_fuel_rod')
-    //     .texture('kubejs:item/resource_gen/nuclear_rods/depleted_low_enriched_uranium_rod');
 
 });

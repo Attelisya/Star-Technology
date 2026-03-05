@@ -186,7 +186,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.Netherite.setMaterialARGB(0x1a0d00);
     GTMaterials.Netherite.setMaterialIconSet(DULL);
     GTMaterials.Netherite.addFlags(rod, foil);
-    // GTMaterials.Lutetium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
     GTMaterials.get('netherite_trisulfate_complex').setFormula('[*Nr*(SO4)3](OH)2');
     GTMaterials.get('netherite_hexammine_sulfate').setFormula('[*Nr*(NH3)6]SO4');
     GTMaterials.get('glowstone').setFormula('(Si(FeS2)5(CrAl2O3)Hg3)Au');
@@ -195,11 +195,9 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
     GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
     GTMaterials.get('nether_star').setFormula('✧');
-    // GTMaterials.get('nether_star_concentrate').setFormula('*✧*');
     GTMaterials.get('dissipated_helish_concentrate').setFormula('⛧-');
     GTMaterials.get('helish_concentrate').setFormula('⛧');
     GTMaterials.get('hellfire_ash').setFormula('🔥-');
-    // GTMaterials.get('starium_alloy').setFormula('*✧*4(Ke6Nq2C)2El2');
     GTMaterials.get('nyanium').setFormula('ᗢ');
     GTMaterials.get('maxwellium').setFormula('ᓚᘏᗢ')
     GTMaterials.get('low_saturation_voidic_excression').setFormula('[∅-]');
@@ -223,14 +221,10 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('order_centric_void').setFormula('⚖∅');
     GTMaterials.get('chaos_centric_void').setFormula('✹∅');
     GTMaterials.get('voidic_waste_residue').setFormula('?∅?');
-    // GTMaterials.get('dragon_breath').setFormula('🜍');
-    // GTMaterials.get('pure_dragon_breath').setFormula('*🜍*');
-    // GTMaterials.get('voidic').setFormula('∅');
     GTMaterials.get('preon').setFormula('✶');
     GTMaterials.get('paradox').setFormula('☯');
     GTMaterials.get('rare_earth').setFormula('?');
     GTMaterials.get('platinum_group_sludge').setFormula('Pt?');
-    // GTMaterials.get('draconyallium').setFormula('🜍Dr68Ag20O94N76🜍');
     GTMaterials.get('draco_abyssal').setFormula('🜍∅🜍');
     GTMaterials.get('silver_sulfate').setFormula('Ag2(SO4)');
     GTMaterials.get('chromium_sulfate').setFormula('Cr2(SO4)3');
@@ -249,6 +243,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get(`thorium`).setFormula(`Th²³⁰`);
     GTMaterials.get(`neptunium`).setFormula(`Np²³⁷`);
     GTMaterials.get(`fermium`).setFormula(`Fm²⁵⁷`);
+    GTMaterials.get(`americium`).setFormula(`Am²⁴⁵`);
 
 });
 
@@ -280,12 +275,16 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     element('rhenium', 'fluid');
     element('zirconium', 'fluid');
     element('hafnium', 'fluid');
+    element('fermium', 'fluid');
+    element('selenium', 'fluid');
 
     // Gasses
-    element('oganesson', 'gas');
 
     // Plasmas
-    
+
+    // Plasma + Gas
+    element('oganesson', 'gas_plasma');
+
     // Materials used as placeholdeFrs
     [
         'mystery','star','dragon','excited','soul'
