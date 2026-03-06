@@ -77,7 +77,7 @@ PlayerEvents.tick(event => {
         }
     }
 
-    // Abyssal Drain
+    // Uranium Fever
     if (player.hasEffect('kubejs:uranium_fever')) {
         let effects = ['minecraft:speed','minecraft:haste'];
 
