@@ -277,6 +277,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     element('hafnium', 'fluid');
     element('fermium', 'fluid');
     element('selenium', 'fluid');
+    element('neptunium', 'fluid');
 
     // Gasses
 
