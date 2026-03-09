@@ -94,6 +94,22 @@ StartupEvents.registry('item', event => {
                 layer0: `kubejs:item/stargate/gate_items/components/reinforced_plating`,
                 layer1: `kubejs:item/stargate/gate_items/components/${tier}`
             })
+
+        event.create(`${tier}_stargate_rod_base`)
+            .tooltip(Text.translate(`item.kubejs.${tier}_stargate_rod_base.tooltip`))
+            // .texture(`kubejs:item/stargate/gate_items/components/${tier}_dimensional_supercomputer`);
+            .textureJson({ //temp
+                layer0: `kubejs:item/stargate/gate_items/components/stargate_rod_base`,
+                layer1: `kubejs:item/stargate/gate_items/components/${tier}`
+            })
+
+        event.create(`${tier}_enscription_plate`)
+            .tooltip(Text.translate(`item.kubejs.${tier}_enscription_plate.tooltip`))
+            // .texture(`kubejs:item/stargate/gate_items/components/${tier}_enscription_plate`);
+            .textureJson({ //temp
+                layer0: `kubejs:item/stargate/gate_items/components/enscription_plate`,
+                layer1: `kubejs:item/stargate/gate_items/components/${tier}`
+            })
             
     });
 
