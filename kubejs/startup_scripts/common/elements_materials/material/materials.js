@@ -820,12 +820,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         compLiquidTemp('molten_estaltadyne_mixture', 3500, ['1x mystery','1x estalt','1x mystery'], 0x8E0505, [no_decomp]);
 
         compDustLiquid('estaltadyne', ['1x mystery','1x estalt','1x mystery'], 0x8E0535, [no_decomp]);
-        compDustLiquid('estaltadyne', ['1x mystery','1x estalt','1x mystery'], 0x8E0535, [no_decomp]);
-
-        // compDust('metmalic_estaltadyne', ['4x estalt','3x titanium','2x aluminium','5x sulfur'], 0x8E0560, [no_decomp]);
-        // compDust('magnemalic_estaltadyne', ['4x estalt','3x titanium','5x sulfur'], 0x8E0480, [no_decomp]);
-        // compDust('tytite_estaltadyne', ['4x estalt','3x titanium'], 0x8E0340, [no_decomp]);
-        
+       
         // compDust('metmalic_estaltadyne', ['4x estalt','3x titanium','2x aluminium','5x sulfur'], 0x8E0560, [no_decomp]);
         // compDust('magnemalic_estaltadyne', ['4x estalt','3x titanium','5x sulfur'], 0x8E0480, [no_decomp]);
         // compDust('tytite_estaltadyne', ['4x estalt','3x titanium'], 0x8E0340, [no_decomp]);

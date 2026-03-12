@@ -4209,6 +4209,8 @@
 			y: -5.0d
 		}
 		{
+			dependencies: ["53B8A2EFCF2D4371"]
+			icon: "gtceu:advanced_synthesis_plant"
 			id: "271587AB365AB803"
 			tasks: [
 				{
