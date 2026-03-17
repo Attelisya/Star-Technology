@@ -497,7 +497,7 @@ ServerEvents.recipes(event => {
 
             assemblerFluid(`dual_me_${recId}_hatch`, `expandedgt:dual_me_${recId}_hatch`, [
                 `expandedgt:expanded_me_${input}_hatch`, `expandedgt:expanded_me_${input}_bus`, `${pipeMaterial}_nonuple_fluid_pipe`, `3x ${casingMaterial}_frame` 
-            ], `gtceu:polybenzimidazole ${144 * fluidMulti}`, GTValues.V[GTValues[consTier]], circuit);
+            ], `polybenzimidazole ${144 * fluidMulti}`, GTValues.V[GTValues[consTier]], circuit);
         });
     });
 
