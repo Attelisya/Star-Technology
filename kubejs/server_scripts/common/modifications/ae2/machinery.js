@@ -406,6 +406,7 @@ ServerEvents.recipes(event => {
             'gtceu:tungsten_carbide_frame', 'gtceu:ev_field_generator', 'gtceu:ev_emitter', 'gtceu:quantum_star', '6x gtceu:double_fluix_steel_plate'
         ], 'soldering_alloy 144', GTValues.V[GTValues.EV]);
 
+    //Assembler Matrix
     assemblerFluidRem('assembler_matrix_frame','expatternprovider:assembler_matrix_frame', [
             'gtceu:plascrete','2x ae2:fluix_smart_dense_cable', '4x gtceu:ruthenium_plate'
         ], 'fluix_steel 576', GTValues.V[GTValues.EV]);
@@ -430,11 +431,46 @@ ServerEvents.recipes(event => {
             'expatternprovider:assembler_matrix_wall','2x ae2:speed_card'
         ], 'netherite_certus_quartz_skystone_alloy 576', GTValues.V[GTValues.EV]);
     
-    //Misc
-    ['bus', 'hatch'].forEach(type => {
-        assemblerfluid(`expanded_me_input_${type}`, `expandedgt:expanded_me_input_${type}`, [])
-    })
+    //ME Hatches
+    let consTier;
+    let input;
+    let casingMaterial;
+    ['luv', 'zpm'].forEach(tier => {
+        casingMaterial = global.casingMaterials[tier];
+        consTier = (tier == 'luv') ? 'ZPM' : 'UV';
+        input = (tier == 'luv') ? 'input' : 'stocking_input';
+        
+        ['bus', 'hatch'].forEach(type => {
+            assembler(`expanded_me_${input}_${type}`, `expandedgt:expanded_me_${input}_${type}`, [
+                `gtceu:me_${input}_${type}`, `4x ${casingMaterial}_plate`, '2x ae2:capacity_card', `3x #gtceu:circuits/${tier}` 
+            ], GTValues.V[GTValues[consTier]]);
+        });
+    });
+    
+    let pipeMaterial;
+    let circuit;
+    ['zpm'].forEach(tier => { //to allow for dual stockings to be thrown into this when done
+        casingMaterial = global.casingMaterials[tier];
+        pipeMaterial = (tier == 'zpm') ? 'gtceu:polybenzimidazole' : 'gtceu:naquadah';
+        consTier = (tier == 'zpm') ? 'UV' : 'UHV';
 
+        ['input', 'output'].forEach(io => {
+            input = (io == 'input' && tier == 'zpm') ? 'input' : (io == 'input' && tier == 'uv') ? 'stocking_input' : 'output';
+            circuit = (io == 'input') ? 1 : 2;
+            
+            if (io == 'output' && tier == 'uv') {
+                return;
+            }
+
+            assembler(`dual_me_${input}_hatch`, `expandedgt:dual_me_${input}_hatch`, [
+                `expandedgt:expanded_me_${input}_hatch`, `expandedgt:expanded_me_${input}_bus`, `${pipeMaterial}_nonuple_fluid_pipe`, `3x ${casingMaterial}_frame` 
+            ], GTValues.V[GTValues[consTier]], circuit);
+
+            console.log(`expandedgt:expanded_me_${input}_hatch`, `expandedgt:expanded_me_${input}_bus`, `${pipeMaterial}_nonuple_fluid_pipe`, `3x ${casingMaterial}_frame`);
+        });
+    });
+        
+    //Misc
     ['molecular_assembler', 'drive', 'io_port'].forEach(type => {
         extended(`${type}`, `${type}`);
     });
