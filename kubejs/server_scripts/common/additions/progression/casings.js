@@ -382,9 +382,16 @@ ServerEvents.recipes(event => {
             W: '#forge:tools/wrenches'
         }).id(`start:shaped/palladium_substation`);
 
-    const hermeticCasing = (tier, prefix) => {
+    const hermeticCasing = (tier) => {
         const casingMaterial = global.componentMaterials[tier].materials.tierMaterial;
         const pipeMaterial = global.componentMaterials[tier].materials.pipeMaterial;
+        const toRemoveList = ['luv', 'zpm', 'uv'];
+        const isGt = ['lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv'];
+        const prefix = (isGt.includes(tier)) ? 'gtceu:' : 'kubejs:';
+
+        if (toRemoveList.includes(tier)) {
+            event.remove({ output: `gtceu:${tier}_hermetic_casing` })
+        }
 
         event.shaped(`${prefix + tier}_hermetic_casing`, [
             'PPP',
@@ -394,7 +401,18 @@ ServerEvents.recipes(event => {
             P: `gtceu:${casingMaterial}_plate`,
             H: `gtceu:${pipeMaterial}_large_fluid_pipe`
         }).id(id(`${tier}_hermetic_casing`));
+
+        event.recipes.gtceu.assembler(id(`${tier}_hermetic_casing`))
+            .itemInputs(`8x gtceu:${casingMaterial}_plate`, `1x gtceu:${pipeMaterial}_large_fluid_pipe`)
+            .itemOutputs(`${prefix + tier}_hermetic_casing`)
+            .circuit(10)
+            .duration(50)
+            .EUt(GTValues.VH[GTValues.LV]);
     }
 
-    hermeticCasing('uhv', 'gtceu:');
+    [
+        'luv', 'zpm', 'uv', 'uhv'
+    ].forEach(tier => {
+        hermeticCasing(tier);
+    })
 });

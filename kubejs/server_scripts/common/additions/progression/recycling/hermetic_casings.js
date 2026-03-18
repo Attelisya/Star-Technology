@@ -1,7 +1,7 @@
 global.not_hardmode(() => {
     ServerEvents.recipes(event => {
         const TIERS = [
-            'uhv'
+            'luv', 'zpm', 'uv', 'uhv'
         ];
 
         const arcRecipe = (tier) => {
@@ -10,7 +10,13 @@ global.not_hardmode(() => {
             const casingMaterial = global.componentMaterials[tier].materials.tierMaterial;
             const pipeMaterial = global.componentMaterials[tier].materials.pipeMaterial;
             const outputs = [`8x gtceu:${casingMaterial}_ingot`, `6x gtceu:${pipeMaterial}_ingot`];
-            const prefix = (tier == 'uhv') ? 'gtceu:' : 'kubejs:';
+            const isGt = ['lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv'];
+            const prefix = (isGt.includes(tier)) ? 'gtceu:' : 'kubejs:';
+            const toRemoveList = ['luv', 'zpm', 'uv'];
+
+            if (toRemoveList.includes(tier)) {
+                event.remove({ input: `${prefix + tier}_hermetic_casing`, type: 'gtceu:arc_furnace'});
+            }
 
             event.recipes.gtceu.arc_furnace(id(`arc_${tier}_hermetic_casing`))
                 .itemInputs(`${prefix + tier}_hermetic_casing`)
@@ -27,9 +33,15 @@ global.not_hardmode(() => {
             const casingMaterial = global.componentMaterials[tier].materials.tierMaterial;
             const pipeMaterial = global.componentMaterials[tier].materials.pipeMaterial;
             const outputs = [`8x gtceu:${casingMaterial}_dust`, `6x gtceu:${pipeMaterial}_dust`];
-            const prefix = (tier == 'uhv') ? 'gtceu:' : 'kubejs:';
+            const isGt = ['lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv'];
+            const prefix = (isGt.includes(tier)) ? 'gtceu:' : 'kubejs:';
+            const toRemoveList = ['luv', 'zpm', 'uv'];
+            
+            if (toRemoveList.includes(tier)) {
+                event.remove({ input: `${prefix + tier}_hermetic_casing`, type: 'gtceu:macerator'});
+            }
 
-            event.recipes.gtceu.macerator(id(`macerate${tier}_hermetic_casing`))
+            event.recipes.gtceu.macerator(id(`macerate_${tier}_hermetic_casing`))
                 .itemInputs(`${prefix + tier}_hermetic_casing`)
                 .itemOutputs(outputs)
                 .duration(calculateDuration(outputs))
