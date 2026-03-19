@@ -2,6 +2,7 @@ ServerEvents.recipes(event => {
     const id = global.id;
     const assembler = event.recipes.gtceu.assembler;
     const polarizer = event.recipes.gtceu.polarizer;
+    const assline = event.recipes.gtceu.assembly_line;
 
     const log = (text) => {
         console.log("-------------------------------");
@@ -65,6 +66,7 @@ ServerEvents.recipes(event => {
                 .itemOutputs(`kubejs:${tier}_energy_core`)
                 .duration(600)
                 .EUt(GTValues.VA[GTValues[recipeTier]]);
+
         }
 
         const {
@@ -83,8 +85,8 @@ ServerEvents.recipes(event => {
 
         recipe
             .itemInputs(
-                `gtceu:double_${tierMaterial}_plate`, `kubejs:${tier}_energy_core`, 
-                `16x gtceu:fine_${superconductor}_wire`, `2x #gtceu:circuits/${tier}` 
+                `gtceu:double_${tierMaterial}_plate`, `kubejs:${tier}_energy_core`, `16x gtceu:fine_${superconductor}_wire`, 
+                `2x #gtceu:circuits/${tier}` 
             )
             .inputFluids(`gtceu:${solder} 576`)
             .itemOutputs(`kubejs:${tier}_photovoltaic_cell`)
@@ -92,11 +94,10 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues[recipeTier]]);
 
         //Solar Cells
-        log(`2x kubejs:${tier}_photovoltaic_cell, gtceu:${tierMaterial}_frame, 2x gtceu:${cable}_double_cable, #gtceu:circuits/${tier}`);
         assembler(id(`${tier}_solar_cell`))
             .itemInputs(
-                `2x kubejs:${tier}_photovoltaic_cell`, `gtceu:${tierMaterial}_frame`, 
-                `2x gtceu:${cable}_double_cable`, `#gtceu:circuits/${tier}`
+                `2x kubejs:${tier}_photovoltaic_cell`, `gtceu:${tierMaterial}_frame`, `2x gtceu:${cable}_double_cable`, 
+                `#gtceu:circuits/${tier}`
             )
             .inputFluids(`gtceu:epoxy ${288 * getEpoxyMultiplier(tier)}`)
             .itemOutputs(Item.of(`2x start_core:${tier}_solar_cell`))
@@ -105,4 +106,85 @@ ServerEvents.recipes(event => {
             
     });
 
+    const getControllerDetails = (tier) => {
+        const cableMultiplier = (tier == 'luv' || tier == 'uhv') ? 4 : (tier == 'iv' || tier == 'uv') ? 2 : 1;
+        const lubeMultiplier = (tier == 'uhv' || tier == 'uv') ? 8 : (tier == 'luv') ? 4 : (tier == 'iv') ? 2 : 1;
+        const pipeMaterial = (tier == 'uhv') ? 'poly_34_ethylenedioxythiophene_polystyrene_sulfate' : 'polyether_ether_ketone';
+        const researchItem = (tier == 'uhv') ? 'start_core:uv_solar_array' : 'start_core:luv_solar_panel';
+        const waterMultiplier = (tier == 'uhv') ? 4 : 1;
+        const cwuT = (tier == 'uhv') ? 160 : 128;
+
+        const controllerDetails = {
+            cableMultiplier: cableMultiplier,
+            lubeMultiplier: lubeMultiplier,
+            pipeMaterial: pipeMaterial,
+            researchItem: researchItem,
+            waterMultiplier: waterMultiplier,
+            cwuT: cwuT
+        }
+
+        return controllerDetails;
+    }
+    
+    //Solar Panels and Arrays
+    ['ev', 'iv', 'luv', 'uv', 'uhv', 'uev'].forEach((tier, index, tiers) => {
+        if (tier == 'uev') return; //in list purely for circuit tier
+        
+        recipeTier = (tier == 'luv') ? 'LuV' : tier.toUpperCase();
+        const {
+            tierMaterial,
+            wireMechanical,
+            lubricant,
+            solder,
+            cable,
+            battery
+        } = global.componentMaterials[tier].materials;
+
+        const {
+            cableMultiplier,
+            lubeMultiplier,
+            pipeMaterial,
+            researchItem,
+            waterMultiplier,
+            cwuT
+        } = getControllerDetails(tier);
+
+        //Solar Panels
+        if (tier == 'ev' || tier == 'iv' || tier == 'luv') {
+            assembler(id(`${tier}_solar_panel`))
+                .itemInputs(
+                    `4x gtceu:${tierMaterial}_frame`, Item.of(`gtceu:${battery}`), `${8 * cableMultiplier}x gtceu:${cable}_double_cable`,
+                    `4x gtceu:${tier}_emitter`, `4x gtceu:${tier}_sensor`, `2x #gtceu:circuits/${tiers[index + 1]}`
+                )
+                .inputFluids(`gtceu:${lubricant} ${2000 * lubeMultiplier}`)
+                .itemOutputs(`start_core:${tier}_solar_panel`)
+                .duration(600)
+                .EUt(GTValues.VHA[GTValues[recipeTier]]);
+
+        }
+        //Solar Arrays
+        else {
+            assline(id(`${tier}_solar_array`))
+                .itemInputs(
+                    `4x gtceu:${tierMaterial}_frame`, Item.of(`gtceu:${battery}`), `${8 * cableMultiplier}x gtceu:${cable}_double_cable`,
+                    `8x gtceu:${tier}_emitter`, `8x gtceu:${tier}_sensor`, `gtceu:${pipeMaterial}_tiny_fluid_pipe`, 
+                    `64x gtceu:fine_${wireMechanical}_wire`, `64x gtceu:fine_${wireMechanical}_wire`, `2x #gtceu:circuits/${tiers[index + 1]}`
+                )
+                .inputFluids(
+                    `gtceu:deionized_water ${25000 * waterMultiplier}`, `gtceu:${lubricant} ${2000 * lubeMultiplier}`, `gtceu:${solder} 3000`
+                )
+                .itemOutputs(`start_core:${tier}_solar_array`)
+                .duration(600)
+                .stationResearch(
+                    researchRecipeBuilder => researchRecipeBuilder
+                        .researchStack(Item.of(researchItem))
+                        .EUt(GTValues.VHA[GTValues[recipeTier]])
+                        .CWUt(cwuT)
+                )
+                .EUt(GTValues.VHA[GTValues[recipeTier]]);
+
+        }
+    });
+
+    
 });
