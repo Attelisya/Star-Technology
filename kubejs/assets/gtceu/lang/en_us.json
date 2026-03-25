@@ -775,8 +775,8 @@
 
     "material.gtceu.abydos_refractory_dense_magma": "Abydos-Refractory Dense Magma",
     "material.gtceu.abydos_reactive_dense_magma": "Abydos-Reactivity Dense Magma",
-    "material.gtceu.naquadite_magma": "Naquadite Magma",
-    "material.gtceu.naquadite_magma_residue": "Naquadite Magma Residue",
+    "material.gtceu.abydos_naquadite_dense_magma": "Abydos-Naquadite Dense Magma",
+    "material.gtceu.naquadite_dense_residue": "Naquadite Dense Residue",
     "material.gtceu.naquadite": "Naquadite",
     "material.gtceu.hydrogen_iodide": "Hydrogen Iodide",
     "material.gtceu.hydroiodic_acid": "Hydroiodic Acid",
@@ -1120,7 +1120,7 @@
     "gtceu.jei.bedrock_fluid.highly_unstable_nether_magma_deposit": "Highly Unstable Nether Magma Deposit",
     "gtceu.jei.bedrock_fluid.crude_infernal_concentrate": "Crude Infernal Concentrate Deposit",
     "gtceu.jei.bedrock_fluid.lava_dense": "Lava Deposit",
-    "gtceu.jei.bedrock_fluid.naquadite_magma": "Naquadite Magma",
+    "gtceu.jei.bedrock_fluid.abydos_naquadite_dense_magma": "Abydos-Naquadite Dense Magma",
 
     "block.gtceu.tree_synthesizer": "Tree Synthesizer",
     "block.gtceu.tree_synthesizer.tooltip.0": "§7A larger greenhouse that provides ample space for gigantic trees to be grown, and felled.",
