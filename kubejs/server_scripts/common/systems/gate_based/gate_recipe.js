@@ -122,8 +122,8 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.ZPM]);
     
     event.recipes.gtceu.assembly_line(id('stargate_component_assembly'))
-            .itemInputs('gtceu:prismalium_frame', '4x #gtceu:circuits/uhv', '2x gtceu:uv_field_generator', '8x gtceu:gravi_star', 
-                    '4x gtceu:uv_robot_arm', '4x gtceu:uv_robot_arm', '4x gtceu:uv_robot_arm', '4x gtceu:uv_robot_arm', 
+            .itemInputs('gtceu:prismalium_frame', '4x #gtceu:circuits/uv', '2x gtceu:zpm_field_generator', '8x gtceu:gravi_star',
+                    '4x gtceu:zpm_robot_arm', '4x gtceu:zpm_electric_motor', '4x gtceu:zpm_conveyor_module', '4x gtceu:zpm_electric_piston',
                     '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', 
                     '56x gtceu:stellarium_screw', '32x gtceu:melodium_single_wire')
             .inputFluids('gtceu:prismalium 36864', 'gtceu:pcb_coolant 64000', 'gtceu:osmiridium 73728')
@@ -132,10 +132,10 @@ ServerEvents.recipes(event => {
             .stationResearch(
         researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('kubejs:stargate_rod'))
-                .EUt(GTValues.VHA[GTValues.UV])
-                .CWUt(144)
+                .EUt(GTValues.VHA[GTValues.ZPM])
+                .CWUt(32)
             )
-            .EUt(GTValues.VHA[GTValues.UHV]);
+            .EUt(GTValues.VHA[GTValues.ZPM]);
 
     event.recipes.gtceu.assembly_line(id('gate_assembly'))
             .itemInputs('gtceu:ancient_runicalium_frame', '32x #gtceu:circuits/uhv', '8x gtceu:uhv_field_generator', '8x kubejs:uhv_catalyst_core', 
