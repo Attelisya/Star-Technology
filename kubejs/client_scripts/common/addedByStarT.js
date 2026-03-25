@@ -24,7 +24,7 @@ global.addedByStarT = {
         'hellforge', 'abyssal_harvester', 'abyssal_containment_room', 'luv_fusion_reactor', 'zpm_fusion_reactor', 'uv_fusion_reactor', 'uhv_fusion_reactor', 'uev_fusion_reactor', 'uiv_fusion_reactor'
     ],
     modifiers: [
-        'batch', 'paraBatch', 'subBatch', 'pocBatch', 'throughBatch', 'coilBatch', 'paraLayered', 'paraSubBatch', 'paraPocBatch', 'subThroughBatch', 'threadSubBatch', 'paraSubBulkBatch', 'paraSubAssBatch',
+        'batch', 'paraBatch', 'subBatch', 'pocBatch', 'throughBatch', 'coilBatch', 'paraLayered', 'paraSubBatch', 'paraPocBatch', 'subThroughBatch', 'threadSubBatch', 'paraSubAssBatch',
         'paraSubThroughBatch', 'paraThreadBulkBatch', 'subAssThroughBatch', 'paraSubBulkThroughBatch', 'paraPocSubBulkThroughBatch', 'paraThreadSubBulkBatch'
     ],
     batch: [
