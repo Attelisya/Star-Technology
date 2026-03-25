@@ -85,6 +85,7 @@ GTCEuServerEvents.oreVeins(event => {
                 .layer(l => l.weight(3).mat(GTMaterials.get('naquadite')).size(2, 3))
                 .layer(l => l.weight(2).mat(GTMaterials.get('magnesite')).size(2, 4))
                 .layer(l => l.weight(2).mat(GTMaterials.get('chromite')).size(2, 4))
+                .layer(l => l.weight(1).mat(GTMaterials.get('magnetite')).size(1, 2))
             )
         )
         vein.surfaceIndicatorGenerator(indicator => indicator

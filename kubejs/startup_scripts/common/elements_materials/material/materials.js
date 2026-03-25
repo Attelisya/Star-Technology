@@ -239,7 +239,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('echo_shard').setFormula('Ec');
     GTMaterials.get('zavaritskite').setFormula('(BiO)F');
     GTMaterials.get('acidic_water').setFormula('H2O*');
-    GTMaterials.get('hydroiodic_acid').setFormula('HI-');
+    GTMaterials.get('hydroiodic_acid').setFormula('HI*');
 
     GTMaterials.get(`thorium`).setFormula(`Th²³⁰`);
     GTMaterials.get(`neptunium`).setFormula(`Np²³⁷`);
@@ -945,7 +945,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         // Naquadite Line
         compLiquid('hydroiodic_acid', ['1x hydrogen', '1x iodine'], 0x906ad6, []);
 
-        compDust('naquadite_solution', ['1x naquadite'], 0x524848, [no_decomp]);
+        compDust('naquadite_solution', ['1x naquadite', '1x mystery'], 0x524848, [no_decomp]);
 
         // Alloys and other compounds
         conductor('zalloy', ['3x zapolgium', '4x duranium', '2x europium'], 0xff66ff, METALLIC, [10799, 'highest', VHA('zpm'), 3000], [V('uv'), 2, 4, false], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, dense_plate]);
