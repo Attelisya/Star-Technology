@@ -17,13 +17,13 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.chemical_bath(id('naquadite_solution'))
         .itemInputs('3x gtceu:naquadite_dust')
         .inputFluids('gtceu:hydroiodic_acid 500')
-        .itemOutputs('gtceu:naquadite_solution')
+        .itemOutputs('gtceu:naquadite_solution_dust')
         .duration(800)
         .EUt(GTValues.VHA[GTValues.LuV]);
 
     event.recipes.gtceu.centrifuge(id('naquadah_from_naquadite'))
-        .itemInputs('gtceu:naquadite_solution')
-        .itemOutputs('4x gtceu:naquadah_dust', 'gtceu:magnesite', 'gtceu:magnesia')
+        .itemInputs('gtceu:naquadite_solution_dust')
+        .itemOutputs('4x gtceu:naquadah_dust', 'gtceu:magnesite_dust', 'gtceu:magnesia_dust')
         .duration(200)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 

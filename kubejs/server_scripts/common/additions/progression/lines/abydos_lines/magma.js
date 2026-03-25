@@ -18,7 +18,7 @@ ServerEvents.recipes(event => {
         .duration(240)
         .EUt(GTValues.VHA[GTValues.UV]*.8);
 
-    event.recipe.gtceu.cyclonic_sifter(id('abydos_naquadite_dense_magma'))
+    event.recipes.gtceu.cyclonic_sifter(id('abydos_naquadite_dense_magma'))
         .chancedInput('1x kubejs:netherite_reinforced_mesh', 300, -20)
         .inputFluids('gtceu:abydos_naquadite_dense_magma 25000')
         .outputFluids('gtceu:naquadite_dense_residue 16000')
