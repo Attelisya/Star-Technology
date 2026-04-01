@@ -238,7 +238,8 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('lepton_dense_akreyrium').setFormula('Ak(ℓ)?');
     GTMaterials.get('echo_shard').setFormula('Ec');
     GTMaterials.get('zavaritskite').setFormula('(BiO)F');
-    GTMaterials.get(`acidic_water`).setFormula(`H2O*`);
+    GTMaterials.get('acidic_water').setFormula('H2O*');
+    GTMaterials.get('hydroiodic_acid').setFormula('HI*');
 
     GTMaterials.get(`thorium`).setFormula(`Th²³⁰`);
     GTMaterials.get(`neptunium`).setFormula(`Np²³⁷`);
@@ -794,6 +795,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
         compDustOre('zavaritskite',['1x bismuth', '1x oxygen', '1x fluorine'], 0xE7D795, []);
 
+        compDustOre('naquadite', ['2x naquadah', '1x magnesia', '1x magnetite'], 0x272424, [no_decomp]);
+
+        compLiquidTemp('abydos_naquadite_dense_magma', 5120, ['1x mystery', '1x naquadite', '1x mystery'], 0x272424, [no_decomp]);
+
+        compLiquidTemp('naquadite_dense_residue', 2560, ['1x mystery', '1x naquadite', '1x mystery'], 0x524848, [no_decomp]);
+
         compLiquidTemp('abydos_refractory_dense_magma', 4520, ['1x mystery', '1x titanite', '1x xenotime', '1x monazite', '1x scheelite', '1x mystery'], 0xe65c00, [no_decomp]);
 
         compLiquidTemp('abydos_reactive_dense_magma', 4980, ['1x mystery', '1x zapolite', '1x crookesite', '1x kitkaite', '1x lautarite', '1x mystery'], 0xff471a, [no_decomp]);
@@ -934,6 +941,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         compLiquid('rare_earth_concentrate', ['1x mystery', '1x sulfur', '4x oxygen'], 0x8c8a7e, [no_decomp]);
 
         compDust('rich_rare_earth', ['1x mystery'], 0xb5ac90, [no_decomp]);
+
+        // Naquadite Line
+        compLiquid('hydroiodic_acid', ['1x hydrogen', '1x iodine'], 0x906ad6, [no_decomp]);
+
+        compDust('naquadite_solution', ['1x naquadite', '1x mystery'], 0x524848, [no_decomp]);
 
         // Alloys and other compounds
         conductor('zalloy', ['3x zapolgium', '4x duranium', '2x europium'], 0xff66ff, METALLIC, [10799, 'highest', VHA('zpm'), 3000], [V('uv'), 2, 4, false], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, dense_plate]);
