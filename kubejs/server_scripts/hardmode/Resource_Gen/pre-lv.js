@@ -299,7 +299,7 @@ ServerEvents.recipes(event => {
 	});
 
 	event.recipes.gtceu.assembler(id('industrial_pump'))
-		.itemInputs('1x gtceu:primitive_pump','6x gtceu:double_steel_plate','2x kubejs:ulv_electric_pump',
+		.itemInputs('1x gtceu:primitive_pump','6x gtceu:double_steel_plate','2x gtceu:ulv_electric_pump',
 			'2x #gtceu:circuits/ulv','4x gtceu:rubber_ring')
 		.circuit(3)
 		.inputFluids('gtceu:rubber 288')

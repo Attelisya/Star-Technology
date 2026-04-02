@@ -84,7 +84,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler(id('solid_blast_furnace'))
         .itemInputs('gtceu:rugged_alloyer', '2x gtceu:double_steel_plate', '2x gtceu:steel_gear', 
-            '2x #gtceu:circuits/ulv' ,'kubejs:ulv_conveyor_module', 'kubejs:ulv_robot_arm')
+            '2x #gtceu:circuits/ulv' ,'gtceu:ulv_conveyor_module', 'gtceu:ulv_robot_arm')
         .inputFluids('gtceu:tin_alloy 432')
         .itemOutputs('gtceu:solid_blast_furnace')
         .duration(300)
@@ -92,7 +92,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler(id('bessemer_forgery'))
         .itemInputs('gtceu:lv_machine_hull','4x gtceu:long_steel_rod','4x #gtceu:circuits/lv','create:basin','2x gtceu:potin_gear',
-            '4x gtceu:small_steel_gear','4x kubejs:ulv_robot_arm','3x kubejs:ulv_electric_pump')
+            '4x gtceu:small_steel_gear','4x gtceu:ulv_robot_arm','3x gtceu:ulv_electric_pump')
         .inputFluids('gtceu:tin_alloy 1152')
         .itemOutputs('gtceu:bessemer_forgery')
         .duration(400)
