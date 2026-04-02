@@ -1812,4 +1812,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquid(`acidic_water`, [`2x hydrogen`, `oxygen`], 0x2E85FF, [no_decomp]);
     compLiquid(`divinylbenzene`, [`10x carbon`, `10x hydrogen`], 0x9fb1b8, [no_decomp]);
     compLiquid(`deionized_water`, [`2x hydrogen`, `oxygen`], 0x006AFF, [no_decomp]);
+
+    //Combustion fuels and oxidizers
+
+    compLiquid(`kerosene`,[`12x carbon`,`26x hydrogen`],0xE8D44D, [no_decomp]);
+    compLiquid(`hydrofined_kerosene`,[`12x carbon`,`26x hydrogen`],0xF2EC9A , [no_decomp]);
+    compLiquid(`rp_1`,[`12x carbon`,`26x hydrogen`],0xF2EC9A , [no_decomp]);
+
 });
