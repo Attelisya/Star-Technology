@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
 			.blasting(`gtceu:${dust}_ingot`, `gtceu:${dust}_dust`)
 			.id(`start:blasting/${dust}_dust_manual_only`);
         // event.recipes.gtceu
-		// 	.gt_blasting(id(`${dust}_from_dust`))
+		// 	.electric_vanilla_blast_furnace(id(`${dust}_from_dust`))
         //     .itemInputs(`gtceu:${dust}_dust`)
         //     .itemOutputs(`gtceu:${dust}_ingot`)
         //     .duration(100)
@@ -43,7 +43,7 @@ ServerEvents.recipes(event => {
     //         let InItem = ParseBlast.inputs.item[0].content;
     //         let OutItem = ParseBlast.outputs.item[0].content;
 
-    //     event.recipes.gtceu.gt_blasting(id(`smelt_${OutItem.value.item}_from_${InItem.value.item}`))
+    //     event.recipes.gtceu.electric_vanilla_blast_furnace(id(`smelt_${OutItem.value.item}_from_${InItem.value.item}`))
     //         .itemInputs(InItem.ingredient.item)
     //         .itemOutputs(OutItem.ingredient.item)
     //         .duration(100)
