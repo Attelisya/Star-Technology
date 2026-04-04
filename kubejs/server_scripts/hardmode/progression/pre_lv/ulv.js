@@ -286,9 +286,9 @@ ServerEvents.recipes(event => {
 
     ['electric_motor', 'electric_pump', 'conveyor_module', 'robot_arm', 'electric_piston'].forEach(component => {
         event.shapeless(
-          Item.of(`kubejs:${component}`),
-          [`gtceu:${component}`]
-        ).id(id(`old_to_new_HM_${component}`));
+          Item.of(`kubejs:ulv_${component}`),
+          [`gtceu:ulv_${component}`]
+        ).id(id(`old_to_new_HM_ulv_${component}`));
     });
 
     //ulv removals
