@@ -562,11 +562,29 @@
 				type: "item"
 			}]
 			size: 1.0d
-			tasks: [{
-				id: "2E2AFC73A37B8B2B"
-				item: "gtceu:high_performance_computation_array"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2E2AFC73A37B8B2B"
+					item: "gtceu:high_performance_computation_array"
+					type: "item"
+				}
+				{
+					id: "2C076710398563AC"
+					item: "gtceu:hpca_computation_component"
+					type: "item"
+				}
+				{
+					id: "480247573BF27D4A"
+					item: "gtceu:hpca_heat_sink_component"
+					type: "item"
+				}
+				{
+					id: "7EABDB7A9387F6EF"
+					item: "gtceu:hpca_active_cooler_component"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: -4.0d
 			y: -7.0d
 		}
@@ -1559,6 +1577,17 @@
 			}]
 			x: 12.0d
 			y: -3.0d
+		}
+		{
+			dependencies: ["3FC351F05F2AC743"]
+			id: "0815FFB99B152DC9"
+			tasks: [{
+				id: "41200BD7E39672CC"
+				item: "gtceu:hpca_advanced_computation_component"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -4.0d
 		}
 	]
 	title: "{ftbquests.futuristic_mechanisms.title}"
