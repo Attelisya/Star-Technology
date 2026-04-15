@@ -2024,9 +2024,7 @@
 		{
 			dependencies: ["4450509C08F416EC"]
 			description: [
-				"-to format to lang"
-				""
-				"\"Tier 1 Specialized Helixes\""
+				"{ftbquests.draconic_age.specialized_t1.description}"
 			]
 			id: "11EA350764763463"
 			size: 1.0d
