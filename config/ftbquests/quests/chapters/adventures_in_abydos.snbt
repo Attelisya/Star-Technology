@@ -617,7 +617,7 @@
 			optional: true
 			tasks: [{
 				id: "6A826ED481004E31"
-				title: "{ftbquests.abydos.positioner.title}"
+				title: "{ftbquests.positioner.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d

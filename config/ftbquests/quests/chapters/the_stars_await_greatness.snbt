@@ -54,7 +54,7 @@
 				item: "minecraft:bedrock"
 				type: "item"
 			}]
-			title: "{ftbquests.draconic_age.dsg_gate_line.title}"
+			title: "{ftbquests.dsg.dsg_gate_line.title}"
 			x: 13.5d
 			y: -0.5d
 		}
@@ -69,7 +69,7 @@
 				item: "sgjourney:pegasus_stargate"
 				type: "item"
 			}]
-			title: "{ftbquests.draconic_age.draconic_stargate.title}"
+			title: "{ftbquests.dsg.draconic_stargate.title}"
 			x: 13.5d
 			y: 3.5d
 		}
@@ -81,9 +81,9 @@
 				"208863E121666BF4"
 			]
 			description: [
-				"{ftbquests.draconic_age.maxwell.description.1}"
+				"{ftbquests.dsg.maxwell.description.1}"
 				"{@pagebreak}"
-				"{ftbquests.draconic_age.maxwell.description.2}"
+				"{ftbquests.dsg.maxwell.description.2}"
 			]
 			id: "3BB8848F84026B45"
 			rewards: [{
@@ -105,23 +105,23 @@
 		}
 		{
 			dependencies: ["3BB8848F84026B45"]
-			description: ["{ftbquests.draconic_age.completion.description}"]
+			description: ["{ftbquests.dsg.completion.description}"]
 			id: "46982CD51A50CD07"
 			shape: "pentagon"
 			size: 1.25d
 			subtitle: "{ftbquests.dsg.completion.subtitle}"
 			tasks: [{
 				id: "5163F1D911C227BB"
-				title: "{ftbquests.draconic_age.completion.item_title}"
+				title: "{ftbquests.dsg.completion.item_title}"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.draconic_age.completion.title}"
+			title: "{ftbquests.dsg.completion.title}"
 			x: 10.875d
 			y: 4.745000000000001d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
-			description: ["{ftbquests.draconic_age.vasilisa.description}"]
+			description: ["{ftbquests.dsg.vasilisa.description}"]
 			hide_dependency_lines: true
 			id: "0B475E2385B478C0"
 			rewards: [{
@@ -142,7 +142,7 @@
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
-			description: ["{ftbquests.draconic_age.valenok.description}"]
+			description: ["{ftbquests.dsg.valenok.description}"]
 			hide_dependency_lines: true
 			id: "53E595EAB1C90884"
 			rewards: [{
@@ -164,7 +164,7 @@
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			dependency_requirement: "one_started"
-			description: ["{ftbquests.draconic_age.mars.description}"]
+			description: ["{ftbquests.dsg.mars.description}"]
 			hide_dependency_lines: true
 			id: "61C534992FB17066"
 			rewards: [{
@@ -196,7 +196,7 @@
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
-			description: ["{ftbquests.draconic_age.poomba.description}"]
+			description: ["{ftbquests.dsg.poomba.description}"]
 			hide_dependency_lines: true
 			id: "208863E121666BF4"
 			shape: "none"
@@ -252,5 +252,5 @@
 			y: -0.5d
 		}
 	]
-	title: "The Stars Await Greatness"
+	title: "{ftbquests.dsg.title}"
 }

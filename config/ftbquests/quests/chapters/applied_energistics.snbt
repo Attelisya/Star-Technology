@@ -1428,7 +1428,7 @@
 			invisible: true
 			tasks: [{
 				id: "76B74EE25F58E344"
-				title: "{ftbquests.ae2.positioner.title}"
+				title: "{ftbquests.positioner.title}"
 				type: "checkmark"
 			}]
 			x: 0.0d

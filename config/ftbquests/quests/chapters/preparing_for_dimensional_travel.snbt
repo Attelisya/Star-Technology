@@ -21,6 +21,12 @@
 			x: -5.0d
 			y: 2.0d
 		}
+		{
+			id: "7A4DCD40CD71CDDF"
+			linked_quest: "6AEB17C2D2AF5344"
+			x: -17.0d
+			y: -2.0d
+		}
 	]
 	quests: [
 		{
@@ -904,17 +910,6 @@
 			}]
 			x: -14.0d
 			y: -1.0d
-		}
-		{
-			dependencies: ["027C5CE3CFCB5649"]
-			id: "2D7B099B96BD2A3D"
-			tasks: [{
-				id: "5D5086A6D1DCDE59"
-				title: "{ftbquests.csg.layered_inputs.title}"
-				type: "checkmark"
-			}]
-			x: -17.0d
-			y: -2.0d
 		}
 	]
 	title: "{ftbquests.csg.title}"

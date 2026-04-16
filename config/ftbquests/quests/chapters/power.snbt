@@ -2407,7 +2407,7 @@
 		}
 		{
 			dependencies: ["22B85F7F13C66730"]
-			description: ["{ftbquests.abydos.lucinducer.description}"]
+			description: ["{ftbquests.power.lucinducer.description}"]
 			id: "7E9A5A626648A859"
 			rewards: [{
 				id: "4A257F294C4D4C76"
