@@ -746,5 +746,5 @@
 			y: 2.5d
 		}
 	]
-	title: "{ftbquests.pl_nuc.title}Nuclear Fission"
+	title: "{ftbquests.pl_nuc.title}"
 }
