@@ -7,9 +7,9 @@ ServerEvents.recipes (event => {
         ' GG1m2GG ',
         '  s345a  ',
         'R  FPF  R',
-        'RRFPPPFRR',
+        'PPFPPPFPP',
         '  fFPFf  ',
-        'PfFPPPFfP',
+        'RfFPPPFfR',
         'PPPPPPPPP'
 	], {
 		G: 'kubejs:komaru_gravitational_stabilizers',

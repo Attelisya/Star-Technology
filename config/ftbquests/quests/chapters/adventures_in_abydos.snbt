@@ -1463,7 +1463,10 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["11D51899B980082B"]
+			dependencies: [
+				"11D51899B980082B"
+				"139F1EF64FA349B1"
+			]
 			description: ["{ftbquests.preparing_for_dimensional_travel.uhv_energy_input_hatch_4a.description}"]
 			id: "44B43694312BAAC8"
 			rewards: [{
@@ -1480,10 +1483,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"44B43694312BAAC8"
-				"7E33A485E30B47EA"
-			]
+			dependencies: ["44B43694312BAAC8"]
 			description: ["{ftbquests.preparing_for_dimensional_travel.uhv_energy_input_hatch_16a.description}"]
 			id: "581B9922CC4B457F"
 			rewards: [{
@@ -1897,6 +1897,7 @@
 		}
 		{
 			dependencies: ["4D04123F036F181E"]
+			hide_dependency_lines: true
 			id: "139F1EF64FA349B1"
 			tasks: [{
 				id: "0BD9F34CD9894B76"
@@ -1904,7 +1905,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -2.5d
+			y: 1.5d
 		}
 	]
 	title: "{ftbquests.abydos.title}"
