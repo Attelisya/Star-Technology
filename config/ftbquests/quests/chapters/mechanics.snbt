@@ -286,7 +286,7 @@
 		}
 		{
 			dependencies: ["027C5CE3CFCB5649"]
-			description: ["\"{ftbquests.mechanics.layered_inputs.description}\""]
+			description: ["{ftbquests.mechanics.layered_inputs.description}"]
 			id: "6AEB17C2D2AF5344"
 			tasks: [{
 				id: "4463F39E5E37E799"
