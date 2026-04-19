@@ -62,7 +62,7 @@ global.addedByStarT = {
         'chemical_plant'
     ],
     subThroughBatch: [
-        'component_nexus', 'component_part_hub', 'super_abs', 'super_ebf', 'super_vacuum_freezer'
+        'component_nexus', 'component_part_hub', 'super_abs', 'super_ebf', 'super_vacuum_freezer', 'super_barrel', 'super_cracker', 'super_pyrolyse', 'super_gas_collector'
     ],
     threadSubBatch: [
         'multithreaded_component_synthesis_forge'
