@@ -275,35 +275,65 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["492F2FED6328118F"]
+			dependencies: ["06D6795B5152B7E1"]
+			icon: "gtceu:riftic_concentrate_bucket"
 			id: "01A904AC91C3F022"
-			tasks: [{
-				id: "4778134D7C5A0C09"
-				title: "Riftic Concentrate"
-				type: "checkmark"
-			}]
+			size: 1.0d
+			tasks: [
+				{
+					id: "4778134D7C5A0C09"
+					title: "Riftic Concentrate"
+					type: "checkmark"
+				}
+				{
+					id: "2064A5312BF4BB76"
+					item: "gtceu:riftic_concentrate_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: 9.5d
 			y: 1.5d
 		}
 		{
-			dependencies: ["492F2FED6328118F"]
+			dependencies: ["260696AEE718A614"]
+			icon: "gtceu:prismatic_hypergurmalium_bucket"
 			id: "53B0C723F50526D9"
-			tasks: [{
-				id: "20796BB8AB7A034B"
-				title: "Prismatic Hypergurmalium"
-				type: "checkmark"
-			}]
+			size: 1.0d
+			tasks: [
+				{
+					id: "20796BB8AB7A034B"
+					title: "Prismatic Hypergurmalium"
+					type: "checkmark"
+				}
+				{
+					id: "718E6C8B095134C0"
+					item: "gtceu:prismatic_hypergurmalium_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: 10.5d
 			y: 1.5d
 		}
 		{
-			dependencies: ["492F2FED6328118F"]
+			dependencies: ["42A47D5635CFA200"]
+			icon: "gtceu:primordial_residue_bucket"
 			id: "586BADD5DCF46444"
-			tasks: [{
-				id: "7D7E91AD6AC0B305"
-				title: "Primordial Residue"
-				type: "checkmark"
-			}]
+			size: 1.0d
+			tasks: [
+				{
+					id: "7D7E91AD6AC0B305"
+					title: "Primordial Residue"
+					type: "checkmark"
+				}
+				{
+					id: "449DB8BC2224104E"
+					item: "gtceu:primordial_residue_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: 8.5d
 			y: 1.5d
 		}
@@ -350,6 +380,7 @@
 		{
 			dependencies: ["20ABDF48307586F2"]
 			id: "492F2FED6328118F"
+			size: 1.0d
 			tasks: [{
 				id: "3064ED963E3DF255"
 				title: "Rimula Extraction"

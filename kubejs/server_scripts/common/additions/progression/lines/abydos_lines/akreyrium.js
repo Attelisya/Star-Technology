@@ -338,7 +338,7 @@ ServerEvents.recipes(event => {
         .duration(240)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
-    event.recipes.gtceu.folding_akreyrium_stabiliser(id('lepton_resonant_thallium_antimonide'))
+    event.recipes.gtceu.abyssal_akreyriadix_stabilizer(id('lepton_resonant_thallium_antimonide'))
         .itemInputs('gtceu:gray_glass_lens','gtceu:tiny_thallium_antimonide_dust')
         .inputFluids('gtceu:lepton_dense_akreyrium 1000')
         .itemOutputs('gtceu:gray_glass_lens','gtceu:tiny_lepton_resonant_thallium_antimonide_dust')

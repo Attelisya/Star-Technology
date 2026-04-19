@@ -431,9 +431,11 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["3B69844600AD5430"]
+			dependencies: [
+				"3B69844600AD5430"
+				"10D78E10735CD210"
+			]
 			description: ["{ftbquests.preparing_for_dimensional_travel.runic_circuitry_assembling_station.description}"]
-			hide_dependency_lines: false
 			id: "6D169C5E35C9EF6C"
 			rewards: [{
 				count: 2
@@ -448,7 +450,7 @@
 				item: "gtceu:runic_circuitry_assembling_station"
 				type: "item"
 			}]
-			x: -10.0d
+			x: -8.0d
 			y: -3.0d
 		}
 		{
@@ -692,6 +694,7 @@
 		}
 		{
 			dependencies: ["12B23627DD0026B5"]
+			hide_dependency_lines: true
 			id: "5C47DBDF58A5D177"
 			size: 1.0d
 			tasks: [{
@@ -699,7 +702,7 @@
 				item: "kubejs:csg_enscription_plate"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -10.0d
 			y: -3.0d
 		}
 		{

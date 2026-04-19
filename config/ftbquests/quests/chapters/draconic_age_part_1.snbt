@@ -568,6 +568,7 @@
 			dependencies: [
 				"7EB9C44EE7515882"
 				"75C33909E2CD5EC0"
+				"07872C5ED6FAE66E"
 			]
 			description: ["{ftbquests.draconic_age.uiv_alloys.description}"]
 			hide_dependency_lines: true
@@ -600,7 +601,7 @@
 			]
 			title: "{ftbquests.draconic_age.uiv_alloys.title}"
 			x: -2.5d
-			y: 5.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -641,7 +642,7 @@
 				type: "item"
 			}]
 			x: -2.5d
-			y: 3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3F9D1B0CED0D4133"]
@@ -659,7 +660,7 @@
 				type: "item"
 			}]
 			x: -0.5d
-			y: 3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -680,7 +681,7 @@
 				type: "item"
 			}]
 			x: -0.5d
-			y: 5.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["69493DCA3D764771"]
@@ -697,7 +698,7 @@
 				item: "gtceu:uiv_energy_input_hatch_16a"
 				type: "item"
 			}]
-			x: -0.5d
+			x: 1.5d
 			y: 7.0d
 		}
 		{
@@ -990,10 +991,7 @@
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"6A82CC9F01960097"
-				"31F87896FF834E63"
-			]
+			dependencies: ["31F87896FF834E63"]
 			description: ["{ftbquests.draconic_age.abyssal_containment_room.description}"]
 			id: "09B55AFE7C06EC82"
 			rewards: [{
@@ -1405,7 +1403,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: -1.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1473,12 +1471,12 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 1.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"2DACE6EF41A118D9"
 				"3FBD3851CCB3F14E"
+				"2BD5C9B89DCEC339"
 			]
 			description: ["{ftbquests.draconic_age.lepton_resonant_thallium_antimonide_ingot.description}"]
 			hide_dependent_lines: true
@@ -1495,8 +1493,8 @@
 				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 1.0d
+			x: 5.5d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1590,7 +1588,10 @@
 			y: -7.0d
 		}
 		{
-			dependencies: ["45E628CF1DA8D380"]
+			dependencies: [
+				"45E628CF1DA8D380"
+				"07872C5ED6FAE66E"
+			]
 			description: ["{ftbquests.draconic_age.rhenium_super_composite_alloy_ingot.description}"]
 			id: "33FBF8561A3D901D"
 			rewards: [{
@@ -1722,8 +1723,8 @@
 				item: "gtceu:atomic_synthesis_plant"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 5.0d
+			x: 3.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
@@ -1762,8 +1763,8 @@
 				}
 				type: "item"
 			}]
-			x: 5.5d
-			y: 1.0d
+			x: 8.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["6D6C79E7CBBCC893"]
@@ -1781,7 +1782,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1974,7 +1975,7 @@
 				type: "item"
 			}]
 			x: 5.5d
-			y: 3.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["7C7300975C25047A"]
@@ -1986,7 +1987,7 @@
 				item: "kubejs:abyssal_processor"
 				type: "item"
 			}]
-			x: 9.5d
+			x: 11.5d
 			y: 5.0d
 		}
 		{
@@ -1998,7 +1999,7 @@
 				item: "kubejs:abyssal_processing_unit"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 9.5d
 			y: 5.0d
 		}
 		{
@@ -2128,6 +2129,56 @@
 			}]
 			x: -3.5d
 			y: -6.0d
+		}
+		{
+			dependencies: [
+				"3B1453C435E3950B"
+				"694E1F6458D5F72F"
+			]
+			id: "6BAC4AC1B7032B93"
+			tasks: [{
+				id: "6542FCC23D69CF5C"
+				item: "gtceu:primordial_infusion"
+				type: "item"
+			}]
+			x: 11.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["09B55AFE7C06EC82"]
+			id: "10019AD38638B628"
+			tasks: [{
+				id: "3A40738B3A56C2E2"
+				item: "kubejs:prismalic_reflector_casing"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0E75A2FC17ED0C28"]
+			id: "07872C5ED6FAE66E"
+			tasks: [{
+				id: "102068348306ABB6"
+				item: "kubejs:dragonic_reflector_casing"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"2DACE6EF41A118D9"
+				"6A82CC9F01960097"
+			]
+			id: "2BD5C9B89DCEC339"
+			tasks: [{
+				id: "7C71CE2BE4CF25FF"
+				item: "gtceu:abyssal_akreyriadix_stabilizer"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 3.0d
 		}
 	]
 	title: "{ftbquests.draconic_age.title}"
