@@ -94,4 +94,4 @@
     // Formatting Util
     const $FormattingUtil = Java.loadClass('com.gregtechceu.gtceu.utils.FormattingUtil');
 
-    const $KomaruFrameMachine = Java.loadClass('com.startechnology.start_core.machine.komaru.StarTKomaruFrameMachine');
+    // const $KomaruFrameMachine = Java.loadClass('com.startechnology.start_core.machine.komaru.StarTKomaruFrameMachine');

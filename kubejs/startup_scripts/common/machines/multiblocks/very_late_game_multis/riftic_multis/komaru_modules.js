@@ -80,6 +80,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .workableCasingModel('kubejs:block/casings/end_multis/draco_ware_casing',
             'gtceu:block/multiblock/hpca');
 
-    $KomaruFrameMachine.addModule("gtceu:basic_test_module", "basic");
-    $KomaruFrameMachine.addModule("gtceu:advanced_test_module", "advanced");
+    // $KomaruFrameMachine.addModule("gtceu:basic_test_module", "basic");
+    // $KomaruFrameMachine.addModule("gtceu:advanced_test_module", "advanced");
 });
