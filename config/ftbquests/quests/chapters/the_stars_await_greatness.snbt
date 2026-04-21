@@ -7,12 +7,20 @@
 	id: "6E4FD72B8C507106"
 	order_index: 8
 	progression_mode: "linear"
-	quest_links: [{
-		id: "0D05E42ADEB37A61"
-		linked_quest: "795C7DA2DD644F5A"
-		x: 10.0d
-		y: 1.0d
-	}]
+	quest_links: [
+		{
+			id: "0D05E42ADEB37A61"
+			linked_quest: "795C7DA2DD644F5A"
+			x: 10.0d
+			y: 1.0d
+		}
+		{
+			id: "360B8720B0369EAE"
+			linked_quest: "7E55361BFC343CEC"
+			x: 9.0d
+			y: 4.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: [
@@ -104,7 +112,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 6.0d
+			y: 7.5d
 		}
 		{
 			dependencies: ["66EFD1B3494C51C0"]
@@ -141,7 +149,7 @@
 				type: "item"
 			}]
 			x: 8.5d
-			y: 5.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["139F1EF64FA349B1"]
@@ -162,7 +170,7 @@
 				type: "item"
 			}]
 			x: 11.5d
-			y: 5.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["576C0430D0CDE409"]
@@ -184,7 +192,7 @@
 				type: "item"
 			}]
 			x: 11.0d
-			y: 6.0d
+			y: 7.5d
 		}
 		{
 			dependencies: [
@@ -204,7 +212,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 5.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["00333140377A33F5"]
@@ -219,7 +227,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 4.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["7D2E83192ABF08CA"]
@@ -285,10 +293,14 @@
 				}
 			]
 			x: 10.0d
-			y: 7.0d
+			y: 8.5d
 		}
 		{
-			dependencies: ["20ABDF48307586F2"]
+			dependencies: [
+				"20ABDF48307586F2"
+				"7E55361BFC343CEC"
+				"1E73A1F64F6EA9B5"
+			]
 			hide_dependency_lines: true
 			id: "642FCA1C212F7DCB"
 			tasks: [
@@ -303,22 +315,21 @@
 					type: "checkmark"
 				}
 				{
-					id: "34F47A19423CE810"
-					title: "Dimensional Restabilization"
-					type: "checkmark"
-				}
-				{
 					id: "10CEAB194FF57A3F"
 					title: "Absolute Assembly Line"
 					type: "checkmark"
 				}
 			]
 			title: "-toLang \"Basic Modules\""
-			x: 5.5d
-			y: 3.5d
+			x: 11.0d
+			y: 5.5d
 		}
 		{
-			dependencies: ["20ABDF48307586F2"]
+			dependencies: [
+				"20ABDF48307586F2"
+				"7E55361BFC343CEC"
+				"1E73A1F64F6EA9B5"
+			]
 			id: "1B498C64A42758C5"
 			tasks: [{
 				id: "4816553F3E854AA7"
@@ -329,7 +340,11 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["20ABDF48307586F2"]
+			dependencies: [
+				"20ABDF48307586F2"
+				"7E55361BFC343CEC"
+				"1E73A1F64F6EA9B5"
+			]
 			hide_dependency_lines: true
 			id: "492F2FED6328118F"
 			size: 1.0d
@@ -441,8 +456,8 @@
 			dependencies: ["1B498C64A42758C5"]
 			id: "3137F3F544ACF245"
 			tasks: [{
-				id: "41F504FD87DEE6FC"
-				item: "gtceu:kaledoscopic_fractalizer"
+				id: "5938D776548EF600"
+				item: "gtceu:kaleidoscopic_fractalizer"
 				type: "item"
 			}]
 			x: 12.0d
@@ -482,11 +497,18 @@
 		{
 			dependencies: ["1B498C64A42758C5"]
 			id: "554E28F0B2A6CB25"
-			tasks: [{
-				id: "4C52E9BB6CAF5446"
-				item: "gtceu:riftion_accelerator"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4C52E9BB6CAF5446"
+					item: "gtceu:riftion_accelerator"
+					type: "item"
+				}
+				{
+					id: "5CE38771873AB467"
+					item: "kubejs:particle_rod_holder"
+					type: "item"
+				}
+			]
 			x: 9.0d
 			y: 2.0d
 		}
@@ -495,12 +517,23 @@
 			hide_dependency_lines: true
 			id: "6BA06E19F3C09184"
 			tasks: [{
-				id: "4BB8548AB0472156"
-				title: "primordially_stellarized_weapon_grade_naquadah"
-				type: "checkmark"
+				id: "3946DC83D24EEBB0"
+				item: "gtceu:primordially_stellarized_weapon_grade_naquadah_ingot"
+				type: "item"
 			}]
 			x: 8.0d
 			y: -5.0d
+		}
+		{
+			dependencies: ["09B55AFE7C06EC82"]
+			id: "1E73A1F64F6EA9B5"
+			tasks: [{
+				id: "76F83BA6BF794014"
+				item: "gtceu:faematter_bucket"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 4.0d
 		}
 	]
 	title: "The Stars Await Greatness"

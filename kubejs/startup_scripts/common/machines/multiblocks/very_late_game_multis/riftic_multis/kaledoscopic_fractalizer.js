@@ -1,6 +1,6 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
-    event.create('kaledoscopic_fractalizer')
+    event.create('kaleidoscopic_fractalizer')
         .category('komaru')
         .setEUIO('in')
         .setMaxIOSize(6, 0, 1, 3)
@@ -11,9 +11,9 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
-    event.create('kaledoscopic_fractalizer', 'multiblock')
+    event.create('kaleidoscopic_fractalizer', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType('kaledoscopic_fractalizer')
+        .recipeType('kaleidoscopic_fractalizer')
         .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(() => Block.getBlock('kubejs:aberration_casing'))
         .pattern(definition => FactoryBlockPattern.start()
@@ -60,6 +60,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
        .workableCasingModel('kubejs:block/casings/riftic_multis/aberration_casing',  
-            'kubejs:block/casings/multiblock/kaledoscopic_fractionizer');
+            'kubejs:block/casings/multiblock/kaleidoscopic_fractionizer');
         
 });

@@ -106,7 +106,7 @@ ServerEvents.recipes (event => {
 
         event.recipes.gtceu.riftion_injector(id(riftion[i] + '_singularity'))
             .itemInputs('gtceu:gravi_star',`256x kubejs:neutral_${riftion[i]}_riftion`)
-            .itemOutputs(`minecraft:stone`) //will be kubejs:${riftion[i]}_singularity
+            .itemOutputs(`kubejs:${riftion[i]}_singularity`)
             // .euToStart(250000000000) //consumes 250GEU to start the recipe
             .duration(800)
             .EUt(GTValues.VHA[GTValues.UXV]);
@@ -120,14 +120,14 @@ ServerEvents.recipes (event => {
         .duration(400)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
-    event.recipes.gtceu.riftion_injector(id('raging_rimulatia_ingot'))
+    event.recipes.gtceu.riftion_injector(id('rift_infused_soc'))
         .itemInputs('kubejs:draco_advanced_soc',`4x kubejs:wild_riftion`)
         .itemOutputs(`kubejs:rift_infused_soc`) //will be kubejs:${riftion[i]}_singularity
         // .euToStart(125000000000) //consumes 25GEU to start the recipe
         .duration(100)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
-    event.recipes.gtceu.kaledoscopic_fractalizer(id('riftion_fractalization'))
+    event.recipes.gtceu.kaleidoscopic_fractalizer(id('riftion_fractalization'))
         .inputFluids('gtceu:true_rimula_foundation 6000')
         .itemInputs('32x kubejs:neutral_undina_riftion','32x kubejs:neutral_sylvestris_riftion','32x kubejs:neutral_gnomus_riftion',
             '32x kubejs:neutral_vulcanus_riftion','32x kubejs:neutral_illustris_riftion','32x kubejs:neutral_tenebrosus_riftion')
@@ -135,6 +135,7 @@ ServerEvents.recipes (event => {
         .duration(600)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
+    // TODO
     event.recipes.gtceu.supreme_chemist(id('primordial_residue'))
             .layeredRecipe((layers) => layers
                 .inputFluids('gtceu:primordial_extract')

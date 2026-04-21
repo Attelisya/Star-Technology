@@ -15,25 +15,28 @@ StartupEvents.registry('item', event => {
         .texture('kubejs:item/progression/riftic/komaru/plating');
 
     //Riftions
-    for(let j = 0; j<= 2; j++) {
+    for(let i = 0; i<= 5; i++) {
+
+        let riftion = ['undina','sylvestris','gnomus','vulcanus','illustris','tenebrosus'];
+        //water, air, earth, fire, light, dark
+        let riftionSymbol = ['ᵁ','ˢ','ᴳ','ⱽ','ᴵ','ᵀ']
 
         let charge = ['up','down','neutral'];
+        let chargeSymbol = ['§a⁺§r','§c⁻§r','§6⁰§r'];
 
-        let chargeSymbol = ['⁺','⁻','⁰'];
+        event.create(`${riftion[i]}_singularity`)
+            .texture(`kubejs:item/progression/riftic/singularity/${riftion[i]}`)
+            .tooltip('ψ§l' + riftionSymbol[i] + '§r');
 
-        for(let i = 0; i<= 5; i++) {
-
-            let riftion = ['undina','sylvestris','gnomus','vulcanus','illustris','tenebrosus'];
-            //water, air, earth, fire, light, dark
-            let symbol = ['ᵁ','ˢ','ᴳ','ⱽ','ᴵ','ᵀ']
-
+        for(let j = 0; j<= 2; j++) {
+            
             event.create(`${charge[j]}_${riftion[i]}_riftion`)
                 .textureJson({ 
                     layer0: `kubejs:item/progression/riftic/riftion/${riftion[i]}`,
                     layer1: `kubejs:item/progression/riftic/riftion/${riftion[i]}_id`,
                     layer2: `kubejs:item/progression/riftic/riftion/${charge[j]}`
                 })
-            .tooltip('ψ' + symbol[i] + ' : q' + chargeSymbol[j] + ' : s=1/3'); //spin is fixed and known for NM, HM however.... Far:tm:
+            .tooltip('ψ§l' + riftionSymbol[i] + '§r §7|§r q' + chargeSymbol[j] + ' §7|§r s=§d1/3'); //spin is fixed and known for NM, HM however.... Far:tm:
 
         };
     };
@@ -43,6 +46,6 @@ StartupEvents.registry('item', event => {
             layer0: 'kubejs:item/progression/riftic/riftion/wild',
             layer1: `kubejs:item/progression/riftic/riftion/wild_id`
         })
-        .tooltip('ψ? : q? : s=1/3'); //spin is fixed and known for NM, HM however.... Far:tm:
+        .tooltip('ψ§k?§r §7|§r q§k?§r §7|§r s=§d1/3'); //spin is fixed and known for NM, HM however.... Far:tm:
 
 });

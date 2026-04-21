@@ -1150,9 +1150,9 @@
 			]
 			id: "7E55361BFC343CEC"
 			tasks: [{
-				id: "60D8790CE4DBD814"
-				title: "filament"
-				type: "checkmark"
+				id: "08CE86F41E13950F"
+				item: "kubejs:komaru_filament_t1"
+				type: "item"
 			}]
 			x: -3.0d
 			y: 4.0d
@@ -1161,34 +1161,23 @@
 			dependencies: ["12DF6E4CCD8DE702"]
 			id: "19A621823829E686"
 			tasks: [{
-				id: "7BCDA0504003B13B"
-				title: "infernal_stabilization_mixture"
-				type: "checkmark"
+				id: "6C06D183EAC2C8E6"
+				item: "gtceu:infernal_stabilization_mixture_bucket"
+				type: "item"
 			}]
 			x: -6.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["12DF6E4CCD8DE702"]
-			id: "429765E24B864C8E"
-			tasks: [{
-				id: "16AB267CD1609F42"
-				title: "abyssal_stabilization_mixture"
-				type: "checkmark"
-			}]
-			x: -6.0d
-			y: 5.0d
-		}
-		{
 			dependencies: [
 				"19A621823829E686"
-				"429765E24B864C8E"
+				"1F47B156F1AA198E"
 			]
 			id: "194D29F7135DB256"
 			tasks: [{
-				id: "555E394565F43F24"
-				title: "draconic_stabilization_mixture"
-				type: "checkmark"
+				id: "528327F575F66979"
+				item: "gtceu:draconic_stabilization_mixture_bucket"
+				type: "item"
 			}]
 			x: -5.0d
 			y: 4.0d
@@ -1201,9 +1190,9 @@
 			]
 			id: "12DF6E4CCD8DE702"
 			tasks: [{
-				id: "4F43F1CCC7BD4ABF"
-				title: "stabilization_mixture_base"
-				type: "checkmark"
+				id: "662E3B17E3694AC3"
+				item: "gtceu:stabilization_mixture_base_bucket"
+				type: "item"
 			}]
 			x: -7.0d
 			y: 4.0d
@@ -1254,14 +1243,26 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["492F2FED6328118F"]
 			id: "6AB0E55EE7D7423D"
 			tasks: [{
-				id: "5E9D127DC62997D7"
-				title: "kaleidoscope_agitation_serum"
-				type: "checkmark"
+				id: "5FFB2D62DD50A811"
+				item: "gtceu:kaleidoscope_agitation_serum_bucket"
+				type: "item"
 			}]
 			x: -1.0d
 			y: 3.5d
+		}
+		{
+			dependencies: ["12DF6E4CCD8DE702"]
+			id: "1F47B156F1AA198E"
+			tasks: [{
+				id: "0A07658A684FF3BD"
+				item: "gtceu:abyssal_stabilization_mixture_bucket"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 5.0d
 		}
 	]
 	title: "toLang \"Processing Lines - 5\""

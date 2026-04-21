@@ -932,8 +932,8 @@
 			hide_dependent_lines: true
 			id: "0A242E67024A0A0B"
 			tasks: [{
-				id: "64278A142F8CA3D4"
-				item: "gtceu:weapon_grade_stellarized_naquadah_ingot"
+				id: "21EDCA5D2FF30644"
+				item: "gtceu:stellarized_weapon_grade_naquadah_ingot"
 				type: "item"
 			}]
 			x: 0.0d
