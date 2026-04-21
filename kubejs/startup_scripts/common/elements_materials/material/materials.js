@@ -199,7 +199,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('helish_concentrate').setFormula('⛧');
     GTMaterials.get('hellfire_ash').setFormula('🔥-');
     GTMaterials.get('nyanium').setFormula('ᗢ');
-    GTMaterials.get('maxwellium').setFormula('ᓚᘏᗢ')
+    // GTMaterials.get('maxwellium').setFormula('ᓚᘏᗢ')
     GTMaterials.get('low_saturation_voidic_excression').setFormula('[∅-]');
     GTMaterials.get('moderate_saturation_voidic_excression').setFormula('[∅]');
     GTMaterials.get('high_saturation_voidic_excression').setFormula('[∅+]');
@@ -289,7 +289,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     // Materials used as placeholdeFrs
     [
-        'mystery','star','dragon','excited','soul'
+        'mystery','star','dragon','excited','soul','riftic'
     ].forEach(elem => {
         event.create(elem)
                 .element(GTElements.get(elem));
@@ -752,7 +752,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngotLiquid('weapon_grade_naquadah', ['7x naquadria', '4x pure_netherite', '6x trinaquadalloy', '12x fluorine'], 0xccff33, DULL, [9001, 'highest', VA('zpm'), 3000], [foil, plates, rod, frame]);
 
-    compIngotLiquid('weapon_grade_stellarized_naquadah', ['1x void', '8x weapon_grade_naquadah', '4x stellarium'], 0x57ab6b, SHINY, [12049, 'highest', VA('uhv'), 3600], [foil, plates, rod, frame]);
+    compIngotLiquid('stellarized_weapon_grade_naquadah', ['1x void', '8x weapon_grade_naquadah', '4x stellarium'], 0x57ab6b, SHINY, [12049, 'highest', VA('uhv'), 3600], [foil, plates, rod, frame]);
 
     compGem('runic_laser_source_base', ['6x naquadic_netherite', '6x neptunium', '5x trinium'], 0x00ff00, OPAL, []);    
     
@@ -1405,11 +1405,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquid('nether_tempered_basalz', ['1x mystery'], 0x9f2414, [no_decomp]);
 
     // Quantrum Comporessor Infusions
-    noCompFluid('intangibility_infusion', 0x00AAAA);
+    // noCompFluid('intangibility_infusion', 0x00AAAA);
 
-    noCompFluid('paradoxicity_infusion', 0xAA00AA);
+    // noCompFluid('paradoxicity_infusion', 0xAA00AA);
 
-    noCompFluid('causality_infusion', 0xFFAA00);
+    // noCompFluid('causality_infusion', 0xFFAA00);
+    // will return post DSG with probability lines
 
     // Runic Convergence Infusion
     /*
@@ -1636,14 +1637,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .blastTemp(18880, 'highest', VA('uxv'), 600)
         .iconSet(SHINY)
         .flags(plates, frame, rod, dense_plate, long_rod, gear, foil, small_gear, rotor, no_decomp, no_abs_recipe);
-    
-    event.create('shadowwyrm_holder') //Hide in JEI
-        .components('1x dragon','1x voidic','1x dragon')
-        .dust()
-        .flags(no_working);
 
     event.create('draco_abyssal') //Shadowyrm
-        .components('1x draconyallium','3x abyssal_alloy','2x void','3x ancient_runicalium')
+        .components('1x dragon','1x voidic','1x dragon')
         .ingot()
         .fluid()
         .plasma()
@@ -1661,7 +1657,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngotPlasmaSecColor('borealic_steel',['2x prismalium', '4x rose_gold', '11x aurourium', '2x titan_steel', '1x ancient_netherite'],0x8f7090,0x70907c,SHINY,[18880, 'highest', VA('uxv'), 600],[plates, frame, rod, bolt_and_screw, dense_plate, long_rod, gear, small_gear, no_decomp, no_abs_recipe]);
 
-    compIngotPlasmaSecColor('hvga_steel',['1x signalum','3x hssg','1x shadowwyrm_holder','8x hsla_steel','3x titan_steel'],0x280c6c,0x2561b7,SHINY,[18880, 'highest', VA('uxv'), 600],[plates, frame, rod, bolt_and_screw, dense_plate, long_rod, gear, small_gear, no_decomp, no_abs_recipe, foil]);
+    compIngotPlasmaSecColor('hvga_steel',['1x signalum','3x hssg','1x draco_abyssal','8x hsla_steel','3x titan_steel'],0x280c6c,0x2561b7,SHINY,[18880, 'highest', VA('uxv'), 600],[plates, frame, rod, bolt_and_screw, dense_plate, long_rod, gear, small_gear, no_decomp, no_abs_recipe, foil]);
 
     compIngotPlasmaSecColor('melastrium_mox',['2x osmiridium','7x astrenalloy_nx','3x melodium','1x potin'],0x7d486d,0x4c487d,SHINY,[18880, 'highest', VA('uxv'), 600],[plates, frame, rod, bolt_and_screw, dense_plate, long_rod, gear, small_gear, no_decomp, no_abs_recipe]);
 
@@ -1813,11 +1809,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
     //Polycarbonate Line
-    /* Missing items/fluids
-    diphenoxide
-    phosgene
-    polycarbonate
-    */
     compDust(`sodium_diphenoxide`, [`2x sodium`, `2x oxygen`, `15x carbon`, `16x hydrogen`], 0xFEFEFE, [no_decomp]);
     compLiquid(`phosgene`, [`carbon`, `oxygen`, `2x chlorine`], 0xFDFEFC, [no_decomp]);
     polymerFluidPipe(`polycarbonate`, [`3x oxygen`, `16x carbon`, `16x hydrogen`], 0x202020, [388, 300, true, true, false, false], [no_decomp, foil, plates]);
@@ -1828,21 +1819,34 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquid(`divinylbenzene`, [`10x carbon`, `10x hydrogen`], 0x9fb1b8, [no_decomp]);
     compLiquid(`deionized_water`, [`2x hydrogen`, `oxygen`], 0x006AFF, [no_decomp]);
 
+    //Faematter + Filaments
+    compLiquid('impure_faematter', ['1x mystery','1x faetic','1x mystery'], 0xffffff, [no_decomp]);
+    compLiquid('faematter', ['1x faetic'], 0xffffff, [no_decomp]);
+
+    compLiquid('stabilization_mixture_base', ['1x mystery'], 0xffffff, [no_decomp]);
+    compLiquid('infernal_stabilization_mixture', ['24x stabilization_mixture_base','magmada_alloy'], 0xffffff, [no_decomp]);
+    compLiquid('abyssal_stabilization_mixture', ['24x stabilization_mixture_base','abyssal_alloy'], 0xffffff, [no_decomp]);
+    compLiquid('draconic_stabilization_mixture', ['1x abyssal_stabilization_mixture','infernal_stabilization_mixture'], 0xffffff, [no_decomp]);
+
     //Riftions + Rift Line
-    compLiquid('riftion_extract', ['999x mystery'], 0x8f5d8c, [no_decomp]);
+    compLiquid('riftion_extract', ['999x mystery','1x riftic','999x mystery'], 0x8f5d8c, [no_decomp]);
     compPlasma('riftion', 999989999, ['1x riftion_extract','1x neutronium'], 0xf0fbff, no_decomp);
-    compLiquid('highly_unstable_rift_source', ['1x mystery'], 0x5e1c5b, [no_decomp]);
-    compLiquid('destabilized_rift_source', ['1x mystery'], 0x854181, [no_decomp]);
-    compLiquid('accension_rift_slurry', ['1x mystery'], 0xedb2ea, [no_decomp]);
-    compLiquid('abyssal_rift_slurry', ['1x mystery'], 0x3c265c, [no_decomp]);
-    compLiquid('rimula_t_foundation', ['1x mystery'], 0xe5d1eb, [no_decomp]);
-    compLiquid('rimula_s_foundation', ['1x mystery'], 0x230145, [no_decomp]);
-    compLiquid('true_rimula_foundation', ['1x mystery'], 0x9e22bd, [no_decomp]);
-    compLiquid('primordial_extract', ['1x mystery'], 0xffffff, [no_decomp]);
-    compLiquid('primordial_residue', ['1x mystery'], 0xffffff, [no_decomp]);
-    compLiquid('condensed_rimula', ['1x mystery'], 0xffffff, [no_decomp]);
-    compLiquid('riftic_concentrate', ['1x mystery'], 0xffffff, [no_decomp]);
-    compLiquid('faetic_extract', ['1x mystery'], 0xffffff, [no_decomp]);
-    compLiquid('prismatic_hypergurmalium', ['1x mystery'], 0xffffff, [no_decomp]);
+    compLiquid('highly_unstable_rift_source', ['1x riftic','1x excited'], 0x5e1c5b, [no_decomp]);
+    compLiquid('destabilized_rift_source', ['1x riftic','1x mystery'], 0x854181, [no_decomp]);
+    compLiquid('accension_rift_slurry', ['1x riftic','1x mystery'], 0xedb2ea, [no_decomp]);
+    compLiquid('abyssal_rift_slurry', ['1x riftic','1x mystery'], 0x3c265c, [no_decomp]);
+    compLiquid('rimula_t_foundation', ['1x riftic','1x mystery'], 0xe5d1eb, [no_decomp]);
+    compLiquid('rimula_s_foundation', ['1x riftic','1x mystery'], 0x230145, [no_decomp]);
+    compLiquid('true_rimula_foundation', ['1x riftic','1x mystery'], 0x9e22bd, [no_decomp]);
+    compLiquid('primordial_extract', ['1x riftic','1x voidic','1x mystery'], 0xffffff, [no_decomp]);
+    compLiquid('primordial_residue', ['1x riftic','1x voidic'], 0xffffff, [no_decomp]);
+    compLiquid('condensed_rimula', ['8x riftic','1x mystery'], 0xffffff, [no_decomp]);
+    compLiquid('riftic_concentrate', ['8x riftic'], 0xffffff, [no_decomp]);
+    compLiquid('faetic_extract', ['1x riftic','1x faetic','1x mystery'], 0xffffff, [no_decomp]);
+    compLiquid('prismatic_hypergurmalium', ['1x riftic','1x faetic'], 0xffffff, [no_decomp]);
+
+    //DSG
+    compIngotLiquidSecColor('raging_rimulatia',['1x rifitc','1x draco_abyssal','1x riftic'],0xe357f2,0x163f5e,SHINY,'',[plates, frame, rod, bolt_and_screw, dense_plate, long_rod, gear, small_gear, no_decomp, fine_wire])
+    compIngotPlasmaSecColor('primordially_stellarized_weapon_grade_naquadah',['57x stellarized_weapon_grade_naquadah','1x prismatic_hypergurmalium','1x primordial_residue','1x riftic_concentrate'],0x7b27c4,0x489957,SHINY,[18880, 'highest', VA('uxv'), 600],[plates, frame, rod, bolt_and_screw, dense_plate, long_rod, gear, small_gear, no_decomp, no_abs_recipe, foil,fine_wire]);
 
 });

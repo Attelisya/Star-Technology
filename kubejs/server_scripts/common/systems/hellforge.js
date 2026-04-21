@@ -80,8 +80,8 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.UEV]);
 
     event.recipes.gtceu.injection_mixer(id('sub_stellar_infernal_concentrate'))
-        .inputFluids('gtceu:superheated_infernal_concentrate 3000', 'gtceu:borealic_concentrate 8')
-        .outputFluids('gtceu:sub_stellar_infernal_concentrate 2000')
+        .inputFluids('gtceu:superheated_infernal_concentrate 7500', 'gtceu:borealic_concentrate 36')
+        .outputFluids('gtceu:sub_stellar_infernal_concentrate 5000')
         .duration(960)
         .EUt(GTValues.VHA[GTValues.UEV]);  
         

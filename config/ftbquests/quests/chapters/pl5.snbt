@@ -68,49 +68,28 @@
 			y: -3.25d
 		}
 		{
-			icon: "gtceu:primordial_residue_bucket"
-			id: "4699CD2A5E6DAA80"
-			linked_quest: "586BADD5DCF46444"
-			shape: "gear"
-			size: 1.25d
-			x: 13.5d
-			y: 4.5d
-		}
-		{
-			id: "700EA8F5D85F11BB"
-			linked_quest: "01A904AC91C3F022"
-			shape: "gear"
-			size: 1.25d
-			x: 13.5d
-			y: 6.5d
-		}
-		{
-			id: "135B7A14418CF69B"
-			linked_quest: "53B0C723F50526D9"
-			shape: "gear"
-			size: 1.25d
-			x: 13.5d
-			y: 8.5d
-		}
-		{
-			id: "20F57C0BE199ED65"
-			linked_quest: "5A6856892D99F5ED"
-			x: 6.0d
+			id: "6FFE4A6D78E56C7F"
+			linked_quest: "5C4FE0E51C67FDFA"
+			x: -4.0d
 			y: 3.0d
 		}
 		{
-			id: "2511644863C10967"
-			linked_quest: "5BDA17962F4630EB"
-			x: 5.5d
-			y: 10.0d
+			id: "7615BD1D95880533"
+			linked_quest: "7C33054877B2DB16"
+			x: -8.0d
+			y: 3.0d
 		}
 		{
-			id: "1F4F09F15E11C813"
-			linked_quest: "492F2FED6328118F"
-			shape: "circle"
-			size: 1.5d
-			x: 3.5d
-			y: 6.5d
+			id: "1B6F970B9C1F88F3"
+			linked_quest: "1B6159E114BA50ED"
+			x: -8.0d
+			y: 5.0d
+		}
+		{
+			id: "746C84CB597356A0"
+			linked_quest: "6D573ACD05D0EF96"
+			x: -8.5d
+			y: 4.0d
 		}
 	]
 	quests: [
@@ -844,38 +823,32 @@
 		{
 			dependencies: [
 				"30A558CAD3E962D6"
-				"5BDA17962F4630EB"
-				"1B498C64A42758C5"
 				"38C2E3061C764F05"
 				"10019AD38638B628"
 			]
 			id: "1E9495EE98A83BFD"
-			tasks: [
-				{
-					id: "24E00A17A77B9A19"
-					item: "gtceu:riftion_plasma_bucket"
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "02485A5E6D91A5E9"
-					item: "gtceu:riftion_accelerator"
-					type: "item"
-				}
-			]
-			x: 5.5d
-			y: 8.5d
+			tasks: [{
+				id: "24E00A17A77B9A19"
+				item: "gtceu:riftion_plasma_bucket"
+				optional_task: true
+				type: "item"
+			}]
+			x: 0.5d
+			y: 5.0d
 		}
 		{
-			dependencies: ["492F2FED6328118F"]
+			dependencies: [
+				"492F2FED6328118F"
+				"6AB0E55EE7D7423D"
+			]
 			id: "30A558CAD3E962D6"
 			tasks: [{
 				id: "7E4F67F14188A16D"
 				item: "gtceu:riftion_extract_bucket"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 8.5d
+			x: -1.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["67A6378B37B88293"]
@@ -885,8 +858,8 @@
 				item: "gtceu:destabilized_rift_source_bucket"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 4.5d
+			x: 0.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["1E9495EE98A83BFD"]
@@ -903,8 +876,8 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 7.5d
+			x: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1E9495EE98A83BFD"]
@@ -921,8 +894,8 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: 7.5d
+			x: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1E9495EE98A83BFD"]
@@ -939,8 +912,8 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: 8.5d
+			x: 2.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1E9495EE98A83BFD"]
@@ -957,8 +930,8 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: 9.5d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1E9495EE98A83BFD"]
@@ -975,8 +948,8 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 8.5d
+			x: 3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1E9495EE98A83BFD"]
@@ -993,8 +966,8 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 9.5d
+			x: 3.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1005,6 +978,8 @@
 				"3F610C3DCE18F8B9"
 				"2FAEBF81FEE8367A"
 				"74DC3EFD9977611A"
+				"554E28F0B2A6CB25"
+				"492F2FED6328118F"
 			]
 			icon: "kubejs:wild_riftion"
 			id: "795C7DA2DD644F5A"
@@ -1045,19 +1020,22 @@
 					type: "item"
 				}
 			]
-			x: 9.5d
-			y: 8.5d
+			x: 4.5d
+			y: 5.0d
 		}
 		{
-			dependencies: ["492F2FED6328118F"]
+			dependencies: [
+				"492F2FED6328118F"
+				"6AB0E55EE7D7423D"
+			]
 			id: "67A6378B37B88293"
 			tasks: [{
 				id: "2479EAB8E85B2638"
 				item: "gtceu:highly_unstable_rift_source_bucket"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.5d
+			x: -1.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -1070,34 +1048,19 @@
 				item: "gtceu:accension_rift_slurry_bucket"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 3.5d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
-			dependencies: [
-				"51E67DF73C15419D"
-				"3117841E06C473F9"
-			]
+			dependencies: ["3117841E06C473F9"]
 			id: "22463601F108D3E1"
 			tasks: [{
 				id: "592D036F0E498374"
 				item: "gtceu:abyssal_rift_slurry_bucket"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 5.5d
-		}
-		{
-			dependencies: ["3D239E0F7B45AE92"]
-			id: "51E67DF73C15419D"
-			tasks: [{
-				id: "35E1DA0E8465FAB6"
-				item: "gtceu:abyssal_alloy_ingot"
-				optional_task: true
-				type: "item"
-			}]
-			x: 6.0d
-			y: 6.0d
+			x: 2.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["22463601F108D3E1"]
@@ -1107,8 +1070,8 @@
 				item: "gtceu:rimula_s_foundation_bucket"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 5.5d
+			x: 3.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["16175EA6CBD36D19"]
@@ -1118,8 +1081,8 @@
 				item: "gtceu:rimula_t_foundation_bucket"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 3.5d
+			x: 3.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1132,67 +1095,173 @@
 				item: "gtceu:true_rimula_foundation_bucket"
 				type: "item"
 			}]
-			x: 9.5d
-			y: 4.5d
+			x: 4.5d
+			y: 2.0d
 		}
 		{
-			dependencies: ["3137F3F544ACF245"]
+			dependencies: [
+				"795C7DA2DD644F5A"
+				"0AED3CF0D740E059"
+				"3137F3F544ACF245"
+			]
 			id: "42A47D5635CFA200"
 			tasks: [{
 				id: "68F5CFDF294E4FF9"
 				item: "gtceu:primordial_extract_bucket"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 4.5d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["3137F3F544ACF245"]
+			dependencies: [
+				"795C7DA2DD644F5A"
+				"0AED3CF0D740E059"
+				"3137F3F544ACF245"
+			]
 			id: "260696AEE718A614"
 			tasks: [{
 				id: "049E6F4C5E634E74"
 				item: "gtceu:faetic_extract_bucket"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 8.5d
+			x: 6.0d
+			y: 5.0d
 		}
 		{
-			dependencies: ["3137F3F544ACF245"]
+			dependencies: [
+				"795C7DA2DD644F5A"
+				"0AED3CF0D740E059"
+				"3137F3F544ACF245"
+			]
 			id: "06D6795B5152B7E1"
 			tasks: [{
 				id: "3EE36EF1AB881FA7"
 				item: "gtceu:condensed_rimula_bucket"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 6.5d
+			x: 6.0d
+			y: 3.5d
 		}
 		{
 			dependencies: [
-				"795C7DA2DD644F5A"
-				"0AED3CF0D740E059"
-				"1B498C64A42758C5"
+				"5C4FE0E51C67FDFA"
+				"194D29F7135DB256"
 			]
-			id: "3137F3F544ACF245"
+			id: "7E55361BFC343CEC"
 			tasks: [{
-				id: "41F504FD87DEE6FC"
-				item: "gtceu:kaledoscopic_fractalizer"
-				type: "item"
+				id: "60D8790CE4DBD814"
+				title: "filament"
+				type: "checkmark"
 			}]
-			x: 10.0d
-			y: 6.5d
+			x: -3.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["1B498C64A42758C5"]
-			id: "74DC3EFD9977611A"
+			dependencies: ["12DF6E4CCD8DE702"]
+			id: "19A621823829E686"
 			tasks: [{
-				id: "24BD792F155D2EAA"
-				item: "gtceu:riftion_slammer"
+				id: "7BCDA0504003B13B"
+				title: "infernal_stabilization_mixture"
+				type: "checkmark"
+			}]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["12DF6E4CCD8DE702"]
+			id: "429765E24B864C8E"
+			tasks: [{
+				id: "16AB267CD1609F42"
+				title: "abyssal_stabilization_mixture"
+				type: "checkmark"
+			}]
+			x: -6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"19A621823829E686"
+				"429765E24B864C8E"
+			]
+			id: "194D29F7135DB256"
+			tasks: [{
+				id: "555E394565F43F24"
+				title: "draconic_stabilization_mixture"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"1B6159E114BA50ED"
+				"7C33054877B2DB16"
+				"6D573ACD05D0EF96"
+			]
+			id: "12DF6E4CCD8DE702"
+			tasks: [{
+				id: "4F43F1CCC7BD4ABF"
+				title: "stabilization_mixture_base"
+				type: "checkmark"
+			}]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["06D6795B5152B7E1"]
+			icon: "gtceu:riftic_concentrate_bucket"
+			id: "01A904AC91C3F022"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "2064A5312BF4BB76"
+				item: "gtceu:riftic_concentrate_bucket"
+				optional_task: true
 				type: "item"
 			}]
-			x: 9.5d
-			y: 10.0d
+			x: 8.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["260696AEE718A614"]
+			icon: "gtceu:prismatic_hypergurmalium_bucket"
+			id: "53B0C723F50526D9"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "718E6C8B095134C0"
+				item: "gtceu:prismatic_hypergurmalium_bucket"
+				optional_task: true
+				type: "item"
+			}]
+			x: 8.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["42A47D5635CFA200"]
+			icon: "gtceu:primordial_residue_bucket"
+			id: "586BADD5DCF46444"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "449DB8BC2224104E"
+				item: "gtceu:primordial_residue_bucket"
+				optional_task: true
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			id: "6AB0E55EE7D7423D"
+			tasks: [{
+				id: "5E9D127DC62997D7"
+				title: "kaleidoscope_agitation_serum"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: 3.5d
 		}
 	]
 	title: "toLang \"Processing Lines - 5\""

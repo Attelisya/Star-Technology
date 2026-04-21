@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
     // global.researchBuilder = (machineType, recId, inputsI, inputsF, outputsI, duration, cwuT, totalCWU, euT, researched)
 
     researchBuilder(assline, 'asg_field_stabilizer', 
-        ['gtceu:weapon_grade_stellarized_naquadah_frame', '8x gtceu:uhv_field_generator', 'kubejs:asg_energy_modulator',
+        ['gtceu:stellarized_weapon_grade_naquadah_frame', '8x gtceu:uhv_field_generator', 'kubejs:asg_energy_modulator',
             '2x gtceu:neutronium_ultradense_plate','32x gtceu:fine_stellarium_wire','32x gtceu:fine_melodium_wire'
             ,'32x gtceu:fine_enderium_wire', '12x gtceu:zalloy_screw'], 
         ['gtceu:naquadated_soldering_alloy 1296', 'gtceu:utopian_akreyrium 2500'], 
@@ -152,13 +152,13 @@ ServerEvents.recipes(event => {
         .layeredRecipe((layers) => layers
             .itemInputs('kubejs:asg_stargate_rod_base','kubejs:inferno_fragment')
             .next()
-            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:weapon_grade_stellarized_naquadah_foil_ream','gtceu:void_foil_ream')
+            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:stellarized_weapon_grade_naquadah_foil_ream','gtceu:void_foil_ream')
             .inputFluids('gtceu:tungsten_disulfide 10800')
             .next()
-            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:weapon_grade_stellarized_naquadah_foil_ream','gtceu:neutronium_foil_ream')
+            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:stellarized_weapon_grade_naquadah_foil_ream','gtceu:neutronium_foil_ream')
             .inputFluids('gtceu:tungsten_disulfide 10800')
             .next()
-            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:weapon_grade_stellarized_naquadah_foil_ream','gtceu:void_foil_ream')
+            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:stellarized_weapon_grade_naquadah_foil_ream','gtceu:void_foil_ream')
             .inputFluids('gtceu:tungsten_disulfide 10800')
         )
         .itemOutputs('kubejs:infernally_reforged_stargate_rod')
@@ -169,13 +169,13 @@ ServerEvents.recipes(event => {
         .layeredRecipe((layers) => layers
             .itemInputs('kubejs:asg_stargate_rod_base','kubejs:abyss_fragment')
             .next()
-            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:weapon_grade_stellarized_naquadah_foil_ream','gtceu:void_foil_ream')
+            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:stellarized_weapon_grade_naquadah_foil_ream','gtceu:void_foil_ream')
             .inputFluids('gtceu:tungsten_disulfide 10800')
             .next()
-            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:weapon_grade_stellarized_naquadah_foil_ream','gtceu:neutronium_foil_ream')
+            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:stellarized_weapon_grade_naquadah_foil_ream','gtceu:neutronium_foil_ream')
             .inputFluids('gtceu:tungsten_disulfide 10800')
             .next()
-            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:weapon_grade_stellarized_naquadah_foil_ream','gtceu:void_foil_ream')
+            .itemInputs('gtceu:neutronium_silicon_carbide_foil_ream','gtceu:stellarized_weapon_grade_naquadah_foil_ream','gtceu:void_foil_ream')
             .inputFluids('gtceu:tungsten_disulfide 10800')
         )
         .itemOutputs('kubejs:abyssally_reforged_stargate_rod')

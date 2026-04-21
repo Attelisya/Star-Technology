@@ -1,6 +1,13 @@
 ServerEvents.recipes (event => {
     const id = global.id;
 
+    event.recipes.gtceu.assembler(id('husk_brick'))
+        .itemInputs('kubejs:extreme_temperature_smelting_casing')
+        .inputFluids('gtceu:ancient_netherite 864')
+        .itemOutputs('kubejs:husk_brick')
+        .duration(36000)
+        .EUt(480);
+
     let cpaRecipe = event.recipes.gtceu.component_part_assembly(id(`compass_of_the_flame`))
         .itemInputs(`gtceu:calamatium_frame`, `4x gtceu:dense_ancient_netherite_plate`, `4x #gtceu:circuits/uev`,`gtceu:uhv_sensor`, `gtceu:long_magnetic_zapolgium_rod`,`8x gtceu:isovol_screw`)
         .inputFluids(`gtceu:indium_tin_lead_cadmium_soldering_alloy 1520`, `start_core:flamewake_solvent 10000`)

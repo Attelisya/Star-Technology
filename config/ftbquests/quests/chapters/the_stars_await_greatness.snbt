@@ -7,12 +7,17 @@
 	id: "6E4FD72B8C507106"
 	order_index: 8
 	progression_mode: "linear"
-	quest_links: [ ]
+	quest_links: [{
+		id: "0D05E42ADEB37A61"
+		linked_quest: "795C7DA2DD644F5A"
+		x: 10.0d
+		y: 1.0d
+	}]
 	quests: [
 		{
 			dependencies: [
 				"13508A2A55EAA6E1"
-				"586BADD5DCF46444"
+				"7D2E83192ABF08CA"
 			]
 			description: [
 				"- to format to lang"
@@ -38,15 +43,15 @@
 					type: "item"
 				}
 			]
-			x: 8.5d
-			y: -0.5d
+			x: 13.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"01A904AC91C3F022"
-				"586BADD5DCF46444"
-				"53B0C723F50526D9"
-				"1B498C64A42758C5"
+				"7D2E83192ABF08CA"
+				"74F3E9BE19218BA2"
+				"1F2D598551BC3DAB"
+				"6BA06E19F3C09184"
 			]
 			id: "10D5DA8708208783"
 			invisible: true
@@ -58,8 +63,8 @@
 				type: "item"
 			}]
 			title: "{ftbquests.draconic_age.dsg_gate_line.title}"
-			x: 11.5d
-			y: 1.5d
+			x: 12.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["10D5DA8708208783"]
@@ -73,8 +78,8 @@
 				type: "item"
 			}]
 			title: "{ftbquests.draconic_age.draconic_stargate.title}"
-			x: 13.5d
-			y: 1.5d
+			x: 14.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["31F87896FF834E63"]
@@ -114,8 +119,8 @@
 				type: "checkmark"
 			}]
 			title: "{ftbquests.draconic_age.completion.title}"
-			x: 15.5d
-			y: 1.5d
+			x: 16.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["7FFCAD92772A175F"]
@@ -191,6 +196,7 @@
 				"44A1A4ABAD13871E"
 			]
 			id: "20ABDF48307586F2"
+			shape: "gear"
 			size: 1.0d
 			tasks: [{
 				id: "424CEAF907D8A023"
@@ -216,7 +222,7 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["01A904AC91C3F022"]
+			dependencies: ["7D2E83192ABF08CA"]
 			id: "7D09EB91B10EC7B0"
 			size: 1.0d
 			tasks: [{
@@ -224,23 +230,30 @@
 				item: "start_core:uiv_256a_dream_link_energy_hatch"
 				type: "item"
 			}]
-			x: 9.5d
-			y: -0.5d
+			x: 14.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["53B0C723F50526D9"]
+			dependencies: ["7D2E83192ABF08CA"]
 			id: "3FFF41FD6067C5B8"
 			size: 1.0d
-			tasks: [{
-				id: "0631AA27A297B2C2"
-				item: "start_core:fornaxs_infernal_rotary_engine"
-				type: "item"
-			}]
-			x: 11.5d
-			y: -0.5d
+			tasks: [
+				{
+					id: "0631AA27A297B2C2"
+					item: "start_core:fornaxs_infernal_rotary_engine"
+					type: "item"
+				}
+				{
+					id: "41BD194D197433BA"
+					item: "kubejs:soul_of_the_flame"
+					type: "item"
+				}
+			]
+			x: 11.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["53B0C723F50526D9"]
+			dependencies: ["7D2E83192ABF08CA"]
 			id: "325986460718E0F9"
 			size: 1.0d
 			tasks: [{
@@ -248,8 +261,8 @@
 				item: "gtceu:ultimate_abs"
 				type: "item"
 			}]
-			x: 10.5d
-			y: -0.5d
+			x: 13.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["4A13D4F1B22DBCAF"]
@@ -272,73 +285,11 @@
 				}
 			]
 			x: 10.0d
-			y: 7.5d
-		}
-		{
-			dependencies: ["06D6795B5152B7E1"]
-			icon: "gtceu:riftic_concentrate_bucket"
-			id: "01A904AC91C3F022"
-			size: 1.0d
-			tasks: [
-				{
-					id: "4778134D7C5A0C09"
-					title: "Riftic Concentrate"
-					type: "checkmark"
-				}
-				{
-					id: "2064A5312BF4BB76"
-					item: "gtceu:riftic_concentrate_bucket"
-					optional_task: true
-					type: "item"
-				}
-			]
-			x: 9.5d
-			y: 1.5d
-		}
-		{
-			dependencies: ["260696AEE718A614"]
-			icon: "gtceu:prismatic_hypergurmalium_bucket"
-			id: "53B0C723F50526D9"
-			size: 1.0d
-			tasks: [
-				{
-					id: "20796BB8AB7A034B"
-					title: "Prismatic Hypergurmalium"
-					type: "checkmark"
-				}
-				{
-					id: "718E6C8B095134C0"
-					item: "gtceu:prismatic_hypergurmalium_bucket"
-					optional_task: true
-					type: "item"
-				}
-			]
-			x: 10.5d
-			y: 1.5d
-		}
-		{
-			dependencies: ["42A47D5635CFA200"]
-			icon: "gtceu:primordial_residue_bucket"
-			id: "586BADD5DCF46444"
-			size: 1.0d
-			tasks: [
-				{
-					id: "7D7E91AD6AC0B305"
-					title: "Primordial Residue"
-					type: "checkmark"
-				}
-				{
-					id: "449DB8BC2224104E"
-					item: "gtceu:primordial_residue_bucket"
-					optional_task: true
-					type: "item"
-				}
-			]
-			x: 8.5d
-			y: 1.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["20ABDF48307586F2"]
+			hide_dependency_lines: true
 			id: "642FCA1C212F7DCB"
 			tasks: [
 				{
@@ -363,8 +314,8 @@
 				}
 			]
 			title: "-toLang \"Basic Modules\""
-			x: 11.0d
-			y: 4.0d
+			x: 5.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["20ABDF48307586F2"]
@@ -374,11 +325,12 @@
 				title: "Riftic Infusion Assembly"
 				type: "checkmark"
 			}]
-			x: 10.5d
+			x: 10.0d
 			y: 3.0d
 		}
 		{
 			dependencies: ["20ABDF48307586F2"]
+			hide_dependency_lines: true
 			id: "492F2FED6328118F"
 			size: 1.0d
 			tasks: [{
@@ -386,8 +338,169 @@
 				title: "Rimula Extraction"
 				type: "checkmark"
 			}]
-			x: 9.5d
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"795C7DA2DD644F5A"
+				"475330A24EC07BBD"
+			]
+			id: "54B0129F9E6F4AEA"
+			tasks: [{
+				id: "2DA5C0777EE7069B"
+				title: "singularities"
+				type: "checkmark"
+			}]
+			x: 8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["54B0129F9E6F4AEA"]
+			id: "1F2D598551BC3DAB"
+			tasks: [
+				{
+					id: "15D567DF6FB7E94C"
+					item: "kubejs:transcension_engraved_undina_sigil"
+					type: "item"
+				}
+				{
+					id: "071C503B9F045943"
+					item: "kubejs:transcension_engraved_sylvestris_sigil"
+					type: "item"
+				}
+				{
+					id: "58FCF7EF220DA4F1"
+					item: "kubejs:transcension_engraved_gnomus_sigil"
+					type: "item"
+				}
+				{
+					id: "64C967779C199CAE"
+					item: "kubejs:transcension_engraved_vulcanus_sigil"
+					type: "item"
+				}
+				{
+					id: "0982E7CB4A930F7A"
+					item: "kubejs:transcension_engraved_illustris_sigil"
+					type: "item"
+				}
+				{
+					id: "5937FED82A8F0E50"
+					item: "kubejs:transcension_engraved_tenebrosus_sigil"
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"795C7DA2DD644F5A"
+				"475330A24EC07BBD"
+			]
+			hide_dependency_lines: true
+			id: "74F3E9BE19218BA2"
+			tasks: [{
+				id: "6CCDEF33DEC5583F"
+				item: "gtceu:raging_rimulatia_ingot"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1B498C64A42758C5"]
+			id: "475330A24EC07BBD"
+			tasks: [
+				{
+					id: "165BE80839990A5A"
+					item: "gtceu:riftion_injector"
+					type: "item"
+				}
+				{
+					id: "6103F412A745371B"
+					item: "kubejs:riftion_injection_core"
+					type: "item"
+				}
+			]
+			x: 8.0d
 			y: 3.0d
+		}
+		{
+			dependencies: ["1B498C64A42758C5"]
+			id: "74DC3EFD9977611A"
+			tasks: [{
+				id: "24BD792F155D2EAA"
+				item: "gtceu:riftion_slammer"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1B498C64A42758C5"]
+			id: "3137F3F544ACF245"
+			tasks: [{
+				id: "41F504FD87DEE6FC"
+				item: "gtceu:kaledoscopic_fractalizer"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"42A47D5635CFA200"
+				"795C7DA2DD644F5A"
+				"3137F3F544ACF245"
+			]
+			icon: "gtceu:primordial_residue_bucket"
+			id: "7D2E83192ABF08CA"
+			shape: "gear"
+			size: 1.0d
+			tasks: [
+				{
+					id: "5D1186FE724C6069"
+					item: "gtceu:primordial_residue_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "5913299D819E8332"
+					item: "gtceu:prismatic_hypergurmalium_bucket"
+					type: "item"
+				}
+				{
+					id: "361141683566A002"
+					item: "gtceu:riftic_concentrate_bucket"
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1B498C64A42758C5"]
+			id: "554E28F0B2A6CB25"
+			tasks: [{
+				id: "4C52E9BB6CAF5446"
+				item: "gtceu:riftion_accelerator"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7D2E83192ABF08CA"]
+			hide_dependency_lines: true
+			id: "6BA06E19F3C09184"
+			tasks: [{
+				id: "4BB8548AB0472156"
+				title: "primordially_stellarized_weapon_grade_naquadah"
+				type: "checkmark"
+			}]
+			x: 8.0d
+			y: -5.0d
 		}
 	]
 	title: "The Stars Await Greatness"

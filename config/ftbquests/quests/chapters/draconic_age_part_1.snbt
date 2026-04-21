@@ -63,7 +63,7 @@
 			}
 			id: "4DF07CB3D60C901C"
 			shape: "rsquare"
-			size: 1.0d
+			size: 1.25d
 			tasks: [{
 				dimension: "minecraft:the_nether"
 				icon: "minecraft:netherrack"
@@ -168,11 +168,18 @@
 			}]
 			shape: "gear"
 			size: 1.5d
-			tasks: [{
-				id: "5A3365B01BF98E8E"
-				item: "start_core:hellforge"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "5A3365B01BF98E8E"
+					item: "start_core:hellforge"
+					type: "item"
+				}
+				{
+					id: "04BFB2FB927005B1"
+					item: "kubejs:heart_of_the_flame"
+					type: "item"
+				}
+			]
 			x: -6.5d
 			y: -1.0d
 		}
@@ -402,7 +409,7 @@
 			}
 			id: "28DE3D2A96C4D0C8"
 			shape: "rsquare"
-			size: 1.0d
+			size: 1.25d
 			tasks: [{
 				dimension: "minecraft:the_end"
 				icon: "minecraft:end_stone"
@@ -680,7 +687,7 @@
 				item: "gtceu:uiv_energy_input_hatch_4a"
 				type: "item"
 			}]
-			x: -0.5d
+			x: 1.5d
 			y: 7.0d
 		}
 		{
@@ -698,7 +705,7 @@
 				item: "gtceu:uiv_energy_input_hatch_16a"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 3.5d
 			y: 7.0d
 		}
 		{
@@ -1493,8 +1500,8 @@
 				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 5.0d
+			x: 3.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1584,8 +1591,8 @@
 				}
 			]
 			title: "{ftbquests.draconic_age.super_heavy_elements.title}"
-			x: -10.5d
-			y: -7.0d
+			x: -12.5d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -1625,8 +1632,8 @@
 				title: "{ftbquests.draconic_age.bastion.title}"
 				type: "structure"
 			}]
-			x: -12.5d
-			y: -3.0d
+			x: -10.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["1B6159E114BA50ED"]
@@ -1723,8 +1730,8 @@
 				item: "gtceu:atomic_synthesis_plant"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 1.0d
+			x: 5.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
@@ -1975,7 +1982,7 @@
 				type: "item"
 			}]
 			x: 5.5d
-			y: 1.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["7C7300975C25047A"]
@@ -2076,15 +2083,16 @@
 				""
 				"\"something about helping find husk\""
 			]
-			hide_dependency_lines: true
+			hide_dependent_lines: true
 			id: "7255F8A417A52A46"
+			optional: true
 			tasks: [{
 				id: "7B34E58D08A73A5A"
 				item: "kubejs:compass_of_the_flame"
 				type: "item"
 			}]
 			x: -10.5d
-			y: -1.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["28DE3D2A96C4D0C8"]
@@ -2178,7 +2186,7 @@
 				type: "item"
 			}]
 			x: 5.5d
-			y: 3.0d
+			y: 1.0d
 		}
 	]
 	title: "{ftbquests.draconic_age.title}"

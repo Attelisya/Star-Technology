@@ -4,11 +4,17 @@ ServerEvents.recipes(event => {
     // Pre - Array
 
     event.recipes.gtceu.extractor(id('dragon_breath'))
-        .itemInputs('minecraft:dragon_breath')
-        .outputFluids('gtceu:dragon_breath 250')
-        .itemOutputs('minecraft:glass_bottle')
+        .itemInputs('minecraft:dragon_egg')
+        .outputFluids('gtceu:dragon_breath 750')
+        .duration(1000)
+        .EUt(GTValues.VHA[GTValues.UIV]);
+
+    event.recipes.gtceu.canner(id('dragon_breath'))
+        .itemInputs('minecraft:glass_bottle')
+        .inputFluids('gtceu:dragon_breath 250')
+        .itemOutputs('minecraft:dragon_breath')
         .duration(100)
-        .EUt(GTValues.VHA[GTValues.UEV]);
+        .EUt(GTValues.VHA[GTValues.UIV]);
     
     event.remove({id: 'minecraft:popped_chorus_fruit'});
     event.replaceInput({ input: 'minecraft:popped_chorus_fruit' },'minecraft:popped_chorus_fruit','minecraft:chorus_fruit');

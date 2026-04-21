@@ -101,7 +101,7 @@ ServerEvents.recipes(event => {
         Fluid.of('gtceu:xenon 10')
     );
 
-    event.replaceInput({id: 'gtceu:electric_blast_furnace/blast_weapon_grade_stellarized_naquadah_gas'},
+    event.replaceInput({id: 'gtceu:electric_blast_furnace/blast_stellarized_weapon_grade_naquadah_gas'},
         Fluid.of('gtceu:krypton 10'),
         Fluid.of('gtceu:xenon 10')
     );
