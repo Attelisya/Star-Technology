@@ -240,11 +240,12 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('zavaritskite').setFormula('(BiO)F');
     GTMaterials.get('acidic_water').setFormula('H2O*');
     GTMaterials.get('hydroiodic_acid').setFormula('HI*');
-
+    GTMaterials.get(`aerogel`).setFormula(`ᯓ(N78O21Ar9)ᯓ`);
     GTMaterials.get(`thorium`).setFormula(`Th²³⁰`);
     GTMaterials.get(`neptunium`).setFormula(`Np²³⁷`);
     GTMaterials.get(`fermium`).setFormula(`Fm²⁵⁷`);
     GTMaterials.get(`americium`).setFormula(`Am²⁴⁵`);
+    GTMaterials.get(`netherite_triselex_oxide`).setFormula(`Nr4Se3O2`);
 
 });
 
@@ -1523,6 +1524,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .flags(no_decomp);
 
     //UEV Materials
+    compDustLiquid('tungsten_disulfide', ['1x tungsten', '2x sulfur'], 0x928897, [no_decomp]);
+
     event.create('warped').dust().color(0x4FBB85).flags([no_smelt]);
 
     compDust('hellfire_ash', ['1x mystery'], 0x5e4646, [no_smelt, no_decomp]);
@@ -1577,8 +1580,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquidStill('borealic_concentrate', ['1x aurourium', '15x stellarium'], [no_decomp]);
 
     //UIV Materials
-    compDustLiquid('tungsten_disulfide', ['1x tungsten', '2x sulfur'], 0x928897, [no_decomp]);
-
     conductor('polonium_bismide', ['1x polonium', '1x bismuth'], 0x016038, DULL, [14400, 'highest', VHA('uev'), 1800], [V('uiv'), 5, 24, false], [fine_wire, bolt_and_screw,spring,small_spring]);
 
     compIngot('diamane', ['1x carbon'], 0x62777A, [], [4000, 'low', VA('lv'), 1], [no_decomp]);
@@ -1717,7 +1718,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     noCompFluid('growth_hormone_complex',0x756B7D);
 
     //UXV Materials
-    compDust('thallium_antimonide',['1x thallium','1x antimony'],0xADC5E3,[])
+    compDustLiquid('netherite_triselex_oxide', ['4x netherite','3x selenium','2x oxygen'], 0xcfd9a3, [no_decomp]);
+
+    compIngotLiquid('neutrindium_soldering_alloy', ['2x neutronium', '51x indium', '6x tin', '4x darmstadium', '4x enriched_naquadah', '5x cadium', '2x hafnium'], 0xf8f2fa, [], [], []);
+
+    compDust('thallium_antimonide',['1x thallium','1x antimony'],0xADC5E3,[]) 
     
     compLiquidStill('lepton_dense_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);
 
@@ -1801,6 +1806,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     noCompFluid(`aerogel_precursor_solution`, 0xAEBBBF);
 
     event.create(`aerogel`)
+        .components('1x air')
         .polymer()
         .ingot()
         .color(0x9fcad9)

@@ -62,6 +62,14 @@ ServerEvents.recipes(event => {
     }); 
 
     //Quantum Cooling
+    event.recipes.gtceu.quantum_cooling(id(`oganesson`))
+        .inputFluids(`gtceu:oganesson_plasma 500`)
+        .inputFluids('gtceu:liquid_helium 5000')
+        .outputFluids(`gtceu:oganesson 500`)
+        .outputFluids('gtceu:helium 2500')
+        .duration(80)
+        .EUt(GTValues.VA[GTValues.UEV]);
+
     event.recipes.gtceu.quantum_cooling(id('bec_og'))
         .inputFluids('gtceu:oganesson 500')
         .inputFluids('gtceu:superstate_helium_3 7500')

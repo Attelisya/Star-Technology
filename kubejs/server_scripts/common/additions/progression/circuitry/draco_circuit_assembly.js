@@ -134,7 +134,7 @@ ServerEvents.recipes(event => {
         `24x ${Tra}`,
         `32x gtceu:void_foil`,
         '1x gtceu:energy_module',
-        `64x ${PEDOT_PSS}_foil`, 
+        `64x gtceu:aerogel_foil`, 
         '32x gtceu:polonium_bismide_single_wire',  
         '4x gtceu:aurourium_plate'
         ], [`${Solder} 2304`,`${PEDOT_PSS} 1152`,`${DB} 500`], 

@@ -72,7 +72,7 @@
 			}]
 			title: "{ftbquests.draconic_age.dsg_gate_line.title}"
 			x: 12.0d
-			y: -3.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["10D5DA8708208783"]
@@ -87,7 +87,7 @@
 			}]
 			title: "{ftbquests.draconic_age.draconic_stargate.title}"
 			x: 14.0d
-			y: -3.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["31F87896FF834E63"]
@@ -128,7 +128,7 @@
 			}]
 			title: "{ftbquests.draconic_age.completion.title}"
 			x: 16.0d
-			y: -3.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["7FFCAD92772A175F"]

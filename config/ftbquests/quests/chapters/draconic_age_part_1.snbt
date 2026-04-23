@@ -146,8 +146,8 @@
 				item: "gtceu:cryostate_quantum_chiller"
 				type: "item"
 			}]
-			x: -8.5d
-			y: -5.0d
+			x: -6.5d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -248,9 +248,15 @@
 					optional_task: true
 					type: "item"
 				}
+				{
+					id: "3C0A2DC887A27895"
+					item: "gtceu:oganesson_bucket"
+					optional_task: true
+					type: "item"
+				}
 			]
 			title: "{ftbquests.draconic_age.coolants.title}"
-			x: -6.5d
+			x: -4.5d
 			y: -5.0d
 		}
 		{
@@ -977,8 +983,8 @@
 		}
 		{
 			dependencies: [
-				"310FC3F86513555F"
 				"1B6159E114BA50ED"
+				"059CB064A515B157"
 			]
 			description: ["{ftbquests.draconic_age.sterile_cleaning_maintenance_hatch.description}"]
 			hide_dependent_lines: true
@@ -1184,8 +1190,8 @@
 				item: "gtceu:mega_abs"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -3.0d
+			x: -8.5d
+			y: -5.0d
 		}
 		{
 			dependencies: ["5944C4DE27F98FF3"]
@@ -2014,13 +2020,14 @@
 				"112C0821547F18B2"
 				"6A49DA8ECA601B4B"
 			]
+			icon: "gtceu:oganesson_plasma_bucket"
 			id: "5FAEC6FD93ACC381"
 			size: 1.0d
 			tasks: [
 				{
-					id: "4FB3DB9E35967567"
-					item: "gtceu:oganesson_bucket"
-					type: "item"
+					id: "0A40A0A86C660693"
+					title: "-toLang \"Noblest \"Gas\"\""
+					type: "checkmark"
 				}
 				{
 					id: "36A35F698B08CADD"
@@ -2029,7 +2036,7 @@
 					type: "item"
 				}
 			]
-			x: -4.5d
+			x: -6.5d
 			y: -5.0d
 		}
 		{
@@ -2062,7 +2069,10 @@
 			y: -7.0d
 		}
 		{
-			dependencies: ["07A6B3DF67E267A0"]
+			dependencies: [
+				"07A6B3DF67E267A0"
+				"7F8D144334941F9D"
+			]
 			id: "6A49DA8ECA601B4B"
 			size: 1.0d
 			tasks: [{
