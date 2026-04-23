@@ -79,8 +79,8 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .build())
         .paginatedTooltips(
             [
-                Text.translate("block.gtceu.nyinsane_plasma_turbine.p1.1"),
-                Text.translate("block.gtceu.nyinsane_plasma_turbine.p1.2"),
+                Text.translate("block.gtceu.supreme_plasma_turbine.p1.1"),
+                Text.translate("block.gtceu.supreme_plasma_turbine.p1.2"),
                 Text.translate("block.start_core.breaker_line"),
                 Text.translate("block.gtceu.nyinsane_plasma_turbine.p1.3")
             ],

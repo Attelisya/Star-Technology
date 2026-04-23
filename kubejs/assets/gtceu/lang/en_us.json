@@ -905,8 +905,6 @@
     "block.gtceu.nyinsane_plasma_turbine.tooltip.0": "§3§lBoosted Large Plasma Turbine",
     "block.gtceu.nyinsane_plasma_turbine.tooltip.1": "§7A massive turbine capable of being boosted consuming extreme quantities of fuel for extreme quantities of power.",
     "block.gtceu.nyinsane_plasma_turbine.tooltip.2": "§8-----------------------------------",
-    "block.gtceu.nyinsane_plasma_turbine.p1.1": "§eBase Production: §f16384 EU/t",
-    "block.gtceu.nyinsane_plasma_turbine.p1.2": "§7Each Rotor Holder above §9IV§7 multiplies efficiency by 10% and multiplies EU/t by 2.",
     "block.gtceu.nyinsane_plasma_turbine.p1.3": "§c§uTurbine Parallels: §7Turbine can run up to §a12x§7 as many recipes as a standard Large Plasma Turbine.",
     "block.gtceu.nyinsane_plasma_turbine.p2.1": "§6Lubricant Boosting: §7Consumes 2500B of §fTungsten Disulfide§7 an Hour for an additional §a+50% §fEU/t §7output, failure to do so leads to a loss of §4-20% §fEU/t §7output.",
     "block.gtceu.nyinsane_plasma_turbine.p2.2": "§3Coolant Boosting: §7Consumes 800B of §fOganesson Stabilized Bose-Einstein Condensate§7 an Hour for an additional §a+150% §fEU/t §7output.",
