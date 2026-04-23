@@ -1835,5 +1835,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquid(`kerosene`,[`12x carbon`,`26x hydrogen`],0xE8D44D, [no_decomp]);
     compLiquid(`hydrofined_kerosene`,[`12x carbon`,`26x hydrogen`],0xF2EC9A , [no_decomp]);
     compLiquid(`rp_1`,[`12x carbon`,`26x hydrogen`],0xF2EC9A , [no_decomp]);
-
+    compLiquidTemp(`liquid_fluorine`,85, [`2x fluorine`], 0xB5E0FF, [no_decomp]);
+    compLiquidTemp(`dioxygen_difluoride`, 110, [`2x oxygen`, `2x fluorine`], 0xE8F1FF, [no_decomp]);
+    compLiquid(`white_fuming_nitric_acid`, [`1x nitrogen`, `3x oxygen`,`1x hydrogen`], 0xFDFEFC, [no_decomp]);
+    compLiquid(`red_fuming_nitric_acid`, [`1x nitrogen`, `3x oxygen`,`1x hydrogen`], 0xFF0000, [no_decomp]);
+    compLiquid(`monomethylhydrazine`, [`1x carbon`, `6x hydrogen`, `2x nitrogen`], 0x9E9E9E, [no_decomp]);
+    compLiquid(`sorbitol_hypergolic_mixture`, [`6x carbon`, `14x hydrogen`, `6x oxygen`], 0xA9A9A9, [no_decomp]);
+    compLiquid(`ferrocenium_superoxide`, [`10x carbon`, `10x hydrogen`, `1x iron`, `2x oxygen`], 0xB87333, [no_decomp]);
 });
