@@ -35,6 +35,14 @@ ServerEvents.recipes(event => {
         .duration(10800)
         .EUt(GTValues.VHA[GTValues.UEV]);
 
+    event.recipes.gtceu.injection_mixer(id('aquariadic_rimuli_dragonix_dust'))
+        .itemInputs('7x gtceu:akreyriadic_runixium_dust', '4x gtceu:raging_rimulatia_dust')
+        .inputFluids('gtceu:pure_dragon_breath 5000', 'minecraft:water 1000000000')
+        .itemOutputs('16x gtceu:aquariadic_rimuli_dragonix_dust')
+        .duration(7350)
+        .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
+        .EUt(GTValues.VHA[GTValues.UXV]);
+
     event.remove({type: 'gtceu:implosion_compressor', input: 'gtceu:naquadic_netherite_dust'});
 
     event.recipes.gtceu.implosion_compressor(id(`naquadic_netherite_dynamite`))
@@ -61,6 +69,15 @@ ServerEvents.recipes(event => {
         .chancedOutput('gtceu:dark_ash_dust', 2500, 0)
         .duration(800)
         .EUt(GTValues.VHA[GTValues.LuV]);
+
+    event.remove({type: 'gtceu:implosion_compressor', input: 'gtceu:aquariadic_rimuli_dragonix_dust'});
+
+    event.recipes.gtceu.implosion_compressor(id(`aquariadic_rimuli_dragonix_industrial_tnt`))
+        .itemInputs('4x gtceu:aquariadic_rimuli_dragonix_dust', '64x gtceu:industrial_tnt', '64x gtceu:industrial_tnt')
+        .itemOutputs('gtceu:aquariadic_rimuli_dragonix_gem')
+        .chancedOutput('gtceu:dark_ash_dust', 2500, 0)
+        .duration(1500)
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.laser_engraver(id('coordinate_crystal'))
         .itemInputs('gtceu:exquisite_purified_naquadah_gem')

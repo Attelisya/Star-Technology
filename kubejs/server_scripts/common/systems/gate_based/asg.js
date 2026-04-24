@@ -30,14 +30,14 @@ ServerEvents.recipes(event => {
         6000, 144, 144 * 1200, GTValues.VHA[GTValues.UHV], 'kubejs:csg_stellar_dialer');
 
     researchBuilder(cpa, 'asg_computational_matrix', 
-        ['3x kubejs:runic_printed_circuit_board','32x gtceu:fine_stellarium_wire','24x kubejs:asg_dpu',
+        ['2x kubejs:runic_printed_circuit_board','32x gtceu:fine_stellarium_wire','24x kubejs:asg_dpu',
             '8x gtceu:highly_advanced_soc','18x gtceu:ancient_runicalium_bolt','64x kubejs:uepic_chip'], 
         ['gtceu:naquadated_soldering_alloy 2592', 'gtceu:sterilized_growth_medium 5000'], 
         ['kubejs:asg_computational_matrix'], 
         6000, 144, 144 * 1200, GTValues.VHA[GTValues.UHV], 'kubejs:csg_computational_matrix');
 
     researchBuilder(assline, 'asg_dimensional_supercomputer', 
-        ['3x gtceu:void_frame', '10x kubejs:asg_computational_matrix', 'kubejs:draconic_core', '4x kubejs:asg_energy_modulator', 
+        ['3x gtceu:void_frame', '10x kubejs:asg_computational_matrix', '2x kubejs:draconic_core', '4x kubejs:asg_energy_modulator', 
             '6x gtceu:stellarium_foil_ream', '4x gtceu:ancient_runicalium_foil_ream','64x #gtceu:circuits/uev','32x #gtceu:circuits/uev',
             '8x gtceu:uhv_fluid_regulator', '4x gtceu:zapolgium_large_fluid_pipe', '56x gtceu:perfluoroelastomer_rubber_ring',
             '64x gtceu:polyether_ether_ketone_tiny_fluid_pipe'], 
@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
 
     researchBuilder(assline, 'asg_reinforced_plating', 
         ['gtceu:neutronium_ultradense_plate', 'gtceu:titan_steel_ultradense_plate', 'gtceu:zalloy_ultradense_plate', 'gtceu:naquadria_ultradense_plate', 
-            '2x kubejs:runic_reinforced_plating', '2x gtceu:uhv_electric_piston', '2x #gtceu:circuits/uev', '18x gtceu:cerium_tritelluride_single_cable'], 
+            '2x kubejs:csg_reinforced_plating', '2x gtceu:uhv_electric_piston', '2x #gtceu:circuits/uev', '18x gtceu:cerium_tritelluride_single_cable'], 
         ['gtceu:naquadated_soldering_alloy 1728', 'gtceu:runic_convergence_infusion 2250', 'gtceu:utopian_akreyrium 1750'], 
         ['kubejs:asg_reinforced_plating'], 
         6000, 144, 144 * 1200, GTValues.VHA[GTValues.UHV], 'kubejs:csg_reinforced_plating');
@@ -94,19 +94,17 @@ ServerEvents.recipes(event => {
         ['kubejs:inferno_fragment'], 
         6000, 192, 192 * 1200, GTValues.VHA[GTValues.UHV], 'minecraft:blaze_rod');
 
-    injectMix(id('voidic_core'))
-        .itemInputs('kubejs:quantum_core','8x kubejs:abyss_fragment')
-        .inputFluids('thermal:ender 50000')
-        .itemOutputs('kubejs:voidic_core')
-        .duration(3000)
-        .EUt(GTValues.VA[GTValues.UHV]);
+    researchBuilder(assline, 'voidic_core', 
+        ['kubejs:quantum_core','8x kubejs:abyss_fragment','4x gtceu:uhv_field_generator','12x kubejs:uhv_high_strength_panel'], 
+        ['thermal:ender 50000','gtceu:neutronium 2304'], 
+        ['kubejs:voidic_core'], 
+        3000, 192, 192 * 1200, GTValues.VHA[GTValues.UHV], 'kubejs:abyss_fragment');
 
-    injectMix(id('helish_core'))
-        .itemInputs('kubejs:quantum_core','8x kubejs:inferno_fragment')
-        .inputFluids('gtceu:blaze 57600')
-        .itemOutputs('kubejs:helish_core')
-        .duration(3000)
-        .EUt(GTValues.VA[GTValues.UHV]);
+    researchBuilder(assline, 'helish_core', 
+        ['kubejs:quantum_core','8x kubejs:inferno_fragment','4x gtceu:uhv_field_generator','12x kubejs:uhv_high_strength_panel'], 
+        ['gtceu:blaze 57600','gtceu:neutronium 2304'], 
+        ['kubejs:helish_core'], 
+        3000, 192, 192 * 1200, GTValues.VHA[GTValues.UHV], 'kubejs:inferno_fragment');
 
     pressureHeat(id('draconic_core'))
         .itemInputs('kubejs:voidic_core','kubejs:helish_core')

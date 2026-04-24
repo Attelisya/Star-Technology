@@ -113,20 +113,6 @@ ServerEvents.recipes (event => {
 
     }
 
-    event.recipes.gtceu.riftion_injector(id('raging_rimulatia_ingot'))
-        .itemInputs('gtceu:draco_abyssal_ingot',`32x kubejs:wild_riftion`)
-        .itemOutputs(`gtceu:raging_rimulatia_ingot`) //will be kubejs:${riftion[i]}_singularity
-        // .euToStart(125000000000) //consumes 125GEU to start the recipe
-        .duration(400)
-        .EUt(GTValues.VHA[GTValues.UXV]);
-
-    event.recipes.gtceu.riftion_injector(id('rift_infused_soc'))
-        .itemInputs('kubejs:draco_advanced_soc',`4x kubejs:wild_riftion`)
-        .itemOutputs(`kubejs:rift_infused_soc`) //will be kubejs:${riftion[i]}_singularity
-        // .euToStart(125000000000) //consumes 25GEU to start the recipe
-        .duration(100)
-        .EUt(GTValues.VHA[GTValues.UXV]);
-
     event.recipes.gtceu.kaleidoscopic_fractalizer(id('riftion_fractalization'))
         .inputFluids('gtceu:true_rimula_foundation 6000')
         .itemInputs('32x kubejs:neutral_undina_riftion','32x kubejs:neutral_sylvestris_riftion','32x kubejs:neutral_gnomus_riftion',

@@ -194,6 +194,16 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VH[GTValues.UHV])
         .circuit(8);
 
+    event.recipes.gtceu.alloy_blast_smelter(id('neutrindium_soldering_alloy'))
+        .itemInputs('2x gtceu:neutronium_dust', '51x gtceu:indium_dust', '6x gtceu:tin_dust',
+             '4x gtceu:darmstadtium_dust', '5x gtceu:cadmium_dust', '4x gtceu:enriched_naquadah_dust',
+             '2x gtceu:hafnium_dust')
+        .outputFluids('gtceu:neutrindium_soldering_alloy 10656')
+        .duration(4810)
+        .blastFurnaceTemp(14895)
+        .EUt(GTValues.VH[GTValues.UIV])
+        .circuit(7);
+
     event.remove({ output: 'gtceu:uv_voltage_coil' });
     event.recipes.gtceu.assembler(id('uv_voltage_coil'))
         .itemInputs('gtceu:magnetic_dysprosium_rod', '16x gtceu:fine_tritanium_wire')

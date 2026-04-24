@@ -1718,9 +1718,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     noCompFluid('growth_hormone_complex',0x756B7D);
 
     //UXV Materials
-    compDustLiquid('netherite_triselex_oxide', ['4x netherite','3x selenium','2x oxygen'], 0xcfd9a3, [no_decomp]);
+    compDustLiquid('netherite_triselex_oxide', ['4x netherite','3x selenium','8x oxygen'], 0xcfd9a3, [no_decomp]);
 
-    compIngotLiquid('neutrindium_soldering_alloy', ['2x neutronium', '51x indium', '6x tin', '4x darmstadium', '4x enriched_naquadah', '5x cadium', '2x hafnium'], 0xf8f2fa, [], [], []);
+    compIngotLiquid('neutrindium_soldering_alloy', ['2x neutronium', '51x indium', '6x tin', '4x darmstadtium', '5x cadmium', '4x enriched_naquadah', '2x hafnium'], 0xf8f2fa, [], [], []);
 
     compDust('thallium_antimonide',['1x thallium','1x antimony'],0xADC5E3,[]) 
     
@@ -1856,5 +1856,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //DSG
     compIngotLiquidSecColor('raging_rimulatia',['1x rifitc','1x draco_abyssal','1x riftic'],0xe357f2,0x163f5e,SHINY,'',[plates, frame, rod, bolt_and_screw, dense_plate, long_rod, gear, small_gear, no_decomp, fine_wire])
     compIngotPlasmaSecColor('primordially_stellarized_weapon_grade_naquadah',['157x stellarized_weapon_grade_naquadah','1x prismatic_hypergurmalium','1x primordial_residue','1x riftic_concentrate'],0x9881de,0x489957,SHINY,[18880, 'highest', VA('uxv'), 600],[plates, frame, rod, bolt_and_screw, dense_plate, long_rod, gear, small_gear, no_decomp, no_abs_recipe, foil,fine_wire]);
+    compGem('aquariadic_rimuli_dragonix', ['5x pure_dragon_breath','7x akreyriadic_runixium','4x raging_rimulatia'], 0x16269e, GEM_VERTICAL, []);    
 
 });
