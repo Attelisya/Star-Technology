@@ -4,7 +4,7 @@ ServerEvents.recipes(event => {
     // === Hell Forge ===
     event.recipes.gtceu.assembly_line(id('heart_of_the_flame'))
         .itemInputs(
-            'kubejs:husk_brick', '2x kubejs:hell_core', '6x gtceu:dense_ancient_netherite_plate', '24x gtceu:pure_netherite_screw'
+            'kubejs:husk_brick', '2x kubejs:helish_core', '6x gtceu:dense_ancient_netherite_plate', '24x gtceu:pure_netherite_screw'
         )
         .inputFluids(
             'start_core:flamewake_solvent 500000'

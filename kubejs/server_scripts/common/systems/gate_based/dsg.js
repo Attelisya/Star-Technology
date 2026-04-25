@@ -136,6 +136,14 @@ ServerEvents.recipes(event => {
         ['kubejs:primus_tempus_core'], 
         3000, 500, 500 * 1200, GTValues.VHA[GTValues.UIV], 'kubejs:primordial_fragment');
 
+    event.recipes.gtceu.draco_infusion(id('ascension_core'))
+        .itemInputs('kubejs:draconic_core','kubejs:prismafae_illuminatus_core','kubejs:primordial_fragment','kubejs:riftic_fragment','kubejs:spatium_ruptura_core',
+            'kubejs:primus_tempus_core','kubejs:prismalic_fragment')
+        .inputFluids('gtceu:borealic_concentrate 73728')
+        .itemOutputs('kubejs:ascension_core')
+        .duration(6000)
+        .EUt(GTValues.VHA[GTValues.UXV]);
+
     event.recipes.gtceu.supreme_chemist(id('dsg_enscription_plate'))
         .layeredRecipe((layers) => layers
             .itemInputs('2x kubejs:asg_enscription_plate','32x gtceu:aurourium_foil')
