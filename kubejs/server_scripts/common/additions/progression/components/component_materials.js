@@ -32,6 +32,7 @@ global.componentMaterials = {
         }
     },
     ev: {
+        tiers: { tier: 'ev', tier0: 'iv', tier1: 'hv', tier2: 'mv' },
         materials: {
             tierMaterial: 'titanium',
             wire: 'nichrome',
@@ -43,9 +44,14 @@ global.componentMaterials = {
             battery: 'lapotron_crystal',
             rotorMaterial: 'stainless_steel',
             grind: 'gtceu:diamond_grinding_head'
+        },
+        scaling: {
+            scaler: 1,
+            EU: GTValues.VA[GTValues.HV]
         }
     },
     iv: {
+        tiers: { tier: 'iv', tier0: 'luv', tier1: 'ev', tier2: 'hv' },
         materials: {
             tierMaterial: 'tungsten_steel',
             wire: 'rtm_alloy',
@@ -57,6 +63,10 @@ global.componentMaterials = {
             battery: 'lapotronic_energy_orb',
             rotorMaterial: 'tungsten_steel',
             grind: 'gtceu:tungsten_grinding_head'
+        },
+        scaling: {
+            scaler: 1,
+            EU: GTValues.VA[GTValues.EV]
         }
     },
     luv: {

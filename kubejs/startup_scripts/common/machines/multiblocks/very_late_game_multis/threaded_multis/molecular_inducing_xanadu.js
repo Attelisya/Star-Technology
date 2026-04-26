@@ -42,6 +42,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('J', Predicates.blocks('start_core:threading_controller'))
             .build())
         .workableCasingModel('kubejs:block/casings/threading/atomic_convergence_casing',
-            'gtceu:block/multiblock/implosion_compressor');
+            'gtceu:block/machines/mixer');
 
 });

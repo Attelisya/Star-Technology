@@ -88,8 +88,8 @@ ServerEvents.recipes(event => {
     'gtceu:double_abyssal_alloy_plate','2x kubejs:draconic_scale_cells','2x kubejs:draconic_stem_cells', '4x gtceu:draconyallium_foil', 
     '2x kubejs:helish_star',400,GTValues.VHA[GTValues.UIV]);
 
-    Infusion('draco_stem_cells','4x kubejs:draconic_stem_cells','gtceu:dragon_breath 125','32x gtceu:stem_cells', 'gtceu:echo_shard_plate', 
-    'gtceu:nether_star_plate','8x gtceu:quantum_star','8x minecraft:popped_chorus_fruit','gtceu:echo_shard_lens',
+    Infusion('draco_stem_cells','8x kubejs:draconic_stem_cells','gtceu:dragon_breath 125','32x gtceu:stem_cells', 'gtceu:echo_shard_plate', 
+    'gtceu:nether_star_plate','4x gtceu:quantum_star','4x minecraft:popped_chorus_fruit','gtceu:echo_shard_lens',
     'gtceu:nether_star_lens',640,GTValues.VHA[GTValues.UHV]);
 
     Infusion('draco_brain_matter_cells','4x kubejs:draconic_brain_matter_cells','thermal:ender 10000','4x kubejs:draconic_stem_cells',
@@ -142,7 +142,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler(id('voidic_sponge'))
         .itemInputs('16x minecraft:sponge','24x gtceu:fine_enderium_wire','6x kubejs:voidic_reinforced_mesh')
-        .inputFluids('gtceu:polyether_ether_ketone 432')
+        .inputFluids('gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 288')
         .itemOutputs('16x kubejs:void_saturation_sponge')
         .duration(900)
         .circuit(3)

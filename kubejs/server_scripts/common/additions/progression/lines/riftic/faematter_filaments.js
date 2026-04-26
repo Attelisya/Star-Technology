@@ -48,9 +48,16 @@ ServerEvents.recipes (event => {
 
     event.recipes.gtceu.autoclave(id(`komaru_filament_t1`))
         .itemInputs('2x gtceu:tiny_akreyriadic_runixium_dust')
-        .inputFluids(`gtceu:draconic_stabilization_mixture 9`)
+        .inputFluids(`gtceu:draconic_stabilization_mixture 18`)
         .itemOutputs(`4x kubejs:komaru_filament_t1`)
-        .duration(460)
+        .duration(480)
         .EUt(GTValues.VHA[GTValues.UHV] / 3);
+
+    event.recipes.gtceu.autoclave(id(`komaru_filament_t2`))
+        .itemInputs('2x gtceu:tiny_aquariadic_rimuli_dragonix_dust')
+        .inputFluids(`gtceu:draconic_stabilization_mixture 36`)
+        .itemOutputs(`4x kubejs:komaru_filament_t2`)
+        .duration(420)
+        .EUt(GTValues.VA[GTValues.UHV] / 3);
 
 });

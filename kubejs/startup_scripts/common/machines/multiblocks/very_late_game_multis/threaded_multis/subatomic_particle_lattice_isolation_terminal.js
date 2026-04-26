@@ -36,6 +36,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
         .workableCasingModel('kubejs:block/casings/threading/inoculated_nuclei_seperation_casing',
-            'gtceu:block/multiblock/implosion_compressor');
+            'gtceu:block/machines/cutter');
 
 });

@@ -52,6 +52,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
         .workableCasingModel('kubejs:block/casings/threading/absolute_annihilation_casing',
-            'gtceu:block/multiblock/implosion_compressor');
+            'gtceu:block/machines/macerator');
 
 });

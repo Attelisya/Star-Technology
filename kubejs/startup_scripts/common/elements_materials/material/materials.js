@@ -279,7 +279,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     element('hafnium', 'fluid');
     element('fermium', 'fluid');
     element('selenium', 'fluid');
-    element('neptunium', 'fluid');
 
     // Gasses
 
@@ -949,7 +948,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         // Naquadite Line
         compLiquid('hydroiodic_acid', ['1x hydrogen', '1x iodine'], 0x906ad6, [no_decomp]);
 
-        compDust('naquadite_solution', ['1x naquadite', '1x mystery'], 0x524848, [no_decomp]);
+        compLiquid('naquadite_solution', ['1x naquadite', '1x mystery'], 0x524848, [no_decomp]);
 
         // Alloys and other compounds
         conductor('zalloy', ['3x zapolgium', '4x duranium', '2x europium'], 0xff66ff, METALLIC, [10799, 'highest', VHA('zpm'), 3000], [V('uv'), 2, 4, false], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, dense_plate]);
@@ -1047,11 +1046,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //ANSD Line
     // compLiquid('oganesson_rich_sludge_concentrate', ['1x mystery','1x oganesson','1x mystery'], 0xFFFFFF, [no_decomp]);
 
-    compDust('hafnastide_rich_sludge', ['1x mystery','1x hafnium','1x astatine','1x mystery'], 0xFFFFFF, [no_decomp]);
+    compDust('hafnastide_rich_sludge', ['1x mystery','1x hafnium','1x astatine','1x mystery'], 0xa8798a, [no_decomp]);
 
-    compDust('flerovium_rich_re_sludge', ['1x mystery','1x flerovium','1x mystery','1x mystery'], 0xFFFFFF, [no_decomp]);
+    compDust('flerovium_rich_re_sludge', ['1x mystery','1x flerovium','1x mystery','1x mystery'], 0x798579, [no_decomp]);
 
-    compDust('pologium_rich_sludge', ['1x mystery','1x polonium','1x seaborgium','1x mystery'], 0xFFFFFF, [no_decomp]);
+    compDust('pologium_rich_sludge', ['1x mystery','1x polonium','1x seaborgium','1x mystery'], 0x576b62, [no_decomp]);
 
     compDust('silicate', ['1x silicon', '4x oxygen'], 0xC0BA97, [no_decomp]);
 
@@ -1082,9 +1081,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // compDust('sodium_hafnate', ['2x sodium', '1x hafnium', '3x oxygen'], 0x8894A1, [no_decomp]);
     // compDust('barium_diastatide', ['1x barium', '2x astatine'], 0x665058, [no_decomp]);
 
-    compDust('barium_hydroxide', ['1x barium', '2x hydroxide'], 0xB5AC9B, [no_decomp]);
+    // compDust('barium_hydroxide', ['1x barium', '2x hydroxide'], 0xB5AC9B, [no_decomp]);
 
-    compDust('barium_carbonate', ['1x barium', '1x carbon', '3x oxygen'], 0x9B8F77, []);
+    // compDust('barium_carbonate', ['1x barium', '1x carbon', '3x oxygen'], 0x9B8F77, []);
 
     compDust('sodium_astatide', ['1x sodium', '1x astatine'], 0x5F5076, [no_decomp]);
 
@@ -1118,11 +1117,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     // compDust('polonium_pyrophosphate', ['1x polonium', '1x pyrophosphate'], 0x356231, [no_decomp]);
 
-    compLiquid('pyrophosphoric_acid', ['4x hydrogen', '1x pyrophosphate'], 0xB3A36D, [no_decomp]);
+    compLiquid('pyrophosphoric_acid', ['4x hydrogen', '1x pyrophosphate'], 0xB3A36D, []);
 
-    compLiquid('orthophosphoric_acid', ['3x hydrogen', '1x phosphorus', '4x oxygen'], 0xD5C385, [no_decomp]);
+    // compLiquid('orthophosphoric_acid', ['3x hydrogen', '1x phosphorus', '4x oxygen'], 0xD5C385, [no_decomp]);
 
-    compDust('sodium_phosphate', ['3x sodium', '1x phosphorus', '4x oxygen'], 0x819BC8, []);
+    // compDust('sodium_phosphate', ['3x sodium', '1x phosphorus', '4x oxygen'], 0x819BC8, []);
 
     // compDust('polonium_tetrachloride', ['1x polonium', '4x chlorine'], 0x357C44, [no_decomp]);
     // compDust('polonium_hydroxide', ['1x polonium', '4x hydroxide'], 0x0E5A1F, [no_decomp]);
@@ -1867,6 +1866,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .iconSet(SHINY)
         .flags(plates, frame, rod, dense_plate, long_rod, gear, foil, small_gear, rotor, fine_wire, no_decomp, no_abs_recipe);
 
-    compGem('aquariadic_rimuli_dragonix', ['5x pure_dragon_breath','7x akreyriadic_runixium','4x raging_rimulatia'], 0x16269e, GEM_VERTICAL, []);    
+    compGem('aquariadic_rimuli_dragonix', ['5x pure_dragon_breath','7x akreyriadic_runixium','4x raging_rimulatia'], 0x16269e, GEM_VERTICAL, [no_decomp]);    
 
 });

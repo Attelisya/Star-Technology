@@ -459,14 +459,19 @@
 		{
 			dependencies: ["47DF7968E9B98C65"]
 			description: ["{ftbquests.abydos.ethylbenzene.description}"]
-			icon: "gtceu:ethylbenzene_bucket"
 			id: "2F91771A1872EB4E"
 			optional: true
-			tasks: [{
-				id: "78C1C4C6A34B9E8B"
-				title: "{ftbquests.abydos.ethylbenzene.title}"
-				type: "checkmark"
+			rewards: [{
+				id: "4EC2838A7C2560F4"
+				item: "kubejs:coin"
+				type: "item"
 			}]
+			tasks: [{
+				id: "01BC6ACCAA3F846C"
+				item: "gtceu:bacteria_synthesizer"
+				type: "item"
+			}]
+			title: "{ftbquests.abydos.ethylbenzene.title}"
 			x: -7.5d
 			y: 3.5d
 		}

@@ -4,6 +4,9 @@ StartupEvents.registry('item', event => {
     event.create('komaru_filament_t1')
         .texture('kubejs:item/progression/riftic/komaru/filament_t1');
 
+    event.create('komaru_filament_t2')
+        .texture('kubejs:item/progression/riftic/komaru/filament_t2');
+
     // KOMARU Parts
     event.create('komaru_gravitational_stabilizers')
         .texture('kubejs:item/progression/riftic/komaru/gravitational_stabilizers');

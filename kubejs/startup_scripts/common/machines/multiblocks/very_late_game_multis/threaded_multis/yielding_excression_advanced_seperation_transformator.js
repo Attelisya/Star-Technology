@@ -37,6 +37,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('I', Predicates.blocks('start_core:threading_controller'))
             .build())
         .workableCasingModel('kubejs:block/casings/threading/quantumly_resistant_casing',
-            'gtceu:block/multiblock/implosion_compressor');
+            'gtceu:block/machines/distillery');
 
 });
