@@ -1858,6 +1858,17 @@
 			x: -9.0d
 			y: 7.0d
 		}
+		{
+			dependencies: ["617E17824856450D"]
+			id: "145E8628D8EAB5A8"
+			tasks: [{
+				id: "5EC8800E511924D5"
+				item: "pccard:card_programmed_circuit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
 	]
 	title: "{ftbquests.ae2.title}"
 }

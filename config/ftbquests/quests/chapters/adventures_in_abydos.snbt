@@ -1745,11 +1745,19 @@
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			tasks: [{
-				id: "66552A0737028183"
-				item: "start_core:dream_link_node"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "66552A0737028183"
+					item: "start_core:dream_link_node"
+					type: "item"
+				}
+				{
+					id: "317B167D4342C13D"
+					item: "start_core:lucinducer"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: -8.5d
 			y: 6.5d
 		}
