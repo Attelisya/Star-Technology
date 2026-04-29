@@ -1443,8 +1443,8 @@
 				title: "{ftbquests.positioner.title}"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: -2.5d
+			y: -0.5d
 		}
 		{
 			dependencies: [

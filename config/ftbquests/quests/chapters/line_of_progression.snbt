@@ -632,11 +632,11 @@
 			optional: true
 			tasks: [{
 				id: "03D2F19E7E4E8C5A"
-				title: "{ftbquests.line_of_progression.positioner.title}"
+				title: "{ftbquests.positioner.title}"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -1.0d
+			x: -3.5d
+			y: -0.5d
 		}
 		{
 			dependencies: [

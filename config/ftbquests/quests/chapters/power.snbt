@@ -1,4 +1,5 @@
 {
+	autofocus_id: "676CB078F9E4B9EF"
 	default_hide_dependency_lines: false
 	default_quest_shape: "square"
 	filename: "power"
@@ -2445,6 +2446,18 @@
 			}]
 			x: -8.5d
 			y: -1.0d
+		}
+		{
+			id: "676CB078F9E4B9EF"
+			invisible: true
+			optional: true
+			tasks: [{
+				id: "0A52F661FF0497E5"
+				title: "{ftbquests.positioner.title}"
+				type: "checkmark"
+			}]
+			x: -4.0d
+			y: -0.5d
 		}
 	]
 	title: "{ftbquests.power.title}"
