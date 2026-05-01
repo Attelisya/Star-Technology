@@ -3,11 +3,9 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('super_implosion_compressor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .tooltips([
+            Text.translate("block.start_core.gap"),
+            Text.translate("gtceu.multiblock.exact_hatch_1.tooltip"),
             Text.translate("block.start_core.breaker_line")
-        ])
-        .bottomTooltips([
-            Text.translate("block.start_core.breaker_line"),
-            Text.translate("block.kubejs.only_one_hatch.tooltip")
         ])
         .recipeType('implosion_compressor')
         .machine((holder) => new $CoiledMulti(holder))

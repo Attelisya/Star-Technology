@@ -15,11 +15,9 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('component_nexus', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .tooltips([
+            Text.translate("block.start_core.gap"),
+            Text.translate("gtceu.multiblock.exact_hatch_1.tooltip"),
             Text.translate("block.start_core.breaker_line")
-        ])
-        .bottomTooltips([
-            Text.translate("block.start_core.breaker_line"),
-            Text.translate("block.kubejs.only_one_hatch.tooltip")
         ])
         .recipeType('component_nexus')
         .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, $StarTRecipeModifiers.THROUGHPUT_BOOSTING, GTRecipeModifiers.BATCH_MODE])

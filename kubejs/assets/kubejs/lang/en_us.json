@@ -668,7 +668,7 @@
 
     "block.kubejs.added_by_StarT.tooltip": "§8§oAdded by Star Technology",
     "block.kubejs.threading.tooltip": "Has §5Threading§r",
-    "block.kubejs.only_one_hatch.tooltip": "Can only have §bone§r Energy Hatch",
+    "block.kubejs.only_one_2a_hatch.tooltip": "§fAccepts Exactly §6One §f2§eA §fEnergy Hatch.",
 
     "item.kubejs.basic_neutron_reflector" : "Basic Neutron Reflector",
     "item.kubejs.basic_neutron_reflector.tooltip" : "§7Used for \"Simple\" Fusion Reactions",
