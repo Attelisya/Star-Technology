@@ -159,24 +159,19 @@
 			id: "642FCA1C212F7DCB"
 			tasks: [
 				{
-					id: "527E4D8EA3CE26E1"
-					title: "Magma Drill"
-					type: "checkmark"
+					id: "7B8BB9080D47F19A"
+					item: "gtceu:voidic_refinement_module"
+					type: "item"
 				}
 				{
-					id: "5AAE40F440141D9F"
-					title: "Void Refinement"
-					type: "checkmark"
-				}
-				{
-					id: "10CEAB194FF57A3F"
-					title: "Absolute Assembly Line"
-					type: "checkmark"
+					id: "070EC3F3BCDD61F6"
+					item: "gtceu:magmatic_drilling_module"
+					type: "item"
 				}
 			]
 			title: "-toLang \"Basic Modules\""
-			x: 1.0d
-			y: 6.5d
+			x: 3.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -188,27 +183,23 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "4816553F3E854AA7"
-				title: "Riftic Infusion Assembly"
-				type: "checkmark"
+				id: "50C29FA5CB9F8319"
+				item: "gtceu:riftic_infusion_assembly_module"
+				type: "item"
 			}]
 			x: 0.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"20ABDF48307586F2"
-				"7E55361BFC343CEC"
-				"1E73A1F64F6EA9B5"
-			]
+			dependencies: ["1B498C64A42758C5"]
 			hide_dependency_lines: true
 			id: "492F2FED6328118F"
 			shape: "gear"
 			size: 1.25d
 			tasks: [{
-				id: "3064ED963E3DF255"
-				title: "Rimula Extraction"
-				type: "checkmark"
+				id: "5B1BC69C84820B91"
+				item: "gtceu:rimula_extraction_module"
+				type: "item"
 			}]
 			x: -5.0d
 			y: 2.5d
@@ -641,7 +632,10 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["5F0D2337489D103A"]
+			dependencies: [
+				"5F0D2337489D103A"
+				"1B5D6D46D336C119"
+			]
 			id: "5EFE01DCB5105D41"
 			tasks: [{
 				id: "22D473303C6A8EF7"
@@ -652,7 +646,10 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["2E5AD3C35325DD28"]
+			dependencies: [
+				"2E5AD3C35325DD28"
+				"1B5D6D46D336C119"
+			]
 			id: "667AD3BD25D97907"
 			tasks: [{
 				id: "7D0D121768B825D5"
@@ -663,7 +660,10 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["7F6DC4F513395F2B"]
+			dependencies: [
+				"7F6DC4F513395F2B"
+				"1B5D6D46D336C119"
+			]
 			id: "60431246CC351807"
 			tasks: [{
 				id: "7039929A462751BC"
@@ -942,6 +942,19 @@
 			}]
 			x: 5.0d
 			y: 6.5d
+		}
+		{
+			dependencies: ["1B498C64A42758C5"]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "1B5D6D46D336C119"
+			tasks: [{
+				id: "55D575FBA476ACFA"
+				item: "gtceu:riftic_enhancement_module"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.0d
 		}
 	]
 	title: "The Stars Await Greatness"

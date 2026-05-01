@@ -250,13 +250,19 @@
 				"1AEBAE3050B72906"
 			]
 			id: "07A6B3DF67E267A0"
+			rewards: [{
+				id: "36DC86AA77EB1C7E"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "gear"
 			tasks: [{
 				id: "79B4338B34520EFA"
 				item: "gtceu:ancient_netherite_ingot"
 				type: "item"
 			}]
-			x: -13.0d
-			y: -10.5d
+			x: -13.5d
+			y: -9.5d
 		}
 		{
 			dependencies: ["07A6B3DF67E267A0"]
@@ -1779,15 +1785,15 @@
 			y: -7.0d
 		}
 		{
-			dependencies: ["4C4E700B3DE67CDD"]
+			dependencies: ["27D7C1B5750ADFEE"]
 			id: "37E2C08013A6105A"
 			tasks: [{
 				id: "3195D047EDF92740"
 				item: "gtceu:deactivated_nether_dust"
 				type: "item"
 			}]
-			x: -9.5d
-			y: -6.5d
+			x: -12.0d
+			y: -9.0d
 		}
 		{
 			dependencies: ["37E2C08013A6105A"]
@@ -1798,8 +1804,8 @@
 				item: "gtceu:activated_nether_dust"
 				type: "item"
 			}]
-			x: -8.0d
-			y: -6.5d
+			x: -12.0d
+			y: -10.5d
 		}
 		{
 			dependencies: ["0A1A8258657B67B5"]

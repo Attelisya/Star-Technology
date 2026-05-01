@@ -2123,7 +2123,7 @@
 		}
 		{
 			dependencies: ["799F6F79B9FF86DF"]
-			hide_dependent_lines: true
+			hide_dependency_lines: true
 			id: "7809407ED588BCBD"
 			shape: "gear"
 			tasks: [{
@@ -2131,8 +2131,8 @@
 				item: "kubejs:end_coordinate_crystal"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -6.0d
+			x: -9.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
