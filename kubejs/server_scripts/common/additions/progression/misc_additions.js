@@ -56,7 +56,7 @@ ServerEvents.recipes (event => {
             .inputFluids(`gtceu:${dye}_dye 1000000`)
             .itemInputs(`512x minecraft:${dye2}_wool`,`512x #forge:cooked_fishes`)
             .itemOutputs(`placeablemaxwell:${name}`)
-            .duration(20 * 60 * 60 * 14)
+            .duration(168000)
             .EUt(GTValues.VH[GTValues.ZPM] * (4 ** scaler))
     
     }

@@ -9,7 +9,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('voidic_refinement')
         .category('komaru')
         .setEUIO('in')
-        .setMaxIOSize(2, 18, 2, 3)
+        .setMaxIOSize(1, 15, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE , FillDirection.LEFT_TO_RIGHT);
 
     event.create('riftic_infusion_assembly')

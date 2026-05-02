@@ -53,7 +53,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('M', Predicates.blocks('gtceu:advanced_computer_casing'))
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .where('N', Predicates.blocks('minecraft:pink_wool'))
-            .where('O', Predicates.blocks('gtceu:naquadah_coil_block'))
+            .where('O', Predicates.heatingCoils())
             .build())
         .workableCasingModel('gtceu:block/casings/solid/machine_casing_palladium_substation',
             'gtceu:block/machines/scanner');

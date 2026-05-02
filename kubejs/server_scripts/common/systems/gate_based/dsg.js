@@ -251,21 +251,24 @@ ServerEvents.recipes(event => {
         .itemInputs('kubejs:prismaticly_infused_stargate_rod')
         .inputFluids('gtceu:faematter 25000')
         .itemOutputs('kubejs:faetic_stargate_rod')
-        .duration(800)
+        .CWUt(888)
+        .totalCWU(888 * 20 * 40)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
     riftEnh(id('riftic_stargate_rod'))
         .itemInputs('kubejs:kaleidoscopicly_infused_stargate_rod')
         .inputFluids('gtceu:faematter 25000')
         .itemOutputs('kubejs:riftic_stargate_rod')
-        .duration(800)
+        .CWUt(888)
+        .totalCWU(888 * 20 * 40)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
     riftEnh(id('temporic_stargate_rod'))
         .itemInputs('kubejs:primordicly_infused_stargate_rod')
         .inputFluids('gtceu:faematter 25000')
         .itemOutputs('kubejs:temporic_stargate_rod')
-        .duration(800)
+        .CWUt(888)
+        .totalCWU(888 * 20 * 40)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
     stargateComponent('dsg_ring')

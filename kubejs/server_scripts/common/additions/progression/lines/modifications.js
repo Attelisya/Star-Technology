@@ -55,11 +55,11 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'gtceu:centrifuge/rare_earth_separation' });
     event.recipes.gtceu.centrifuge(id('rare_earth_speraration'))
         .itemInputs('1x gtceu:rare_earth_dust')
-        .chancedOutput('1x gtceu:neodymium_dust',2000,0)
-        .chancedOutput('1x gtceu:samarium_dust',2000,0)
-        .chancedOutput('1x gtceu:cerium_dust',2000,0)
-        .chancedOutput('1x gtceu:yttrium_dust',2000,0)
-        .chancedOutput('1x gtceu:lanthanum_dust',2000,0)
+        .chancedOutput('1x gtceu:neodymium_dust',500,50)
+        .chancedOutput('1x gtceu:samarium_dust',500,50)
+        .chancedOutput('1x gtceu:cerium_dust',500,50)
+        .chancedOutput('1x gtceu:yttrium_dust',500,50)
+        .chancedOutput('1x gtceu:lanthanum_dust',500,50)
         .duration(12)
         .EUt(80);
 

@@ -34,10 +34,10 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.centrifuge(id('xenotime_proc_5'))
         .itemInputs('1x gtceu:rich_rare_earth_dust')
-        .chancedOutput('1x gtceu:lutetium_dust',2500,0)
-        .chancedOutput('1x gtceu:dysprosium_dust',2500,0)
-        .chancedOutput('1x gtceu:europium_dust',2500,0)
-        .chancedOutput('1x gtceu:samarium_dust',2500,0)
+        .chancedOutput('1x gtceu:lutetium_dust',900,100)
+        .chancedOutput('1x gtceu:dysprosium_dust',900,100)
+        .chancedOutput('1x gtceu:europium_dust',900,100)
+        .chancedOutput('1x gtceu:samarium_dust',900,100)
         .duration(28)
         .EUt(48000);
 

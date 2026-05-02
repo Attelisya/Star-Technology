@@ -18,8 +18,8 @@
 		{
 			id: "44FE2B6F74FCFC9B"
 			linked_quest: "70EE9D4811A27CF2"
-			x: -4.0d
-			y: 2.5d
+			x: -4.5d
+			y: 4.0d
 		}
 	]
 	quests: [
@@ -83,7 +83,7 @@
 				item: "gtceu:quantum_processor"
 				type: "item"
 			}]
-			x: -6.5d
+			x: -8.5d
 			y: 4.0d
 		}
 		{
@@ -101,7 +101,7 @@
 				item: "gtceu:quantum_processor_assembly"
 				type: "item"
 			}]
-			x: -6.5d
+			x: -8.5d
 			y: 6.0d
 		}
 		{
@@ -119,7 +119,7 @@
 				item: "gtceu:quantum_processor_computer"
 				type: "item"
 			}]
-			x: -4.5d
+			x: -6.5d
 			y: 6.0d
 		}
 		{
@@ -143,7 +143,7 @@
 				item: "gtceu:quantum_processor_mainframe"
 				type: "item"
 			}]
-			x: -2.5d
+			x: -4.5d
 			y: 6.0d
 		}
 		{
@@ -172,8 +172,8 @@
 				}
 			]
 			title: "{ftbquests.futuristic_mechanisms.qubit_chip.title}"
-			x: -8.5d
-			y: 6.0d
+			x: -6.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -339,8 +339,8 @@
 				item: "gtceu:iv_parallel_hatch"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 1.5d
+			x: -4.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -1171,8 +1171,8 @@
 				item: "gtceu:naquadah_wafer"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 4.0d
+			x: -2.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["445BC7DFD3387DD4"]
@@ -1353,7 +1353,7 @@
 				type: "item"
 			}]
 			x: -10.5d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["45AAA2B53069E806"]
@@ -1375,7 +1375,7 @@
 					type: "item"
 				}
 			]
-			x: -8.5d
+			x: -10.5d
 			y: 4.0d
 		}
 		{
