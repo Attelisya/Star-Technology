@@ -1,6 +1,6 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     
-    event.create('supreme_chemist')
+    event.create('supreme_chemistry')
         .category('highly_advanced')
         .setEUIO('in')
         .setMaxTooltips(4)
@@ -16,7 +16,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('true_synthesis_array', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .machine((holder) => new $LayeredWorkableElectricMultiblockMachine(holder))
-        .recipeTypes(['ordered_chemistry','supreme_chemist'])
+        .recipeTypes(['ordered_chemistry','supreme_chemistry'])
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH,GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, $StarTRecipeModifiers.THROUGHPUT_BOOSTING])
         .appearanceBlock(() => Block.getBlock('kubejs:cattomolymer_casing'))
         .pattern(definition => FactoryBlockPattern.start()

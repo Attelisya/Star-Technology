@@ -104,13 +104,13 @@ ServerEvents.recipes(event => {
             )
         .EUt(GTValues.VHA[GTValues.UXV])
 
-    // === Ak Stabilizer 2 ===
-    event.recipes.gtceu.assembly_line(id('abyssal_akreyriadix_stabilizer'))
+    // === Ak stabiliser 2 ===
+    event.recipes.gtceu.assembly_line(id('abyssal_akreyriadix_stabiliser'))
         .itemInputs('gtceu:uiv_machine_hull', '12x #gtceu:circuits/uiv','192x kubejs:uepic_chip','8x gtceu:small_draco_abyssal_gear',
             '32x gtceu:nyanium_normal_fluid_pipe','16x gtceu:nether_star_lens','16x gtceu:echo_shard_lens','4x gtceu:uiv_field_generator',
             '4x gtceu:uiv_fluid_regulator','4x gtceu:uiv_sensor','2x gtceu:draco_abyssal_rotor')
         .inputFluids('gtceu:abyssal_alloy 9216','gtceu:dragon_breath 75000')
-        .itemOutputs('gtceu:abyssal_akreyriadix_stabilizer')
+        .itemOutputs('gtceu:abyssal_akreyriadix_stabiliser')
         .duration(1600)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder

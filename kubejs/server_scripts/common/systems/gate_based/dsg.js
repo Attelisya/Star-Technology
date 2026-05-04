@@ -26,13 +26,13 @@ ServerEvents.recipes(event => {
     const researchBuilder = global.researchBuilder;
     // global.researchBuilder = (machineType, recId, inputsI, inputsF, outputsI, duration, cwuT, totalCWU, euT, researched)
 
-    researchBuilder(riftAss, 'dsg_field_stabilizer', 
+    researchBuilder(riftAss, 'dsg_field_stabiliser', 
         ['2x gtceu:primordially_stellarized_weapon_grade_naquadah_frame', '24x gtceu:uiv_field_generator', '3x kubejs:dsg_energy_modulator', '8x gtceu:uiv_electric_piston',
             '96x gtceu:fine_draco_abyssal_wire','96x gtceu:fine_magmada_alloy_wire','96x gtceu:fine_lepton_resonant_thallium_antimonide_wire','96x gtceu:fine_raging_rimulatia_wire',
             '4x gtceu:hvga_steel_ultradense_plate','24x gtceu:calamatium_screw','4x gtceu:nyanium_ultradense_plate','18x gtceu:isovol_screw'], 
         ['gtceu:neutrindium_soldering_alloy 9216', 'gtceu:faematter 5000', 'gtceu:draconic_stabilization_mixture 3750'], 
-        ['kubejs:dsg_field_stabilizer'], 
-        6000, 500, 500 * 1200, GTValues.VHA[GTValues.UIV], 'kubejs:asg_field_stabilizer');
+        ['kubejs:dsg_field_stabiliser'], 
+        6000, 500, 500 * 1200, GTValues.VHA[GTValues.UIV], 'kubejs:asg_field_stabiliser');
 
     researchBuilder(assline, 'dsg_stellar_dialer', 
         ['2x gtceu:nyanium_ultradense_plate', 'gtceu:advanced_monitor', '2x kubejs:dsg_computational_matrix', 
@@ -73,7 +73,7 @@ ServerEvents.recipes(event => {
         6000, 500, 500 * 1200, GTValues.VHA[GTValues.UIV], 'kubejs:asg_energy_modulator');
 
     researchBuilder(riftAss, 'dsg_chevron', 
-        ['3x gtceu:raging_rimulatia_frame', 'gtceu:exquisite_aquariadic_rimuli_dragonix_gem', '6x kubejs:dsg_field_stabilizer','8x kubejs:dsg_computational_matrix',
+        ['3x gtceu:raging_rimulatia_frame', 'gtceu:exquisite_aquariadic_rimuli_dragonix_gem', '6x kubejs:dsg_field_stabiliser','8x kubejs:dsg_computational_matrix',
             '24x gtceu:uiv_sensor', '256x kubejs:komaru_filament_t1', '8x gtceu:uiv_electric_motor', '6x gtceu:long_raging_rimulatia_rod',
             '320x gtceu:nether_star_foil', '96x gtceu:lepton_resonant_thallium_antimonide_double_cable'], 
         ['gtceu:neutrindium_soldering_alloy 36864', 'gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 6912', 'gtceu:faematter 17500'], 
@@ -144,7 +144,7 @@ ServerEvents.recipes(event => {
         .duration(6000)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
-    event.recipes.gtceu.supreme_chemist(id('dsg_enscription_plate'))
+    event.recipes.gtceu.supreme_chemistry(id('dsg_enscription_plate'))
         .layeredRecipe((layers) => layers
             .itemInputs('2x kubejs:asg_enscription_plate','32x gtceu:aurourium_foil')
             .inputFluids('gtceu:prismatic_hypergurmalium 125')
@@ -294,7 +294,7 @@ ServerEvents.recipes(event => {
 
     stargateComponent('dsg_chevron')
         .layeredRecipe((layers) => layers
-            .itemInputs('kubejs:draconic_stargate_ring_block','kubejs:dsg_chevron','8x kubejs:dsg_field_stabilizer','2x kubejs:dsg_reinforced_plating')
+            .itemInputs('kubejs:draconic_stargate_ring_block','kubejs:dsg_chevron','8x kubejs:dsg_field_stabiliser','2x kubejs:dsg_reinforced_plating')
             .next()
             .itemInputs('6x ' + t_rune,'4x ' + i_rune,'4x kubejs:temporic_stargate_rod','2x kubejs:dsg_reinforced_plating')
             .next()

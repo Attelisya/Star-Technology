@@ -113,7 +113,7 @@
 
     "block.gtceu.latex_plantation.tooltip.0": "§7라텍스를 빠르게 얻을 수 있는 멀티블록",
 
-    "block.gtceu.molten_destabilizer.tooltip.0": "§7복잡한 용융된 상태의 화학 물질들을 가공하기 위해 더 작은 덩어리로 분할 해주는 강력한 기계",
+    "block.gtceu.molten_destabiliser.tooltip.0": "§7복잡한 용융된 상태의 화학 물질들을 가공하기 위해 더 작은 덩어리로 분할 해주는 강력한 기계",
 
     "block.gtceu.cyclonic_sifter.tooltip.0": "§7쉬프터의 다음 단계로, 기존보다 강하고 정확한 성능을 통해 더 나은 정제가 가능합니다",
 
@@ -845,7 +845,7 @@
     "material.gtceu.americium_plas": "아메리슘",
 
     "gtceu.molten_destabilizing": "용융 분해",
-    "block.gtceu.molten_destabilizer": "용융 상태 불안정화 장치",
+    "block.gtceu.molten_destabiliser": "용융 상태 불안정화 장치",
 
     "gtceu.latex_plantation": "라텍스 농업",
     "block.gtceu.latex_plantation": "라텍스 농장",

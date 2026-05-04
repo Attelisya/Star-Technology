@@ -544,7 +544,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "4B7BCE98FFBFDE65"
-				item: "kubejs:csg_field_stabilizer"
+				item: "kubejs:csg_field_stabiliser"
 				type: "item"
 			}]
 			x: -12.0d

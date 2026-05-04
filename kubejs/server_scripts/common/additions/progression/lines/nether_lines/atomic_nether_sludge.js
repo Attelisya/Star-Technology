@@ -23,7 +23,6 @@ ServerEvents.recipes(event => {
                 .inputFluids('gtceu:nitric_acid 875')
         )
         .itemOutputs('4x gtceu:flerovium_tetrafluoride_dust', 'gtceu:rich_rare_earth_dust', '2x gtceu:rare_earth_dust')
-        .fluidOutputs('gtceu:enriched_uranium_hexafluoride 2000')
         .duration(360)
         .EUt(GTValues.VA[GTValues.UEV]);
 

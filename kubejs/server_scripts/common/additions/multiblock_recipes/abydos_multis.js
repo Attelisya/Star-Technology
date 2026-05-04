@@ -57,11 +57,11 @@ ServerEvents.recipes(event => {
         )
         .EUt(GTValues.VA[GTValues.UV]); 
 
-    event.recipes.gtceu.assembly_line(id('molten_destabilizer'))
+    event.recipes.gtceu.assembly_line(id('molten_destabiliser'))
         .itemInputs('gtceu:zpm_machine_hull', '6x #gtceu:circuits/uv', '4x gtceu:dense_naquadria_plate','64x gtceu:uhpic_chip','4x gtceu:duranium_huge_fluid_pipe',
             '4x gtceu:pure_netherite_rotor','4x gtceu:small_pure_netherite_gear','24x gtceu:zpm_electric_pump')
         .inputFluids('gtceu:polybenzimidazole 8000','gtceu:gritty_akreyrium 72000')
-        .itemOutputs('gtceu:molten_destabilizer')
+        .itemOutputs('gtceu:molten_destabiliser')
         .duration(2250)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder

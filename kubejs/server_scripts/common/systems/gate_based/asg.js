@@ -14,13 +14,13 @@ ServerEvents.recipes(event => {
     const researchBuilder = global.researchBuilder;
     // global.researchBuilder = (machineType, recId, inputsI, inputsF, outputsI, duration, cwuT, totalCWU, euT, researched)
 
-    researchBuilder(assline, 'asg_field_stabilizer', 
+    researchBuilder(assline, 'asg_field_stabiliser', 
         ['gtceu:stellarized_weapon_grade_naquadah_frame', '8x gtceu:uhv_field_generator', 'kubejs:asg_energy_modulator',
             '2x gtceu:neutronium_ultradense_plate','32x gtceu:fine_stellarium_wire','32x gtceu:fine_melodium_wire'
             ,'32x gtceu:fine_enderium_wire', '12x gtceu:zalloy_screw'], 
         ['gtceu:naquadated_soldering_alloy 1296', 'gtceu:utopian_akreyrium 2500'], 
-        ['kubejs:asg_field_stabilizer'], 
-        6000, 144, 144 * 1200, GTValues.VHA[GTValues.UHV], 'kubejs:csg_field_stabilizer');
+        ['kubejs:asg_field_stabiliser'], 
+        6000, 144, 144 * 1200, GTValues.VHA[GTValues.UHV], 'kubejs:csg_field_stabiliser');
 
     researchBuilder(cpa, 'asg_stellar_dialer', 
         ['gtceu:neutronium_ultradense_plate', 'gtceu:monitor', 'kubejs:asg_computational_matrix', 
@@ -60,7 +60,7 @@ ServerEvents.recipes(event => {
         6000, 144, 144 * 1200, GTValues.VHA[GTValues.UHV], 'kubejs:csg_energy_modulator');
 
     researchBuilder(assline, 'asg_chevron', 
-        ['gtceu:ancient_runicalium_frame', 'gtceu:exquisite_akreyriadic_runixium_gem', '2x kubejs:asg_field_stabilizer','2x kubejs:asg_computational_matrix',
+        ['gtceu:ancient_runicalium_frame', 'gtceu:exquisite_akreyriadic_runixium_gem', '2x kubejs:asg_field_stabiliser','2x kubejs:asg_computational_matrix',
             '8x gtceu:uhv_sensor', '48x kubejs:naquadic_netherite_fibers', '2x gtceu:uhv_electric_motor', '2x gtceu:long_ancient_runicalium_rod'], 
         ['gtceu:naquadated_soldering_alloy 3888', 'gtceu:utopian_akreyrium 3750'], 
         ['kubejs:asg_chevron'], 
@@ -215,11 +215,11 @@ ServerEvents.recipes(event => {
         .layeredRecipe((layers) => layers
             .itemInputs('kubejs:ancient_stargate_ring_block','kubejs:asg_chevron','kubejs:asg_computational_matrix')
             .next()
-            .itemInputs('kubejs:asg_field_stabilizer','kubejs:asg_reinforced_plating','2x kubejs:awakened_inferno_stargate_rod')
+            .itemInputs('kubejs:asg_field_stabiliser','kubejs:asg_reinforced_plating','2x kubejs:awakened_inferno_stargate_rod')
             .next()
             .itemInputs('4x kubejs:runic_transportation_plating','3x kubejs:runic_pathway_plating','2x kubejs:awakened_abyss_stargate_rod')
             .next()
-            .itemInputs('kubejs:asg_field_stabilizer','kubejs:asg_reinforced_plating','2x kubejs:awakened_inferno_stargate_rod')
+            .itemInputs('kubejs:asg_field_stabiliser','kubejs:asg_reinforced_plating','2x kubejs:awakened_inferno_stargate_rod')
             .next()
             .itemInputs('4x kubejs:runic_transportation_plating','3x kubejs:runic_pathway_plating','2x kubejs:awakened_abyss_stargate_rod')
         )

@@ -33,7 +33,7 @@ ServerEvents.recipes (event => {
         .duration(540)
         .EUt(GTValues.VA[GTValues.UIV]);
 
-    event.recipes.gtceu.abyssal_akreyriadix_stabilizer(id('true_rimula_foundation'))
+    event.recipes.gtceu.abyssal_akreyriadix_stabiliser(id('true_rimula_foundation'))
         .inputFluids('gtceu:rimula_s_foundation 500','gtceu:rimula_t_foundation 500')
         .outputFluids('gtceu:true_rimula_foundation 875')
         .duration(48)
@@ -117,7 +117,7 @@ ServerEvents.recipes (event => {
         .duration(600)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
-    event.recipes.gtceu.supreme_chemist(id('primordial_residue'))
+    event.recipes.gtceu.supreme_chemistry(id('primordial_residue'))
         .layeredRecipe((layers) => layers
             .inputFluids('gtceu:primordial_extract 750')
             .next()
@@ -129,7 +129,7 @@ ServerEvents.recipes (event => {
         .duration(480)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
-    event.recipes.gtceu.supreme_chemist(id('riftic_concentrate'))
+    event.recipes.gtceu.supreme_chemistry(id('riftic_concentrate'))
         .layeredRecipe((layers) => layers
             .inputFluids('gtceu:condensed_rimula 750')
             .next()
@@ -141,7 +141,7 @@ ServerEvents.recipes (event => {
         .duration(480)
         .EUt(GTValues.VHA[GTValues.UXV]);
 
-    event.recipes.gtceu.supreme_chemist(id('prismatic_hypergurmalium'))
+    event.recipes.gtceu.supreme_chemistry(id('prismatic_hypergurmalium'))
         .layeredRecipe((layers) => layers
             .inputFluids('gtceu:faetic_extract 750')
             .next()

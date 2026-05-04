@@ -1,6 +1,6 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
-    event.create('abyssal_akreyriadix_stabilizer')
+    event.create('abyssal_akreyriadix_stabiliser')
         .category('resource_production')
         .setEUIO('in')
         .setMaxIOSize(2,1,2,1)
@@ -11,9 +11,9 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
-    event.create('abyssal_akreyriadix_stabilizer', 'multiblock')
+    event.create('abyssal_akreyriadix_stabiliser', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes(['abyssal_akreyriadix_stabilizer','folding_akreyrium_stabiliser'])
+        .recipeTypes(['abyssal_akreyriadix_stabiliser','folding_akreyrium_stabiliser'])
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(() => Block.getBlock('kubejs:nyanium_machine_casing'))
         .pattern(definition => FactoryBlockPattern.start()

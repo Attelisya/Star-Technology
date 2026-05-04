@@ -12,7 +12,7 @@ ServerEvents.recipes (event => {
         'RfFPPPFfR',
         'PPPPPPPPP'
 	], {
-		G: 'kubejs:komaru_gravitational_stabilizers',
+		G: 'kubejs:komaru_gravitational_stabilisers',
 		F: 'gtceu:hvga_steel_frame',
 		f: 'gtceu:draco_abyssal_frame',
 		P: 'kubejs:komaru_plating',
@@ -35,18 +35,18 @@ ServerEvents.recipes (event => {
 
     researchBuilder(riftAss, 'komaru_frame_test', 
         ['3x gtceu:hvga_steel_frame','gtceu:multithreaded_component_synthesis_forge','gtceu:byteforce_unified_incomparable_logistics_depot','gtceu:superior_particulate_isolation_nexus',
-            'gtceu:ascendant_engraving_matrix','gtceu:gravitational_compression_chamber','8x kubejs:komaru_gravitational_stabilizers',
+            'gtceu:ascendant_engraving_matrix','gtceu:gravitational_compression_chamber','8x kubejs:komaru_gravitational_stabilisers',
             '4x kubejs:komaru_rift_caller','21x kubejs:komaru_plating','placeablemaxwell:maxwell','placeablemaxwell:poomba','placeablemaxwell:mars',
             'placeablemaxwell:vasilisa','placeablemaxwell:valenok'], 
         ['gtceu:neutrindium_soldering_alloy 2304', 'gtceu:hvga_steel 2160', 'gtceu:draco_abyssal 1152'], 
         ['start_core:komaru'], 
         1200, 444, 444 * 1200, GTValues.VA[GTValues.UIV], 'kubejs:komaru_plating');
 
-    event.recipes.gtceu.assembly_line(id('komaru_gravitational_stabilizers'))
+    event.recipes.gtceu.assembly_line(id('komaru_gravitational_stabilisers'))
         .itemInputs('6x gtceu:nyanium_frame', '12x gtceu:uiv_field_generator', '2x #gtceu:circuits/uxv', '4x gtceu:uiv_sensor',
             '12x gtceu:draco_abyssal_plate','24x gtceu:hvga_steel_screw')
         .inputFluids('gtceu:neutrindium_soldering_alloy 4608','gtceu:netherite_triselex_oxide 9792')
-        .itemOutputs('kubejs:komaru_gravitational_stabilizers')
+        .itemOutputs('kubejs:komaru_gravitational_stabilisers')
         .duration(1500)
             .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder

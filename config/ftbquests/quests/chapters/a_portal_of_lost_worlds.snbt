@@ -649,7 +649,7 @@
 			id: "5FC1A69559B6FEB5"
 			tasks: [{
 				id: "6CAC683C98A0C372"
-				item: "kubejs:asg_field_stabilizer"
+				item: "kubejs:asg_field_stabiliser"
 				type: "item"
 			}]
 			x: -5.0d

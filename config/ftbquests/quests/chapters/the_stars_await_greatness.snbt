@@ -132,7 +132,7 @@
 			tasks: [
 				{
 					id: "050FE2BCA8A9594B"
-					item: "kubejs:komaru_gravitational_stabilizers"
+					item: "kubejs:komaru_gravitational_stabilisers"
 					type: "item"
 				}
 				{
@@ -420,7 +420,7 @@
 			id: "7689B3714EB62592"
 			tasks: [{
 				id: "11AD2F8DE939EE36"
-				item: "kubejs:dsg_field_stabilizer"
+				item: "kubejs:dsg_field_stabiliser"
 				type: "item"
 			}]
 			x: 3.0d

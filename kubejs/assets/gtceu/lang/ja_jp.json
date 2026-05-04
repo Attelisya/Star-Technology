@@ -130,7 +130,7 @@
 
     "block.gtceu.latex_plantation.tooltip.0": "§7木精抽出機よりも遥かに高速にラテックスを抽出することが出来るマルチブロック機械。",
 
-    "block.gtceu.molten_destabilizer.tooltip.0": "§7複雑な溶融化学物質を、小さな塊に分割して処理できる強力な機械。",
+    "block.gtceu.molten_destabiliser.tooltip.0": "§7複雑な溶融化学物質を、小さな塊に分割して処理できる強力な機械。",
 
     "block.gtceu.cyclonic_sifter.tooltip.0": "§7基本型の選別機に比べ、精度と強度に優れており、より発展的なレシピを処理可能な、発展型の選別機。",
 
@@ -876,7 +876,7 @@
     "material.gtceu.americium_plas": "アメリシウム",
 
     "gtceu.molten_destabilizing": "溶融物質蒸留",
-    "block.gtceu.molten_destabilizer": "溶融物質蒸留機",
+    "block.gtceu.molten_destabiliser": "溶融物質蒸留機",
 
     "gtceu.latex_plantation": "ラテックス農園",
     "block.gtceu.latex_plantation": "ラテックス農園",

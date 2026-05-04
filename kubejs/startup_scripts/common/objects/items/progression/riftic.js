@@ -8,8 +8,8 @@ StartupEvents.registry('item', event => {
         .texture('kubejs:item/progression/riftic/komaru/filament_t2');
 
     // KOMARU Parts
-    event.create('komaru_gravitational_stabilizers')
-        .texture('kubejs:item/progression/riftic/komaru/gravitational_stabilizers');
+    event.create('komaru_gravitational_stabilisers')
+        .texture('kubejs:item/progression/riftic/komaru/gravitational_stabilisers');
 
     event.create('komaru_rift_caller')
         .texture('kubejs:item/progression/riftic/komaru/rift_caller');

@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
     // global.researchBuilder = (machineType, recId, inputsI, inputsF, outputsI, duration, cwuT, totalCWU, euT, researched)
 
     researchBuilder(cpa, 'csg_chevron', 
-        ['2x gtceu:long_prismalium_rod', 'gtceu:exquisite_naquadic_netherite_gem', 'kubejs:csg_field_stabilizer', 
+        ['2x gtceu:long_prismalium_rod', 'gtceu:exquisite_naquadic_netherite_gem', 'kubejs:csg_field_stabiliser', 
             'kubejs:csg_computational_matrix', '4x gtceu:zpm_sensor', '64x gtceu:fine_borosilicate_glass_wire'], 
         ['gtceu:indium_tin_lead_cadmium_soldering_alloy 864'], 
         ['kubejs:csg_chevron'], 
@@ -43,11 +43,11 @@ ServerEvents.recipes(event => {
         ['kubejs:csg_energy_modulator'], 
         6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:prismalium_foil');
 
-    researchBuilder(cpa, 'csg_field_stabilizer', 
+    researchBuilder(cpa, 'csg_field_stabiliser', 
         ['2x gtceu:dense_enriched_naquadah_plate', '4x gtceu:zpm_field_generator', 'kubejs:csg_energy_modulator', 
             '16x gtceu:fine_lumium_wire', '16x gtceu:fine_twinite_wire', '16x gtceu:fine_signalum_wire'], 
         ['gtceu:indium_tin_lead_cadmium_soldering_alloy 1296'], 
-        ['kubejs:csg_field_stabilizer'], 
+        ['kubejs:csg_field_stabiliser'], 
         6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:fine_trinaquadalloy_wire');
 
     researchBuilder(cpa, 'csg_stellar_dialer', 
@@ -171,11 +171,11 @@ ServerEvents.recipes(event => {
         .layeredRecipe((layers) => layers
             .itemInputs('sgjourney:classic_stargate_ring_block','kubejs:csg_chevron','6x kubejs:activated_stargate_rod')
             .next()
-            .itemInputs('kubejs:csg_field_stabilizer', 'kubejs:csg_reinforced_plating','2x kubejs:activated_stargate_rod')
+            .itemInputs('kubejs:csg_field_stabiliser', 'kubejs:csg_reinforced_plating','2x kubejs:activated_stargate_rod')
             .next()
             .itemInputs('kubejs:proto_solarus_rune', '3x kubejs:proto_energized_rune', 'kubejs:proto_lunarus_rune')
             .next()
-            .itemInputs('kubejs:csg_field_stabilizer', 'kubejs:csg_reinforced_plating','2x kubejs:activated_stargate_rod')
+            .itemInputs('kubejs:csg_field_stabiliser', 'kubejs:csg_reinforced_plating','2x kubejs:activated_stargate_rod')
         )
         .inputFluids('gtceu:naquadria 1152')
         .itemOutputs('sgjourney:classic_stargate_chevron_block')
