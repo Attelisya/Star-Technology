@@ -832,6 +832,7 @@
     "block.gtceu.latex_plantation": "Latex Plantation",
 
     "gtceu.draco_circuit_assembler": "Draconic Circuit Assembler",
+    "gtceu.draco_bulk_circuiter": "Draco Bulk Circuiter",
     "block.gtceu.draco_circuit_assembler": "Draconic Circuit Assembler",
     "block.gtceu.draco_circuit_assembler.tooltip.0": "§7A circuit fabrication nexus weaving more advanced processors. It assembles high-tier circuits while mass-assembling lesser circuits with extreme precision.",
 
@@ -1373,6 +1374,7 @@
     "material.gtceu.highly_unstable_rift_source": "Highly Unstable Rift Source",
     "material.gtceu.abyssal_stabilization_mixture": "Abyssal Stabilization Mixture",
     "material.gtceu.stabilization_mixture_base": "Stabilization Mixture Base",
+    "material.gtceu.aquariadic_rimuli_dragonix": "Aquariadic Rimuli-Dragonix",
 
     "block.gtceu.kaleidoscopic_fractalizer": "Kaleidoscopic Fractalizer",
     "block.gtceu.kaleidoscopic_fractalizer.tooltip.0": "wip toolip",

@@ -1049,6 +1049,10 @@
 								id: "gtceu:ev_fluid_drilling_rig"
 								tag: { }
 							}
+							{
+								Count: 1b
+								id: "start_core:zpm_fluid_drilling_rig"
+							}
 						]
 					}
 				}

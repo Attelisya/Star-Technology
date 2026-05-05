@@ -165,7 +165,7 @@
 					type: "item"
 				}
 			]
-			title: "-toLang \"Basic Modules\""
+			title: "{ftbquests.dsg.basic_modules.title}"
 			x: 3.0d
 			y: 3.0d
 		}
@@ -950,6 +950,7 @@
 				item: "gtceu:riftic_enhancement_module"
 				type: "item"
 			}]
+			title: "{ftbquests.dsg.advanced_modules.title}"
 			x: 5.0d
 			y: 3.0d
 		}

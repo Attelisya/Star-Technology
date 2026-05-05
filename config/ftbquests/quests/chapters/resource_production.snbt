@@ -15,15 +15,15 @@
 			linked_quest: "439D8AE6D3DC41AF"
 			shape: "gear"
 			size: 1.5d
-			x: -2.5d
-			y: 6.0d
+			x: -3.0d
+			y: 6.5d
 		}
 		{
 			id: "31A47C784DBE6072"
 			linked_quest: "22BC7BDE5E132A30"
 			shape: "gear"
 			size: 1.5d
-			x: 6.5d
+			x: 7.5d
 			y: 3.0d
 		}
 		{
@@ -43,8 +43,8 @@
 			linked_quest: "0AB3A8C14C3A0512"
 			shape: "gear"
 			size: 1.5d
-			x: -6.0d
-			y: 6.0d
+			x: -6.5d
+			y: 6.5d
 		}
 	]
 	quests: [
@@ -1585,22 +1585,6 @@
 			dependencies: ["22BC7BDE5E132A30"]
 			icon: {
 				Count: 1
-				id: "minecraft:grass_block"
-				tag: { }
-			}
-			id: "748EC87C28C4CC56"
-			tasks: [{
-				id: "7D01C9B5B1A9671B"
-				title: "{ftbquests.resource_production.overworld_drilling.title}"
-				type: "checkmark"
-			}]
-			x: 4.5d
-			y: 4.5d
-		}
-		{
-			dependencies: ["22BC7BDE5E132A30"]
-			icon: {
-				Count: 1
 				id: "minecraft:sand"
 				tag: { }
 			}
@@ -1610,38 +1594,24 @@
 				title: "{ftbquests.resource_production.abydos_drilling.title}"
 				type: "checkmark"
 			}]
-			x: 6.5d
-			y: 7.0d
+			x: 9.5d
+			y: 4.5d
 		}
 		{
-			dependencies: ["748EC87C28C4CC56"]
-			icon: "gtceu:brackish_water_bucket"
-			id: "13FB042818A0F23C"
-			tasks: [
-				{
-					id: "6C29F1145624CD33"
-					item: "gtceu:brackish_water_bucket"
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "300A95CAA17FD962"
-					type: "checkmark"
-				}
+			dependencies: [
+				"531800AEC3B8E3AF"
+				"727A07D94F0E2C39"
+				"416A33A031A0C3D6"
+				"66FEE4EFA0EFFC42"
 			]
-			title: "{ftbquests.resource_production.brackish_water.title}"
-			x: 5.5d
-			y: 6.0d
-		}
-		{
 			id: "254A058C83258376"
 			tasks: [{
 				id: "5650CB9FACAD6C04"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.resource_production.processing_lines_456.title}"
-			x: 6.5d
-			y: 10.0d
+			title: "{ftbquests.pl3.title}"
+			x: 9.5d
+			y: 7.5d
 		}
 		{
 			dependencies: ["307FA3025E294979"]
@@ -1668,8 +1638,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.sulfuric_heavy_fuel.title}"
-			x: 2.0d
-			y: 4.5d
+			x: 1.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["307FA3025E294979"]
@@ -1696,8 +1666,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.sulfuric_light_fuel.title}"
-			x: 2.0d
-			y: 5.5d
+			x: 1.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["307FA3025E294979"]
@@ -1724,8 +1694,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.sulfuric_naptha.title}"
-			x: 2.0d
-			y: 6.5d
+			x: 1.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["307FA3025E294979"]
@@ -1752,8 +1722,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.sulfuric_gas.title}"
-			x: 2.0d
-			y: 7.5d
+			x: 1.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["5B257F1A37D54D75"]
@@ -1781,8 +1751,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.heavy_fuel.title}"
-			x: 0.75d
-			y: 4.5d
+			x: 0.25d
+			y: 5.0d
 		}
 		{
 			dependencies: ["4B90760BD8243CCB"]
@@ -1810,8 +1780,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.light_fuel.title}"
-			x: 0.75d
-			y: 5.5d
+			x: 0.25d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1102B794BA4446CF"]
@@ -1839,8 +1809,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.naphtha.title}"
-			x: 0.75d
-			y: 6.5d
+			x: 0.25d
+			y: 7.0d
 		}
 		{
 			dependencies: ["5AB4194223AAE768"]
@@ -1868,8 +1838,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.refinery_gas.title}"
-			x: 0.75d
-			y: 7.5d
+			x: 0.25d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -1887,8 +1857,8 @@
 				title: "{ftbquests.resource_production.steam_cracking.title}"
 				type: "checkmark"
 			}]
-			x: -0.75d
-			y: 7.0d
+			x: -1.25d
+			y: 7.5d
 		}
 		{
 			dependencies: [
@@ -1906,11 +1876,10 @@
 				title: "{ftbquests.resource_production.hydro_cracking.title}"
 				type: "checkmark"
 			}]
-			x: -0.75d
-			y: 5.0d
+			x: -1.25d
+			y: 5.5d
 		}
 		{
-			dependencies: ["748EC87C28C4CC56"]
 			dependency_requirement: "one_completed"
 			icon: {
 				Count: 1
@@ -1966,8 +1935,8 @@
 				}
 			]
 			title: "{ftbquests.resource_production.oil_production.title}"
-			x: 3.5d
-			y: 6.0d
+			x: 3.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -1995,8 +1964,8 @@
 					type: "item"
 				}
 			]
-			x: -4.5d
-			y: 7.5d
+			x: -5.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -2048,8 +2017,8 @@
 					type: "item"
 				}
 			]
-			x: -4.5d
-			y: 5.5d
+			x: -5.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -2091,8 +2060,8 @@
 					type: "item"
 				}
 			]
-			x: -4.5d
-			y: 6.5d
+			x: -5.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -2134,8 +2103,8 @@
 					type: "item"
 				}
 			]
-			x: -4.5d
-			y: 4.5d
+			x: -5.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["439D8AE6D3DC41AF"]
@@ -2258,8 +2227,8 @@
 				title: "{ftbquests.resource_production.hydrocarbons.title}"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 8.5d
+			x: -3.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["22BC7BDE5E132A30"]
@@ -2270,29 +2239,45 @@
 				title: "{ftbquests.resource_production.nether_drilling.title}"
 				type: "checkmark"
 			}]
-			x: 8.5d
+			x: 5.5d
 			y: 4.5d
 		}
 		{
 			dependencies: ["4E6158880F47AACC"]
+			icon: "gtceu:debris_rich_nether_magma_bucket"
 			id: "30AB8331D0B80859"
-			tasks: [{
-				id: "653F650A694C243A"
-				item: "gtceu:debris_rich_nether_magma_bucket"
-				type: "item"
-			}]
-			x: 7.5d
+			tasks: [
+				{
+					id: "653F650A694C243A"
+					item: "gtceu:debris_rich_nether_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0E00BE7DAF3B921D"
+					type: "checkmark"
+				}
+			]
+			x: 4.5d
 			y: 6.0d
 		}
 		{
 			dependencies: ["4E6158880F47AACC"]
+			icon: "gtceu:highly_unstable_nether_magma_bucket"
 			id: "2068B9072855036B"
-			tasks: [{
-				id: "5770E3840D8195A6"
-				item: "gtceu:highly_unstable_nether_magma_bucket"
-				type: "item"
-			}]
-			x: 9.5d
+			tasks: [
+				{
+					id: "5770E3840D8195A6"
+					item: "gtceu:highly_unstable_nether_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6AF3BB7D3F264CB5"
+					type: "checkmark"
+				}
+			]
+			x: 6.5d
 			y: 6.0d
 		}
 		{
@@ -2306,8 +2291,8 @@
 				id: "7BDD424C5B7480B1"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.resource_production.processing_lines_71.title}"
-			x: 8.5d
+			title: "{ftbquests.pl4.title}"
+			x: 5.5d
 			y: 7.5d
 		}
 		{
@@ -2345,13 +2330,21 @@
 		}
 		{
 			dependencies: ["4E6158880F47AACC"]
+			icon: "gtceu:crude_infernal_concentrate_bucket"
 			id: "2FF64174BEF10D64"
-			tasks: [{
-				id: "4E7308B4C0006151"
-				item: "gtceu:crude_infernal_concentrate_bucket"
-				type: "item"
-			}]
-			x: 8.5d
+			tasks: [
+				{
+					id: "4E7308B4C0006151"
+					item: "gtceu:crude_infernal_concentrate_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "19417033B4E3AD1D"
+					type: "checkmark"
+				}
+			]
+			x: 5.5d
 			y: 6.0d
 		}
 		{
@@ -2397,6 +2390,82 @@
 			}]
 			x: 7.5d
 			y: -5.0d
+		}
+		{
+			dependencies: ["69CCC4E36528A4FC"]
+			icon: "gtceu:gritty_akreyrium_bucket"
+			id: "531800AEC3B8E3AF"
+			tasks: [
+				{
+					id: "79F5F9A8702F1558"
+					item: "gtceu:gritty_akreyrium_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "149B77B974CBC068"
+					type: "checkmark"
+				}
+			]
+			x: 11.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["69CCC4E36528A4FC"]
+			icon: "gtceu:abydos_reactive_dense_magma_bucket"
+			id: "416A33A031A0C3D6"
+			tasks: [
+				{
+					id: "035348E806204549"
+					item: "gtceu:abydos_reactive_dense_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "66ED4062BB42D0EB"
+					type: "checkmark"
+				}
+			]
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["69CCC4E36528A4FC"]
+			icon: "gtceu:abydos_refractory_dense_magma_bucket"
+			id: "66FEE4EFA0EFFC42"
+			tasks: [
+				{
+					id: "0CF12C48D8C173A8"
+					item: "gtceu:abydos_refractory_dense_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6692A290910A9A2F"
+					type: "checkmark"
+				}
+			]
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["69CCC4E36528A4FC"]
+			icon: "gtceu:abydos_naquadite_dense_magma_bucket"
+			id: "727A07D94F0E2C39"
+			tasks: [
+				{
+					id: "47869563C71D0BF9"
+					item: "gtceu:abydos_naquadite_dense_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0AFC9B693924D8AF"
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
+			y: 6.0d
 		}
 	]
 	title: "{ftbquests.resource_production.title}"

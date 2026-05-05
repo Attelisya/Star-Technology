@@ -2009,19 +2009,13 @@
 			icon: "gtceu:oganesson_plasma_bucket"
 			id: "5FAEC6FD93ACC381"
 			size: 1.0d
-			tasks: [
-				{
-					id: "0A40A0A86C660693"
-					title: "-toLang \"Noblest \"Gas\"\""
-					type: "checkmark"
-				}
-				{
-					id: "36A35F698B08CADD"
-					item: "gtceu:oganesson_plasma_bucket"
-					optional_task: true
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "36A35F698B08CADD"
+				item: "gtceu:oganesson_plasma_bucket"
+				optional_task: true
+				type: "item"
+			}]
+			title: "{ftbquests.draconic_age.oganesson.title}"
 			x: -6.5d
 			y: -5.0d
 		}
