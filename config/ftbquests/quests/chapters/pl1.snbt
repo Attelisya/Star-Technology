@@ -120,6 +120,7 @@
 				"104CAE7C2406E9BF"
 				"2CE4C49C11FE9C36"
 			]
+			dependency_requirement: "one_completed"
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "348A5FD9441DCD71"
 			size: 1.0d
@@ -2131,6 +2132,7 @@
 					type: "checkmark"
 				}
 			]
+			title: "{ftbquests.pl.easy_hydrochloric.title}"
 			x: -9.5d
 			y: -5.0d
 		}

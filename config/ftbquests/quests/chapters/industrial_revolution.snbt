@@ -1518,7 +1518,10 @@
 				"6D23752791E9928A"
 				"23C8E1371ABA986C"
 			]
-			description: ["{ftbquests.industrial_revolution.rock_filtrator.description}"]
+			description: [
+				"{ftbquests.industrial_revolution.rock_filtrator.description}"
+				"[ \"===> [\", { \"text\": \"X\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"14AB8F4BE7C1F8E3\" } }, \"] <===\" ]"
+			]
 			id: "5F80268C02FAD5F6"
 			optional: true
 			rewards: [{
@@ -1540,7 +1543,10 @@
 				"13B656D92E651FB4"
 				"54549EC141659C30"
 			]
-			description: ["{ftbquests.industrial_revolution.void_extractor.description}"]
+			description: [
+				"{ftbquests.industrial_revolution.void_extractor.description}"
+				"[ \"===> [\", { \"text\": \"X\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"71456BC654A6D4A7\" } }, \"] <===\" ]"
+			]
 			icon: "gtceu:void_extractor"
 			id: "30B2688F8387048F"
 			rewards: [{
@@ -1621,7 +1627,7 @@
 			description: [
 				"{ftbquests.industrial_revolution.etching_liquids.description}"
 				""
-				"[ \"===> [\", { \"text\": \"Na2S2O8\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"261B946701411D9C\" } }, \"] <===\" ]"
+				"[ \"===> [\", { \"text\": \"Na2S2O8\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7908E8C196F82F9B\" } }, \"] <===\" ]"
 				"[ \"===> [\", { \"text\": \"FeCl3\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"261B946701411D9C\" } }, \"] <===\" ]"
 			]
 			icon: "gtceu:sodium_bisulfate_dust"
