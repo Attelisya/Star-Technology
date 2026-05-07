@@ -276,7 +276,7 @@
     "gtceu.nuclear_fission": "Nuclear Fission",
     "block.gtceu.nuclear_reactor": "Nuclear Reactor [NR]",
     "gtceu.chemical_skip": "Chemical Line Reduction",
-    "block.gtceu.chemical_plant": "Chemical Plant [CP]",
+    "block.gtceu.chemical_plant": "Chemical Plant [CHP]",
     "gtceu.component_part_assembly": "Component Part Assembly",
     "block.gtceu.component_part_assembly": "Component Part Assembly [CPA]",
     "gtceu.large_farm": "Farming",
