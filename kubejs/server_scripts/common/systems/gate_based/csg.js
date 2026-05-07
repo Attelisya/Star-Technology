@@ -20,42 +20,42 @@ ServerEvents.recipes(event => {
             'kubejs:csg_computational_matrix', '4x gtceu:zpm_sensor', '64x gtceu:fine_borosilicate_glass_wire'],
         ['gtceu:indium_tin_lead_cadmium_soldering_alloy 864'],
         ['kubejs:csg_chevron'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:exquisite_naquadic_netherite_gem', 'gtceu:data_orb');
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:exquisite_naquadic_netherite_gem');
 
     researchBuilder(cpa, 'csg_reinforced_plating',
         ['gtceu:dense_trinaquadalloy_plate', 'gtceu:zpm_electric_piston', 'gtceu:dense_naquadah_alloy_plate',
             '2x #gtceu:circuits/uv', 'gtceu:dense_enriched_naquadah_plate', '8x gtceu:yttrium_barium_cuprate_single_cable'],
         ['gtceu:naquadria 288', 'gtceu:indium_tin_lead_cadmium_soldering_alloy 864'],
         ['kubejs:csg_reinforced_plating'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:dense_trinaquadalloy_plate', 'gtceu:data_orb');
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:dense_trinaquadalloy_plate');
 
     researchBuilder(cpa, 'csg_stellar_access_point',
         ['gtceu:double_naquadah_plate', 'kubejs:csg_computational_matrix', '4x gtceu:prismalium_double_wire',
             'gtceu:polycarbonate_foil_ream', 'gtceu:polyphenylene_sulfide_foil_ream', 'gtceu:polyvinyl_chloride_foil_ream'],
         ['gtceu:indium_tin_lead_cadmium_soldering_alloy 864', 'gtceu:polybenzimidazole 1296'],
         ['kubejs:csg_stellar_access_point'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:yttrium_barium_cuprate_double_cable', 'gtceu:data_orb')
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:yttrium_barium_cuprate_double_cable')
 
     researchBuilder(cpa, 'csg_energy_modulator',
         ['gtceu:trinaquadalloy_frame', '1x gtceu:zpm_emitter', '4x gtceu:prismalium_foil', 'gtceu:energy_module',
             '4x kubejs:advanced_neutron_reflector', '4x gtceu:naquadah_alloy_foil'],
         ['gtceu:pcb_coolant 250000', 'gtceu:indium_tin_lead_cadmium_soldering_alloy 864'],
         ['kubejs:csg_energy_modulator'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:prismalium_foil', 'gtceu:data_orb');
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:prismalium_foil');
 
     researchBuilder(cpa, 'csg_field_stabiliser',
         ['2x gtceu:dense_enriched_naquadah_plate', '4x gtceu:zpm_field_generator', 'kubejs:csg_energy_modulator',
             '16x gtceu:fine_lumium_wire', '16x gtceu:fine_twinite_wire', '16x gtceu:fine_signalum_wire'],
         ['gtceu:indium_tin_lead_cadmium_soldering_alloy 1296'],
         ['kubejs:csg_field_stabiliser'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:fine_trinaquadalloy_wire', 'gtceu:data_orb');
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:fine_trinaquadalloy_wire');
 
     researchBuilder(cpa, 'csg_stellar_dialer',
         ['gtceu:dense_enriched_naquadah_plate', 'gtceu:computer_monitor_cover', 'kubejs:csg_computational_matrix',
             'gtceu:dragonsteel_bolt'],
         ['gtceu:indium_tin_lead_cadmium_soldering_alloy 864'],
         ['kubejs:csg_stellar_dialer'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:computer_monitor_cover', 'gtceu:data_orb')
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:computer_monitor_cover')
 
     researchBuilder(assline, 'quantum_core',
         ['gtceu:weapon_grade_naquadah_frame', '4x kubejs:csg_energy_modulator', '16x gtceu:quantum_star', '2x gtceu:zpm_field_generator',
@@ -63,14 +63,14 @@ ServerEvents.recipes(event => {
             '8x gtceu:naquadah_alloy_plate', '4x gtceu:osmiridium_bolt'],
         ['gtceu:nether_star_concentrate 864', 'gtceu:polybenzimidazole 1296'],
         ['kubejs:quantum_core'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:quantum_star', 'gtceu:data_orb');
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:quantum_star');
 
     researchBuilder(assline, 'crystal_interface',
         ['gtceu:trinaquadalloy_frame', '16x gtceu:prismalium_hex_wire', '6x kubejs:csg_reinforced_plating',
             'kubejs:csg_stellar_access_point', 'kubejs:csg_energy_modulator', '64x gtceu:fine_dragonsteel_wire', '64x gtceu:fine_dragonsteel_wire'],
         ['gtceu:indium_tin_lead_cadmium_soldering_alloy 3888', 'gtceu:polycarbonate 2592'],
         ['sgjourney:crystal_interface'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'start_core:zpm_64a_energy_converter', 'gtceu:data_orb');
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'start_core:zpm_64a_energy_converter');
 
     researchBuilder(assline, 'csg_dimensional_supercomputer',
         ['3x gtceu:trinaquadalloy_frame', '8x kubejs:csg_computational_matrix', 'kubejs:quantum_core', '64x #gtceu:circuits/uv',
@@ -78,7 +78,7 @@ ServerEvents.recipes(event => {
             '48x gtceu:polycarbonate_tiny_fluid_pipe'],
         ['gtceu:polybenzimidazole 3888', 'gtceu:indium_tin_lead_cadmium_soldering_alloy 2592', 'gtceu:naquadria 576'],
         ['kubejs:csg_dimensional_supercomputer'],
-        6000, 48, 48 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:crystal_processor_mainframe', 'gtceu:data_orb')
+        6000, 24, 24 * 600, GTValues.VHA[GTValues.ZPM], 'gtceu:crystal_processor_mainframe')
 
     lcr(id('csg_enscription_plate'))
         .itemInputs('gtceu:naquadah_wafer', '48x gtceu:aerogel_foil', '1x #gtceu:circuits/uv')
