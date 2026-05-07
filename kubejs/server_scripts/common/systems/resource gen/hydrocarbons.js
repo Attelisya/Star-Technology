@@ -1,6 +1,10 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
+    // Chem Cracking Removal
+    event.remove({id: /gtceu:chemical_reactor\/lightly.*crack.*/})
+    event.remove({id: /gtceu:large_chemical_reactor\/severely.*crack.*/})
+
     const chem = event.recipes.gtceu.large_chemical_reactor || event.recipes.gtceu.chemical_reactor;
 
     event.recipes.gtceu.fermenter(id('fermented_biomass'))

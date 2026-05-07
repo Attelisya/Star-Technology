@@ -1251,9 +1251,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compDustIcon('boron_trioxide', ['2x boron', '3x oxygen'], 0xDACABB, DULL, []);
 
     // Ultimate Multis
-    compIngotLiquid('astrenalloy_nx', ['1x hastelloy_x', '4x enriched_naquadah', '3x zirconium', '6x tantalum_carbide', '4x osmiridium', '3x boron_nitride'], 0x63478e, SHINY, [10090, 'highest', VA('uv'), 2800], [plates, rod, frame]);
+    compIngotLiquid('astrenalloy_nx', ['1x hastelloy_x', '4x enriched_naquadah', '3x zirconium', '6x tantalum_carbide', '4x osmiridium', '3x boron_nitride'], 0x63478e, SHINY, [8650, 'highest', VHA('zpm'), 2100], [plates, rod, frame]);
     
-    compIngotLiquid('thacoloy_nq_42x', ['6x incoloy_ma_956', '4x enriched_naquadah', '2x niobium_titanium', '4x osmiridium', '4x thallium_tungstate'], 0x467624, SHINY, [9190, 'highest', VA('zpm'), 3400], [plates, rod, frame]);
+    compIngotLiquid('thacoloy_nq_42x', ['6x incoloy_ma_956', '4x enriched_naquadah', '2x niobium_titanium', '4x osmiridium', '4x thallium_tungstate'], 0x467624, SHINY, [8800, 'highest', VHA('zpm'), 1800], [plates, rod, frame]);
 
     compIngotLiquidSecColor('tritan_steel', ['7x tritanium', '3x maraging_steel_300', '2x enriched_naquadah', '3x titanium_tungsten_carbide', '1x boron_nitride'], 0x9a445d, 0x2d095a, METALLIC, [8990, 'highest', VHA('uv'), 2400], [plates, rod, frame, small_gear, gear, round, ring, bolt_and_screw, long_rod, foil, dense_plate]);
 
