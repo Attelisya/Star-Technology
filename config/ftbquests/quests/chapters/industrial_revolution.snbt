@@ -398,7 +398,6 @@
 			dependencies: [
 				"0E88CB5E68212006"
 				"7CA424E05FB05DFF"
-				"4179261E3E8278E0"
 			]
 			dependency_requirement: "one_completed"
 			description: ["{ftbquests.industrial_revolution.cobalt_dust.description}"]
