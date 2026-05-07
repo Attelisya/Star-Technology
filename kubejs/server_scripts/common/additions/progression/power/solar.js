@@ -16,6 +16,7 @@ ServerEvents.recipes(event => {
             .itemInputs('3x gtceu:iron_foil', `2x ${prefix + smdType}_diode`, `2x ${prefix + smdType}_capacitor`)
             .inputFluids('gtceu:glass 288')
             .itemOutputs(`${count}x kubejs:ev_energy_core`)
+            .circuit(3)
             .duration(400)
             .EUt(GTValues.VHA[GTValues.HV] * count);
 
