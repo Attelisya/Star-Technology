@@ -172,7 +172,7 @@
       .overlay()
       .showText(60)
       .text(
-        "§eStargate Interface§rs are used to transfer power to the Stargate. You can provide either EU energy."
+        "§eStargate Interface§r(s) are used to transfer power to the Stargate. You can provide either EU energy."
       );
 
     scene.idle(20);

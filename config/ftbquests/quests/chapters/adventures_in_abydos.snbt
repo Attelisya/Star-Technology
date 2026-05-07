@@ -1485,7 +1485,7 @@
 		}
 		{
 			dependencies: ["44B43694312BAAC8"]
-			description: ["{ftbquests.preparing_for_dimensional_travel.uhv_energy_input_hatch_16a.description}"]
+			description: ["{ftbquests.abydos.uhv_energy_input_hatch_16a.description}"]
 			id: "581B9922CC4B457F"
 			rewards: [{
 				id: "354EE1013EA404DB"

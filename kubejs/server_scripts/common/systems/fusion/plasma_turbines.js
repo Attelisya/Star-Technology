@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.LuV]);
 
     event.recipes.gtceu.assembler(id('zpm_rotor_holder'))
-        .itemInputs('gtceu:zpm_machine_hull','4x gtceu:trinium_gear','gtceu:zpm_electric_motor','4x gtceu:small_naquadah_alloy_gear','6x gtceu:osmiridium_round','gtceu:naquadah_alloy_ring','8x gtceu:fine_europium_wire')
+        .itemInputs('gtceu:zpm_machine_hull','4x gtceu:trinium_gear','gtceu:zpm_electric_motor','4x gtceu:small_osthendah_gear','6x gtceu:osmiridium_round','gtceu:osthendah_ring','8x gtceu:fine_europium_wire')
         .inputFluids('gtceu:polybenzimidazole 144')
         .itemOutputs('gtceu:zpm_rotor_holder')
         .circuit(3)
@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
     event.recipes.gtceu.assembler(id('uv_rotor_holder'))
-        .itemInputs('gtceu:uv_machine_hull','4x gtceu:tritanium_gear','2x gtceu:uv_electric_motor','4x gtceu:small_darmstadtium_gear','6x gtceu:tritanium_round','gtceu:darmstadtium_ring','#gtceu:circuits/uv','8x gtceu:fine_americium_wire')
+        .itemInputs('gtceu:uv_machine_hull','4x gtceu:tritan_steel_gear','2x gtceu:uv_electric_motor','4x gtceu:small_darmstadtium_gear','6x gtceu:tritan_steel_round','gtceu:darmstadtium_ring','#gtceu:circuits/uv','8x gtceu:fine_americium_wire')
         .inputFluids('gtceu:polybenzimidazole 288')
         .itemOutputs('gtceu:uv_rotor_holder')
         .circuit(3)

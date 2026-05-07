@@ -1327,7 +1327,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquidStill('dense_electron_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);
 
     // Resource Gen
-    compLiquid('brackish_water', ['1x water', '1x mystery'], 0x459ea4, [no_decomp]);
+    // compLiquid('brackish_water', ['1x water', '1x mystery'], 0x459ea4, [no_decomp]);
 
     compLiquid('iron_mixture', ['1x mystery'], 0xc42626, [no_decomp]);
     
