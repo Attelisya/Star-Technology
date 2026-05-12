@@ -1957,6 +1957,7 @@
 				"3336D618E129F764"
 				"4974D7E690B02ECA"
 			]
+			description: ["{ftbquests.csg.aerogel.description}"]
 			id: "12B23627DD0026B5"
 			rewards: [{
 				count: 3
