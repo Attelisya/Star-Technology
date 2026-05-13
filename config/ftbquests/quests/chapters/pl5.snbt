@@ -980,6 +980,7 @@
 				"554E28F0B2A6CB25"
 				"492F2FED6328118F"
 			]
+			description: ["{ftbquests.dsg.riftions.description}"]
 			icon: "kubejs:wild_riftion"
 			id: "795C7DA2DD644F5A"
 			tasks: [
@@ -1019,6 +1020,7 @@
 					type: "item"
 				}
 			]
+			title: "{ftbquests.dsg.riftions.title}"
 			x: 4.5d
 			y: 5.0d
 		}
