@@ -580,6 +580,7 @@
 				"73D0DC357821B395"
 			]
 			description: ["{ftbquests.csg.stellar_dialer.description}"]
+			hide_dependent_lines: true
 			id: "062A42026FFE75AB"
 			size: 1.0d
 			tasks: [{
@@ -918,6 +919,7 @@
 			dependencies: [
 				"7FB86A5B9F6F6F35"
 				"4DE40B37D609B921"
+				"28005E2D4B9F1BFF"
 			]
 			description: ["{ftbquests.csg.quantum_core.description}"]
 			hide_dependent_lines: true

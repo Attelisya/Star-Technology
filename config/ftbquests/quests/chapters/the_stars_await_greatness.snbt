@@ -26,7 +26,7 @@
 		{
 			dependencies: [
 				"13508A2A55EAA6E1"
-				"7D2E83192ABF08CA"
+				"74F3E9BE19218BA2"
 			]
 			description: ["{ftbquests.dsg.specialized_helix_t2.description}"]
 			id: "48E30750B355F98F"
@@ -48,8 +48,9 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 1.5d
+			title: "{ftbquests.dsg.specialized_helix_t2.title}"
+			x: 0.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["2BC819D3CE572543"]
@@ -877,7 +878,7 @@
 				id: "5DA225F96004A6C5"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.draconic_age.positioner.title}"
+			title: "{ftbquests.positioner.title}"
 			x: 0.0d
 			y: 0.0d
 		}

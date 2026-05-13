@@ -413,6 +413,7 @@
 				"40D758F7F13C6959"
 				"0A242E67024A0A0B"
 			]
+			description: ["{ftbquests.asg.abyssal_stargate_rod.description}"]
 			id: "1C352799FF32D6FA"
 			tasks: [{
 				id: "20798D7A59C71F69"
@@ -428,6 +429,7 @@
 				"40D758F7F13C6959"
 				"0A242E67024A0A0B"
 			]
+			description: ["{ftbquests.asg.infernal_stargate_rod.description}"]
 			id: "1D917722EDB1F267"
 			tasks: [{
 				id: "7FBEA25DF7CFCF47"
@@ -442,6 +444,7 @@
 				"1D917722EDB1F267"
 				"59711F987DE95924"
 			]
+			description: ["{ftbquests.asg.awakened_infernal_stargate_rod.description}"]
 			id: "58DCDBC6EE97CA5E"
 			tasks: [{
 				id: "3BB30603567E2CD9"
@@ -456,6 +459,7 @@
 				"1C352799FF32D6FA"
 				"59711F987DE95924"
 			]
+			description: ["{ftbquests.asg.awakened_abyssal_stargate_rod.description}"]
 			id: "42EA4F227DC6D1DE"
 			tasks: [{
 				id: "1638DACF125E8A7D"
@@ -470,6 +474,7 @@
 				"7A5734E3CF682EBA"
 				"25583D0BF59E1BC8"
 			]
+			description: ["{ftbquests.asg.stargate_rod_base.description}"]
 			hide_dependent_lines: true
 			id: "40D758F7F13C6959"
 			tasks: [{
@@ -482,6 +487,7 @@
 		}
 		{
 			dependencies: ["43DAD4B63603BFC3"]
+			description: ["{ftbquests.asg.abyss_fragment.description}"]
 			id: "40BD5304492E6177"
 			shape: "gear"
 			size: 1.25d
@@ -495,6 +501,7 @@
 		}
 		{
 			dependencies: ["43DAD4B63603BFC3"]
+			description: ["{ftbquests.asg.inferno_fragment.description}"]
 			id: "073B57C15F3BFCFD"
 			shape: "gear"
 			size: 1.25d
@@ -508,6 +515,7 @@
 		}
 		{
 			dependencies: ["073B57C15F3BFCFD"]
+			description: ["{ftbquests.asg.helish_core.description}"]
 			id: "4869BB9EE1BCDDDB"
 			tasks: [{
 				id: "5A1A22D143C4FF22"
@@ -519,6 +527,7 @@
 		}
 		{
 			dependencies: ["40BD5304492E6177"]
+			description: ["{ftbquests.asg.voidic_core.description}"]
 			id: "250A0858E6E14F2A"
 			tasks: [{
 				id: "78551DE22E97A8EB"
@@ -534,6 +543,7 @@
 				"250A0858E6E14F2A"
 				"59711F987DE95924"
 			]
+			description: ["{ftbquests.asg.draconic_core.description}"]
 			id: "3CB8D2D72137848F"
 			shape: "gear"
 			size: 1.25d
@@ -646,6 +656,7 @@
 				"1AA53815B9903975"
 				"0A242E67024A0A0B"
 			]
+			description: ["{ftbquests.asg.field_stabiliser.description}"]
 			id: "5FC1A69559B6FEB5"
 			tasks: [{
 				id: "6CAC683C98A0C372"
@@ -660,6 +671,7 @@
 				"7A5734E3CF682EBA"
 				"30C974448C57F0EC"
 			]
+			description: ["{ftbquests.asg.energy_modulator.description}"]
 			id: "1AA53815B9903975"
 			tasks: [{
 				id: "3C53287B0E1F663A"
@@ -671,6 +683,7 @@
 		}
 		{
 			dependencies: ["7BBD4C912E080813"]
+			description: ["{ftbquests.asg.stellar_dialer.description}"]
 			id: "36079E557301733E"
 			tasks: [{
 				id: "27B8D2818B602819"
@@ -682,6 +695,7 @@
 		}
 		{
 			dependencies: ["3104E8ABA3C4FC66"]
+			description: ["{ftbquests.asg.dpu.description}"]
 			id: "4C954542DB739F5E"
 			tasks: [
 				{
@@ -703,6 +717,7 @@
 				"07AD6651D0B40E22"
 				"7A5734E3CF682EBA"
 			]
+			description: ["{ftbquests.asg.enscription_plate.description}"]
 			id: "3104E8ABA3C4FC66"
 			tasks: [{
 				id: "3437233A70862CD4"
@@ -714,6 +729,7 @@
 		}
 		{
 			dependencies: ["4C954542DB739F5E"]
+			description: ["{ftbquests.asg.computational_matrix.description}"]
 			id: "7BBD4C912E080813"
 			tasks: [{
 				id: "4B3CEE27A234D7A1"
@@ -725,6 +741,7 @@
 		}
 		{
 			dependencies: ["7BBD4C912E080813"]
+			description: ["{ftbquests.asg.stellar_access_point.description}"]
 			hide_dependent_lines: true
 			id: "330F222D8230852A"
 			tasks: [{
@@ -741,6 +758,7 @@
 				"5FC1A69559B6FEB5"
 				"7BBD4C912E080813"
 			]
+			description: ["{ftbquests.asg.chevron.description}"]
 			hide_dependency_lines: true
 			id: "21E115DFA9F2E14A"
 			tasks: [{
@@ -757,6 +775,7 @@
 				"1AA53815B9903975"
 				"330F222D8230852A"
 			]
+			description: ["{ftbquests.asg.dimensional_supercomputer.description}"]
 			hide_dependency_lines: true
 			id: "101A7D0F395C7642"
 			tasks: [{
@@ -769,6 +788,7 @@
 		}
 		{
 			dependencies: ["3C09E77C352B2A11"]
+			description: ["{ftbquests.asg.reinforced_plating.description}"]
 			hide_dependent_lines: true
 			id: "6E5A8D4641052624"
 			tasks: [{
@@ -900,6 +920,7 @@
 		}
 		{
 			dependencies: ["3104E8ABA3C4FC66"]
+			description: ["{ftbquests.asg.runic_plating.description}"]
 			id: "3C09E77C352B2A11"
 			tasks: [
 				{
@@ -923,11 +944,13 @@
 					type: "item"
 				}
 			]
+			title: "{ftbquests.asg.runic_plating.title}"
 			x: 3.0d
 			y: 4.5d
 		}
 		{
 			dependencies: ["7A5734E3CF682EBA"]
+			description: ["{ftbquests.asg.stellarized_weapon_grade_naquadah.description}"]
 			hide_dependent_lines: true
 			id: "0A242E67024A0A0B"
 			tasks: [{
@@ -940,6 +963,7 @@
 		}
 		{
 			dependencies: ["5C4FE0E51C67FDFA"]
+			description: ["{ftbquests.asg.akreyriadic_runixium_gem.description}"]
 			id: "4B0DA4EB357663F7"
 			tasks: [{
 				id: "2E12F375D370D520"
@@ -951,6 +975,7 @@
 		}
 		{
 			dependencies: ["07AD6651D0B40E22"]
+			description: ["{ftbquests.asg.akreyriadic_runixium_dust.description}"]
 			id: "5C4FE0E51C67FDFA"
 			tasks: [{
 				id: "1FFC87A96FC735E0"

@@ -2041,6 +2041,7 @@
 					type: "item"
 				}
 			]
+			title: "{ftbquests.draconic_age.specialized_helix_t1.title}"
 			x: 9.5d
 			y: -7.0d
 		}
