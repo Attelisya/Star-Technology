@@ -75,8 +75,8 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.LV]);
 
     event.recipes.gtceu.chemical_reactor(id('ammonia_borane'))
-        .itemInputs('4x gtceu:sodium_borohydride_dust', '4x gtceu:ammonium_chloride_dust')
-        .itemOutputs('4x gtceu:ammonia_borane_dust', '4x gtceu:salt_dust')
+        .itemInputs('3x gtceu:sodium_borohydride_dust', '3x gtceu:ammonium_chloride_dust')
+        .itemOutputs('4x gtceu:ammonia_borane_dust', '1x gtceu:salt_dust')
         .outputFluids('gtceu:hydrogen 1000')
         .duration(120)
         .EUt(GTValues.VA[GTValues.LV]);
