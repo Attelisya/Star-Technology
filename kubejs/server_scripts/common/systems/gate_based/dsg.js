@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
     researchBuilder(assline, 'dsg_reinforced_plating', 
         ['2x gtceu:melastrium_mox_ultradense_plate', '2x gtceu:vastaqalloy_cr_4200x_ultradense_plate', '2x gtceu:soul_ascendant_cuperite_ultradense_plate', 
             '2x gtceu:aerorelient_steel_ultradense_plate','2x gtceu:zeroidic_trinate_steel_ultradense_plate','2x gtceu:expetidalloy_d_17_ultradense_plate',
-            '4x kubejs:asg_reinforced_plating', '3x #gtceu:circuits/uev', '3x gtceu:hvga_steel_gear','4x gtceu:uiv_robot_arm', 
+            '4x kubejs:asg_reinforced_plating', '1x #gtceu:circuits/uxv', '3x gtceu:hvga_steel_gear','4x gtceu:uiv_robot_arm', 
             '3x gtceu:small_draconyallium_gear','42x gtceu:lepton_resonant_thallium_antimonide_single_cable'], 
         ['gtceu:neutrindium_soldering_alloy 1152', 'gtceu:faematter 750', 'gtceu:draconic_stabilization_mixture 625'], 
         ['kubejs:dsg_reinforced_plating'], 
