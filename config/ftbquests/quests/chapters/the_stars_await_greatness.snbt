@@ -26,9 +26,9 @@
 		{
 			dependencies: [
 				"13508A2A55EAA6E1"
-				"7D2E83192ABF08CA"
+				"74F3E9BE19218BA2"
 			]
-			description: ["{ftbquests.dsg.specialized_helix_t2.description}"]
+			description: ["{ftbquests.dsg.specialized_helix_t3.description}"]
 			id: "48E30750B355F98F"
 			size: 1.0d
 			tasks: [
@@ -48,8 +48,9 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 1.5d
+			title: "{ftbquests.dsg.specialized_helix_t3.title}"
+			x: 0.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["2BC819D3CE572543"]
@@ -77,6 +78,7 @@
 				"28205F5F3F3A7F3C"
 				"4115D804C6E1259D"
 			]
+			description: ["{ftbquests.dsg.komaru.description}"]
 			id: "20ABDF48307586F2"
 			shape: "gear"
 			size: 1.625d
@@ -90,6 +92,7 @@
 		}
 		{
 			dependencies: ["7D2E83192ABF08CA"]
+			description: ["{ftbquests.dsg.fornaxs_infernal_rotary_engine.description}"]
 			id: "3FFF41FD6067C5B8"
 			shape: "gear"
 			size: 1.125d
@@ -110,6 +113,7 @@
 		}
 		{
 			dependencies: ["7D2E83192ABF08CA"]
+			description: ["{ftbquests.dsg.limitless_overactive_alloy_fuser.description}"]
 			id: "325986460718E0F9"
 			shape: "gear"
 			size: 1.125d
@@ -175,6 +179,7 @@
 				"7E55361BFC343CEC"
 				"1E73A1F64F6EA9B5"
 			]
+			description: ["{ftbquests.dsg.riftic_infusion_assemblying_unit.description}"]
 			id: "1B498C64A42758C5"
 			shape: "gear"
 			size: 1.5d
@@ -188,6 +193,7 @@
 		}
 		{
 			dependencies: ["1B498C64A42758C5"]
+			description: ["{ftbquests.dsg.rimula_extraction_unit.description}"]
 			hide_dependency_lines: true
 			id: "492F2FED6328118F"
 			shape: "gear"
@@ -205,6 +211,7 @@
 				"795C7DA2DD644F5A"
 				"475330A24EC07BBD"
 			]
+			description: ["{ftbquests.dsg.singularities.description}"]
 			id: "54B0129F9E6F4AEA"
 			tasks: [
 				{
@@ -238,6 +245,7 @@
 					type: "item"
 				}
 			]
+			title: "{ftbquests.dsg.singularities.title}"
 			x: -4.0d
 			y: 5.5d
 		}
@@ -246,6 +254,7 @@
 				"54B0129F9E6F4AEA"
 				"7A7666EAF18D93EE"
 			]
+			description: ["{ftbquests.dsg.transcension_engraved_sigils.description}"]
 			id: "1F2D598551BC3DAB"
 			tasks: [
 				{
@@ -279,6 +288,7 @@
 					type: "item"
 				}
 			]
+			title: "{ftbquests.dsg.transcension_engraved_sigils.title}"
 			x: -6.0d
 			y: 3.5d
 		}
@@ -287,6 +297,7 @@
 				"795C7DA2DD644F5A"
 				"475330A24EC07BBD"
 			]
+			description: ["{ftbquests.dsg.raging_rimulatia.description}"]
 			hide_dependency_lines: true
 			id: "74F3E9BE19218BA2"
 			shape: "gear"
@@ -301,6 +312,8 @@
 		}
 		{
 			dependencies: ["1B498C64A42758C5"]
+			description: ["{ftbquests.dsg.riftion_injector.description}"]
+			icon: "gtceu:riftion_injector"
 			id: "475330A24EC07BBD"
 			shape: "gear"
 			size: 1.125d
@@ -321,6 +334,7 @@
 		}
 		{
 			dependencies: ["1B498C64A42758C5"]
+			description: ["{ftbquests.dsg.kaleidoscopic_fractalizer.description}"]
 			id: "3137F3F544ACF245"
 			tasks: [{
 				id: "5938D776548EF600"
@@ -337,6 +351,7 @@
 				"3137F3F544ACF245"
 				"212353E6819931CD"
 			]
+			description: ["{ftbquests.dsg.riftion_fluids.description}"]
 			icon: "gtceu:primordial_residue_bucket"
 			id: "7D2E83192ABF08CA"
 			shape: "gear"
@@ -359,11 +374,13 @@
 					type: "item"
 				}
 			]
+			title: "{ftbquests.dsg.riftion_fluids.title}"
 			x: -2.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["1B498C64A42758C5"]
+			description: ["{ftbquests.dsg.riftion_production.description}"]
 			id: "554E28F0B2A6CB25"
 			tasks: [
 				{
@@ -382,11 +399,13 @@
 					type: "item"
 				}
 			]
+			title: "{ftbquests.dsg.riftion_production.title}"
 			x: -2.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["7D2E83192ABF08CA"]
+			description: ["{ftbquests.dsg.priomordially_stellarized_weapon_grade_naquadah.description}"]
 			hide_dependent_lines: true
 			id: "6BA06E19F3C09184"
 			tasks: [{
@@ -399,6 +418,7 @@
 		}
 		{
 			dependencies: ["09B55AFE7C06EC82"]
+			description: ["{ftbquests.dsg.faematter.description}"]
 			id: "1E73A1F64F6EA9B5"
 			tasks: [{
 				id: "76F83BA6BF794014"
@@ -413,6 +433,7 @@
 				"6F043133B3ED4164"
 				"6BA06E19F3C09184"
 			]
+			description: ["{ftbquests.dsg.field_stabiliser.description}"]
 			id: "7689B3714EB62592"
 			tasks: [{
 				id: "11AD2F8DE939EE36"
@@ -424,6 +445,7 @@
 		}
 		{
 			dependencies: ["74F3E9BE19218BA2"]
+			description: ["{ftbquests.dsg.energy_modulator.description}"]
 			id: "6F043133B3ED4164"
 			tasks: [{
 				id: "305AD19BD9A68B08"
@@ -435,6 +457,7 @@
 		}
 		{
 			dependencies: ["61814509EFE2D192"]
+			description: ["{ftbquests.dsg.stellar_dialer.description}"]
 			id: "1165C75215DB1B25"
 			tasks: [{
 				id: "6C082542A48A7E82"
@@ -446,6 +469,7 @@
 		}
 		{
 			dependencies: ["7A7666EAF18D93EE"]
+			description: ["{ftbquests.dsg.dpu.description}"]
 			id: "31F010777D02EF40"
 			tasks: [
 				{
@@ -468,6 +492,7 @@
 				"2AA675FD56AF1059"
 				"6BA06E19F3C09184"
 			]
+			description: ["{ftbquests.dsg.computational_matrix.description}"]
 			hide_dependent_lines: true
 			id: "61814509EFE2D192"
 			tasks: [{
@@ -480,6 +505,7 @@
 		}
 		{
 			dependencies: ["61814509EFE2D192"]
+			description: ["{ftbquests.dsg.stellar_access_point.description}"]
 			id: "786BC32B1934FBB4"
 			tasks: [{
 				id: "2F5FFDBC14438686"
@@ -491,6 +517,7 @@
 		}
 		{
 			dependencies: ["5228DB53CD02A2D2"]
+			description: ["{ftbquests.dsg.chevron.description}"]
 			id: "4D8C9A6B5764340A"
 			tasks: [{
 				id: "64FAA121CBAC4912"
@@ -505,6 +532,7 @@
 				"765401A55467C4C5"
 				"61814509EFE2D192"
 			]
+			description: ["{ftbquests.dsg.dimensional_supercomputer.description}"]
 			id: "5B0A68B1C06BE678"
 			tasks: [{
 				id: "5BDBF3DF0FF0763A"
@@ -519,6 +547,7 @@
 				"1E73A1F64F6EA9B5"
 				"31F87896FF834E63"
 			]
+			description: ["{ftbquests.dsg.reinforced_plating.description}"]
 			hide_dependent_lines: true
 			id: "3F34F57EBFA11FB9"
 			tasks: [{
@@ -531,6 +560,7 @@
 		}
 		{
 			dependencies: ["74F3E9BE19218BA2"]
+			description: ["{ftbquests.dsg.stargate_rod_base.description}"]
 			id: "6F3D47DB5576CACB"
 			tasks: [{
 				id: "294EE89A278BA103"
@@ -542,6 +572,7 @@
 		}
 		{
 			dependencies: ["7D2E83192ABF08CA"]
+			description: ["{ftbquests.dsg.enscription_plate.description}"]
 			id: "7A7666EAF18D93EE"
 			tasks: [{
 				id: "31F8DAADA7B445EC"
@@ -585,6 +616,7 @@
 				"667AD3BD25D97907"
 				"3F34F57EBFA11FB9"
 			]
+			description: ["{ftbquests.dsg.draconic_stargate_ring_block.description}"]
 			id: "6C4A100C11D8DD64"
 			shape: "octagon"
 			size: 1.5d
@@ -602,6 +634,7 @@
 				"786BC32B1934FBB4"
 				"5B0A68B1C06BE678"
 			]
+			description: ["{ftbquests.dsg.draconic_stargate_base_block.description}"]
 			id: "6F70F986970A42A9"
 			shape: "octagon"
 			size: 1.5d
@@ -618,6 +651,7 @@
 				"6C4A100C11D8DD64"
 				"4D8C9A6B5764340A"
 			]
+			description: ["{ftbquests.dsg.draconic_stargate_chevron_block.description}"]
 			id: "4143AE11600E48D8"
 			shape: "octagon"
 			size: 1.5d
@@ -634,6 +668,7 @@
 				"5F0D2337489D103A"
 				"1B5D6D46D336C119"
 			]
+			description: ["{ftbquests.dsg.temporic_stargate_rod.description}"]
 			id: "5EFE01DCB5105D41"
 			tasks: [{
 				id: "22D473303C6A8EF7"
@@ -648,6 +683,7 @@
 				"2E5AD3C35325DD28"
 				"1B5D6D46D336C119"
 			]
+			description: ["{ftbquests.dsg.riftic_stargate_rod.description}"]
 			id: "667AD3BD25D97907"
 			tasks: [{
 				id: "7D0D121768B825D5"
@@ -662,6 +698,7 @@
 				"7F6DC4F513395F2B"
 				"1B5D6D46D336C119"
 			]
+			description: ["{ftbquests.dsg.faetic_stargate_rod.description}"]
 			id: "60431246CC351807"
 			tasks: [{
 				id: "7039929A462751BC"
@@ -677,6 +714,7 @@
 				"034C91F0A96501AE"
 				"6BA06E19F3C09184"
 			]
+			description: ["{ftbquests.dsg.prismatic_stargate_rod.description}"]
 			id: "7F6DC4F513395F2B"
 			tasks: [{
 				id: "05EA1BABE3DF4064"
@@ -692,6 +730,7 @@
 				"3115295DF8045AF0"
 				"6BA06E19F3C09184"
 			]
+			description: ["{ftbquests.dsg.kaleidoscopic_stargate_rod.description}"]
 			id: "2E5AD3C35325DD28"
 			tasks: [{
 				id: "54FAFD343F908DA4"
@@ -707,6 +746,7 @@
 				"01C4136000FBECED"
 				"6BA06E19F3C09184"
 			]
+			description: ["{ftbquests.dsg.primordial_stargate_rod.description}"]
 			id: "5F0D2337489D103A"
 			tasks: [{
 				id: "46BBDB4207B0568A"
@@ -718,6 +758,7 @@
 		}
 		{
 			dependencies: ["74F3E9BE19218BA2"]
+			description: ["{ftbquests.dsg.primordial_fragment.description}"]
 			hide_dependent_lines: true
 			id: "01C4136000FBECED"
 			shape: "gear"
@@ -732,6 +773,7 @@
 		}
 		{
 			dependencies: ["74F3E9BE19218BA2"]
+			description: ["{ftbquests.dsg.riftic_fragment.description}"]
 			hide_dependent_lines: true
 			id: "3115295DF8045AF0"
 			shape: "gear"
@@ -746,6 +788,7 @@
 		}
 		{
 			dependencies: ["74F3E9BE19218BA2"]
+			description: ["{ftbquests.dsg.prismalic_fragment.description}"]
 			hide_dependent_lines: true
 			id: "034C91F0A96501AE"
 			shape: "gear"
@@ -764,6 +807,7 @@
 				"43D0B2F29F8DA882"
 				"1AABE3F38666F330"
 			]
+			description: ["{ftbquests.dsg.ascension_core.description}"]
 			id: "765401A55467C4C5"
 			shape: "gear"
 			size: 1.25d
@@ -777,6 +821,7 @@
 		}
 		{
 			dependencies: ["01C4136000FBECED"]
+			description: ["{ftbquests.dsg.primus_core.description}"]
 			id: "1AABE3F38666F330"
 			tasks: [{
 				id: "7E94C96BC37C2270"
@@ -788,6 +833,7 @@
 		}
 		{
 			dependencies: ["3115295DF8045AF0"]
+			description: ["{ftbquests.dsg.spatium_core.description}"]
 			id: "43D0B2F29F8DA882"
 			tasks: [{
 				id: "2D060F2019CDD24C"
@@ -799,6 +845,7 @@
 		}
 		{
 			dependencies: ["034C91F0A96501AE"]
+			description: ["{ftbquests.dsg.prismafae_core.description}"]
 			id: "09A554F29750413A"
 			tasks: [{
 				id: "518C598B3BCE0119"
@@ -810,6 +857,7 @@
 		}
 		{
 			dependencies: ["1165C75215DB1B25"]
+			description: ["{ftbquests.dsg.draconic_dhd.description}"]
 			id: "5D727563B870184E"
 			shape: "octagon"
 			size: 1.1d
@@ -832,6 +880,7 @@
 		}
 		{
 			dependencies: ["3008A69083AC3858"]
+			description: ["{ftbquests.dsg.aquariadic_rimuli_dragonix_gem.description}"]
 			id: "5228DB53CD02A2D2"
 			tasks: [{
 				id: "2E2DDDB0A731E31A"
@@ -843,6 +892,7 @@
 		}
 		{
 			dependencies: ["74F3E9BE19218BA2"]
+			description: ["{ftbquests.dsg.aquariadic_rimuli_dragonix_dust.description}"]
 			hide_dependency_lines: true
 			id: "3008A69083AC3858"
 			tasks: [{
@@ -858,6 +908,7 @@
 				"795C7DA2DD644F5A"
 				"475330A24EC07BBD"
 			]
+			description: ["{ftbquests.dsg.risoc.description}"]
 			hide_dependency_lines: true
 			id: "2AA675FD56AF1059"
 			tasks: [{
@@ -877,7 +928,7 @@
 				id: "5DA225F96004A6C5"
 				type: "checkmark"
 			}]
-			title: "{ftbquests.draconic_age.positioner.title}"
+			title: "{ftbquests.positioner.title}"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -961,5 +1012,5 @@
 			y: 3.0d
 		}
 	]
-	title: "The Stars Await Greatness"
+	title: "{ftbquests.dsg.title}"
 }

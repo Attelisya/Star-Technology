@@ -59,7 +59,7 @@ ServerEvents.recipes(event => {
         6000, 500, 500 * 1200, GTValues.VHA[GTValues.UIV], 'kubejs:abyssal_processor_mainframe');
 
     researchBuilder(riftAss, 'dsg_dhd', 
-        ['sgjourney:classic_dhd', 'kubejs:dsg_stellar_dialer', '6x ' + u_rune, '6x ' + s_rune, '6x ' + g_rune, '6x ' + v_rune, '6x ' + i_rune, '6x ' + t_rune], 
+        ['sgjourney:milky_way_dhd', 'kubejs:dsg_stellar_dialer', '6x ' + u_rune, '6x ' + s_rune, '6x ' + g_rune, '6x ' + v_rune, '6x ' + i_rune, '6x ' + t_rune], 
         ['gtceu:neutrindium_soldering_alloy 9216', 'gtceu:faematter 7500', 'gtceu:draconic_stabilization_mixture 6250'], 
         ['sgjourney:pegasus_dhd'], 
         6000, 500, 500 * 1200, GTValues.VHA[GTValues.UIV], 'sgjourney:milky_way_dhd');
