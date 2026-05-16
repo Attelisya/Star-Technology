@@ -74,7 +74,7 @@ ServerEvents.recipes(event => {
 
     researchBuilder(riftAss, 'dsg_chevron', 
         ['3x gtceu:raging_rimulatia_frame', 'gtceu:exquisite_aquariadic_rimuli_dragonix_gem', '6x kubejs:dsg_field_stabiliser','8x kubejs:dsg_computational_matrix',
-            '24x gtceu:uiv_sensor', '256x kubejs:komaru_filament_t1', '8x gtceu:uiv_electric_motor', '6x gtceu:long_raging_rimulatia_rod',
+            '24x gtceu:uiv_sensor', '256x kubejs:komaru_filament_t2', '8x gtceu:uiv_electric_motor', '6x gtceu:long_raging_rimulatia_rod',
             '320x gtceu:nether_star_foil', '96x gtceu:lepton_resonant_thallium_antimonide_double_cable'], 
         ['gtceu:neutrindium_soldering_alloy 36864', 'gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 6912', 'gtceu:faematter 17500'], 
         ['kubejs:dsg_chevron'], 
