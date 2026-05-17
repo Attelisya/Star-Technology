@@ -23,7 +23,7 @@
     return result;
   }
 
-  let gtMachines = getGregtechMachines("multiblock");
+  let gtMachines = getGregtechMachines("multiblock"); //Doesnt Work rn / need to fix @n1xx1
   let stargateBlocks = [
     "sgjourney:classic_stargate",
     "sgjourney:classic_stargate_base_block",
@@ -36,7 +36,7 @@
   Ponder.tags((event) => {
     event.createTag(
       "kubejs:gtceu",
-      "gtceu:electric_blast_furnace",
+      "gtceu:electric_blast_furnace", //use?
       "GregTech Multiblocks",
       "Informations on how to use GregTech Multiblocks",
       gtMachines

@@ -338,7 +338,6 @@
     "item.kubejs.uv_photovoltaic_cell": "Photovoltaic Cell V",
     "item.kubejs.uhv_photovoltaic_cell": "Photovoltaic Cell VI",
 
-
     "item.kubejs.csg_field_stabiliser": "CSG Field Stabiliser",
     "item.kubejs.csg_field_stabiliser.tooltip": "§8TBA",
     "item.kubejs.csg_energy_modulator": "CSG Energy Modulator",
@@ -414,7 +413,6 @@
     "item.kubejs.dsg_enscription_chip": "DSG Enscription Chip",
     "item.kubejs.dsg_enscription_chip.tooltip": "§8TBA",
 
-
     "item.kubejs.raw_stargate_rod": "Raw Stargate Rod",
     "item.kubejs.raw_stargate_rod.tooltip": "§8TBA",
     "item.kubejs.activated_stargate_rod": "Activated Stargate Rod",
@@ -451,7 +449,6 @@
     "item.kubejs.primordial_fragment": "§9§m§oPrimoridal§r Fragment",
     "item.kubejs.primordial_fragment.tooltip": "§8TBA",
 
-
     "item.kubejs.quantum_core": "§3Quantum§r Core",
     "item.kubejs.quantum_core.tooltip": "§8TBA",
     "item.kubejs.helish_core": "§4Helish§r Core",
@@ -468,7 +465,6 @@
     "item.kubejs.primus_tempus_core.tooltip": "§8TBA",
     "item.kubejs.ascension_core": "§6Ascension§r Core",
     "item.kubejs.ascension_core.tooltip": "§8TBA",
-
 
     "item.kubejs.proto_solarus_rune": "Proto Solarus Rune",
     "item.kubejs.proto_solarus_rune.tooltip": "§8TBA",
@@ -535,6 +531,9 @@
     "item.kubejs.ion_exchange_resin_beads": "Ion Exchange Resin Beads",
     "item.kubejs.dry_ion_exchange_resin_beads": "Dry Ion Exchange Resin Beads",
     "item.kubejs.dirty_ion_exchange_resin_beads": "Dirty Ion Exchange Resin Beads",
+
+    "item.kubejs.wet_aerogel_ingot": "Wet Aerogel Ingot",
+    "item.kubejs.wet_aerogel_ingot.tooltip": "ᯓ*",
 
     "item.kubejs.uhv_voltage_coil": "Ultra High Voltage Coil",
     "item.kubejs.uhv_voltage_coil.tooltip": "§l§4P§fe§4p§fp§4e§fr§4m§fi§4n§ft§r Coil",
