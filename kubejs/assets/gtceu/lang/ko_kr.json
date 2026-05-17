@@ -210,7 +210,7 @@
     "gtceu.greenhouse_growing": "신비 농업 온실 성장",
     "block.gtceu.primitive_ore_factory": "원시 광석 정제 공장 [POF]",
     "gtceu.primitive_ore_processing": "원시 광석 정제",
-    "block.gtceu.large_barrel": "대형 통",
+    "block.gtceu.large_barrel": "대형 통[LBl]",
     "gtceu.large_barrel": "통 변환",
     "material.gtceu.echo_r": "액체 메아리",
     "material.gtceu.raw_void": "생 공허",
@@ -232,7 +232,7 @@
     "gtceu.runic_circuitry_assembling_station": "루닉 전기 회로 조립",
     "block.gtceu.electric_ore_factory": "전기 광석 정제소[EOF]",
     "gtceu.electric_ore_processing": "광석 정제",
-    "block.gtceu.large_stone_barrel": "대형 돌 통 [LSB]",
+    "block.gtceu.large_stone_barrel": "대형 돌 통 [LSBl]",
     "gtceu.large_stone_barrel": "대형 돌 통",
     "material.gtceu.zapolgium_diiodide_oxide": "이아이오딘화 산화 자폴기움",
     "material.gtceu.austenitic_stainless_steel_304": "오스테나이트 스테인리스 강철 304",
@@ -276,13 +276,13 @@
     "gtceu.nuclear_fission": "핵분열",
     "block.gtceu.nuclear_reactor": "핵 원자로 [NR]",
     "gtceu.chemical_skip": "화학 라인 감소",
-    "block.gtceu.chemical_plant": "화학 설비 [CHP]",
+    "block.gtceu.chemical_plant": "화학 설비 [CmP]",
     "gtceu.component_part_assembly": "부품 구성 요소 조립",
     "block.gtceu.component_part_assembly": "부품 구성 요소 조립기 [CPA]",
     "gtceu.large_farm": "농사",
     "block.gtceu.large_farm": "대형 농장 [LF]",
     "gtceu.large_sieve": "대형 체",
-    "block.gtceu.large_sieve": "대형 체질기 [LS]",
+    "block.gtceu.large_sieve": "대형 체질기 [LSv]",
     "gtceu.plant_ore_processing": "광석 정제",
     "block.gtceu.ore_processing_plant": "광석 정제 처리 설비 [OPP]",
 
@@ -317,7 +317,7 @@
     "material.gtceu.supremium_steel": "수프레뮴 강철",
     "material.gtceu.awakened_supremium_steel": "깨어난 슈프레뮴 강철",
     "material.gtceu.insanium_steel": "인사늄 강철",
-    "block.gtceu.mechanical_sieve": "기계 체질기 [MS]",
+    "block.gtceu.mechanical_sieve": "기계 체질기 [MSv]",
     "gtceu.mechanical_sieve": "기계 체질",
     "block.gtceu.petrochemistry_plant": "페트로화학 설비 [PCP]",
     "gtceu.petrochemistry_plant": "기름 정제",
@@ -333,9 +333,9 @@
     "material.gtceu.zamak": "자막",
     "material.gtceu.tumbaga": "툼바가",
     "gtceu.t_large_bender": "대형 벤더",
-    "block.gtceu.t_large_bender": "대형 벤더 [LB]",
+    "block.gtceu.t_large_bender": "대형 벤더 [LBd]",
     "gtceu.t_large_centrifuge": "대형 원심 분리기",
-    "block.gtceu.t_large_centrifuge": "대형 원심 분리기 [LC]",
+    "block.gtceu.t_large_centrifuge": "대형 원심 분리기 [LCn]",
     "gtceu.t_large_electrolyzer": "대형 전해조",
     "block.gtceu.t_large_electrolyzer": "대형 전해조 [LE]",
     "gtceu.t_large_extruder": "대형 압출기",
@@ -345,9 +345,9 @@
     "gtceu.t_large_lathe": "대형 선반",
     "block.gtceu.t_large_lathe": "대형 선반 [LL]",
     "gtceu.t_large_macerator": "대형 분쇄기",
-    "block.gtceu.t_large_macerator": "대형 분쇄기 [LM]",
+    "block.gtceu.t_large_macerator": "대형 분쇄기 [LMc]",
     "gtceu.t_large_mixer": "대형 믹서",
-    "block.gtceu.t_large_mixer": "대형 믹서 [LM]",
+    "block.gtceu.t_large_mixer": "대형 믹서 [LMx]",
     "gtceu.t_large_ore_washer": "대형 광석 세척기",
     "block.gtceu.t_large_ore_washer": "대형 광석 세척기 [LOW]",
     "gtceu.t_large_sifter": "대형 체질기",
@@ -405,7 +405,7 @@
     "material.gtceu.alternating_phase_electron_infusion_flux": "대체 §d전자§r 융합 플럭스",
 
 
-    "block.gtceu.cyclonic_sifter": "사이클론 쉬프터 [CS]",
+    "block.gtceu.cyclonic_sifter": "사이클론 쉬프터 [CSf]",
     "gtceu.cyclonic_sifter": "사이클론 쉬프팅",
 
     "block.gtceu.manifold_centrifuge": "다방면 원심 분리기 [MC]",
@@ -829,7 +829,7 @@
     "block.gtceu.molten_destabiliser": "용융 상태 불안정화 장치 [MD]",
 
     "gtceu.latex_plantation": "라텍스 농업",
-    "block.gtceu.latex_plantation": "라텍스 농장 [LP]",
+    "block.gtceu.latex_plantation": "라텍스 농장 [LxP]",
 
     "gtceu.draco_circuit_assembler": "드라코닉 회로 조립",
     "gtceu.draco_bulk_circuiter": "드라코닉 대량 회로 제조기",
@@ -1157,7 +1157,7 @@
     "block.gtceu.super_implosion_compressor": "고강도 폭발실 [HII]",
     "block.gtceu.super_implosion_compressor.tooltip.0": "§7연속적인 폭발로 기계를 엄청난 속도로 동작하게 합니다.",
 
-    "block.gtceu.super_cutter": "대형 절단기 [LC]",
+    "block.gtceu.super_cutter": "대형 절단기 [LCt]",
     "block.gtceu.super_cutter.tooltip.0": "§7절단기의 대형 변형으로, 더 많은 재료를 한 번에 절단합니다.",
 
     "block.gtceu.super_electric_ore_factory": "광석 정제소 공장 [OPF]",
@@ -1209,9 +1209,9 @@
     "block.gtceu.electro_magnetic_material_ripper.tooltip.0": "§3§l멀티 스레드 에너자이저",
     "block.gtceu.electro_magnetic_material_ripper.tooltip.1": "§f폭력적이지만 불가능할 정도로 정밀하게 제어되는 필드 플럭스 엔진 기계로, 분자 배열을 찢어발기고 압도적인 권위 아래 재구성합니다.",
 
-    "block.gtceu.fermenting_arboreal_rejuvination_monstronsity": "수목 재생 유기체 발효 처리 시설 [FARM]",
-    "block.gtceu.fermenting_arboreal_rejuvination_monstronsity.tooltip.0": "§3§l멀티 스레드 농장",
-    "block.gtceu.fermenting_arboreal_rejuvination_monstronsity.tooltip.1": "§7생물학적 거대 구조체로, 식물, 동물이나 미생물 기질을 강제적으로 지속적인 대사 과잉 상태로 만들어 비정상적인 생태학적 리듬으로 자원을 생산하게 합니다.",
+    "block.gtceu.fermenting_arboreal_rejuvenation_monstrosity": "수목 재생 유기체 발효 처리 시설 [FARM]",
+    "block.gtceu.fermenting_arboreal_rejuvenation_monstrosity.tooltip.0": "§3§l멀티 스레드 농장",
+    "block.gtceu.fermenting_arboreal_rejuvenation_monstrosity.tooltip.1": "§7생물학적 거대 구조체로, 식물, 동물이나 미생물 기질을 강제적으로 지속적인 대사 과잉 상태로 만들어 비정상적인 생태학적 리듬으로 자원을 생산하게 합니다.",
 
     "block.gtceu.gravitational_compression_chamber": "과중력 압축 챔버 [GCC]",
     "block.gtceu.gravitational_compression_chamber.tooltip.0": "§3§l멀티 스레드 압축기",
@@ -1239,10 +1239,10 @@
 
     "material.gtceu.galvanized_steel": "아연 도금 강철",
     "gtceu.pulverizer": "파쇄기",
-    "block.gtceu.t_large_pulverizer": "대형 파쇄기 [LP]",
+    "block.gtceu.t_large_pulverizer": "대형 파쇄기 [LPv]",
     "block.gtceu.t_large_pulverizer.tooltip.0": "§7파쇄기의 대형 변형으로, 대량의 아이템을 파쇄할 수 있습니다.",
 
-    "block.gtceu.t_large_arc_furnace": "대형 아크로 [LAF]",
+    "block.gtceu.t_large_arc_furnace": "대형 아크로 [LAFn]",
     "block.gtceu.t_large_arc_furnace.tooltip.0": "§7아크로의 대형 버전으로, 한 번에 여러 아이템을 태웁니다.",
 
     "material.gtceu.manganin": "망가닌",
@@ -1341,6 +1341,7 @@
     "material.gtceu.hydrofined_kerosene": "수소가 첨가된 등유",
     "material.gtceu.liquid_fluorine": "액체 플루오르",
     "material.gtceu.dioxygen_difluoride": "이산화 이플루오라이드",
+    "gtceu.modular_rocket_module": "로켓 발전",
 
     "material.gtceu.osthendah": "오스루테나콰다",
     "material.gtceu.raging_rimulatia": "화내는 리물라티아",
@@ -1349,10 +1350,10 @@
     "material.gtceu.netherite_triselex_oxide": "네더라이트 삼셀레늄 산화물",
     "material.gtceu.primordial_extract": "원시 추출물",
     "material.gtceu.infernal_stabilization_mixture": "인페르날 안정화 혼합물",
-    "material.gtceu.riftion": "리프티온",
+    "material.gtceu.riftion": "외계 쿼크",
     "material.gtceu.condensed_rimula": "압축된 리물라",
     "material.gtceu.faematter": "파매터",
-    "material.gtceu.riftion_extract": "리프티온 추출물",
+    "material.gtceu.riftion_extract": "외계 쿼크 추출물",
     "material.gtceu.impure_faematter": "불순물이 섞인 파매터",
     "material.gtceu.true_rimula_foundation": "진정한 리물라 기초물",
     "material.gtceu.primordial_residue": "원시 잔류물",
@@ -1375,17 +1376,17 @@
     "block.gtceu.kaleidoscopic_fractalizer.tooltip.0": "wip toolip",
     "gtceu.kaleidoscopic_fractalizer": "분광성 분열",
 
-    "block.gtceu.riftion_accelerator": "리프티온 가속기 [RA]",
+    "block.gtceu.riftion_accelerator": "외계 쿼크 가속기 [RA]",
     "block.gtceu.riftion_accelerator.tooltip.0": "wip toolip",
-    "gtceu.riftion_accelerator": "리프티온 가속",
+    "gtceu.riftion_accelerator": "외계 쿼크 가속",
 
-    "block.gtceu.riftion_injector": "리프티온 주입기 [RI]",
+    "block.gtceu.riftion_injector": "외계 쿼크 주입기 [RI]",
     "block.gtceu.riftion_injector.tooltip.0": "wip toolip",
-    "gtceu.riftion_injector": "리프티온 주입",
+    "gtceu.riftion_injector": "외계 쿼크 주입",
 
-    "block.gtceu.riftion_slammer": "리프티온 분열기 [RS]",
+    "block.gtceu.riftion_slammer": "외계 쿼크 분열기 [RS]",
     "block.gtceu.riftion_slammer.tooltip.0": "wip toolip",
-    "gtceu.riftion_slammer": "리프티온 분열",
+    "gtceu.riftion_slammer": "외계 쿼크 분열",
 
     "block.gtceu.magmatic_drilling_module": "마그마틱 드릴링 유닛 [MDU]",
     "block.gtceu.magmatic_drilling_module.tooltip.0": "wip tooltip",
@@ -1397,7 +1398,7 @@
     "block.gtceu.voidic_refinement_module.tooltip.1": "K.O.M.A.R.U 모듈 등급: 일반",
     "gtceu.voidic_refinement": "공허 정제",
 
-    "block.gtceu.rimula_extraction_module": "리물라 추출 유닛 [REU]",
+    "block.gtceu.rimula_extraction_module": "리물라 추출 유닛 [RmEU]",
     "block.gtceu.rimula_extraction_module.tooltip.0": "wip tooltip",
     "block.gtceu.rimula_extraction_module.tooltip.1": "K.O.M.A.R.U 모듈 등급: 일반",
     "gtceu.rimula_extraction": "리물라 추출",
@@ -1407,12 +1408,12 @@
     "block.gtceu.riftic_infusion_assembly_module.tooltip.1": "K.O.M.A.R.U 모듈 등급: 고급",
     "gtceu.riftic_infusion_assembly": "균열 융합 조립",
 
-    "block.gtceu.riftic_enhancement_module": "균열 강화 유닛 [REU]",
+    "block.gtceu.riftic_enhancement_module": "균열 강화 유닛 [RfEU]",
     "block.gtceu.riftic_enhancement_module.tooltip.0": "wip tooltip",
     "block.gtceu.riftic_enhancement_module.tooltip.1": "K.O.M.A.R.U 모듈 등급: 고급",
     "gtceu.riftic_enhancement": "균열 강화",
 
-    "block.gtceu.limitless_smelter": "무한 화로 [LS]",
+    "block.gtceu.limitless_smelter": "무한 화로 [LSm]",
     "block.gtceu.limitless_smelter.tooltip.0": "§6§l강화된 멀티 용광로",
 
     "block.gtceu.incomprehensible_chemical_reactor": "이해불가한 화학 반응기 [ICR]",
@@ -1426,7 +1427,7 @@
     "block.gtceu.titan_forge.tooltip.0": "wip tooltip",
     "gtceu.titan_forge": "티탄 용광로",
 
-    "block.gtceu.catto_shrine": "고양이 사원 [CS]",
+    "block.gtceu.catto_shrine": "고양이 사원 [ᗢCS]",
     "block.gtceu.catto_shrine.tooltip.0": "wip tooltip",
     "block.gtceu.catto_shrine.tooltip.1": "고양이 제작...기?",
     "gtceu.catto_shrine": "고양이 사원"
