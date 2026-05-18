@@ -49,8 +49,8 @@
 				}
 			]
 			title: "{ftbquests.dsg.specialized_helix_t3.title}"
-			x: 0.5d
-			y: 1.0d
+			x: 4.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["2BC819D3CE572543"]
@@ -768,8 +768,8 @@
 				item: "kubejs:primordial_fragment"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -0.5d
+			x: 3.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["74F3E9BE19218BA2"]
@@ -783,8 +783,8 @@
 				item: "kubejs:riftic_fragment"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 1.0d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["74F3E9BE19218BA2"]
@@ -798,8 +798,8 @@
 				item: "kubejs:prismalic_fragment"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 1.5d
+			x: 0.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
