@@ -17,7 +17,10 @@ ServerEvents.recipes(event => {
         'gtceu:centrifuge/rare_earth_separation',
         // Styrene
         'gtceu:chemical_reactor/styrene_from_benzene',
-        'gtceu:large_chemical_reactor/styrene_from_benzene'
+        'gtceu:large_chemical_reactor/styrene_from_benzene',
+        // Maint Steel Dupe Fix
+        'gtceu:arc_furnace/arc_maintenance_hatch', 
+        'gtceu:macerator/macerate_maintenance_hatch'
     ]
 
     IdRemoval.forEach(RecipeId => {
@@ -90,5 +93,21 @@ ServerEvents.recipes(event => {
         .duration(120)
         .circuit(3)
         .EUt(GTValues.VA[GTValues.LV]);
+
+    // Maint Decomp
+    event.recipes.gtceu.arc_furnace(id('maint_decomp_fix'))
+        .itemInputs('gtceu:maintenance_hatch')
+        .inputFluids('gtceu:oxygen 569')
+        .itemOutputs('8x gtceu:steel_ingot','gtceu:tin_ingot','gtceu:small_ash_dust')
+        .duration(569)
+        .EUt(30)
+        .category(GTRecipeCategories.ARC_FURNACE_RECYCLING);
+
+    event.recipes.gtceu.macerator(id('maint_decomp_fix'))
+        .itemInputs('gtceu:maintenance_hatch')
+        .itemOutputs('8x gtceu:steel_dust','gtceu:tin_dust','gtceu:rubber_dust')
+        .duration(576)
+        .EUt(30)
+        .category(GTRecipeCategories.MACERATOR_RECYCLING);
  
 });

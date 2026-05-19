@@ -516,7 +516,10 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["5228DB53CD02A2D2"]
+			dependencies: [
+				"5228DB53CD02A2D2"
+				"7689B3714EB62592"
+			]
 			description: ["{ftbquests.dsg.chevron.description}"]
 			id: "4D8C9A6B5764340A"
 			tasks: [{
